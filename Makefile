@@ -1,7 +1,25 @@
 PROJECT_NAME=StrictlyPositiveCert
+TEST_FILE=test.mpl
+SUFFIX=
+LOG_FILE=log_time${SUFFIX}.txt
+OUTPUT=output${SUFFIX}.txt
+FLAGS=
 
-all : $(PROJECT_NAME).mla
--e 	maple test.mpl
+QUIET_MODE=
+QUIET_MODE=-q
 
-$(PROJECT_NAME).mla: $(PROJECT_NAME).mpl
--e 	archive_maple_project.py $(PROJECT_NAME) $(PROJECT_NAME) $(PROJECT_NAME)
+QUIET_MODE=
+
+.PHONY: clean all
+
+all: ${OUTPUT}
+
+${OUTPUT}: ${PROJECT_NAME}.mla ${TEST_FILE}
+	if [ -f ${LOG_FILE} ]; then rm ${LOG_FILE}; fi;
+	maple ${TEST_FILE} ${QUIET_MODE} ${FLAGS} > ${OUTPUT}
+
+${PROJECT_NAME}.mla: ${PROJECT_NAME}.mpl
+	archive_maple_project.py ${PROJECT_NAME} ${PROJECT_NAME} ${PROJECT_NAME}
+
+clean:
+	rm -rf ${PROJECT_NAME}.mla:
