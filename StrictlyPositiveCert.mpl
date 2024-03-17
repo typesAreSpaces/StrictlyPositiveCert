@@ -1,4 +1,4 @@
-$define ENABLE_DEBUGGING      false
+$define ENABLE_DEBUGGING      true
 $define ENABLE_VERIFICATION   false
 $define ENABLE_BINARY_SEARCH  true
 $define ENABLE_N_HEURISTIC    false
@@ -666,11 +666,11 @@ $ifdef LOG_TIME
 $endif
 local A;
 local i, j;
-local Ga, Ep;
+local _gamma, eps;
 local tobe_disjoint_set;
 local N, N1, N2, poly := _poly, _g;
 local pos_coeff := 1;
-local semialgebraic_Ep_lifted;
+local semialgebraic_eps_lifted;
 local m, mu, interval, lowerbound, upperbound;
 local R := PolynomialRing([x]);
 
@@ -705,18 +705,18 @@ $endif
 
     # We just need a lowerbound, not the
     # tightest lowerbound [to discuss later]
-    Ga := convert(1/2*evalf(1.001*maximize(g)), rational);
+    _gamma := convert(1/2*evalf(1.001*maximize(g)), rational);
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Ga", Ga));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
 
     #
-    # Find exponent Ep
+    # Find exponent eps
     #
     # |-
     # --------
     # old code
     # --------
-    #Ep := -1/2*convert((Maximize(g, {poly <= 0})[1]), rational, exact);
+    #eps := -1/2*convert((Maximize(g, {poly <= 0})[1]), rational, exact);
     # |-
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Start computation of SemiAlg_poly", poly));
 #1 local SemiAlg_poly := SemiAlgebraic([poly<=0], [x]);
@@ -730,8 +730,8 @@ local SemiAlg_poly := [];
         _old_point := _SemiAlg_poly[i];
     end do;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done computation of SemiAlg_poly", SemiAlg_poly));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Start computation of Ep"));
-    Ep := -1/2*max(
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Start computation of eps"));
+    eps := -1/2*max(
         map(proc(bound)
                 #1 interval := bound_info(x, bound, 0);
                 # TOCHECK
@@ -749,11 +749,11 @@ local SemiAlg_poly := [];
             end proc,
             SemiAlg_poly));
     # DEBUG if problems
-    Ep := convert(evalf(Ep), rational);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Ep:", Ep));
+    eps := convert(evalf(eps), rational);
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps:", eps));
 
-    semialgebraic_Ep_lifted := SemiAlgebraic(
-        [g + 17/10*Ep >= 0], [x]);
+    semialgebraic_eps_lifted := SemiAlgebraic(
+        [g + 17/10*eps >= 0], [x]);
     mu := min(
         map(proc(bound)
                 interval := bound_info(x, bound, 0);
@@ -764,7 +764,7 @@ local SemiAlg_poly := [];
                 upperbound := convert(evalf(interval[2]), rational);
                 simplify(minimize(poly, x = lowerbound .. upperbound))
             end proc,
-            semialgebraic_Ep_lifted));
+            semialgebraic_eps_lifted));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
     # |-
     # --------
@@ -773,10 +773,10 @@ local SemiAlg_poly := [];
     #temp := Cap_set(S, [[-infinity, infinity]]);
     #mu := min(seq(minimize(poly, x = temp[i][1] .. temp[i][2]), i = 1 .. numelems(temp)));
     #m := ceil(evalf(minimize(poly))) - 1;
-    #lprint(Ga, Ep, mu, m);
+    #lprint(_gamma, eps, mu, m);
     #N := 1/2*max(
-    #ceil((log(mu) - log(2*Ga))/(log(Ga) - log(Ga + Ep))),
-    #ceil((log(-m) - log(2*Ep))/(log(Ga + 2*Ep) - log(Ga + Ep))));
+    #ceil((log(mu) - log(2*_gamma))/(log(_gamma) - log(_gamma + eps))),
+    #ceil((log(-m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps))));
     # |-
     m := ceil(evalf(minimize(poly))) - 1;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> m", m));
@@ -785,8 +785,8 @@ local SemiAlg_poly := [];
     #
     # Find exponent N
     #
-local _exp1 := (log(2*Ga) - log(alpha*mu))/(log(Ga + Ep) - log(Ga));
-local _exp2 := (log(-alpha*m) - log(2*Ep))/(log(Ga + 2*Ep) - log(Ga + Ep));
+local _exp1 := (log(2*_gamma) - log(alpha*mu))/(log(_gamma + eps) - log(_gamma));
+local _exp2 := (log(-alpha*m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps));
     pos_coeff := convert(
         evalf(solve(_exp1 = _exp2, alpha, 'maxsols'=1)), rational);
     N := ceil(1/2*subs(alpha=pos_coeff, _exp1));
@@ -811,7 +811,7 @@ local _exp2 := (log(-alpha*m) - log(2*Ep))/(log(Ga + 2*Ep) - log(Ga + Ep));
             N_curr := iquo(N_top + N_bottom, 2);
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current N_curr", N_curr));
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current pos_coeff", pos_coeff));
-            _g := 1/pos_coeff*g*((g - Ga)/(Ga + Ep))^(2*N_curr);
+            _g := 1/pos_coeff*g*((g - _gamma)/(_gamma + eps))^(2*N_curr);
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current _g", _g));
             if SemiAlgebraic([_g - _poly >= 0], [x]) = [] then
                 N_top := N_curr;
@@ -842,7 +842,7 @@ $endif
 $ifdef LOG_TIME
         END_LOG_TIME("Last_step",0)
 $endif
-        return 1/pos_coeff*((g - Ga)/(Ga + Ep))^(2*N);
+        return 1/pos_coeff*((g - _gamma)/(_gamma + eps))^(2*N);
     end if;
 end proc;
 
