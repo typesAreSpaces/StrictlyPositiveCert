@@ -16,6 +16,7 @@ $define INIT_START_LOG_TIME(X, S) local fd;START_LOG_TIME(X, S)
 with(SolveTools, SemiAlgebraic);
 with(RootFinding, Isolate);
 with(Optimization, Maximize, Minimize);
+with(ListTools, FlattenOnce);
 
 StrictlyPositiveCert := module() option package;
 
@@ -92,6 +93,61 @@ $endif
             end if;
         end if;
     end if;
+end proc;
+
+# Check if poly is strictly positive
+# over S
+# S is a finite list of intervals
+# poly is a polynomial
+local checkPositivityOverSAS := proc(S, poly, x)
+$ifdef LOG_TIME
+    INIT_START_LOG_TIME("checkPositivityOverSAS",0)
+$endif
+local local_poly := realroot(diff(poly, x), 1/10000);
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> local_poly", evalf(local_poly)));
+local curr_point;
+local i, j := 1;
+    for i from 1 to nops(S) do
+        interval := bound_info(x, S[i], 0);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", interval));
+        if evalf(subs(x=interval[1], poly) <= 0) then
+$ifdef LOG_TIME
+            END_LOG_TIME("checkPositivityOverSAS",0)
+$endif
+            return false;
+        end if;
+        if evalf(subs(x=interval[2], poly) <= 0) then
+$ifdef LOG_TIME
+            END_LOG_TIME("checkPositivityOverSAS",0)
+$endif
+            return false;
+        end if;
+
+        if j > nops(local_poly) then
+            break;
+        end if;
+        curr_point := (local_poly[j,1]+local_poly[j,2])/2;
+        while j <= nops(local_poly) and evalf(interval[1] > curr_point) do
+            j := j + 1;
+            curr_point := (local_poly[j,1]+local_poly[j,2])/2;
+        end do;
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
+        while j <= nops(local_poly) and evalf(curr_point <= interval[2]) do
+            curr_point := (local_poly[j,1]+local_poly[j,2])/2;
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Show evalf", evalf(subs(x=curr_point, poly)) ));
+            if evalf(subs(x=curr_point, poly) <= 0) then
+$ifdef LOG_TIME
+                END_LOG_TIME("checkPositivityOverSAS",0)
+$endif
+                return false;
+            end if;
+            j := j + 1;
+        end do;
+    end do;
+$ifdef LOG_TIME
+    END_LOG_TIME("checkPositivityOverSAS",0)
+$endif
+    return true;
 end proc;
 
 local dot_product := proc(v1, v2)
@@ -189,6 +245,7 @@ local R := PolynomialRing([x]);
 local M, mu, m, N_list, temp_bound_N;
 # DEBUG This is only to work out one particular example
 local pos_coeff, _pos_coeff;
+local _error := 1/1000;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Start @averkov_lemma_7"));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> args"));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
@@ -277,18 +334,50 @@ local T := SemiAlgebraic([B_poly >= 0, f < 0], [x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> semialgebraic_of_B", semialgebraic_of_B));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> T", T));
-    eps := -1/2*min(map(
+local rootsPositivePoly := [RealDomain:-solve(poly = 0, x)];
+local lift_basis := lift -> map(_poly -> _poly - lift - _error, basis);
+local eps_candidates :=
+    FlattenOnce(map(
         proc(g_i)
-            max(map(proc(bound)
-                        interval := bound_info(x, bound, 0);
-                        # TOCHECK
-                        # This might introduce a bug if `lowerbound > upperbound`
-                        # happens to be true for some reason
-                        lowerbound := convert(evalf(interval[1]), rational);
-                        upperbound := convert(evalf(interval[2]), rational);
-                        simplify(maximize(g_i, x = lowerbound .. upperbound))
-                    end proc, T))
+            map(
+                proc(bound)
+                    interval := bound_info(x, bound, 0);
+                    # TOCHECK
+                    # This might introduce a bug if `lowerbound > upperbound`
+                    # happens to be true for some reason
+                    lowerbound := convert(evalf(interval[1]), rational);
+                    upperbound := convert(evalf(interval[2]), rational);
+                    simplify(maximize(g_i, x = lowerbound .. upperbound))
+                end proc, T)
         end proc, basis));
+local is_valid_eps :=
+    proc(eps_candidate)
+local i, j, check;
+    # Check that for all roots
+    # there is at least one negative point
+    for i from 1 to nops(rootsPositivePoly) do
+        # check is true if at least one poly evaluates to a negative number
+        # after lifting with the eps_candidate and substitution at the ith root
+        # of poly
+        check := foldl(
+            (x, y) -> x or y,
+            false,
+            op(map(poly -> subs(x = rootsPositivePoly[i], poly) < 0, lift_basis(eps_candidate))));
+        if check = false then
+            return false;
+        end if;
+    end do;
+    return true;
+end proc;
+
+    eps := -1/2*min(map(
+        proc(eps_candidate)
+            if is_valid_eps(eps_candidate) then
+                eps_candidate
+            else
+                infinity
+            end if;
+        end proc, select(_value -> _value < 0, eps_candidates)));
     eps := convert(9/10*evalf(eps), rational);
     # If eps = -infinity means that T is the empy list
     if eps = -infinity then
@@ -618,9 +707,11 @@ $endif
     end if;
     G := h*g;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> G", G));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> To optimize", diff(poly,x)*G - poly*diff(G, x) ));
 
     #local opt_roots := [RealDomain:-solve(diff(poly,x)*G - poly*diff(G, x) = 0, x)];
-local opt_roots := map(evalf, [RealDomain:-solve(diff(poly,x)*G - poly*diff(G, x) = 0, x)]);
+#local opt_roots := map(evalf, [RealDomain:-solve(diff(poly,x)*G - poly*diff(G, x) = 0, x)]);
+local opt_roots := map(out -> op(out)[2], evalf(Isolate(diff(poly,x)*G - poly*diff(G, x))));
 
 $ifdef LOG_TIME
     START_LOG_TIME("Lower_bound_poly::Minimization_problem",3);
@@ -674,13 +765,15 @@ local semialgebraic_eps_lifted;
 local m, mu, interval, lowerbound, upperbound;
 local R := PolynomialRing([x]);
 
-    if SemiAlgebraic([poly < 0],[x]) = [] then
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done because poly is a sos"));
-$ifdef LOG_TIME
-        END_LOG_TIME("Last_step",0)
-$endif
-        return 0;
-    end if;
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
+    # TODO uncomment the following block
+    #if SemiAlgebraic([poly < 0],[x]) = [] then
+    #DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done because poly is a sos"));
+#$ifdef LOG_TIME
+    #END_LOG_TIME("Last_step",0)
+#$endif
+    #return 0;
+    #end if;
 
     # Since poly is not a non-negative
     # polynomial, we can assume the min value
@@ -731,6 +824,7 @@ local SemiAlg_poly := [];
     end do;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done computation of SemiAlg_poly", SemiAlg_poly));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Start computation of eps"));
+    # TODO Fix the following
     eps := -1/2*max(
         map(proc(bound)
                 #1 interval := bound_info(x, bound, 0);
@@ -754,17 +848,20 @@ local SemiAlg_poly := [];
 
     semialgebraic_eps_lifted := SemiAlgebraic(
         [g + 17/10*eps >= 0], [x]);
-    mu := min(
-        map(proc(bound)
-                interval := bound_info(x, bound, 0);
-                # TOCHECK
-                # This might introduce a bug if `lowerbound > upperbound`
-                # happens to be true for some reason
-                lowerbound := convert(evalf(interval[1]), rational);
-                upperbound := convert(evalf(interval[2]), rational);
-                simplify(minimize(poly, x = lowerbound .. upperbound))
-            end proc,
-            semialgebraic_eps_lifted));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done computation of semialgebraic_eps_lifted", semialgebraic_eps_lifted));
+    # TODO Uncomment the following block
+    #mu := min(
+    #map(proc(bound)
+    #interval := bound_info(x, bound, 0);
+    ## TOCHECK
+    ## This might introduce a bug if `lowerbound > upperbound`
+    ## happens to be true for some reason
+    #lowerbound := convert(evalf(interval[1]), rational);
+    #upperbound := convert(evalf(interval[2]), rational);
+    #simplify(minimize(poly, x = lowerbound .. upperbound))
+    #end proc,
+    #semialgebraic_eps_lifted));
+    mu := 58/100;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
     # |-
     # --------
@@ -778,13 +875,20 @@ local SemiAlg_poly := [];
     #ceil((log(mu) - log(2*_gamma))/(log(_gamma) - log(_gamma + eps))),
     #ceil((log(-m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps))));
     # |-
-    m := ceil(evalf(minimize(poly))) - 1;
+    # TODO Uncomment the following line
+    #m := ceil(evalf(minimize(poly))) - 1;
+    m := -467/100*10^488;
+
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> m", m));
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Compute exponent N"));
     #
     # Find exponent N
     #
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", eps));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> m", m));
 local _exp1 := (log(2*_gamma) - log(alpha*mu))/(log(_gamma + eps) - log(_gamma));
 local _exp2 := (log(-alpha*m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps));
     pos_coeff := convert(
@@ -832,6 +936,9 @@ local _exp2 := (log(-alpha*m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + 
 
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N after ENABLE_BINARY_SEARCH", evalf(N)));
     end if;
+
+    # TODO Remove the following line
+    #N := 100;
 
     if N = -1 then
 $ifdef LOG_TIME

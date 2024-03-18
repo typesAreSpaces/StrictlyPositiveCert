@@ -10,7 +10,7 @@ QUIET_MODE=-q
 
 QUIET_MODE=
 
-.PHONY: clean all
+.PHONY: clean all ${OUTPUT}
 
 all: ${OUTPUT}
 
