@@ -334,7 +334,8 @@ local T := SemiAlgebraic([B_poly >= 0, f < 0], [x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> semialgebraic_of_B", semialgebraic_of_B));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> T", T));
-local rootsPositivePoly := [RealDomain:-solve(poly = 0, x)];
+local rootsPositivePoly := [RealDomain:-solve(f = 0, x)];
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> rootsPositivePoly", rootsPositivePoly));
 local lift_basis := lift -> map(_poly -> _poly - lift - _error, basis);
 local eps_candidates :=
     FlattenOnce(map(
