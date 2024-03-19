@@ -354,6 +354,7 @@ local eps_candidates :=
 local is_valid_eps :=
     proc(eps_candidate)
 local i, j, check;
+local lifted_basis := lift_basis(eps_candidate);
     # Check that for all roots
     # there is at least one negative point
     for i from 1 to nops(rootsPositivePoly) do
@@ -363,7 +364,7 @@ local i, j, check;
         check := foldl(
             (x, y) -> x or y,
             false,
-            op(map(poly -> subs(x = rootsPositivePoly[i], poly) < 0, lift_basis(eps_candidate))));
+            op(map(poly -> evalf(subs(x = rootsPositivePoly[i], poly) < 0), lifted_basis)));
         if check = false then
             return false;
         end if;
