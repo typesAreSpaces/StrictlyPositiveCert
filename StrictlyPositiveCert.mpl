@@ -1,4 +1,4 @@
-$define ENABLE_DEBUGGING      true
+$define ENABLE_DEBUGGING      false
 $define ENABLE_VERIFICATION   false
 $define ENABLE_BINARY_SEARCH  true
 $define ENABLE_N_HEURISTIC    false
@@ -25,6 +25,85 @@ export spCertificates;
 $ifdef LOG_TIME
 local stack_level := -1;
 $endif
+
+# Returns a list of the form [g, h1, h2, index1, index2]
+# where
+# - g is the bound poly
+# - h1, h2 are the sums of squares which make the linear combination for g
+# - index1, index2 are the indexes in basis which make the linear combination for g
+local bound_poly := proc(basis, x)
+$ifdef LOG_TIME
+    INIT_START_LOG_TIME("bound_poly",0)
+$endif
+local degrees, fst_coeffs, snd_coeffs, h1, h2;
+local i, j;
+    degrees := map(poly -> degree(poly, x), basis);
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> degress", degrees));
+
+    fst_coeffs := map[indices](
+        i -> coeff(basis[i], x^degrees[i]), basis);
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> fst_coeffs", fst_coeffs));
+
+    snd_coeffs := map[indices](
+        i ->
+        if degrees[i] = 1 then
+            subs(x = 0, basis[i])/abs(fst_coeffs[i])
+        else
+            coeff(basis[i]/abs(fst_coeffs[i]), x^(degrees[i] - 1))
+        end if, basis);
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> snd_coeffs", snd_coeffs));
+
+    for i from 1 to nops(basis) do
+        if type(degrees[i], even) and fst_coeffs[i] < 0 then
+$ifdef LOG_TIME
+            END_LOG_TIME("bound_poly",0)
+$endif
+            return [basis[i], 1, 0, i, i];
+        end if;
+    end do;
+
+    # At this point, every element in the basis has odd degree
+    for i from 1 to nops(basis) - 1 do
+        for j from i + 1 to nops(basis) do
+            if fst_coeffs[i]*fst_coeffs[j] > 0 then
+                next;
+            end if;
+            if degrees[i] = degrees[j] then
+                h1 := x^2/abs(fst_coeffs[i]);
+                h2 := (x + sign(fst_coeffs[i])*(1/2*snd_coeffs[i] + 1/2*snd_coeffs[j] + 1))^2
+                /abs(fst_coeffs[j]);
+            elif degrees[j] < degrees[i] then
+                h1 := 1/abs(fst_coeffs[i]);
+                h2 := x^(degrees[i] - degrees[j] - 2)
+                *(x + sign(fst_coeffs[i])*(1/2*snd_coeffs[i] + 1/2*snd_coeffs[j] + 1))^2
+                /abs(fst_coeffs[j]);
+            else
+                h1 := x^(degrees[j] - degrees[i] - 2)
+                *(x - sign(fst_coeffs[i])*(1/2*snd_coeffs[i] + 1/2*snd_coeffs[j] + 1))^2
+                /abs(fst_coeffs[i]);
+                h2 := 1/abs(fst_coeffs[j]);
+            end if;
+$ifdef LOG_TIME
+            END_LOG_TIME("bound_poly",0)
+$endif
+            return [expand(h1*basis[i] + h2*basis[j]), h1, h2, i, j];
+        end do;
+    end do;
+end proc;
+
+local dot_product := proc(v1, v2)
+$ifdef LOG_TIME
+    INIT_START_LOG_TIME("dot_product",0)
+$endif
+local out := 0, i;
+    for i from 1 to min(nops(v1), nops(v2)) do
+        out := out + v1[i]*v2[i];
+    end do;
+$ifdef LOG_TIME
+    END_LOG_TIME("dot_product",0)
+$endif
+    return out;
+end proc;
 
 local bound_info := proc(x, bound, eps)
 $ifdef LOG_TIME
@@ -150,85 +229,6 @@ $endif
     return true;
 end proc;
 
-local dot_product := proc(v1, v2)
-$ifdef LOG_TIME
-    INIT_START_LOG_TIME("dot_product",0)
-$endif
-local out := 0, i;
-    for i from 1 to min(nops(v1), nops(v2)) do
-        out := out + v1[i]*v2[i];
-    end do;
-$ifdef LOG_TIME
-    END_LOG_TIME("dot_product",0)
-$endif
-    return out;
-end proc;
-
-# Returns a list of the form [g, h1, h2, index1, index2]
-# where
-# - g is the bound poly
-# - h1, h2 are the sums of squares which make the linear combination for g
-# - index1, index2 are the indexes in basis which make the linear combination for g
-local bound_poly := proc(basis, x)
-$ifdef LOG_TIME
-    INIT_START_LOG_TIME("bound_poly",0)
-$endif
-local degrees, fst_coeffs, snd_coeffs, h1, h2;
-local i, j;
-    degrees := map(poly -> degree(poly, x), basis);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> degress", degrees));
-
-    fst_coeffs := map[indices](
-        i -> coeff(basis[i], x^degrees[i]), basis);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> fst_coeffs", fst_coeffs));
-
-    snd_coeffs := map[indices](
-        i ->
-        if degrees[i] = 1 then
-            subs(x = 0, basis[i])/abs(fst_coeffs[i])
-        else
-            coeff(basis[i]/abs(fst_coeffs[i]), x^(degrees[i] - 1))
-        end if, basis);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> snd_coeffs", snd_coeffs));
-
-    for i from 1 to nops(basis) do
-        if type(degrees[i], even) and fst_coeffs[i] < 0 then
-$ifdef LOG_TIME
-            END_LOG_TIME("bound_poly",0)
-$endif
-            return [basis[i], 1, 0, i, i];
-        end if;
-    end do;
-
-# At this point, every element in the basis has odd degree
-    for i from 1 to nops(basis) - 1 do
-        for j from i + 1 to nops(basis) do
-            if fst_coeffs[i]*fst_coeffs[j] > 0 then
-                next;
-            end if;
-            if degrees[i] = degrees[j] then
-                h1 := x^2/abs(fst_coeffs[i]);
-                h2 := (x + sign(fst_coeffs[i])*(1/2*snd_coeffs[i] + 1/2*snd_coeffs[j] + 1))^2
-                /abs(fst_coeffs[j]);
-            elif degrees[j] < degrees[i] then
-                h1 := 1/abs(fst_coeffs[i]);
-                h2 := x^(degrees[i] - degrees[j] - 2)
-                *(x + sign(fst_coeffs[i])*(1/2*snd_coeffs[i] + 1/2*snd_coeffs[j] + 1))^2
-                /abs(fst_coeffs[j]);
-            else
-                h1 := x^(degrees[j] - degrees[i] - 2)
-                *(x - sign(fst_coeffs[i])*(1/2*snd_coeffs[i] + 1/2*snd_coeffs[j] + 1))^2
-                /abs(fst_coeffs[i]);
-                h2 := 1/abs(fst_coeffs[j]);
-            end if;
-$ifdef LOG_TIME
-            END_LOG_TIME("bound_poly",0)
-$endif
-            return [expand(h1*basis[i] + h2*basis[j]), h1, h2, i, j];
-        end do;
-    end do;
-end proc;
-
 # We assume:
 # 1. SemiAlgebraic(B_poly) is compact
 # Return: list of sums of squares multipliers l
@@ -282,7 +282,7 @@ $endif
     # DEBUG if problems
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> M", M));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> M", evalf(M)));
-    #M := convert(evalf(M), rational);
+    # M := convert(evalf(M), rational);
     if evalf(M < 0) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done because f is strictly positive over SemiAlgebraic(B_poly)"));
         END_LOG_TIME("averkov_lemma_7",0)
@@ -536,17 +536,13 @@ local pos_coeff1, pos_coeff2, N1, N2;
         N := ceil(1/2*subs(alpha=pos_coeff, _exp1));
     end if;
 
-    DEBUG(__FILE__, __LINE__,true, lprint(">>> N before ENABLE_BINARY_SEARCH", evalf(N)));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> N before ENABLE_BINARY_SEARCH", evalf(N)));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N pos_coeff", N, pos_coeff));
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::compute_N_heuristic",5);
 $endif
 
-#local N_guess := 50; # Works with ENABLE_OLD_APPROACH_AVERKOV true
-#local N_guess := 20; # Works with ENABLE_OLD_APPROACH_AVERKOV true
-#local N_guess := 20; # Doesnt work with ENABLE_OLD_APPROACH_AVERKOV false
-#local N_guess := 40; # Doesnt work with ENABLE_OLD_APPROACH_AVERKOV false
-local N_guess := 70; # Works with ENABLE_OLD_APPROACH_AVERKOV true
+local N_guess := 70; 
     if (N > N_guess) then
         g := add(term,
                  term in map(g_i -> 1/pos_coeff*g_i*((g_i - _gamma)/(_gamma + eps))^(2*N_guess), basis));
@@ -575,7 +571,6 @@ $endif
     #
     # TODO Decide a threshold to trigger binary search optimization
     #if ENABLE_BINARY_SEARCH and N < BINARY_SEARCH_TRIGGER then
-
     if ENABLE_BINARY_SEARCH then
         local N_top := N;
         local N_bottom := 0;
@@ -612,7 +607,7 @@ $endif
             N := N_top;
         end if;
 
-        DEBUG(__FILE__, __LINE__,true, lprint(">>> N after ENABLE_BINARY_SEARCH", evalf(N)));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> N after ENABLE_BINARY_SEARCH", evalf(N)));
     end if;
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N: ", N));
@@ -686,6 +681,8 @@ $endif
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> S", S));
     d_g := degree(expand(g), x);
     _point := S[1][1];
+    # ToDiscuss Is it needed to make this point a rational number?
+    _point := convert(evalf(_point), rational);
 $ifdef LOG_TIME
     END_LOG_TIME("Lower_bound_poly::SemiAlgebraic(g)",2);
 $endif
@@ -710,7 +707,7 @@ $endif
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> To optimize", diff(poly,x)*G - poly*diff(G, x) ));
 
     #local opt_roots := [RealDomain:-solve(diff(poly,x)*G - poly*diff(G, x) = 0, x)];
-#local opt_roots := map(evalf, [RealDomain:-solve(diff(poly,x)*G - poly*diff(G, x) = 0, x)]);
+    #local opt_roots := map(evalf, [RealDomain:-solve(diff(poly,x)*G - poly*diff(G, x) = 0, x)]);
 local opt_roots := map(out -> op(out)[2], evalf(Isolate(diff(poly,x)*G - poly*diff(G, x))));
 
 $ifdef LOG_TIME
@@ -751,6 +748,10 @@ $endif
     return C*h;
 end proc;
 
+# We assume:
+# 1. _poly is strictly positive over SemiAlgebraic([g >= 0], [x])
+# 2. _poly has a lowerbound over \mathbb{R}, i.e., SemiAlgebraic([_poly <= 0], [x]) is bounded
+# 3. SemiAlgebraic([g >= 0], [x]) is bounded
 local Last_step := proc(x, _poly, g)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("Last_step",0)
@@ -766,19 +767,18 @@ local m, mu, interval, lowerbound, upperbound;
 local R := PolynomialRing([x]);
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
-    # TODO uncomment the following block
-    #if SemiAlgebraic([poly < 0],[x]) = [] then
-    #DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done because poly is a sos"));
-#$ifdef LOG_TIME
-    #END_LOG_TIME("Last_step",0)
-#$endif
-    #return 0;
-    #end if;
+    if SemiAlgebraic([poly < 0],[x]) = [] then
+    # if Isolate(poly) = [] then
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done because poly is a sos"));
+$ifdef LOG_TIME
+        END_LOG_TIME("Last_step",0)
+$endif
+        return 0;
+    end if;
 
     # Since poly is not a non-negative
     # polynomial, we can assume the min value
     # for `poly` is negative
-
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g", g));
 
@@ -812,9 +812,12 @@ $endif
     #eps := -1/2*convert((Maximize(g, {poly <= 0})[1]), rational, exact);
     # |-
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Start computation of SemiAlg_poly", poly));
-#1 local SemiAlg_poly := SemiAlgebraic([poly<=0], [x]);
+    #1 local SemiAlg_poly := SemiAlgebraic([poly <= 0], [x]);
 local _SemiAlg_poly := map(arg -> op(arg)[2], Isolate(poly));
 local _old_point;
+    # SemiAlg_poly is the semialgebraic set of -poly
+    # Since poly has a lower bound in \mathbb{R}, then
+    # SemiAlgebraic([poly <= 0], [x]) is bounded
 local SemiAlg_poly := [];
     for i from 1 to nops(_SemiAlg_poly) do
         if type(i, even) then
@@ -824,7 +827,6 @@ local SemiAlg_poly := [];
     end do;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done computation of SemiAlg_poly", SemiAlg_poly));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Start computation of eps"));
-    # TODO Fix the following
     eps := -1/2*max(
         map(proc(bound)
                 #1 interval := bound_info(x, bound, 0);
@@ -849,19 +851,19 @@ local SemiAlg_poly := [];
     semialgebraic_eps_lifted := SemiAlgebraic(
         [g + 17/10*eps >= 0], [x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done computation of semialgebraic_eps_lifted", semialgebraic_eps_lifted));
-    # TODO Uncomment the following block
-    #mu := min(
-    #map(proc(bound)
-    #interval := bound_info(x, bound, 0);
-    ## TOCHECK
-    ## This might introduce a bug if `lowerbound > upperbound`
-    ## happens to be true for some reason
-    #lowerbound := convert(evalf(interval[1]), rational);
-    #upperbound := convert(evalf(interval[2]), rational);
-    #simplify(minimize(poly, x = lowerbound .. upperbound))
-    #end proc,
-    #semialgebraic_eps_lifted));
-    mu := 58/100;
+    mu := min(
+        map(proc(bound)
+                interval := bound_info(x, bound, 0);
+                # TOCHECK
+                # This might introduce a bug if `lowerbound > upperbound`
+                # happens to be true for some reason
+                lowerbound := convert(evalf(interval[1]), rational);
+                upperbound := convert(evalf(interval[2]), rational);
+                #simplify(minimize(poly, x = lowerbound .. upperbound))
+                simplify(Minimize(poly, {lowerbound <= x, x <= upperbound})[1])
+            end proc,
+            semialgebraic_eps_lifted));
+    mu := convert(mu, rational);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
     # |-
     # --------
@@ -875,11 +877,12 @@ local SemiAlg_poly := [];
     #ceil((log(mu) - log(2*_gamma))/(log(_gamma) - log(_gamma + eps))),
     #ceil((log(-m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps))));
     # |-
-    # TODO Uncomment the following line
+
     #m := ceil(evalf(minimize(poly))) - 1;
-    m := -467/100*10^488;
+    m := ceil(min(map(point -> subs(x=op(point)[2], poly), Isolate(diff(poly, x))))) - 1;
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> m", m));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> m", evalf(m)));
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Compute exponent N"));
     #
@@ -937,9 +940,6 @@ local _exp2 := (log(-alpha*m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + 
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N after ENABLE_BINARY_SEARCH", evalf(N)));
     end if;
 
-    # TODO Remove the following line
-    #N := 100;
-
     if N = -1 then
 $ifdef LOG_TIME
         END_LOG_TIME("Last_step",0)
@@ -954,6 +954,9 @@ $endif
 end proc;
 
     spCertificates := proc(f, basis, x)
+$ifdef LOG_TIME
+    INIT_START_LOG_TIME("spCertificates",0)
+$endif
     local g, H2, f2, H3, f3, H4, certificates;
 
         g := bound_poly(basis, x);
@@ -987,6 +990,9 @@ end proc;
         certificates := [f - dot_product(basis, certificates), op(certificates)];
         DEBUG(__FILE__, __LINE__, ENABLE_VERIFICATION, lprint(">> This should be zero", expand(f - dot_product([1, op(basis)], certificates))));
         DEBUG(__FILE__, __LINE__, ENABLE_VERIFICATION, lprint(">> Certificates found", op(certificates)));
+$ifdef LOG_TIME
+    END_LOG_TIME("spCertificates",0);
+$endif
         return certificates;
     end proc;
 end module;
