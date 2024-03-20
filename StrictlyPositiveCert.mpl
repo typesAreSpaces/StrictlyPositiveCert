@@ -229,6 +229,53 @@ $endif
     return true;
 end proc;
 
+# Check if poly is strictly positive
+# over S
+# S is a finite list of intervals
+# poly is a polynomial
+computeMin := proc(S, poly, x)
+$ifdef LOG_TIME
+    INIT_START_LOG_TIME("computeMin",0)
+$endif
+local roots_poly := map(sol -> op(sol)[2], Isolate(diff(poly, x)));
+local num_roots := nops(roots_poly);
+DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> roots_poly", roots_poly));
+local curr_point;
+local curr_min := infinity;
+local i, j := 1;
+    for i from 1 to nops(S) do
+        interval := bound_info(x, S[i], 0);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", interval));
+
+        curr_point := subs(x=interval[1], poly);
+        if evalf(curr_point <= curr_min) then
+          curr_min = curr_point;
+        end if;
+        curr_point := subs(x=interval[2], poly);
+        if evalf(curr_point <= curr_min) then
+          curr_min = curr_point;
+        end if;
+
+        while j <= num_roots and evalf(roots_poly[j] < interval[1]) do
+          DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @1", j));
+          j := j + 1;
+        end do;
+
+        while j <= num_roots and evalf(roots_poly[j] < interval[2]) do
+          DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @2", j));
+          curr_point := subs(x=roots_poly[j], poly);
+          if evalf(curr_point <= curr_min) then
+            curr_min := curr_point;
+          end if;
+          j := j + 1;
+        end do;
+    end do;
+$ifdef LOG_TIME
+    END_LOG_TIME("computeMin",0)
+$endif
+    return curr_min;
+end proc;
+
 # We assume:
 # 1. SemiAlgebraic(B_poly) is compact
 # Return: list of sums of squares multipliers l
@@ -853,18 +900,19 @@ local SemiAlg_poly := [];
     semialgebraic_eps_lifted := SemiAlgebraic(
         [g + 17/10*eps >= 0], [x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done computation of semialgebraic_eps_lifted", semialgebraic_eps_lifted));
-    mu := min(
-        map(proc(bound)
-                interval := bound_info(x, bound, 0);
-                # TOCHECK
-                # This might introduce a bug if `lowerbound > upperbound`
-                # happens to be true for some reason
-                lowerbound := convert(evalf(interval[1]), rational);
-                upperbound := convert(evalf(interval[2]), rational);
-                #simplify(minimize(poly, x = lowerbound .. upperbound))
-                simplify(Minimize(poly, {lowerbound <= x, x <= upperbound})[1])
-            end proc,
-            semialgebraic_eps_lifted));
+    #mu := min(
+        #map(proc(bound)
+                #interval := bound_info(x, bound, 0);
+                ## TOCHECK
+                ## This might introduce a bug if `lowerbound > upperbound`
+                ## happens to be true for some reason
+                #lowerbound := convert(evalf(interval[1]), rational);
+                #upperbound := convert(evalf(interval[2]), rational);
+                ##simplify(minimize(poly, x = lowerbound .. upperbound))
+                #simplify(Minimize(poly, {lowerbound <= x, x <= upperbound})[1])
+            #end proc,
+            #semialgebraic_eps_lifted));
+    mu := computeMin(semialgebraic_eps_lifted, poly, x);
     mu := convert(mu, rational);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
     # |-
