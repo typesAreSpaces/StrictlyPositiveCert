@@ -8,7 +8,7 @@ FLAGS=
 QUIET_MODE=
 QUIET_MODE=-q
 
-QUIET_MODE=
+QUIET_MODE=-q
 
 .PHONY: clean all ${OUTPUT}
 

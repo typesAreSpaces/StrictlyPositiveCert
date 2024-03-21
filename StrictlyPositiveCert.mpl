@@ -17,6 +17,7 @@ with(SolveTools, SemiAlgebraic);
 with(RootFinding, Isolate);
 with(Optimization, Maximize, Minimize);
 with(ListTools, FlattenOnce);
+with(RegularChains, SemiAlgebraicSetTools, PolynomialRing);
 
 StrictlyPositiveCert := module() option package;
 
@@ -229,8 +230,8 @@ $endif
     return true;
 end proc;
 
-# Check if poly is strictly positive
-# over S
+# Compute minimum of polynomial poly
+# over semialgebraic set S
 # S is a finite list of intervals
 # poly is a polynomial
 computeMin := proc(S, poly, x)
@@ -239,6 +240,7 @@ $ifdef LOG_TIME
 $endif
 local roots_poly := map(sol -> op(sol)[2], Isolate(diff(poly, x)));
 local num_roots := nops(roots_poly);
+DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
 DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> roots_poly", roots_poly));
 local curr_point;
 local curr_min := infinity;
@@ -248,13 +250,18 @@ local i, j := 1;
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", interval));
 
         curr_point := subs(x=interval[1], poly);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
         if evalf(curr_point <= curr_min) then
-          curr_min = curr_point;
+          curr_min := curr_point;
         end if;
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
+
         curr_point := subs(x=interval[2], poly);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
         if evalf(curr_point <= curr_min) then
-          curr_min = curr_point;
+          curr_min := curr_point;
         end if;
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
 
         while j <= num_roots and evalf(roots_poly[j] < interval[1]) do
           DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @1", j));
@@ -913,7 +920,7 @@ local SemiAlg_poly := [];
             #end proc,
             #semialgebraic_eps_lifted));
     mu := computeMin(semialgebraic_eps_lifted, poly, x);
-    mu := convert(mu, rational);
+    mu := convert(evalf(mu), rational);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
     # |-
     # --------
