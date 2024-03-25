@@ -287,7 +287,7 @@ end proc;
 # 1. SemiAlgebraic(B_poly) is compact
 # Return: list of sums of squares multipliers l
 # such that f - dot_product(l, basis) > 0 over SemiAlgebraic(B_poly)
-local averkov_lemma_7 := proc(x, f, basis, B_poly)
+local averkov_lemma_7 := proc(x, f, basis, B_poly, N_guess)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("averkov_lemma_7",0)
 $endif
@@ -389,7 +389,7 @@ local T := SemiAlgebraic([B_poly >= 0, f < 0], [x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> semialgebraic_of_B", semialgebraic_of_B));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> T", T));
 local rootsPositivePoly := [RealDomain:-solve(f = 0, x)];
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> rootsPositivePoly", rootsPositivePoly));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> rootsPositivePoly", evalf(rootsPositivePoly)));
 local lift_basis := lift -> map(_poly -> _poly - lift - _error, basis);
 local eps_candidates :=
     FlattenOnce(map(
@@ -405,6 +405,7 @@ local eps_candidates :=
                     simplify(maximize(g_i, x = lowerbound .. upperbound))
                 end proc, T)
         end proc, basis));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps_candidates", eps_candidates));
 local is_valid_eps :=
     proc(eps_candidate)
 local i, j, check;
@@ -434,13 +435,17 @@ end proc;
                 infinity
             end if;
         end proc, select(_value -> _value < 0, eps_candidates)));
+
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> valid eps_candidates", map(proc(eps_candidate) if is_valid_eps(eps_candidate) then eps_candidate else infinity end if; end proc, select(_value -> _value < 0, eps_candidates))));
     eps := convert(9/10*evalf(eps), rational);
+    #eps := 15348238952272545710160/109523333592933168367369;
     # If eps = -infinity means that T is the empy list
     if eps = -infinity then
         eps := 1;
     end if;
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", eps));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", evalf(eps)));
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::compute_eps",3);
 $endif
@@ -487,29 +492,30 @@ local _exp1 := (log(2*m*_gamma) - log(alpha*mu))/(log(_gamma + eps) - log(_gamma
 local _exp2 := (log(2*m*_gamma) - log(alpha*M))/(log(_gamma + eps) - log(_gamma));
 local _exp3 := (log(alpha*M) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps));
 local pos_coeff1, pos_coeff2, N1, N2;
-
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _exp1", evalf(subs(alpha=1, _exp1))));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _exp2", evalf(subs(alpha=1, _exp2))));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _exp3", evalf(subs(alpha=1, _exp3))));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> M", M));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> m", m));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", evalf(eps)));
 
     # 1.
-    if evalf(subs(alpha=1, _exp1 <= _exp2 and _exp2 <= _exp3)) then
+    if evalf(subs(alpha=1, simplify(_exp1) <= simplify(_exp2) and simplify(_exp2) <= simplify(_exp3))) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Case 1 @ averkov_lemma_7"));
         pos_coeff1 := convert(
             evalf(
                 solve(
-                    _exp2 = _exp3, alpha, 'maxsols'=1)
+                    simplify(_exp2) = simplify(_exp3), alpha, 'maxsols'=1)
                  ),
             rational);
         pos_coeff2 := convert(
             evalf(
                 solve(
-                    _exp1 = _exp3, alpha, 'maxsols'=1)
+                    simplify(_exp1) = simplify(_exp3), alpha, 'maxsols'=1)
                  ),
             rational);
-        N1 := ceil(1/2*subs(alpha=pos_coeff1, _exp3));
-        N2 := max(ceil(1/2*subs(alpha=pos_coeff2, _exp2)), ceil(1/2*subs(alpha=pos_coeff2, _exp3)));
-        if N1 <= N2 then
+        N1 := ceil(1/2*subs(alpha=pos_coeff1, simplify(_exp3)));
+        N2 := max(ceil(1/2*subs(alpha=pos_coeff2, simplify(_exp2))), ceil(1/2*subs(alpha=pos_coeff2, simplify(_exp3))));
+        if evalf(N1 <= N2) then
             N := N1;
             pos_coeff := pos_coeff1;
         else
@@ -519,34 +525,34 @@ local pos_coeff1, pos_coeff2, N1, N2;
     end if;
 
     # 2.
-    if evalf(subs(alpha=1, _exp1 <= _exp3 and _exp3 <= _exp2)) then
+    if evalf(subs(alpha=1, simplify(_exp1) <= simplify(_exp3) and simplify(_exp3) <= simplify(_exp2))) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Case 2 @ averkov_lemma_7"));
         pos_coeff := convert(
             evalf(
                 solve(
-                    _exp3 = _exp2, alpha, 'maxsols'=1)
+                    simplify(_exp3) = simplify(_exp2), alpha, 'maxsols'=1)
                  ),
             rational);
-        N := ceil(1/2*subs(alpha=pos_coeff, _exp2));
+        N := ceil(1/2*subs(alpha=pos_coeff, simplify(_exp2)));
     end if;
 
     # 3.
-    if evalf(subs(alpha=1, _exp2 <= _exp1 and _exp1 <= _exp3)) then
+    if evalf(subs(alpha=1, simplify(_exp2) <= simplify(_exp1) and simplify(_exp1) <= simplify(_exp3))) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Case 3 @ averkov_lemma_7"));
         pos_coeff1 := convert(
             evalf(
                 solve(
-                    _exp1 = _exp3, alpha, 'maxsols'=1)
+                    simplify(_exp1) = simplify(_exp3), alpha, 'maxsols'=1)
                  ),
             rational);
         pos_coeff2 := convert(
             evalf(
                 solve(
-                    _exp2 = _exp3, alpha, 'maxsols'=1)
+                    simplify(_exp2) = simplify(_exp3), alpha, 'maxsols'=1)
                  ),
             rational);
-        N1 := ceil(1/2*subs(alpha=pos_coeff1, _exp3));
-        N2 := max(ceil(1/2*subs(alpha=pos_coeff2, _exp1)), ceil(1/2*subs(alpha=pos_coeff2, _exp3)));
+        N1 := ceil(evalf(1/2*subs(alpha=pos_coeff1, simplify(_exp3))));
+        N2 := max(ceil(evalf(1/2*subs(alpha=pos_coeff2, simplify(_exp1)))), ceil(evalf(1/2*subs(alpha=pos_coeff2, simplify(_exp3)))));
         if N1 <= N2 then
             N := N1;
             pos_coeff := pos_coeff1;
@@ -557,39 +563,39 @@ local pos_coeff1, pos_coeff2, N1, N2;
     end if;
 
     # 4.
-    if evalf(subs(alpha=1,_exp2 <= _exp3 and _exp3 <= _exp1)) then
+    if evalf(subs(alpha=1,simplify(_exp2) <= simplify(_exp3) and simplify(_exp3) <= simplify(_exp1))) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Case 4 @ averkov_lemma_7"));
         pos_coeff := convert(
             evalf(
                 solve(
-                    _exp3 = _exp1, alpha, 'maxsols'=1)
+                    simplify(_exp3) = simplify(_exp1), alpha, 'maxsols'=1)
                  ),
             rational);
-        N := ceil(1/2*subs(alpha=pos_coeff, _exp1));
+        N := ceil(1/2*subs(alpha=pos_coeff, simplify(_exp1)));
     end if;
 
     # 5.
-    if evalf(subs(alpha=1,_exp3 <= _exp1 and _exp1 <= _exp2)) then
+    if evalf(subs(alpha=1,simplify(_exp3) <= simplify(_exp1) and simplify(_exp1) <= simplify(_exp2))) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Case 5 @ averkov_lemma_7"));
         pos_coeff := convert(
             evalf(
                 solve(
-                    _exp3 = _exp2, alpha, 'maxsols'=1)
+                    simplify(_exp3) = simplify(_exp2), alpha, 'maxsols'=1)
                  ),
             rational);
-        N := ceil(1/2*subs(alpha=pos_coeff, _exp2));
+        N := ceil(1/2*subs(alpha=pos_coeff, simplify(_exp2)));
     end if;
 
     # 6.
-    if evalf(subs(alpha=1,_exp3 <= _exp2 and _exp2 <= _exp1)) then
+    if evalf(subs(alpha=1,simplify(_exp3) <= simplify(_exp2) and simplify(_exp2) <= simplify(_exp1))) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Case 6 @ averkov_lemma_7"));
         pos_coeff := convert(
             evalf(
                 solve(
-                    _exp3 = _exp1, alpha, 'maxsols'=1)
+                    simplify(_exp3) = simplify(_exp1), alpha, 'maxsols'=1)
                  ),
             rational);
-        N := ceil(1/2*subs(alpha=pos_coeff, _exp1));
+        N := ceil(1/2*subs(alpha=pos_coeff, simplify(_exp1)));
     end if;
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> N before ENABLE_BINARY_SEARCH", evalf(N)));
@@ -598,7 +604,6 @@ $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::compute_N_heuristic",5);
 $endif
 
-local N_guess := 70; 
     if (N > N_guess) then
         g := add(term,
                  term in map(g_i -> 1/pos_coeff*g_i*((g_i - _gamma)/(_gamma + eps))^(2*N_guess), basis));
@@ -657,7 +662,7 @@ $endif
             N_old := N_curr;
         end do;
 
-        if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([], [B_poly, - f], [], [], R) then
+        if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([B_poly >= 0, f <= 0], R) then
             N := -1;
         else
             N := N_top;
@@ -988,7 +993,7 @@ local _exp2 := (log(-alpha*m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + 
             N_old := N_curr;
         end do;
 
-        if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([], [-_poly], [], [], R) then
+        if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([_poly <= 0], R) then
             N := -1;
         else
             N := N_top;
@@ -1021,7 +1026,7 @@ $endif
 
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Poly f for averkov_lemma_7", f));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Poly g[1] for averkov_lemma_7", g[1]));
-        H2 := averkov_lemma_7(x, f, basis, g[1]);
+        H2 := averkov_lemma_7(x, f, basis, g[1], 70);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with averkov_lemma_7"));
 
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> H2", H2));
