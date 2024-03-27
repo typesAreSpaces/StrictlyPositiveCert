@@ -234,54 +234,54 @@ end proc;
 # over semialgebraic set S
 # S is a finite list of intervals
 # poly is a polynomial
-computeMin := proc(S, poly, x)
+    computeMin := proc(S, poly, x)
 $ifdef LOG_TIME
-    INIT_START_LOG_TIME("computeMin",0)
+        INIT_START_LOG_TIME("computeMin",0)
 $endif
-local roots_poly := map(sol -> op(sol)[2], Isolate(diff(poly, x)));
-local num_roots := nops(roots_poly);
-DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
-DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> roots_poly", roots_poly));
-local curr_point;
-local curr_min := infinity;
-local i, j := 1;
-    for i from 1 to nops(S) do
-        interval := bound_info(x, S[i], 0);
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", interval));
+    local roots_poly := map(sol -> op(sol)[2], Isolate(diff(poly, x)));
+    local num_roots := nops(roots_poly);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> roots_poly", roots_poly));
+    local curr_point;
+    local curr_min := infinity;
+    local i, j := 1;
+        for i from 1 to nops(S) do
+            interval := bound_info(x, S[i], 0);
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", interval));
 
-        curr_point := subs(x=interval[1], poly);
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
-        if evalf(curr_point <= curr_min) then
-          curr_min := curr_point;
-        end if;
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
+            curr_point := subs(x=interval[1], poly);
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
+            if evalf(curr_point <= curr_min) then
+                curr_min := curr_point;
+            end if;
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
 
-        curr_point := subs(x=interval[2], poly);
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
-        if evalf(curr_point <= curr_min) then
-          curr_min := curr_point;
-        end if;
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
+            curr_point := subs(x=interval[2], poly);
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
+            if evalf(curr_point <= curr_min) then
+                curr_min := curr_point;
+            end if;
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
 
-        while j <= num_roots and evalf(roots_poly[j] < interval[1]) do
-          DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @1", j));
-          j := j + 1;
+            while j <= num_roots and evalf(roots_poly[j] < interval[1]) do
+                DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @1", j));
+                j := j + 1;
+            end do;
+
+            while j <= num_roots and evalf(roots_poly[j] < interval[2]) do
+                DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @2", j));
+                curr_point := subs(x=roots_poly[j], poly);
+                if evalf(curr_point <= curr_min) then
+                    curr_min := curr_point;
+                end if;
+                j := j + 1;
+            end do;
         end do;
-
-        while j <= num_roots and evalf(roots_poly[j] < interval[2]) do
-          DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @2", j));
-          curr_point := subs(x=roots_poly[j], poly);
-          if evalf(curr_point <= curr_min) then
-            curr_min := curr_point;
-          end if;
-          j := j + 1;
-        end do;
-    end do;
 $ifdef LOG_TIME
-    END_LOG_TIME("computeMin",0)
+        END_LOG_TIME("computeMin",0)
 $endif
-    return curr_min;
-end proc;
+        return curr_min;
+    end proc;
 
 # We assume:
 # 1. SemiAlgebraic(B_poly) is compact
@@ -829,7 +829,7 @@ local R := PolynomialRing([x]);
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
     if SemiAlgebraic([poly < 0],[x]) = [] then
-    # if Isolate(poly) = [] then
+        # if Isolate(poly) = [] then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done because poly is a sos"));
 $ifdef LOG_TIME
         END_LOG_TIME("Last_step",0)
@@ -913,17 +913,17 @@ local SemiAlg_poly := [];
         [g + 17/10*eps >= 0], [x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done computation of semialgebraic_eps_lifted", semialgebraic_eps_lifted));
     #mu := min(
-        #map(proc(bound)
-                #interval := bound_info(x, bound, 0);
-                ## TOCHECK
-                ## This might introduce a bug if `lowerbound > upperbound`
-                ## happens to be true for some reason
-                #lowerbound := convert(evalf(interval[1]), rational);
-                #upperbound := convert(evalf(interval[2]), rational);
-                ##simplify(minimize(poly, x = lowerbound .. upperbound))
-                #simplify(Minimize(poly, {lowerbound <= x, x <= upperbound})[1])
-            #end proc,
-            #semialgebraic_eps_lifted));
+    #map(proc(bound)
+    #interval := bound_info(x, bound, 0);
+    ## TOCHECK
+    ## This might introduce a bug if `lowerbound > upperbound`
+    ## happens to be true for some reason
+    #lowerbound := convert(evalf(interval[1]), rational);
+    #upperbound := convert(evalf(interval[2]), rational);
+    ##simplify(minimize(poly, x = lowerbound .. upperbound))
+    #simplify(Minimize(poly, {lowerbound <= x, x <= upperbound})[1])
+    #end proc,
+    #semialgebraic_eps_lifted));
     mu := computeMin(semialgebraic_eps_lifted, poly, x);
     mu := convert(evalf(mu), rational);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
@@ -1017,7 +1017,7 @@ end proc;
 
     spCertificates := proc(f, basis, x)
 $ifdef LOG_TIME
-    INIT_START_LOG_TIME("spCertificates",0)
+        INIT_START_LOG_TIME("spCertificates",0)
 $endif
     local g, H2, f2, H3, f3, H4, certificates;
 
@@ -1053,7 +1053,7 @@ $endif
         DEBUG(__FILE__, __LINE__, ENABLE_VERIFICATION, lprint(">> This should be zero", expand(f - dot_product([1, op(basis)], certificates))));
         DEBUG(__FILE__, __LINE__, ENABLE_VERIFICATION, lprint(">> Certificates found", op(certificates)));
 $ifdef LOG_TIME
-    END_LOG_TIME("spCertificates",0);
+        END_LOG_TIME("spCertificates",0);
 $endif
         return certificates;
     end proc;
