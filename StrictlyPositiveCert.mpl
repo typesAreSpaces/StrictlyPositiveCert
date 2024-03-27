@@ -234,54 +234,54 @@ end proc;
 # over semialgebraic set S
 # S is a finite list of intervals
 # poly is a polynomial
-    computeMin := proc(S, poly, x)
+local computeMin := proc(S, poly, x)
 $ifdef LOG_TIME
-        INIT_START_LOG_TIME("computeMin",0)
+    INIT_START_LOG_TIME("computeMin",0)
 $endif
-    local roots_poly := map(sol -> op(sol)[2], Isolate(diff(poly, x)));
-    local num_roots := nops(roots_poly);
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> roots_poly", roots_poly));
-    local curr_point;
-    local curr_min := infinity;
-    local i, j := 1;
-        for i from 1 to nops(S) do
-            interval := bound_info(x, S[i], 0);
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", interval));
+local roots_poly := map(sol -> op(sol)[2], Isolate(diff(poly, x)));
+local num_roots := nops(roots_poly);
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> roots_poly", roots_poly));
+local curr_point;
+local curr_min := infinity;
+local i, j := 1;
+    for i from 1 to nops(S) do
+        interval := bound_info(x, S[i], 0);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", interval));
 
-            curr_point := subs(x=interval[1], poly);
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
-            if evalf(curr_point <= curr_min) then
-                curr_min := curr_point;
-            end if;
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
+        curr_point := subs(x=interval[1], poly);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
+        if evalf(curr_point <= curr_min) then
+            curr_min := curr_point;
+        end if;
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
 
-            curr_point := subs(x=interval[2], poly);
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
-            if evalf(curr_point <= curr_min) then
-                curr_min := curr_point;
-            end if;
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
+        curr_point := subs(x=interval[2], poly);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
+        if evalf(curr_point <= curr_min) then
+            curr_min := curr_point;
+        end if;
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
 
-            while j <= num_roots and evalf(roots_poly[j] < interval[1]) do
-                DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @1", j));
-                j := j + 1;
-            end do;
-
-            while j <= num_roots and evalf(roots_poly[j] < interval[2]) do
-                DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @2", j));
-                curr_point := subs(x=roots_poly[j], poly);
-                if evalf(curr_point <= curr_min) then
-                    curr_min := curr_point;
-                end if;
-                j := j + 1;
-            end do;
+        while j <= num_roots and evalf(roots_poly[j] < interval[1]) do
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @1", j));
+            j := j + 1;
         end do;
+
+        while j <= num_roots and evalf(roots_poly[j] < interval[2]) do
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @2", j));
+            curr_point := subs(x=roots_poly[j], poly);
+            if evalf(curr_point <= curr_min) then
+                curr_min := curr_point;
+            end if;
+            j := j + 1;
+        end do;
+    end do;
 $ifdef LOG_TIME
-        END_LOG_TIME("computeMin",0)
+    END_LOG_TIME("computeMin",0)
 $endif
-        return curr_min;
-    end proc;
+    return curr_min;
+end proc;
 
 # We assume:
 # 1. SemiAlgebraic(B_poly) is compact
@@ -698,7 +698,7 @@ end proc;
 # 1. SemiAlgebraic(g) is bounded
 # Return: list of polynomials l
 # such that poly - l[2] has a lowerbound
-# over \mathbb{R}
+# over \mathbb{}
 local Lower_bound_poly := proc(x, poly, g)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("Lower_bound_poly",0)
@@ -725,7 +725,7 @@ $endif
 
     # If poly has a lowerbound over \mathbb{R}
     # then make no changes to poly
-    if type(d_poly, even) and evalb(evala(c_poly) > 0) then
+    if type(d_poly, even) and evalb(evalf(c_poly) > 0) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly is bounded: "));
 $ifdef LOG_TIME
         END_LOG_TIME("Lower_bound_poly",0)
@@ -764,19 +764,23 @@ $endif
         h := 1;
     end if;
     G := h*g;
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h", h));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> G", G));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> To optimize", diff(poly,x)*G - poly*diff(G, x) ));
 
     #local opt_roots := [RealDomain:-solve(diff(poly,x)*G - poly*diff(G, x) = 0, x)];
     #local opt_roots := map(evalf, [RealDomain:-solve(diff(poly,x)*G - poly*diff(G, x) = 0, x)]);
-local opt_roots := map(out -> op(out)[2], evalf(Isolate(diff(poly,x)*G - poly*diff(G, x))));
+#local opt_roots := map(out -> op(out)[2], evalf(Isolate(diff(poly,x)*G - poly*diff(G, x), maxprec=100, digits=30)));
+    #Digits:=30;
+local opt_roots := map(out -> op(out)[2], Isolate(diff(poly,x)*G - poly*diff(G, x), maxprec=1000, digits=30));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> opt_roots", opt_roots));
 
 $ifdef LOG_TIME
     START_LOG_TIME("Lower_bound_poly::Minimization_problem",3);
 $endif
     # We just need a lowerbound, not the
     # tightest lowerbound [to discuss later]
-    C := 1/2*min(
+    C := 9/10*min(
         seq(
             if evalb(S[i][1] = S[i][2]) then
                 # If we are minimizing over
@@ -787,7 +791,8 @@ $endif
                 min(
                     map(
                         x_arg -> subs({x=x_arg}, poly/G),
-                        select(_root -> evalf(S[i][1] <= _root) and evalf(_root <= S[i][2]), opt_roots)))
+                        #select(_root -> evalf(S[i][1] <= _root) and evalf(_root <= S[i][2]), opt_roots)))
+                        opt_roots))
                 #minimize(
                 #simplify(poly/G),
                 #x = S[i][1] .. S[i][2])
@@ -828,8 +833,8 @@ local m, mu, interval, lowerbound, upperbound;
 local R := PolynomialRing([x]);
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
-    if SemiAlgebraic([poly < 0],[x]) = [] then
-        # if Isolate(poly) = [] then
+    #if SemiAlgebraic([poly < 0],[x]) = [] then
+    if Isolate(poly) = [] then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done because poly is a sos"));
 $ifdef LOG_TIME
         END_LOG_TIME("Last_step",0)
@@ -840,6 +845,7 @@ $endif
     # Since poly is not a non-negative
     # polynomial, we can assume the min value
     # for `poly` is negative
+
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g", g));
 
@@ -873,7 +879,7 @@ $endif
     #eps := -1/2*convert((Maximize(g, {poly <= 0})[1]), rational, exact);
     # |-
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Start computation of SemiAlg_poly", poly));
-    #1 local SemiAlg_poly := SemiAlgebraic([poly <= 0], [x]);
+    #1 local SemiAlg_poly := SemiAlgebraic([poly<=0], [x]);
 local _SemiAlg_poly := map(arg -> op(arg)[2], Isolate(poly));
 local _old_point;
     # SemiAlg_poly is the semialgebraic set of -poly
