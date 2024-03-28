@@ -187,6 +187,7 @@ local local_poly := realroot(diff(poly, x), 1/10000);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> local_poly", evalf(local_poly)));
 local curr_point;
 local i, j := 1;
+local interval;
     for i from 1 to nops(S) do
         interval := bound_info(x, S[i], 0);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", interval));
@@ -245,6 +246,7 @@ local num_roots := nops(roots_poly);
 local curr_point;
 local curr_min := infinity;
 local i, j := 1;
+local interval;
     for i from 1 to nops(S) do
         interval := bound_info(x, S[i], 0);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", interval));
@@ -339,7 +341,9 @@ $endif
     # M := convert(evalf(M), rational);
     if evalf(M < 0) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done because f is strictly positive over SemiAlgebraic(B_poly)"));
+$ifdef LOG_TIME
         END_LOG_TIME("averkov_lemma_7",0)
+$endif
         return map(g_i -> 0, basis);
     end if;
 
