@@ -1,4 +1,4 @@
-$define ENABLE_DEBUGGING      false
+$define ENABLE_DEBUGGING      true
 $define ENABLE_VERIFICATION   false
 $define ENABLE_BINARY_SEARCH  true
 $define ENABLE_N_HEURISTIC    false
@@ -209,8 +209,8 @@ $endif
         end if;
         curr_point := (local_poly[j,1]+local_poly[j,2])/2;
         while j <= nops(local_poly) and evalf(interval[1] > curr_point) do
-            j := j + 1;
             curr_point := (local_poly[j,1]+local_poly[j,2])/2;
+            j := j + 1;
         end do;
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
         while j <= nops(local_poly) and evalf(curr_point <= interval[2]) do
@@ -249,16 +249,16 @@ local i, j := 1;
 local interval;
     for i from 1 to nops(S) do
         interval := bound_info(x, S[i], 0);
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", interval));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", evalf(interval)));
 
-        curr_point := subs(x=interval[1], poly);
+        curr_point := evalf(subs(x=convert(interval[1], rational), poly));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
         if evalf(curr_point <= curr_min) then
             curr_min := curr_point;
         end if;
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
 
-        curr_point := subs(x=interval[2], poly);
+        curr_point := evalf(subs(x=convert(interval[2], rational), poly));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
         if evalf(curr_point <= curr_min) then
             curr_min := curr_point;
@@ -272,9 +272,11 @@ local interval;
 
         while j <= num_roots and evalf(roots_poly[j] < interval[2]) do
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @2", j));
-            curr_point := subs(x=roots_poly[j], poly);
+            curr_point := evalf(subs(x=convert(roots_poly[j], rational), poly));
             if evalf(curr_point <= curr_min) then
                 curr_min := curr_point;
+                DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_arg_min", evalf(roots_poly[j])));
+                DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", evalf(curr_min)));
             end if;
             j := j + 1;
         end do;
@@ -332,6 +334,7 @@ $endif
             end proc,
             semialgebraic_of_B)
              );
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> ok"));
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::Minimization_f",1);
 $endif
@@ -795,8 +798,8 @@ $endif
                 min(
                     map(
                         x_arg -> subs({x=x_arg}, poly/G),
-                        #select(_root -> evalf(S[i][1] <= _root) and evalf(_root <= S[i][2]), opt_roots)))
-                        opt_roots))
+                        select(_root -> evalf(S[i][1] <= _root) and evalf(_root <= S[i][2]), opt_roots)))
+                        #opt_roots))
                 #minimize(
                 #simplify(poly/G),
                 #x = S[i][1] .. S[i][2])
@@ -918,10 +921,11 @@ local SemiAlg_poly := [];
     # DEBUG if problems
     eps := convert(evalf(eps), rational);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps:", eps));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g:", g));
 
     semialgebraic_eps_lifted := SemiAlgebraic(
         [g + 17/10*eps >= 0], [x]);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done computation of semialgebraic_eps_lifted", semialgebraic_eps_lifted));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done computation of semialgebraic_eps_lifted", evalf(semialgebraic_eps_lifted)));
     #mu := min(
     #map(proc(bound)
     #interval := bound_info(x, bound, 0);
@@ -1029,6 +1033,9 @@ end proc;
 $ifdef LOG_TIME
         INIT_START_LOG_TIME("spCertificates",0)
 $endif
+        if SemiAlgebraic([f < 0], [x]) = [] then
+          return [f, op(map(0, basis))];
+        end if;
     local g, H2, f2, H3, f3, H4, certificates;
 
         g := bound_poly(basis, x);
