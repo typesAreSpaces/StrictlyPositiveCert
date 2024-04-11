@@ -322,19 +322,7 @@ $endif
     # --------
     # M := -min(seq(minimize(poly, x = B[i][1] .. B[i][2]), i = 1 .. numelems(B)));
     # |-
-    M := -min(
-        map(proc(bound)
-                interval := bound_info(x, bound, 0);
-                # TOCHECK
-                # This might introduce a bug if `lowerbound > upperbound`
-                # happens to be true for some reason
-                lowerbound := convert(evalf(interval[1]), rational);
-                upperbound := convert(evalf(interval[2]), rational);
-                simplify(minimize(f, x = lowerbound .. upperbound))
-            end proc,
-            semialgebraic_of_B)
-             );
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> ok"));
+    M := -computeMin(semialgebraic_of_B, f, x);
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::Minimization_f",1);
 $endif
@@ -441,9 +429,9 @@ end proc;
             else
                 infinity
             end if;
-        end proc, select(_value -> _value < 0, eps_candidates)));
+        end proc, select(_value -> evalf(_value < 0), eps_candidates)));
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> valid eps_candidates", map(proc(eps_candidate) if is_valid_eps(eps_candidate) then eps_candidate else infinity end if; end proc, select(_value -> _value < 0, eps_candidates))));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> valid eps_candidates", map(proc(eps_candidate) if is_valid_eps(eps_candidate) then eps_candidate else infinity end if; end proc, select(_value -> evalf(_value < 0), eps_candidates))));
     eps := convert(9/10*evalf(eps), rational);
     #eps := 15348238952272545710160/109523333592933168367369;
     # If eps = -infinity means that T is the empy list
@@ -468,18 +456,7 @@ $endif
     # |-
 local semialgebraic_for_mu := SemiAlgebraic([B_poly >= 0, op(map(g_i -> g_i + 17/10*eps >= 0, basis))], [x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> semialgebraic_for_mu", semialgebraic_for_mu));
-    mu := min(
-        map(proc(bound)
-                interval := bound_info(x, bound, 0);
-                # TOCHECK
-                # This might introduce a bug if `lowerbound > upperbound`
-                # happens to be true for some reason
-                lowerbound := convert(evalf(interval[1]), rational);
-                upperbound := convert(evalf(interval[2]), rational);
-                simplify(minimize(f, x = lowerbound .. upperbound))
-            end proc,
-            semialgebraic_for_mu)
-             );
+    mu := computeMin(semialgebraic_for_mu, f, x);
 
     # DEBUG if problems
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
