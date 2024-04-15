@@ -1,7 +1,9 @@
+with(SolveTools, SemiAlgebraic);
 with(StrictlyPositiveCert):
 
 basis := [-(x+3)*(x+2)*(x-2)*(x-3)*(x-13)*(x+13)];
 
+# -----------------------------------------------------------------------------
 sigma := 2967271/21632698560*x^3+4191089/4506812200*x^2-168521967/7210899520
 *x+4978748893/54081746400-87/10242755*x^4-71/50123439*(2967271/21632698560*x^3+
 4191089/4506812200*x^2-168521967/7210899520*x+4978748893/54081746400-87/
@@ -136,10 +138,6 @@ x+1014))^145+(1-71/50123439*(x+3)*(x+2)*(-x^4+5*x^3+163*x^2-845*x+1014))^146+(1
 +5*x^3+163*x^2-845*x+1014))^149+(1-71/50123439*(x+3)*(x+2)*(-x^4+5*x^3+163*x^2-\
 845*x+1014))^150)*(-x^4+5*x^3+163*x^2-845*x+1014);
 
-#lprint(sqrfree(sigma));
-#sigma_real := -(-9957497786 + 2527829505*x - 100586136*x^2 - 14836355*x^3 + 918720*x^4);
-#lprint(spCertificates(sigma_real, basis, x));
-
 tau := 1/10560*x+13/26400-87/10242755*(x+3)*(x+2)+71/50123439*(2967271/
 21632698560*x^3+4191089/4506812200*x^2-168521967/7210899520*x+4978748893/
 54081746400-87/10242755*x^4)*(x+3)^2*(x+2)^2*(2-71/50123439*(x+3)*(x+2)*(-x^4+5
@@ -272,6 +270,54 @@ x+1014))^136+(1-71/50123439*(x+3)*(x+2)*(-x^4+5*x^3+163*x^2-845*x+1014))^137+(1
 x+1014))^147+(1-71/50123439*(x+3)*(x+2)*(-x^4+5*x^3+163*x^2-845*x+1014))^148+(1
 -71/50123439*(x+3)*(x+2)*(-x^4+5*x^3+163*x^2-845*x+1014))^149+(1-71/50123439*(x
 +3)*(x+2)*(-x^4+5*x^3+163*x^2-845*x+1014))^150);
+# -----------------------------------------------------------------------------
 
-#lprint(sqrfree(tau));
-lprint(spCertificates(tau, basis, x));
+decomposeSOSFactors := proc(f, x);
+    local sqrfree_f , todo, i;
+    local _poly, _multiplicity;
+
+    local sos := 1, rest;
+
+    sqrfree_f := sqrfree(f, x);
+    todo := op(sqrfree_f)[2];
+    rest := op(sqrfree_f)[1];
+
+    for i from 1 to nops(todo) do
+      _poly := todo[i][1];
+      _multiplicity := todo[i][2];
+      if type(_multiplicity, even) then
+          sos := sos*(_poly)^_multiplicity;
+      else
+        if evalb(SemiAlgebraic([_poly < 0], [x]) = []) then
+          sos := sos*(_poly)^_multiplicity;
+        else
+          rest := rest*(_poly)^_multiplicity;
+        end if;
+      end if;
+    end do;
+
+    return simplify(sos), simplify(rest);
+end proc;
+
+print(">> Start");
+
+#sigma_sos, sigma_rest := decomposeSOSFactors(sigma, x);
+#lprint(">> sigma_sos", sigma_sos);
+#lprint(">> sigma_rest", sigma_rest);
+
+#sigma_real := -(-9957497786 + 2527829505*x - 100586136*x^2 - 14836355*x^3 + 918720*x^4);
+#lprint(spCertificates(sigma_real, basis, x));
+
+#_tau := sqrfree(tau);
+#lprint(_tau);
+#lprint(spCertificates(tau, basis, x));
+
+
+# TODO
+Gfix := [x+3, (x+2)*(x-1), (x+1)*(x-2), -x+3, -(x+3)*(x-3)];
+Gfix := [x+3, (x+2)*(x-1), (x+1)*(x-2), -x+3];
+sigma := 1/100+35483/1125000*(x+2)*(x-2);
+#lprint(spCertificates(sigma, Gfix, x));
+
+#findEps := proc(basis, T, x)
+lprint(findEps(Gfix, SemiAlgebraic([-sigma >= 0], [x]), x));
