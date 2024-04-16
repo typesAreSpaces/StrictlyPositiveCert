@@ -1,4 +1,4 @@
-$define ENABLE_DEBUGGING      true
+$define ENABLE_DEBUGGING      false
 $define ENABLE_VERIFICATION   false
 $define ENABLE_BINARY_SEARCH  true
 $define ENABLE_N_HEURISTIC    false
@@ -378,7 +378,6 @@ export findEps;
             while true do
                 if j > num_points or evalf(points[j] >= right_end) then
                     g_min := basis[find_g_min(basis, (left_end + right_end)/2, x)];
-                    lprint(">> g_min", g_min);
                     _eps := -computeMinInterval(-g_min, left_end, right_end, x);
                     if eps < _eps then
                         eps := _eps;
@@ -386,7 +385,6 @@ export findEps;
                     break;
                 else
                     g_min := basis[find_g_min(basis, (left_end + points[i])/2, x)];
-                    lprint(">> g_min", g_min);
                     _eps := -computeMinInterval(-g_min, left_end, points[i], x);
                     if eps < _eps then
                         eps := _eps;
@@ -396,9 +394,9 @@ export findEps;
                 end if;
             end do;
         end do;
-
-        # Goal compute eps so far
-        return -17/20*convert(eps, rational);
+        # TODO Figure out a `better` multiplier
+        # currently using 7/10
+        return -7/10*convert(eps, rational);
     end proc;
 
 # We assume:
@@ -495,64 +493,8 @@ $endif
 local T := SemiAlgebraic([B_poly >= 0, f < 0], [x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis", basis));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> semialgebraic_of_B", semialgebraic_of_B));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> T", T));
-local rootsPositivePoly := [RealDomain:-solve(f = 0, x)];
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> rootsPositivePoly", evalf(rootsPositivePoly)));
-local lift_basis := lift -> map(_poly -> _poly - lift - _error, basis);
-local eps_candidates :=
-    FlattenOnce(map(
-        proc(g_i)
-            map(
-                proc(bound)
-                    interval := bound_info(x, bound, 0);
-                    # TOCHECK
-                    # This might introduce a bug if `lowerbound > upperbound`
-                    # happens to be true for some reason
-                    lowerbound := convert(evalf(interval[1]), rational);
-                    upperbound := convert(evalf(interval[2]), rational);
-                    simplify(maximize(g_i, x = lowerbound .. upperbound))
-                end proc, T)
-        end proc, basis));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps_candidates", eps_candidates));
-local is_valid_eps :=
-    proc(eps_candidate)
-local i, j, check;
-local lifted_basis := lift_basis(eps_candidate);
-    # Check that for all roots
-    # there is at least one negative point
-    for i from 1 to nops(rootsPositivePoly) do
-        # check is true if at least one poly evaluates to a negative number
-        # after lifting with the eps_candidate and substitution at the ith root
-        # of poly
-        check := foldl(
-            (x, y) -> x or y,
-            false,
-            op(map(poly -> evalf(subs(x = rootsPositivePoly[i], poly) < 0), lifted_basis)));
-        if check = false then
-            return false;
-        end if;
-    end do;
-    return true;
-end proc;
-
-    eps := -1/2*min(map(
-        proc(eps_candidate)
-            if is_valid_eps(eps_candidate) then
-                eps_candidate
-            else
-                infinity
-            end if;
-        end proc, select(_value -> evalf(_value < 0), eps_candidates)));
-
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> valid eps_candidates", map(proc(eps_candidate) if is_valid_eps(eps_candidate) then eps_candidate else infinity end if; end proc, select(_value -> evalf(_value < 0), eps_candidates))));
-    eps := convert(9/10*evalf(eps), rational);
-    #eps := 15348238952272545710160/109523333592933168367369;
-    # If eps = -infinity means that T is the empy list
-    if eps = -infinity then
-        eps := 1;
-    end if;
-
+    eps := 1/2*findEps(basis, T, x);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", eps));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", evalf(eps)));
 $ifdef LOG_TIME
