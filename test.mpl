@@ -312,10 +312,33 @@ print(">> Start");
 #lprint(_tau);
 #lprint(spCertificates(tau, basis, x));
 
-Gfix := [x+3, (x+2)*(x-1), (x+1)*(x-2), -x+3, -(x+3)*(x-3)];
-sigma := 1/100+35483/1125000*(x+2)*(x-2);
-lprint(spCertificates(sigma, Gfix, x));
+#Gfix := [x+3, (x+2)*(x-1), (x+1)*(x-2), -x+3, -(x+3)*(x-3)];
+#sigma := 1/100+35483/1125000*(x+2)*(x-2);
+#lprint(spCertificates(sigma, Gfix, x));
 
 #findEps := proc(basis, T, x)
 #Gfix := [x+3, (x+2)*(x-1), (x+1)*(x-2), -x+3];
 #lprint(findEps(Gfix, SemiAlgebraic([-sigma >= 0], [x]), x));
+
+#basis := [-(x+2)*(x+1)*x^2*(x-1)*(x-2) + 4*x^2*(x+1)^2];
+#sigma := -13/1536*x + 53/1536 - 901/248984*(-13/1536*x + 53/1536)*(x + 1)*x^3*(-x^2 + x + 8);
+#lprint(spCertificates(sigma, basis, x));
+
+#tau := -13/1536*x^3 + 9/512*x^2 - 1/64*x + 1/8 + 901/248984*(-13/1536*x + 53/1536)*(x + 1)^2*x^6;
+#lprint(spCertificates(tau, basis, x));
+
+#basis := [-(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)];
+#lprint(spCertificates(66 - 27*x + x^3, basis, x));
+#lprint(spCertificates((x+6)*(66 - 27*x + x^3), basis, x));
+#lprint(spCertificates(x+6, basis, x));
+#lprint(spCertificates((x-13/10)*(x-17/10), basis, x));
+#lprint(spCertificates((x+6)*(x-13/10)*(x-17/10), basis, x));
+#lprint(spCertificates((x+6)*(x-13/10)*(x-17/10)*(-(x-6)), basis, x));
+#lprint(spCertificates((x+6)*(x-13/10)*(x-17/10)*(-(x-6))*(x-7)*(x-8), basis, x));
+
+
+basis := [-(x^2+1)*(x+2)*(x+1)*(x-1)*(x-2)];
+sigma:=-1/10*x^2+3/5+7369/67212*(-1/10*x^2+3/5)*(x^2+1)*(x+2)*(x+1)*(x-1)*(x-2);
+tau:=-1/10+7369/67212*(-1/10*x^2+3/5)*(x^2+1)^2;
+lprint(spCertificates(sigma, basis, x));
+lprint(spCertificates(tau, basis, x));
