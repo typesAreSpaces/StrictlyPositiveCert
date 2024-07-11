@@ -1,4 +1,4 @@
-$define ENABLE_DEBUGGING      false
+$define ENABLE_DEBUGGING      true
 $define ENABLE_VERIFICATION   false
 $define ENABLE_BINARY_SEARCH  true
 $define ENABLE_N_HEURISTIC    false
@@ -384,8 +384,8 @@ export findEps;
                     end if;
                     break;
                 else
-                    g_min := basis[find_g_min(basis, (left_end + points[i])/2, x)];
-                    _eps := -computeMinInterval(-g_min, left_end, points[i], x);
+                    g_min := basis[find_g_min(basis, (left_end + points[j])/2, x)];
+                    _eps := -computeMinInterval(-g_min, left_end, points[j], x);
                     if eps < _eps then
                         eps := _eps;
                     end if;
@@ -395,7 +395,7 @@ export findEps;
             end do;
         end do;
         # TODO Figure out a `better` multiplier
-        # currently using 7/10
+        #
         return -7/10*convert(eps, rational);
     end proc;
 
