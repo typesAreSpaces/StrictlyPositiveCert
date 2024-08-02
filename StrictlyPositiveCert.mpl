@@ -479,6 +479,7 @@ $endif
     # We just need a bound, it doesn't need to be
     # the tightest bound [to discuss later]
     _gamma := ceil(evalf(_gamma));
+    _gamma := max(_gamma, 1);
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> B_poly", B_poly));
