@@ -1,4 +1,4 @@
-$define ENABLE_DEBUGGING      true
+$define ENABLE_DEBUGGING      false
 $define ENABLE_VERIFICATION   false
 $define ENABLE_BINARY_SEARCH  true
 $define ENABLE_N_HEURISTIC    false
@@ -869,7 +869,7 @@ local tobe_disjoint_set;
 local N, N1, N2, poly := _poly, _g;
 local pos_coeff := 1;
 local semialgebraic_eps_lifted;
-local m, mu, interval, lowerbound, upperbound;
+local M, mu, interval, lowerbound, upperbound;
 local R := PolynomialRing([x]);
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
@@ -906,6 +906,7 @@ $endif
     # We just need a lowerbound, not the
     # tightest lowerbound [to discuss later]
     _gamma := convert(1/2*evalf(1.001*maximize(g)), rational);
+    _gamma := max(_gamma, 1);
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
 
@@ -987,11 +988,11 @@ local SemiAlg_poly := [];
     #ceil((log(-m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps))));
     # |-
 
-    #m := ceil(evalf(minimize(poly))) - 1;
-    m := ceil(min(map(point -> subs(x=op(point)[2], poly), Isolate(diff(poly, x))))) - 1;
+    #M := ceil(evalf(minimize(poly))) - 1;
+    M := ceil(min(map(point -> subs(x=op(point)[2], poly), Isolate(diff(poly, x))))) - 1;
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> m", m));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> m", evalf(m)));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> M", M));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> M", evalf(M)));
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Compute exponent N"));
     #
@@ -1000,9 +1001,9 @@ local SemiAlg_poly := [];
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", eps));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> m", m));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> M", M));
 local _exp1 := (log(2*_gamma) - log(alpha*mu))/(log(_gamma + eps) - log(_gamma));
-local _exp2 := (log(-alpha*m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps));
+local _exp2 := (log(-alpha*M) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps));
     pos_coeff := convert(
         evalf(solve(_exp1 = _exp2, alpha, 'maxsols'=1)), rational);
     N := ceil(1/2*subs(alpha=pos_coeff, _exp1));
