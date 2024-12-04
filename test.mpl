@@ -1545,4 +1545,5 @@ p2 := -(x+2)*(x+1)^3*x^2*(x-1/8)*(x-2);
 
 #lprint(spCertificates(sigma1, [g1_1], x));
 
-lprint(spCertificates(10-x^2, [x+1,-(x-1)], x));
+#lprint(spCertificates(10-x^2, [x+1,-(x-1)], x));
+lprint(spCertificates(-(x+4)*(x+1)*(x-1)*(x-4), [-(x+3)*(x+2)*(x-2)*(x-3)], x));
