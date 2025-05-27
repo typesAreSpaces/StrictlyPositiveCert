@@ -1,4 +1,4 @@
-$define ENABLE_DEBUGGING      false
+$define ENABLE_DEBUGGING      true
 $define ENABLE_VERIFICATION   false
 $define ENABLE_BINARY_SEARCH  true
 $define ENABLE_N_HEURISTIC    false
