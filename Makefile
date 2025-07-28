@@ -16,7 +16,7 @@ all: ${OUTPUT}
 
 ${OUTPUT}: ${PROJECT_NAME}.mla ${TEST_FILE}
 	if [ -f ${LOG_FILE} ]; then rm ${LOG_FILE}; fi;
-	maple ${TEST_FILE} ${QUIET_MODE} ${FLAGS} > ${OUTPUT}
+	time maple ${TEST_FILE} ${QUIET_MODE} ${FLAGS} > ${OUTPUT}
 
 ${PROJECT_NAME}.mla: ${PROJECT_NAME}.mpl
 	archive_maple_project.py ${PROJECT_NAME} ${PROJECT_NAME} ${PROJECT_NAME}
