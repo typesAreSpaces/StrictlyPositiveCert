@@ -56,10 +56,10 @@ with(StrictlyPositiveCert):
 #lprint(">> Certificate of tau");
 #map(ok -> lprint(ok, ","), spCertificates(tau, [f*g], x));
 
-g1 := x + 3;
-g2 := (x+2)*(x+1);
-g3 := (x-1)*(x-2);
-g4 := -(x - 3);
+#g1 := x + 3;
+#g2 := (x+2)*(x+1);
+#g3 := (x-1)*(x-2);
+#g4 := -(x - 3);
 
 #sigma := -1/240*x + 1/40;
 #tau := -1/240*x^3 + 11/40 + 9/80*x;
@@ -69,10 +69,12 @@ g4 := -(x - 3);
 #lprint(">> Certificate of tau");
 #map(ok -> lprint(ok, ","), spCertificates(tau, [g1*g2*g3*g4], x));
 
-sigma := -3/40*x+1/20+2657411/299935000*(x+2)*(x+1);
-tau := -3/40*x+11/40-2657411/299935000*(x+3)*(-x+3);
+#sigma := -3/40*x+1/20+2657411/299935000*(x+2)*(x+1);
+#tau := -3/40*x+11/40-2657411/299935000*(x+3)*(-x+3);
 
-lprint(">> Certificate of sigma");
-map(ok -> lprint(ok, ","), spCertificates(sigma, [g1*g2*g4], x));
-lprint(">> Certificate of tau");
-map(ok -> lprint(ok, ","), spCertificates(tau, [g1*g2*g4], x));
+#lprint(">> Certificate of sigma");
+#map(ok -> lprint(ok, ","), spCertificates(sigma, [g1*g2*g4], x));
+#lprint(">> Certificate of tau");
+#map(ok -> lprint(ok, ","), spCertificates(tau, [g1*g2*g4], x));
+
+lprint(spCertificates(2-x^2, [10-x^8], x));
