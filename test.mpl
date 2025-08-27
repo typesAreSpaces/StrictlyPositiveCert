@@ -77,4 +77,6 @@ with(StrictlyPositiveCert):
 #lprint(">> Certificate of tau");
 #map(ok -> lprint(ok, ","), spCertificates(tau, [g1*g2*g4], x));
 
-lprint(spCertificates(2-x^2, [10-x^8], x));
+#lprint(spCertificates(2-x^2, [10-x^8], x));
+
+lprint(spCertificates((x + 1)*(x-1), [-1], x));
