@@ -4,6 +4,7 @@ $define ENABLE_BINARY_SEARCH  true
 $define ENABLE_N_HEURISTIC    false
 $define ENABLE_AVERKOV_CHECK  false
 $define BINARY_SEARCH_TRIGGER 100
+#$define WEIFENG_OPTIMIZATION
 #$define LOG_TIME
 
 $define DEBUG_EXIT lprint(">> Debugging, getting out"); return 0
@@ -21,6 +22,8 @@ with(RegularChains, SemiAlgebraicSetTools, PolynomialRing);
 
 StrictlyPositiveCert := module() option package;
 
+export dot_product;
+export bound_info;
 export spCertificates;
 
 $ifdef LOG_TIME
@@ -39,7 +42,7 @@ $endif
 local degrees, fst_coeffs, snd_coeffs, h1, h2;
 local i, j;
     degrees := map(poly -> degree(poly, x), basis);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> degress", degrees));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> degrees", degrees));
 
     fst_coeffs := map[indices](
         i -> coeff(basis[i], x^degrees[i]), basis);
@@ -63,7 +66,7 @@ $endif
         end if;
     end do;
 
-    # At this point, every element in the basis has odd degree
+# At this point, every element in the basis has odd degree
     for i from 1 to nops(basis) - 1 do
         for j from i + 1 to nops(basis) do
             if fst_coeffs[i]*fst_coeffs[j] > 0 then
@@ -87,12 +90,14 @@ $endif
 $ifdef LOG_TIME
             END_LOG_TIME("bound_poly",0)
 $endif
+DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h1", h1));
+DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h2", h2));
             return [expand(h1*basis[i] + h2*basis[j]), h1, h2, i, j];
         end do;
     end do;
 end proc;
 
-local dot_product := proc(v1, v2)
+    dot_product := proc(v1, v2)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("dot_product",0)
 $endif
@@ -106,7 +111,7 @@ $endif
     return out;
 end proc;
 
-local bound_info := proc(x, bound, eps)
+    bound_info := proc(x, bound, eps)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("bound_info",0)
 $endif
@@ -146,7 +151,14 @@ $endif
     else
         i1 := simplify(op(bound[1])[1]);
         j1 := simplify(op(bound[1])[2]);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Ok", bound));
         if type(bound[1], `=`) then
+            if evalb(i1 = x) and evalb(j1 = x) then
+$ifdef LOG_TIME
+                END_LOG_TIME("bound_info",0)
+$endif
+                return [-infinity, infinity];
+            end if;
             if evalb(i1 = x) then
 $ifdef LOG_TIME
                 END_LOG_TIME("bound_info",0)
@@ -187,7 +199,6 @@ local local_poly := realroot(diff(poly, x), 1/10000);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> local_poly", evalf(local_poly)));
 local curr_point;
 local i, j := 1;
-local interval;
     for i from 1 to nops(S) do
         interval := bound_info(x, S[i], 0);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", interval));
@@ -758,7 +769,7 @@ local eps := 1/1000;
 $ifdef LOG_TIME
     START_LOG_TIME("Lower_bound_poly::expand(poly)",1);
 $endif
-    d_poly := degree(expand(poly), x);
+    d_poly := degree(expand(poly), x); # quick_degree
     c_poly := coeff(poly, x^d_poly);
 $ifdef LOG_TIME
     END_LOG_TIME("Lower_bound_poly::expand(poly)",1);
@@ -781,7 +792,7 @@ $endif
         bound -> bound_info(x, bound, eps),
         SemiAlgebraic([g >= 0], [x]));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> S", S));
-    d_g := degree(expand(g), x);
+    d_g := degree(expand(g), x); # quick_degree
     _point := S[1][1];
     # ToDiscuss Is it needed to make this point a rational number?
     _point := convert(evalf(_point), rational);
@@ -809,9 +820,6 @@ $endif
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> G", G));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> To optimize", diff(poly,x)*G - poly*diff(G, x) ));
 
-    #local opt_roots := [RealDomain:-solve(diff(poly,x)*G - poly*diff(G, x) = 0, x)];
-    #local opt_roots := map(evalf, [RealDomain:-solve(diff(poly,x)*G - poly*diff(G, x) = 0, x)]);
-#local opt_roots := map(out -> op(out)[2], evalf(Isolate(diff(poly,x)*G - poly*diff(G, x), maxprec=100, digits=30)));
     #Digits:=30;
 local opt_roots := map(out -> op(out)[2], Isolate(diff(poly,x)*G - poly*diff(G, x), maxprec=1000, digits=30));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> opt_roots", opt_roots));
@@ -833,7 +841,7 @@ $endif
                     map(
                         x_arg -> subs({x=x_arg}, poly/G),
                         select(_root -> evalf(S[i][1] <= _root) and evalf(_root <= S[i][2]), opt_roots)))
-                #opt_roots))
+                        #opt_roots))
                 #minimize(
                 #simplify(poly/G),
                 #x = S[i][1] .. S[i][2])
@@ -853,6 +861,51 @@ $ifdef LOG_TIME
     END_LOG_TIME("Lower_bound_poly",0)
 $endif
     return C*h;
+end proc;
+
+# Return: If f is not a non-negative polynomial
+# then return a positive constant c such that
+# c f - g is non-negative
+# Otherwise, return 0
+local findPositiveConstantAvoidExponent := proc(f, g)
+$ifdef LOG_TIME
+    INIT_START_LOG_TIME("findPositiveConstantAvoidExponent",0)
+$endif
+local i, _args, curr_condition, conditions, pos_coeff;
+local sol := solve(
+    {c > 0, c * f - g >= 0},
+    {x}, 'parametric', 'real', 'parameters' = {c});
+
+    _args := op(sol);
+    conditions := [];
+
+    for i from 1 to nops(sol)/2 do
+        if(evalb(_args[2*i] = [[x = x]])) then
+            conditions := [evalf(_args[2*i - 1]), op(conditions)];
+            pos_coeff := Minimize(c, map(`<=`@op, conditions))[1];
+            if(pos_coeff = 0) then
+$ifdef LOG_TIME
+                END_LOG_TIME("findPositiveConstantAvoidExponent",0)
+$endif
+                return 1;
+            else
+                # We return the inverse because we actually need
+                # to produce a multiplier for `g`
+$ifdef LOG_TIME
+                END_LOG_TIME("findPositiveConstantAvoidExponent",0)
+$endif
+                return 1/convert(pos_coeff, rational, exact);
+            end if;
+        end if;
+        curr_condition := _args[2*i - 1];
+        conditions := [op(0, curr_condition)(seq(map(v -> -evalf(v + 1/100), [op(curr_condition)]))),
+                       op(conditions)];
+    end do;
+
+$ifdef LOG_TIME
+    END_LOG_TIME("findPositiveConstantAvoidExponent",0)
+$endif
+    return 0;
 end proc;
 
 # We assume:
@@ -1072,9 +1125,18 @@ $endif
             return [f, op(map(0, basis))];
         end if;
     local g, H2, f2, H3, f3, H4, certificates;
+    local i;
+        certificates := map(gen -> 0, basis);
+        for i from 1 to nops(basis) do
+          if basis[i] = -1 then
+            certificates[i] := ((f - 1)/2)^2;
+            return [((f + 1)/2)^2, op(certificates)];
+          end if;
+        end do;
 
         g := bound_poly(basis, x);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with bound_poly"));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> bound_poly g", g));
 
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Poly f for averkov_lemma_7", f));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Poly g[1] for averkov_lemma_7", g[1]));
@@ -1086,19 +1148,35 @@ $endif
         DEBUG(__FILE__, __LINE__, ENABLE_AVERKOV_CHECK, print(">> 2. Checking correctness of averkov_lemma_7", SemiAlgebraic([g[1] >= 0, f2 <= 0], [x])));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f2", f2));
 
+$ifndef WEIFENG_OPTIMIZATION
         H3 := Lower_bound_poly(x, f2, g[1]);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with Lower_bound_poly"));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> H3", H3));
+$endif
 
+$ifdef WEIFENG_OPTIMIZATION
+        f3 := f2;
+$else
         f3 := f2 - g[1]*H3;
+$endif
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f3", f3));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g[1]", g[1]));
         H4 := Last_step(x, f3, g[1]);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with Last_step"));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> H4", H4));
 
         certificates := H2;
+$ifdef WEIFENG_OPTIMIZATION
+        certificates[g[4]] := certificates[g[4]] + H4*g[2];
+$else
         certificates[g[4]] := certificates[g[4]] + (H3+H4)*g[2];
+$endif
         if g[3] <> 0 then
+$ifdef WEIFENG_OPTIMIZATION
+            certificates[g[5]] := certificates[g[5]] + H4*g[3];
+$else
             certificates[g[5]] := certificates[g[5]] + (H3+H4)*g[3];
+$endif
         end if;
 
         certificates := [f - dot_product(basis, certificates), op(certificates)];
