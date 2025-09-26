@@ -1,0 +1,19 @@
+QUIET_MODE=
+QUIET_MODE=-q
+HEURISTIC=
+HEURISTIC=-D USE_BOUNDS
+HEURISTIC=-D USE_REALCERTIFY
+OUTPUT=output.txt
+
+QUIET_MODE=-q
+HEURISTIC=-D USE_BOUNDS
+FILE=to_discuss.mpl
+OUTPUT=output.txt
+
+.PHONY: all clean
+
+all:
+	maple ${FILE} ${QUIET_MODE} ${HEURISTIC} > ${OUTPUT}
+
+clean:
+	rm -rf ${OUTPUT}

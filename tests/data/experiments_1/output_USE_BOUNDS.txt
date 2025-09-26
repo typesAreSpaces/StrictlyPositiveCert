@@ -1,0 +1,5413 @@
+                                       1
+
+                                       8
+
+Warning, (in SOSDecomp) `s` is implicitly declared local
+|univsos/univsos1.mm:54|
+Warning, (in CheckTvalue) `s` is implicitly declared local
+|univsos/univsos1.mm:370|
+Warning, (in oldCheckTvalue) `s` is implicitly declared local
+|univsos/univsos1.mm:402|
+Warning, (in UnivariateSumOfSquaresDecItv) `i` is implicitly declared local
+|univsos/univsos1.mm:468|
+Warning, (in UnivariateSumOfSquaresDecItv) `c` is implicitly declared local
+|univsos/univsos1.mm:476|
+Warning, (in UnivariateSumOfSquaresDecItv) `si` is implicitly declared local
+|univsos/univsos1.mm:479|
+Warning, (in UnivariateSumOfSquaresDecItv) `r` is implicitly declared local
+|univsos/univsos1.mm:484|
+Warning, (in UnivariateSumOfSquaresDecItv) `j` is implicitly declared local
+|univsos/univsos1.mm:484|
+Warning, (in UnivariateSumOfSquaresDecItv) `t` is implicitly declared local
+|univsos/univsos1.mm:485|
+Warning, (in HdTailList) `i` is implicitly declared local
+|univsos/univsos1.mm:507|
+Warning, (in univsos2) `se` is implicitly declared local
+|univsos/univsos2.mm:23|
+Warning, (in univsos2) `so` is implicitly declared local
+|univsos/univsos2.mm:24|
+Warning, (in UnivariateSumOfSquaresDecItv2) `i` is implicitly declared local
+|univsos/univsos2.mm:129|
+Warning, (in UnivariateSumOfSquaresDecItv2) `c` is implicitly declared local
+|univsos/univsos2.mm:137|
+Warning, (in UnivariateSumOfSquaresDecItv2) `si` is implicitly declared local
+|univsos/univsos2.mm:140|
+Warning, (in UnivariateSumOfSquaresDecItv2) `r` is implicitly declared local
+|univsos/univsos2.mm:145|
+Warning, (in UnivariateSumOfSquaresDecItv2) `j` is implicitly declared local
+|univsos/univsos2.mm:145|
+Warning, (in UnivariateSumOfSquaresDecItv2) `t` is implicitly declared local
+|univsos/univsos2.mm:146|
+Warning, (in univsos3) `se` is implicitly declared local
+|univsos/univsos3.mm:21|
+Warning, (in univsos3) `so` is implicitly declared local
+|univsos/univsos3.mm:22|
+Warning, (in UnivariateSumOfSquaresDecItv3) `i` is implicitly declared local
+|univsos/univsos3.mm:111|
+Warning, (in UnivariateSumOfSquaresDecItv3) `c` is implicitly declared local
+|univsos/univsos3.mm:120|
+Warning, (in UnivariateSumOfSquaresDecItv3) `si` is implicitly declared local
+|univsos/univsos3.mm:123|
+Warning, (in UnivariateSumOfSquaresDecItv3) `r` is implicitly declared local
+|univsos/univsos3.mm:128|
+Warning, (in UnivariateSumOfSquaresDecItv3) `j` is implicitly declared local
+|univsos/univsos3.mm:128|
+Warning, (in UnivariateSumOfSquaresDecItv3) `t` is implicitly declared local
+|univsos/univsos3.mm:129|
+Warning, (in sositv3) `se` is implicitly declared local
+|univsos/univsos3.mm:324|
+Warning, (in sositv3) `so` is implicitly declared local
+|univsos/univsos3.mm:325|
+Warning, (in SOSDecomp) `s` is implicitly declared local
+|univsos/univsos1.mm:54|
+Warning, (in CheckTvalue) `s` is implicitly declared local
+|univsos/univsos1.mm:370|
+Warning, (in oldCheckTvalue) `s` is implicitly declared local
+|univsos/univsos1.mm:402|
+Warning, (in UnivariateSumOfSquaresDecItv) `i` is implicitly declared local
+|univsos/univsos1.mm:468|
+Warning, (in UnivariateSumOfSquaresDecItv) `c` is implicitly declared local
+|univsos/univsos1.mm:476|
+Warning, (in UnivariateSumOfSquaresDecItv) `si` is implicitly declared local
+|univsos/univsos1.mm:479|
+Warning, (in UnivariateSumOfSquaresDecItv) `r` is implicitly declared local
+|univsos/univsos1.mm:484|
+Warning, (in UnivariateSumOfSquaresDecItv) `j` is implicitly declared local
+|univsos/univsos1.mm:484|
+Warning, (in UnivariateSumOfSquaresDecItv) `t` is implicitly declared local
+|univsos/univsos1.mm:485|
+Warning, (in HdTailList) `i` is implicitly declared local
+|univsos/univsos1.mm:507|
+Warning, (in univsos2) `se` is implicitly declared local
+|univsos/univsos2.mm:23|
+Warning, (in univsos2) `so` is implicitly declared local
+|univsos/univsos2.mm:24|
+Warning, (in UnivariateSumOfSquaresDecItv2) `i` is implicitly declared local
+|univsos/univsos2.mm:129|
+Warning, (in UnivariateSumOfSquaresDecItv2) `c` is implicitly declared local
+|univsos/univsos2.mm:137|
+Warning, (in UnivariateSumOfSquaresDecItv2) `si` is implicitly declared local
+|univsos/univsos2.mm:140|
+Warning, (in UnivariateSumOfSquaresDecItv2) `r` is implicitly declared local
+|univsos/univsos2.mm:145|
+Warning, (in UnivariateSumOfSquaresDecItv2) `j` is implicitly declared local
+|univsos/univsos2.mm:145|
+Warning, (in UnivariateSumOfSquaresDecItv2) `t` is implicitly declared local
+|univsos/univsos2.mm:146|
+Warning, (in univsos3) `se` is implicitly declared local
+|univsos/univsos3.mm:21|
+Warning, (in univsos3) `so` is implicitly declared local
+|univsos/univsos3.mm:22|
+Warning, (in UnivariateSumOfSquaresDecItv3) `i` is implicitly declared local
+|univsos/univsos3.mm:111|
+Warning, (in UnivariateSumOfSquaresDecItv3) `c` is implicitly declared local
+|univsos/univsos3.mm:120|
+Warning, (in UnivariateSumOfSquaresDecItv3) `si` is implicitly declared local
+|univsos/univsos3.mm:123|
+Warning, (in UnivariateSumOfSquaresDecItv3) `r` is implicitly declared local
+|univsos/univsos3.mm:128|
+Warning, (in UnivariateSumOfSquaresDecItv3) `j` is implicitly declared local
+|univsos/univsos3.mm:128|
+Warning, (in UnivariateSumOfSquaresDecItv3) `t` is implicitly declared local
+|univsos/univsos3.mm:129|
+Warning, (in sositv3) `se` is implicitly declared local
+|univsos/univsos3.mm:324|
+Warning, (in sositv3) `so` is implicitly declared local
+|univsos/univsos3.mm:325|
+Warning, (in monshom) `i` is implicitly declared local
+|multivsos/multivsos.mm:20|
+Warning, (in revmons) `i` is implicitly declared local
+|multivsos/multivsos.mm:26|
+Warning, (in revmons2) `i` is implicitly declared local
+|multivsos/multivsos.mm:33|
+Warning, (in mymons) `m` is implicitly declared local
+|multivsos/multivsos.mm:48|
+Warning, (in mymons) `v` is implicitly declared local
+|multivsos/multivsos.mm:48|
+Warning, (in anonymous procedure within mons) `i` is implicitly declared local
+|multivsos/multivsos.mm:54|
+Warning, (in support) `m` is implicitly declared local
+|multivsos/multivsos.mm:62|
+Warning, (in dense_perturbation) `m` is implicitly declared local
+|multivsos/multivsos.mm:68|
+Warning, (in absorber_PP) `im` is implicitly declared local
+|multivsos/multivsos.mm:350|
+Warning, (in relaxordermin) `gi` is implicitly declared local
+|multivsos/multivsos.mm:625|
+Warning, (in locmatsizes) `gi` is implicitly declared local
+|multivsos/multivsos.mm:629|
+Warning, (in preliminary_test_negativity) `x` is implicitly declared local
+|multivsos/multivsos.mm:651|
+Warning, (in permutepoly) `i` is implicitly declared local
+|multivsos/multivsos.mm:678|
+Warning, (in is_homogeneous) `v` is implicitly declared local
+|multivsos/multivsos.mm:708|
+Warning, (in multivsos) `i` is implicitly declared local
+|multivsos/multivsos.mm:719|
+Warning, (in multivsos_internal) `m` is implicitly declared local
+|multivsos/multivsos.mm:815|
+Warning, (in BitSizeSos) `p` is implicitly declared local
+|multivsos/multivsos.mm:996|
+Warning, (in BitSizePolSeq3) `p` is implicitly declared local
+|multivsos/multivsos.mm:1004|
+Warning, (in BitSizePolSeq) `p` is implicitly declared local
+|multivsos/multivsos.mm:1008|
+Warning, (in BitSizeSeq) `c` is implicitly declared local
+|multivsos/multivsos.mm:1018|
+
+>> Start
+
+>> Start benchmark
+
+>> Test
+Batch: 1 Test Weifeng
+>> input polynomial
+-x^2+139876/625
+>> basis
+[(x-851/100)*(x-99/10)*(x-249/25)*(x-274/25)*(x-324/25), -(x-851/100)*(x-99/10)*(x-249/25)*(x-274/25)*(x-324/25)]
+>> Time taken
+1.241000
+">> Sums of squares multipliers", [-x^2+139876/625-2461/4825410*x^2*(x-851/100)
+*(x-99/10)*(x-249/25)*(x-274/25)*(x-324/25)+2461/4825410*(x+1)^2*(x-851/100)*(x
+-99/10)*(x-249/25)*(x-274/25)*(x-324/25), 2461/4825410*x^2, 2461/4825410*(x+1)^
+2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 1 Test Weifeng
+
+>> Test
+Batch: 1 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+139876/625
+>> basis
+[(x-851/100)*(x-99/10)*(x-249/25)*(x-274/25)*(x-324/25), -(x-851/100)*(x-99/10)*(x-249/25)*(x-274/25)*(x-324/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -9.490449
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 1 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 1 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+139876/625
+>> basis
+[(x-851/100)*(x-99/10)*(x-249/25)*(x-274/25)*(x-324/25), -(x-851/100)*(x-99/10)*(x-249/25)*(x-274/25)*(x-324/25), -x^2+139876/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 1 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 2 Test Weifeng
+>> input polynomial
+-x^2+426409/2500
+>> basis
+[(x-237/100)*(x-313/100)*(x-163/25)*(x-459/50)*(x-553/50), -(x-237/100)*(x-313/100)*(x-163/25)*(x-459/50)*(x-553/50)]
+>> Time taken
+1.112000
+">> Sums of squares multipliers", [-x^2+426409/2500-2155/277371*x^2*(x-237/100)
+*(x-313/100)*(x-163/25)*(x-459/50)*(x-553/50)+2155/277371*(x+1)^2*(x-237/100)*(
+x-313/100)*(x-163/25)*(x-459/50)*(x-553/50), 2155/277371*x^2, 2155/277371*(x+1)
+^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 2 Test Weifeng
+
+>> Test
+Batch: 2 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+426409/2500
+>> basis
+[(x-237/100)*(x-313/100)*(x-163/25)*(x-459/50)*(x-553/50), -(x-237/100)*(x-313/100)*(x-163/25)*(x-459/50)*(x-553/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -12.523810
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 2 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 2 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+426409/2500
+>> basis
+[(x-237/100)*(x-313/100)*(x-163/25)*(x-459/50)*(x-553/50), -(x-237/100)*(x-313/100)*(x-163/25)*(x-459/50)*(x-553/50), -x^2+426409/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 2 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 3 Test Weifeng
+>> input polynomial
+-x^2+6827769/10000
+>> basis
+[(x-627/100)*(x-257/25)*(x-322/25)*(x-1549/100)*(x-2413/100), (-x+627/100)*(x-257/25)*(x-322/25)*(x-1549/100)*(x-2413/100)]
+>> Time taken
+1.303000
+">> Sums of squares multipliers", [-x^2+6827769/10000-589/6742632*x^2*(x-627/
+100)*(x-257/25)*(x-322/25)*(x-1549/100)*(x-2413/100)-589/6742632*(x+1)^2*(-x+
+627/100)*(x-257/25)*(x-322/25)*(x-1549/100)*(x-2413/100), 589/6742632*x^2, 589/
+6742632*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 3 Test Weifeng
+
+>> Test
+Batch: 3 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+6827769/10000
+>> basis
+[(x-627/100)*(x-257/25)*(x-322/25)*(x-1549/100)*(x-2413/100), (-x+627/100)*(x-257/25)*(x-322/25)*(x-1549/100)*(x-2413/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.173208
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 3 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 3 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+6827769/10000
+>> basis
+[(x-627/100)*(x-257/25)*(x-322/25)*(x-1549/100)*(x-2413/100), (-x+627/100)*(x-257/25)*(x-322/25)*(x-1549/100)*(x-2413/100), -x^2+6827769/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 3 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 4 Test Weifeng
+>> input polynomial
+-x^2+1256641/2500
+>> basis
+[(x-279/50)*(x-541/50)*(x-1021/50), (-x+279/50)*(x-541/50)*(x-1021/50)]
+>> Time taken
+0.257000
+">> Sums of squares multipliers", [-x^2+1256641/2500-833/75343*x^2*(x-279/50)*(
+x-541/50)*(x-1021/50)-833/75343*(x+1)^2*(-x+279/50)*(x-541/50)*(x-1021/50), 833
+/75343*x^2, 833/75343*(x+1)^2]
+>> Degree size
+5
+>> Succeeds Weifeng Batch: 4 Test Weifeng
+
+>> Test
+Batch: 4 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+1256641/2500
+>> basis
+[(x-279/50)*(x-541/50)*(x-1021/50), (-x+279/50)*(x-541/50)*(x-1021/50)]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: -133.578902
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 4 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 4 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+1256641/2500
+>> basis
+[(x-279/50)*(x-541/50)*(x-1021/50), (-x+279/50)*(x-541/50)*(x-1021/50), -x^2+1256641/2500]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 4 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 5 Test Weifeng
+>> input polynomial
+-x^2+251001/400
+>> basis
+[(x-177/50)*(x-683/100)*(x-527/50)*(x-428/25)*(x-461/20), (-x+177/50)*(x-683/100)*(x-527/50)*(x-428/25)*(x-461/20)]
+>> Time taken
+1.357000
+">> Sums of squares multipliers", [-x^2+251001/400-938/9911413*x^2*(x-177/50)*(
+x-683/100)*(x-527/50)*(x-428/25)*(x-461/20)-938/9911413*(x+1)^2*(-x+177/50)*(x-\
+683/100)*(x-527/50)*(x-428/25)*(x-461/20), 938/9911413*x^2, 938/9911413*(x+1)^2
+]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 5 Test Weifeng
+
+>> Test
+Batch: 5 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+251001/400
+>> basis
+[(x-177/50)*(x-683/100)*(x-527/50)*(x-428/25)*(x-461/20), (-x+177/50)*(x-683/100)*(x-527/50)*(x-428/25)*(x-461/20)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -3.134464
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 5 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 5 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+251001/400
+>> basis
+[(x-177/50)*(x-683/100)*(x-527/50)*(x-428/25)*(x-461/20), (-x+177/50)*(x-683/100)*(x-527/50)*(x-428/25)*(x-461/20), -x^2+251001/400]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000002
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 5 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 6 Test Weifeng
+>> input polynomial
+-x^2+71289/625
+>> basis
+[(x-313/100)*(x-277/50)*(x-837/100)*(x-217/25)*(x-242/25), (-x+313/100)*(x-277/50)*(x-837/100)*(x-217/25)*(x-242/25)]
+>> Time taken
+1.137000
+">> Sums of squares multipliers", [-x^2+71289/625-1884/519835*x^2*(x-313/100)*(
+x-277/50)*(x-837/100)*(x-217/25)*(x-242/25)-1884/519835*(x+1)^2*(-x+313/100)*(x
+-277/50)*(x-837/100)*(x-217/25)*(x-242/25), 1884/519835*x^2, 1884/519835*(x+1)^
+2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 6 Test Weifeng
+
+>> Test
+Batch: 6 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+71289/625
+>> basis
+[(x-313/100)*(x-277/50)*(x-837/100)*(x-217/25)*(x-242/25), (-x+313/100)*(x-277/50)*(x-837/100)*(x-217/25)*(x-242/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -15.610525
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 6 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 6 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+71289/625
+>> basis
+[(x-313/100)*(x-277/50)*(x-837/100)*(x-217/25)*(x-242/25), (-x+313/100)*(x-277/50)*(x-837/100)*(x-217/25)*(x-242/25), -x^2+71289/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000002
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 6 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 7 Test Weifeng
+>> input polynomial
+-x^2+6651241/10000
+>> basis
+[(x-6/5)*(x-161/20)*(x-1151/100)*(x-2379/100)*(x-2479/100), -(x-6/5)*(x-161/20)*(x-1151/100)*(x-2379/100)*(x-2479/100)]
+>> Time taken
+1.038000
+">> Sums of squares multipliers", [-x^2+6651241/10000-1038/1723765*x^2*(x-6/5)*
+(x-161/20)*(x-1151/100)*(x-2379/100)*(x-2479/100)+1038/1723765*(x+1)^2*(x-6/5)*
+(x-161/20)*(x-1151/100)*(x-2379/100)*(x-2479/100), 1038/1723765*x^2, 1038/
+1723765*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 7 Test Weifeng
+
+>> Test
+Batch: 7 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+6651241/10000
+>> basis
+[(x-6/5)*(x-161/20)*(x-1151/100)*(x-2379/100)*(x-2479/100), -(x-6/5)*(x-161/20)*(x-1151/100)*(x-2379/100)*(x-2479/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -2.097995
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 7 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 7 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+6651241/10000
+>> basis
+[(x-6/5)*(x-161/20)*(x-1151/100)*(x-2379/100)*(x-2479/100), -(x-6/5)*(x-161/20)*(x-1151/100)*(x-2379/100)*(x-2479/100), -x^2+6651241/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000005
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 7 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 8 Test Weifeng
+>> input polynomial
+-x^2+4498641/10000
+>> basis
+[(x-133/100)*(x-473/50)*(x-363/25)*(x-1921/100)*(x-2021/100), (-x+133/100)*(x-473/50)*(x-363/25)*(x-1921/100)*(x-2021/100)]
+>> Time taken
+1.104000
+">> Sums of squares multipliers", [-x^2+4498641/10000-1334/881771*x^2*(x-133/
+100)*(x-473/50)*(x-363/25)*(x-1921/100)*(x-2021/100)-1334/881771*(x+1)^2*(-x+
+133/100)*(x-473/50)*(x-363/25)*(x-1921/100)*(x-2021/100), 1334/881771*x^2, 1334
+/881771*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 8 Test Weifeng
+
+>> Test
+Batch: 8 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+4498641/10000
+>> basis
+[(x-133/100)*(x-473/50)*(x-363/25)*(x-1921/100)*(x-2021/100), (-x+133/100)*(x-473/50)*(x-363/25)*(x-1921/100)*(x-2021/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -3.399241
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 8 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 8 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+4498641/10000
+>> basis
+[(x-133/100)*(x-473/50)*(x-363/25)*(x-1921/100)*(x-2021/100), (-x+133/100)*(x-473/50)*(x-363/25)*(x-1921/100)*(x-2021/100), -x^2+4498641/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000005
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 8 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 9 Test Weifeng
+>> input polynomial
+-x^2+5303809/10000
+>> basis
+[(x-6/5)*(x-113/25)*(x-241/25)*(x-1011/100)*(x-1729/100)*(x-2103/100)*(x-2203/100), -(x-6/5)*(x-113/25)*(x-241/25)*(x-1011/100)*(x-1729/100)*(x-2103/100)*(x-2203/100)]
+>> Time taken
+1.708000
+">> Sums of squares multipliers", [-x^2+5303809/10000-129/9645607*x^2*(x-6/5)*(
+x-113/25)*(x-241/25)*(x-1011/100)*(x-1729/100)*(x-2103/100)*(x-2203/100)+129/
+9645607*(x+1)^2*(x-6/5)*(x-113/25)*(x-241/25)*(x-1011/100)*(x-1729/100)*(x-2103
+/100)*(x-2203/100), 129/9645607*x^2, 129/9645607*(x+1)^2]
+>> Degree size
+9
+>> Succeeds Weifeng Batch: 9 Test Weifeng
+
+>> Test
+Batch: 9 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+5303809/10000
+>> basis
+[(x-6/5)*(x-113/25)*(x-241/25)*(x-1011/100)*(x-1729/100)*(x-2103/100)*(x-2203/100), -(x-6/5)*(x-113/25)*(x-241/25)*(x-1011/100)*(x-1729/100)*(x-2103/100)*(x-2203/100)]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.383476
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 9 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 9 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+5303809/10000
+>> basis
+[(x-6/5)*(x-113/25)*(x-241/25)*(x-1011/100)*(x-1729/100)*(x-2103/100)*(x-2203/100), -(x-6/5)*(x-113/25)*(x-241/25)*(x-1011/100)*(x-1729/100)*(x-2103/100)*(x-2203/100), -x^2+5303809/10000]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 9 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 10 Test Weifeng
+>> input polynomial
+-x^2+218089/625
+>> basis
+[(x-37/5)*(x-877/100)*(x-1451/100)*(x-366/25)*(x-417/25), -(x-37/5)*(x-877/100)*(x-1451/100)*(x-366/25)*(x-417/25)]
+>> Time taken
+1.209000
+">> Sums of squares multipliers", [-x^2+218089/625-1101/2829244*x^2*(x-37/5)*(x
+-877/100)*(x-1451/100)*(x-366/25)*(x-417/25)+1101/2829244*(x+1)^2*(x-37/5)*(x-\
+877/100)*(x-1451/100)*(x-366/25)*(x-417/25), 1101/2829244*x^2, 1101/2829244*(x+
+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 10 Test Weifeng
+
+>> Test
+Batch: 10 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+218089/625
+>> basis
+[(x-37/5)*(x-877/100)*(x-1451/100)*(x-366/25)*(x-417/25), -(x-37/5)*(x-877/100)*(x-1451/100)*(x-366/25)*(x-417/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -3.067394
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 10 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 10 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+218089/625
+>> basis
+[(x-37/5)*(x-877/100)*(x-1451/100)*(x-366/25)*(x-417/25), -(x-37/5)*(x-877/100)*(x-1451/100)*(x-366/25)*(x-417/25), -x^2+218089/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000002
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 10 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 11 Test Weifeng
+>> input polynomial
+-x^2+589824/625
+>> basis
+[(x-246/25)*(x-541/50)*(x-66/5)*(x-118/5)*(x-718/25), (-x+246/25)*(x-541/50)*(x-66/5)*(x-118/5)*(x-718/25)]
+>> Time taken
+1.389000
+">> Sums of squares multipliers", [-x^2+589824/625-23/275898*x^2*(x-246/25)*(x-\
+541/50)*(x-66/5)*(x-118/5)*(x-718/25)-23/275898*(x+1)^2*(-x+246/25)*(x-541/50)*
+(x-66/5)*(x-118/5)*(x-718/25), 23/275898*x^2, 23/275898*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 11 Test Weifeng
+
+>> Test
+Batch: 11 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+589824/625
+>> basis
+[(x-246/25)*(x-541/50)*(x-66/5)*(x-118/5)*(x-718/25), (-x+246/25)*(x-541/50)*(x-66/5)*(x-118/5)*(x-718/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.121137
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 11 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 11 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+589824/625
+>> basis
+[(x-246/25)*(x-541/50)*(x-66/5)*(x-118/5)*(x-718/25), (-x+246/25)*(x-541/50)*(x-66/5)*(x-118/5)*(x-718/25), -x^2+589824/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.928328
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 11 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 12 Test Weifeng
+>> input polynomial
+-x^2+222784/625
+>> basis
+[(x-363/50)*(x-929/100)*(x-1259/100)*(x-349/25)*(x-422/25), -(x-363/50)*(x-929/100)*(x-1259/100)*(x-349/25)*(x-422/25)]
+>> Time taken
+1.111000
+">> Sums of squares multipliers", [-x^2+222784/625-532/1147329*x^2*(x-363/50)*(
+x-929/100)*(x-1259/100)*(x-349/25)*(x-422/25)+532/1147329*(x+1)^2*(x-363/50)*(x
+-929/100)*(x-1259/100)*(x-349/25)*(x-422/25), 532/1147329*x^2, 532/1147329*(x+1
+)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 12 Test Weifeng
+
+>> Test
+Batch: 12 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+222784/625
+>> basis
+[(x-363/50)*(x-929/100)*(x-1259/100)*(x-349/25)*(x-422/25), -(x-363/50)*(x-929/100)*(x-1259/100)*(x-349/25)*(x-422/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -2.944488
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 12 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 12 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+222784/625
+>> basis
+[(x-363/50)*(x-929/100)*(x-1259/100)*(x-349/25)*(x-422/25), -(x-363/50)*(x-929/100)*(x-1259/100)*(x-349/25)*(x-422/25), -x^2+222784/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000002
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 12 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 13 Test Weifeng
+>> input polynomial
+-x^2+524176/625
+>> basis
+[(x-166/25)*(x-69/5)*(x-289/20)*(x-674/25)*(x-699/25), (-x+166/25)*(x-69/5)*(x-289/20)*(x-674/25)*(x-699/25)]
+>> Time taken
+1.547000
+">> Sums of squares multipliers", [-x^2+524176/625-451/2401974*x^2*(x-166/25)*(
+x-69/5)*(x-289/20)*(x-674/25)*(x-699/25)-451/2401974*(x+1)^2*(-x+166/25)*(x-69/
+5)*(x-289/20)*(x-674/25)*(x-699/25), 451/2401974*x^2, 451/2401974*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 13 Test Weifeng
+
+>> Test
+Batch: 13 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+524176/625
+>> basis
+[(x-166/25)*(x-69/5)*(x-289/20)*(x-674/25)*(x-699/25), (-x+166/25)*(x-69/5)*(x-289/20)*(x-674/25)*(x-699/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.813025
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 13 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 13 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+524176/625
+>> basis
+[(x-166/25)*(x-69/5)*(x-289/20)*(x-674/25)*(x-699/25), (-x+166/25)*(x-69/5)*(x-289/20)*(x-674/25)*(x-699/25), -x^2+524176/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 13 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 14 Test Weifeng
+>> input polynomial
+-x^2+727609/2500
+>> basis
+[(x-7/5)*(x-102/25)*(x-623/100)*(x-278/25)*(x-753/50), -(x-7/5)*(x-102/25)*(x-623/100)*(x-278/25)*(x-753/50)]
+>> Time taken
+1.288000
+">> Sums of squares multipliers", [-x^2+727609/2500-873/1584190*x^2*(x-7/5)*(x-\
+102/25)*(x-623/100)*(x-278/25)*(x-753/50)+873/1584190*(x+1)^2*(x-7/5)*(x-102/25
+)*(x-623/100)*(x-278/25)*(x-753/50), 873/1584190*x^2, 873/1584190*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 14 Test Weifeng
+
+>> Test
+Batch: 14 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+727609/2500
+>> basis
+[(x-7/5)*(x-102/25)*(x-623/100)*(x-278/25)*(x-753/50), -(x-7/5)*(x-102/25)*(x-623/100)*(x-278/25)*(x-753/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -7.223919
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 14 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 14 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+727609/2500
+>> basis
+[(x-7/5)*(x-102/25)*(x-623/100)*(x-278/25)*(x-753/50), -(x-7/5)*(x-102/25)*(x-623/100)*(x-278/25)*(x-753/50), -x^2+727609/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 14 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 15 Test Weifeng
+>> input polynomial
+-x^2+779689/2500
+>> basis
+[(x-29/4)*(x-63/5)*(x-783/50), (-x+29/4)*(x-63/5)*(x-783/50)]
+>> Time taken
+0.323000
+">> Sums of squares multipliers", [-x^2+779689/2500-5368/133577*x^2*(x-29/4)*(x
+-63/5)*(x-783/50)-5368/133577*(x+1)^2*(-x+29/4)*(x-63/5)*(x-783/50), 5368/
+133577*x^2, 5368/133577*(x+1)^2]
+>> Degree size
+5
+>> Succeeds Weifeng Batch: 15 Test Weifeng
+
+>> Test
+Batch: 15 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+779689/2500
+>> basis
+[(x-29/4)*(x-63/5)*(x-783/50), (-x+29/4)*(x-63/5)*(x-783/50)]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: -112.211233
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 15 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 15 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+779689/2500
+>> basis
+[(x-29/4)*(x-63/5)*(x-783/50), (-x+29/4)*(x-63/5)*(x-783/50), -x^2+779689/2500]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 15 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 16 Test Weifeng
+>> input polynomial
+-x^2+727609/2500
+>> basis
+[(x-57/50)*(x-104/25)*(x-753/50), (-x+57/50)*(x-104/25)*(x-753/50)]
+>> Time taken
+0.464000
+">> Sums of squares multipliers", [-x^2+727609/2500-4045/386547*x^2*(x-57/50)*(
+x-104/25)*(x-753/50)-4045/386547*(x+1)^2*(-x+57/50)*(x-104/25)*(x-753/50), 4045
+/386547*x^2, 4045/386547*(x+1)^2]
+>> Degree size
+5
+>> Succeeds Weifeng Batch: 16 Test Weifeng
+
+>> Test
+Batch: 16 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+727609/2500
+>> basis
+[(x-57/50)*(x-104/25)*(x-753/50), (-x+57/50)*(x-104/25)*(x-753/50)]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: -144.423056
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 16 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 16 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+727609/2500
+>> basis
+[(x-57/50)*(x-104/25)*(x-753/50), (-x+57/50)*(x-104/25)*(x-753/50), -x^2+727609/2500]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 16 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 17 Test Weifeng
+>> input polynomial
+-x^2+1375929/2500
+>> basis
+[(x-381/100)*(x-176/25)*(x-757/100)*(x-1667/100)*(x-1073/50), -(x-381/100)*(x-176/25)*(x-757/100)*(x-1667/100)*(x-1073/50)]
+>> Time taken
+1.441000
+">> Sums of squares multipliers", [-x^2+1375929/2500-255/1799422*x^2*(x-381/100
+)*(x-176/25)*(x-757/100)*(x-1667/100)*(x-1073/50)+255/1799422*(x+1)^2*(x-381/
+100)*(x-176/25)*(x-757/100)*(x-1667/100)*(x-1073/50), 255/1799422*x^2, 255/
+1799422*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 17 Test Weifeng
+
+>> Test
+Batch: 17 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+1375929/2500
+>> basis
+[(x-381/100)*(x-176/25)*(x-757/100)*(x-1667/100)*(x-1073/50), -(x-381/100)*(x-176/25)*(x-757/100)*(x-1667/100)*(x-1073/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -3.902799
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 17 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 17 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+1375929/2500
+>> basis
+[(x-381/100)*(x-176/25)*(x-757/100)*(x-1667/100)*(x-1073/50), -(x-381/100)*(x-176/25)*(x-757/100)*(x-1667/100)*(x-1073/50), -x^2+1375929/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 17 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 18 Test Weifeng
+>> input polynomial
+-x^2+49729/100
+>> basis
+[(x-417/50)*(x-519/50)*(x-1221/100)*(x-1373/100)*(x-203/10), (-x+417/50)*(x-519/50)*(x-1221/100)*(x-1373/100)*(x-203/10)]
+>> Time taken
+1.269000
+">> Sums of squares multipliers", [-x^2+49729/100-514/1268997*x^2*(x-417/50)*(x
+-519/50)*(x-1221/100)*(x-1373/100)*(x-203/10)-514/1268997*(x+1)^2*(-x+417/50)*(
+x-519/50)*(x-1221/100)*(x-1373/100)*(x-203/10), 514/1268997*x^2, 514/1268997*(x
++1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 18 Test Weifeng
+
+>> Test
+Batch: 18 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+49729/100
+>> basis
+[(x-417/50)*(x-519/50)*(x-1221/100)*(x-1373/100)*(x-203/10), (-x+417/50)*(x-519/50)*(x-1221/100)*(x-1373/100)*(x-203/10)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.946526
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 18 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 18 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+49729/100
+>> basis
+[(x-417/50)*(x-519/50)*(x-1221/100)*(x-1373/100)*(x-203/10), (-x+417/50)*(x-519/50)*(x-1221/100)*(x-1373/100)*(x-203/10), -x^2+49729/100]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 18 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 19 Test Weifeng
+>> input polynomial
+-x^2+7767369/10000
+>> basis
+[(x-351/100)*(x-871/100)*(x-352/25)*(x-442/25)*(x-2587/100), -(x-351/100)*(x-871/100)*(x-352/25)*(x-442/25)*(x-2587/100)]
+>> Time taken
+1.177000
+">> Sums of squares multipliers", [-x^2+7767369/10000-156/2863051*x^2*(x-351/
+100)*(x-871/100)*(x-352/25)*(x-442/25)*(x-2587/100)+156/2863051*(x+1)^2*(x-351/
+100)*(x-871/100)*(x-352/25)*(x-442/25)*(x-2587/100), 156/2863051*x^2, 156/
+2863051*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 19 Test Weifeng
+
+>> Test
+Batch: 19 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+7767369/10000
+>> basis
+[(x-351/100)*(x-871/100)*(x-352/25)*(x-442/25)*(x-2587/100), -(x-351/100)*(x-871/100)*(x-352/25)*(x-442/25)*(x-2587/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.698327
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 19 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 19 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+7767369/10000
+>> basis
+[(x-351/100)*(x-871/100)*(x-352/25)*(x-442/25)*(x-2587/100), -(x-351/100)*(x-871/100)*(x-352/25)*(x-442/25)*(x-2587/100), -x^2+7767369/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 19 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 20 Test Weifeng
+>> input polynomial
+-x^2+3265249/10000
+>> basis
+[(x-211/100)*(x-149/25)*(x-73/5)*(x-1607/100)*(x-1707/100), -(x-211/100)*(x-149/25)*(x-73/5)*(x-1607/100)*(x-1707/100)]
+>> Time taken
+1.142000
+">> Sums of squares multipliers", [-x^2+3265249/10000-589/689641*x^2*(x-211/100
+)*(x-149/25)*(x-73/5)*(x-1607/100)*(x-1707/100)+589/689641*(x+1)^2*(x-211/100)*
+(x-149/25)*(x-73/5)*(x-1607/100)*(x-1707/100), 589/689641*x^2, 589/689641*(x+1)
+^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 20 Test Weifeng
+
+>> Test
+Batch: 20 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+3265249/10000
+>> basis
+[(x-211/100)*(x-149/25)*(x-73/5)*(x-1607/100)*(x-1707/100), -(x-211/100)*(x-149/25)*(x-73/5)*(x-1607/100)*(x-1707/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -5.832303
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 20 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 20 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+3265249/10000
+>> basis
+[(x-211/100)*(x-149/25)*(x-73/5)*(x-1607/100)*(x-1707/100), -(x-211/100)*(x-149/25)*(x-73/5)*(x-1607/100)*(x-1707/100), -x^2+3265249/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000005
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 20 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 21 Test Weifeng
+>> input polynomial
+-x^2+549081/625
+>> basis
+[(x-551/100)*(x-649/100)*(x-531/50)*(x-267/20)*(x-1363/100)*(x-691/25)*(x-716/25), -(x-551/100)*(x-649/100)*(x-531/50)*(x-267/20)*(x-1363/100)*(x-691/25)*(x-716/25)]
+>> Time taken
+1.680000
+">> Sums of squares multipliers", [-x^2+549081/625-23/14868099*x^2*(x-551/100)*
+(x-649/100)*(x-531/50)*(x-267/20)*(x-1363/100)*(x-691/25)*(x-716/25)+23/
+14868099*(x+1)^2*(x-551/100)*(x-649/100)*(x-531/50)*(x-267/20)*(x-1363/100)*(x-\
+691/25)*(x-716/25), 23/14868099*x^2, 23/14868099*(x+1)^2]
+>> Degree size
+9
+>> Succeeds Weifeng Batch: 21 Test Weifeng
+
+>> Test
+Batch: 21 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+549081/625
+>> basis
+[(x-551/100)*(x-649/100)*(x-531/50)*(x-267/20)*(x-1363/100)*(x-691/25)*(x-716/25), -(x-551/100)*(x-649/100)*(x-531/50)*(x-267/20)*(x-1363/100)*(x-691/25)*(x-716/25)]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.680492
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 21 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 21 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+549081/625
+>> basis
+[(x-551/100)*(x-649/100)*(x-531/50)*(x-267/20)*(x-1363/100)*(x-691/25)*(x-716/25), -(x-551/100)*(x-649/100)*(x-531/50)*(x-267/20)*(x-1363/100)*(x-691/25)*(x-716/25), -x^2+549081/625]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.982593
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 21 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 22 Test Weifeng
+>> input polynomial
+-x^2+5184729/10000
+>> basis
+[(x-147/100)*(x-609/100)*(x-677/100)*(x-1233/100)*(x-78/5)*(x-2077/100)*(x-2177/100), -(x-147/100)*(x-609/100)*(x-677/100)*(x-1233/100)*(x-78/5)*(x-2077/100)*(x-2177/100)]
+>> Time taken
+1.485000
+">> Sums of squares multipliers", [-x^2+5184729/10000-102/8087405*x^2*(x-147/
+100)*(x-609/100)*(x-677/100)*(x-1233/100)*(x-78/5)*(x-2077/100)*(x-2177/100)+
+102/8087405*(x+1)^2*(x-147/100)*(x-609/100)*(x-677/100)*(x-1233/100)*(x-78/5)*(
+x-2077/100)*(x-2177/100), 102/8087405*x^2, 102/8087405*(x+1)^2]
+>> Degree size
+9
+>> Succeeds Weifeng Batch: 22 Test Weifeng
+
+>> Test
+Batch: 22 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+5184729/10000
+>> basis
+[(x-147/100)*(x-609/100)*(x-677/100)*(x-1233/100)*(x-78/5)*(x-2077/100)*(x-2177/100), -(x-147/100)*(x-609/100)*(x-677/100)*(x-1233/100)*(x-78/5)*(x-2077/100)*(x-2177/100)]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.386761
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 22 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 22 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+5184729/10000
+>> basis
+[(x-147/100)*(x-609/100)*(x-677/100)*(x-1233/100)*(x-78/5)*(x-2077/100)*(x-2177/100), -(x-147/100)*(x-609/100)*(x-677/100)*(x-1233/100)*(x-78/5)*(x-2077/100)*(x-2177/100), -x^2+5184729/10000]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 22 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 23 Test Weifeng
+>> input polynomial
+-x^2+9162729/10000
+>> basis
+[(x-21/5)*(x-651/100)*(x-1279/100)*(x-1471/100)*(x-2827/100), -(x-21/5)*(x-651/100)*(x-1279/100)*(x-1471/100)*(x-2827/100)]
+>> Time taken
+1.169000
+">> Sums of squares multipliers", [-x^2+9162729/10000-33/2127011*x^2*(x-21/5)*(
+x-651/100)*(x-1279/100)*(x-1471/100)*(x-2827/100)+33/2127011*(x+1)^2*(x-21/5)*(
+x-651/100)*(x-1279/100)*(x-1471/100)*(x-2827/100), 33/2127011*x^2, 33/2127011*(
+x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 23 Test Weifeng
+
+>> Test
+Batch: 23 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+9162729/10000
+>> basis
+[(x-21/5)*(x-651/100)*(x-1279/100)*(x-1471/100)*(x-2827/100), -(x-21/5)*(x-651/100)*(x-1279/100)*(x-1471/100)*(x-2827/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.884257
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 23 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 23 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+9162729/10000
+>> basis
+[(x-21/5)*(x-651/100)*(x-1279/100)*(x-1471/100)*(x-2827/100), -(x-21/5)*(x-651/100)*(x-1279/100)*(x-1471/100)*(x-2827/100), -x^2+9162729/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 23 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 24 Test Weifeng
+>> input polynomial
+-x^2+492804/625
+>> basis
+[(x-277/100)*(x-101/20)*(x-577/50)*(x-2361/100)*(x-652/25), -(x-277/100)*(x-101/20)*(x-577/50)*(x-2361/100)*(x-652/25)]
+>> Time taken
+1.261000
+">> Sums of squares multipliers", [-x^2+492804/625-330/1910237*x^2*(x-277/100)*
+(x-101/20)*(x-577/50)*(x-2361/100)*(x-652/25)+330/1910237*(x+1)^2*(x-277/100)*(
+x-101/20)*(x-577/50)*(x-2361/100)*(x-652/25), 330/1910237*x^2, 330/1910237*(x+1
+)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 24 Test Weifeng
+
+>> Test
+Batch: 24 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+492804/625
+>> basis
+[(x-277/100)*(x-101/20)*(x-577/50)*(x-2361/100)*(x-652/25), -(x-277/100)*(x-101/20)*(x-577/50)*(x-2361/100)*(x-652/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -2.357731
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 24 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 24 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+492804/625
+>> basis
+[(x-277/100)*(x-101/20)*(x-577/50)*(x-2361/100)*(x-652/25), -(x-277/100)*(x-101/20)*(x-577/50)*(x-2361/100)*(x-652/25), -x^2+492804/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000002
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 24 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 25 Test Weifeng
+>> input polynomial
+-x^2+298116/625
+>> basis
+[(x-117/25)*(x-129/20)*(x-1233/100)*(x-72/5)*(x-452/25)*(x-496/25)*(x-521/25), -(x-117/25)*(x-129/20)*(x-1233/100)*(x-72/5)*(x-452/25)*(x-496/25)*(x-521/25)]
+>> Time taken
+1.718000
+">> Sums of squares multipliers", [-x^2+298116/625-148/36626273*x^2*(x-117/25)*
+(x-129/20)*(x-1233/100)*(x-72/5)*(x-452/25)*(x-496/25)*(x-521/25)+148/36626273*
+(x+1)^2*(x-117/25)*(x-129/20)*(x-1233/100)*(x-72/5)*(x-452/25)*(x-496/25)*(x-\
+521/25), 148/36626273*x^2, 148/36626273*(x+1)^2]
+>> Degree size
+9
+>> Succeeds Weifeng Batch: 25 Test Weifeng
+
+>> Test
+Batch: 25 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+298116/625
+>> basis
+[(x-117/25)*(x-129/20)*(x-1233/100)*(x-72/5)*(x-452/25)*(x-496/25)*(x-521/25), -(x-117/25)*(x-129/20)*(x-1233/100)*(x-72/5)*(x-452/25)*(x-496/25)*(x-521/25)]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.364586
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 25 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 25 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+298116/625
+>> basis
+[(x-117/25)*(x-129/20)*(x-1233/100)*(x-72/5)*(x-452/25)*(x-496/25)*(x-521/25), -(x-117/25)*(x-129/20)*(x-1233/100)*(x-72/5)*(x-452/25)*(x-496/25)*(x-521/25), -x^2+298116/625]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.310307
+>> Timeout RealCertify Batch: 25 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 26 Test Weifeng
+>> input polynomial
+-x^2+3606201/10000
+>> basis
+[(x-7/5)*(x-621/100)*(x-204/25)*(x-1699/100)*(x-1799/100), (-x+7/5)*(x-621/100)*(x-204/25)*(x-1699/100)*(x-1799/100)]
+>> Time taken
+1.223000
+">> Sums of squares multipliers", [-x^2+3606201/10000-1160/684501*x^2*(x-7/5)*(
+x-621/100)*(x-204/25)*(x-1699/100)*(x-1799/100)-1160/684501*(x+1)^2*(-x+7/5)*(x
+-621/100)*(x-204/25)*(x-1699/100)*(x-1799/100), 1160/684501*x^2, 1160/684501*(x
++1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 26 Test Weifeng
+
+>> Test
+Batch: 26 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+3606201/10000
+>> basis
+[(x-7/5)*(x-621/100)*(x-204/25)*(x-1699/100)*(x-1799/100), (-x+7/5)*(x-621/100)*(x-204/25)*(x-1699/100)*(x-1799/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -6.833721
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 26 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 26 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+3606201/10000
+>> basis
+[(x-7/5)*(x-621/100)*(x-204/25)*(x-1699/100)*(x-1799/100), (-x+7/5)*(x-621/100)*(x-204/25)*(x-1699/100)*(x-1799/100), -x^2+3606201/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+>> Timeout RealCertify Batch: 26 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 27 Test Weifeng
+>> input polynomial
+-x^2+7958041/10000
+>> basis
+[(x-108/25)*(x-901/100)*(x-1337/100)*(x-1683/100)*(x-2621/100), -(x-108/25)*(x-901/100)*(x-1337/100)*(x-1683/100)*(x-2621/100)]
+>> Time taken
+1.544000
+">> Sums of squares multipliers", [-x^2+7958041/10000-305/7134954*x^2*(x-108/25
+)*(x-901/100)*(x-1337/100)*(x-1683/100)*(x-2621/100)+305/7134954*(x+1)^2*(x-108
+/25)*(x-901/100)*(x-1337/100)*(x-1683/100)*(x-2621/100), 305/7134954*x^2, 305/
+7134954*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 27 Test Weifeng
+
+>> Test
+Batch: 27 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+7958041/10000
+>> basis
+[(x-108/25)*(x-901/100)*(x-1337/100)*(x-1683/100)*(x-2621/100), -(x-108/25)*(x-901/100)*(x-1337/100)*(x-1683/100)*(x-2621/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.959702
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 27 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 27 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+7958041/10000
+>> basis
+[(x-108/25)*(x-901/100)*(x-1337/100)*(x-1683/100)*(x-2621/100), -(x-108/25)*(x-901/100)*(x-1337/100)*(x-1683/100)*(x-2621/100), -x^2+7958041/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 27 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 28 Test Weifeng
+>> input polynomial
+-x^2+2455489/10000
+>> basis
+[(x-139/25)*(x-251/25)*(x-1367/100), (-x+139/25)*(x-251/25)*(x-1367/100)]
+>> Time taken
+0.335000
+">> Sums of squares multipliers", [-x^2+2455489/10000-3687/51527*x^2*(x-139/25)
+*(x-251/25)*(x-1367/100)-3687/51527*(x+1)^2*(-x+139/25)*(x-251/25)*(x-1367/100)
+, 3687/51527*x^2, 3687/51527*(x+1)^2]
+>> Degree size
+5
+>> Succeeds Weifeng Batch: 28 Test Weifeng
+
+>> Test
+Batch: 28 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+2455489/10000
+>> basis
+[(x-139/25)*(x-251/25)*(x-1367/100), (-x+139/25)*(x-251/25)*(x-1367/100)]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: -175.130065
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 28 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 28 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+2455489/10000
+>> basis
+[(x-139/25)*(x-251/25)*(x-1367/100), (-x+139/25)*(x-251/25)*(x-1367/100), -x^2+2455489/10000]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 28 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 29 Test Weifeng
+>> input polynomial
+-x^2+231361/625
+>> basis
+[(x-33/20)*(x-101/50)*(x-499/50)*(x-1043/100)*(x-431/25), -(x-33/20)*(x-101/50)*(x-499/50)*(x-1043/100)*(x-431/25)]
+>> Time taken
+1.207000
+">> Sums of squares multipliers", [-x^2+231361/625-137/660800*x^2*(x-33/20)*(x-\
+101/50)*(x-499/50)*(x-1043/100)*(x-431/25)+137/660800*(x+1)^2*(x-33/20)*(x-101/
+50)*(x-499/50)*(x-1043/100)*(x-431/25), 137/660800*x^2, 137/660800*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 29 Test Weifeng
+
+>> Test
+Batch: 29 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+231361/625
+>> basis
+[(x-33/20)*(x-101/50)*(x-499/50)*(x-1043/100)*(x-431/25), -(x-33/20)*(x-101/50)*(x-499/50)*(x-1043/100)*(x-431/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -6.229800
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 29 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 29 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+231361/625
+>> basis
+[(x-33/20)*(x-101/50)*(x-499/50)*(x-1043/100)*(x-431/25), -(x-33/20)*(x-101/50)*(x-499/50)*(x-1043/100)*(x-431/25), -x^2+231361/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 29 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 30 Test Weifeng
+>> input polynomial
+-x^2+318096/625
+>> basis
+[(x-34/5)*(x-471/50)*(x-969/100)*(x-514/25)*(x-539/25), (-x+34/5)*(x-471/50)*(x-969/100)*(x-514/25)*(x-539/25)]
+>> Time taken
+1.539000
+">> Sums of squares multipliers", [-x^2+318096/625-1173/2438473*x^2*(x-34/5)*(x
+-471/50)*(x-969/100)*(x-514/25)*(x-539/25)-1173/2438473*(x+1)^2*(-x+34/5)*(x-\
+471/50)*(x-969/100)*(x-514/25)*(x-539/25), 1173/2438473*x^2, 1173/2438473*(x+1)
+^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 30 Test Weifeng
+
+>> Test
+Batch: 30 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+318096/625
+>> basis
+[(x-34/5)*(x-471/50)*(x-969/100)*(x-514/25)*(x-539/25), (-x+34/5)*(x-471/50)*(x-969/100)*(x-514/25)*(x-539/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -2.186930
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 30 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 30 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+318096/625
+>> basis
+[(x-34/5)*(x-471/50)*(x-969/100)*(x-514/25)*(x-539/25), (-x+34/5)*(x-471/50)*(x-969/100)*(x-514/25)*(x-539/25), -x^2+318096/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 30 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 31 Test Weifeng
+>> input polynomial
+-x^2+6295081/10000
+>> basis
+[(x-249/50)*(x-273/50)*(x-727/100)*(x-399/50)*(x-23)*(x-2309/100)*(x-2409/100), -(x-249/50)*(x-273/50)*(x-727/100)*(x-399/50)*(x-23)*(x-2309/100)*(x-2409/100)]
+>> Time taken
+1.802000
+">> Sums of squares multipliers", [-x^2+6295081/10000-128/84914743*x^2*(x-249/
+50)*(x-273/50)*(x-727/100)*(x-399/50)*(x-23)*(x-2309/100)*(x-2409/100)+128/
+84914743*(x+1)^2*(x-249/50)*(x-273/50)*(x-727/100)*(x-399/50)*(x-23)*(x-2309/
+100)*(x-2409/100), 128/84914743*x^2, 128/84914743*(x+1)^2]
+>> Degree size
+9
+>> Succeeds Weifeng Batch: 31 Test Weifeng
+
+>> Test
+Batch: 31 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+6295081/10000
+>> basis
+[(x-249/50)*(x-273/50)*(x-727/100)*(x-399/50)*(x-23)*(x-2309/100)*(x-2409/100), -(x-249/50)*(x-273/50)*(x-727/100)*(x-399/50)*(x-23)*(x-2309/100)*(x-2409/100)]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.446119
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 31 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 31 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+6295081/10000
+>> basis
+[(x-249/50)*(x-273/50)*(x-727/100)*(x-399/50)*(x-23)*(x-2309/100)*(x-2409/100), -(x-249/50)*(x-273/50)*(x-727/100)*(x-399/50)*(x-23)*(x-2309/100)*(x-2409/100), -x^2+6295081/10000]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.971153
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 31 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 32 Test Weifeng
+>> input polynomial
+-x^2+4004001/10000
+>> basis
+[(x-2)*(x-202/25)*(x-1801/100), (-x+2)*(x-202/25)*(x-1801/100)]
+>> Time taken
+0.275000
+">> Sums of squares multipliers", [-x^2+4004001/10000-3867/394213*x^2*(x-2)*(x-\
+202/25)*(x-1801/100)-3867/394213*(x+1)^2*(-x+2)*(x-202/25)*(x-1801/100), 3867/
+394213*x^2, 3867/394213*(x+1)^2]
+>> Degree size
+5
+>> Succeeds Weifeng Batch: 32 Test Weifeng
+
+>> Test
+Batch: 32 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+4004001/10000
+>> basis
+[(x-2)*(x-202/25)*(x-1801/100), (-x+2)*(x-202/25)*(x-1801/100)]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: -104.656359
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 32 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 32 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+4004001/10000
+>> basis
+[(x-2)*(x-202/25)*(x-1801/100), (-x+2)*(x-202/25)*(x-1801/100), -x^2+4004001/10000]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 32 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 33 Test Weifeng
+>> input polynomial
+-x^2+531441/400
+>> basis
+[(x-229/100)*(x-218/25)*(x-89/5)*(x-689/20)*(x-709/20), -(x-229/100)*(x-218/25)*(x-89/5)*(x-689/20)*(x-709/20)]
+>> Time taken
+1.232000
+">> Sums of squares multipliers", [-x^2+531441/400-164/865891*x^2*(x-229/100)*(
+x-218/25)*(x-89/5)*(x-689/20)*(x-709/20)+164/865891*(x+1)^2*(x-229/100)*(x-218/
+25)*(x-89/5)*(x-689/20)*(x-709/20), 164/865891*x^2, 164/865891*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 33 Test Weifeng
+
+>> Test
+Batch: 33 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+531441/400
+>> basis
+[(x-229/100)*(x-218/25)*(x-89/5)*(x-689/20)*(x-709/20), -(x-229/100)*(x-218/25)*(x-89/5)*(x-689/20)*(x-709/20)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.324307
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 33 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 33 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+531441/400
+>> basis
+[(x-229/100)*(x-218/25)*(x-89/5)*(x-689/20)*(x-709/20), -(x-229/100)*(x-218/25)*(x-89/5)*(x-689/20)*(x-709/20), -x^2+531441/400]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+>> Timeout RealCertify Batch: 33 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 34 Test Weifeng
+>> input polynomial
+-x^2+301401/400
+>> basis
+[(x-401/100)*(x-961/100)*(x-217/20)*(x-327/25)*(x-509/20), -(x-401/100)*(x-961/100)*(x-217/20)*(x-327/25)*(x-509/20)]
+>> Time taken
+1.795000
+">> Sums of squares multipliers", [-x^2+301401/400-221/7390974*x^2*(x-401/100)*
+(x-961/100)*(x-217/20)*(x-327/25)*(x-509/20)+221/7390974*(x+1)^2*(x-401/100)*(x
+-961/100)*(x-217/20)*(x-327/25)*(x-509/20), 221/7390974*x^2, 221/7390974*(x+1)^
+2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 34 Test Weifeng
+
+>> Test
+Batch: 34 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+301401/400
+>> basis
+[(x-401/100)*(x-961/100)*(x-217/20)*(x-327/25)*(x-509/20), -(x-401/100)*(x-961/100)*(x-217/20)*(x-327/25)*(x-509/20)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -2.124113
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 34 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 34 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+301401/400
+>> basis
+[(x-401/100)*(x-961/100)*(x-217/20)*(x-327/25)*(x-509/20), -(x-401/100)*(x-961/100)*(x-217/20)*(x-327/25)*(x-509/20), -x^2+301401/400]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000005
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 34 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 35 Test Weifeng
+>> input polynomial
+-x^2+11015761/10000
+>> basis
+[(x-13/2)*(x-853/100)*(x-317/20)*(x-3119/100)*(x-3219/100), (-x+13/2)*(x-853/100)*(x-317/20)*(x-3119/100)*(x-3219/100)]
+>> Time taken
+1.301000
+">> Sums of squares multipliers", [-x^2+11015761/10000-124/415137*x^2*(x-13/2)*
+(x-853/100)*(x-317/20)*(x-3119/100)*(x-3219/100)-124/415137*(x+1)^2*(-x+13/2)*(
+x-853/100)*(x-317/20)*(x-3119/100)*(x-3219/100), 124/415137*x^2, 124/415137*(x+
+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 35 Test Weifeng
+
+>> Test
+Batch: 35 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+11015761/10000
+>> basis
+[(x-13/2)*(x-853/100)*(x-317/20)*(x-3119/100)*(x-3219/100), (-x+13/2)*(x-853/100)*(x-317/20)*(x-3119/100)*(x-3219/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.327229
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 35 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 35 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+11015761/10000
+>> basis
+[(x-13/2)*(x-853/100)*(x-317/20)*(x-3119/100)*(x-3219/100), (-x+13/2)*(x-853/100)*(x-317/20)*(x-3119/100)*(x-3219/100), -x^2+11015761/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 35 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 36 Test Weifeng
+>> input polynomial
+-x^2+398161/625
+>> basis
+[(x-513/100)*(x-156/25)*(x-1491/100)*(x-151/10)*(x-1123/50)*(x-581/25)*(x-606/25), -(x-513/100)*(x-156/25)*(x-1491/100)*(x-151/10)*(x-1123/50)*(x-581/25)*(x-606/25)]
+>> Time taken
+1.786000
+">> Sums of squares multipliers", [-x^2+398161/625-15/6671222*x^2*(x-513/100)*(
+x-156/25)*(x-1491/100)*(x-151/10)*(x-1123/50)*(x-581/25)*(x-606/25)+15/6671222*
+(x+1)^2*(x-513/100)*(x-156/25)*(x-1491/100)*(x-151/10)*(x-1123/50)*(x-581/25)*(
+x-606/25), 15/6671222*x^2, 15/6671222*(x+1)^2]
+>> Degree size
+9
+>> Succeeds Weifeng Batch: 36 Test Weifeng
+
+>> Test
+Batch: 36 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+398161/625
+>> basis
+[(x-513/100)*(x-156/25)*(x-1491/100)*(x-151/10)*(x-1123/50)*(x-581/25)*(x-606/25), -(x-513/100)*(x-156/25)*(x-1491/100)*(x-151/10)*(x-1123/50)*(x-581/25)*(x-606/25)]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.591244
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 36 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 36 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+398161/625
+>> basis
+[(x-513/100)*(x-156/25)*(x-1491/100)*(x-151/10)*(x-1123/50)*(x-581/25)*(x-606/25), -(x-513/100)*(x-156/25)*(x-1491/100)*(x-151/10)*(x-1123/50)*(x-581/25)*(x-606/25), -x^2+398161/625]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.968121
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 36 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 37 Test Weifeng
+>> input polynomial
+-x^2+241081/400
+>> basis
+[(x-48/25)*(x-577/100)*(x-244/25)*(x-1141/100)*(x-613/50)*(x-451/20)*(x-471/20), -(x-48/25)*(x-577/100)*(x-244/25)*(x-1141/100)*(x-613/50)*(x-451/20)*(x-471/20)]
+>> Time taken
+1.654000
+">> Sums of squares multipliers", [-x^2+241081/400-124/26730621*x^2*(x-48/25)*(
+x-577/100)*(x-244/25)*(x-1141/100)*(x-613/50)*(x-451/20)*(x-471/20)+124/
+26730621*(x+1)^2*(x-48/25)*(x-577/100)*(x-244/25)*(x-1141/100)*(x-613/50)*(x-\
+451/20)*(x-471/20), 124/26730621*x^2, 124/26730621*(x+1)^2]
+>> Degree size
+9
+>> Succeeds Weifeng Batch: 37 Test Weifeng
+
+>> Test
+Batch: 37 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+241081/400
+>> basis
+[(x-48/25)*(x-577/100)*(x-244/25)*(x-1141/100)*(x-613/50)*(x-451/20)*(x-471/20), -(x-48/25)*(x-577/100)*(x-244/25)*(x-1141/100)*(x-613/50)*(x-451/20)*(x-471/20)]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.446440
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 37 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 37 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+241081/400
+>> basis
+[(x-48/25)*(x-577/100)*(x-244/25)*(x-1141/100)*(x-613/50)*(x-451/20)*(x-471/20), -(x-48/25)*(x-577/100)*(x-244/25)*(x-1141/100)*(x-613/50)*(x-451/20)*(x-471/20), -x^2+241081/400]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+>> Timeout RealCertify Batch: 37 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 38 Test Weifeng
+>> input polynomial
+-x^2+277729/400
+>> basis
+[(x-199/100)*(x-49/10)*(x-303/25)*(x-487/20)*(x-507/20), -(x-199/100)*(x-49/10)*(x-303/25)*(x-487/20)*(x-507/20)]
+>> Time taken
+1.288000
+">> Sums of squares multipliers", [-x^2+277729/400-1358/2729341*x^2*(x-199/100)
+*(x-49/10)*(x-303/25)*(x-487/20)*(x-507/20)+1358/2729341*(x+1)^2*(x-199/100)*(x
+-49/10)*(x-303/25)*(x-487/20)*(x-507/20), 1358/2729341*x^2, 1358/2729341*(x+1)^
+2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 38 Test Weifeng
+
+>> Test
+Batch: 38 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+277729/400
+>> basis
+[(x-199/100)*(x-49/10)*(x-303/25)*(x-487/20)*(x-507/20), -(x-199/100)*(x-49/10)*(x-303/25)*(x-487/20)*(x-507/20)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -2.675821
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 38 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 38 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+277729/400
+>> basis
+[(x-199/100)*(x-49/10)*(x-303/25)*(x-487/20)*(x-507/20), -(x-199/100)*(x-49/10)*(x-303/25)*(x-487/20)*(x-507/20), -x^2+277729/400]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000005
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 38 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 39 Test Weifeng
+>> input polynomial
+-x^2+375769/625
+>> basis
+[(x-53/10)*(x-133/10)*(x-193/10)*(x-563/25)*(x-588/25), (-x+53/10)*(x-133/10)*(x-193/10)*(x-563/25)*(x-588/25)]
+>> Time taken
+1.489000
+">> Sums of squares multipliers", [-x^2+375769/625-430/2121891*x^2*(x-53/10)*(x
+-133/10)*(x-193/10)*(x-563/25)*(x-588/25)-430/2121891*(x+1)^2*(-x+53/10)*(x-133
+/10)*(x-193/10)*(x-563/25)*(x-588/25), 430/2121891*x^2, 430/2121891*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 39 Test Weifeng
+
+>> Test
+Batch: 39 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+375769/625
+>> basis
+[(x-53/10)*(x-133/10)*(x-193/10)*(x-563/25)*(x-588/25), (-x+53/10)*(x-133/10)*(x-193/10)*(x-563/25)*(x-588/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.544774
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 39 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 39 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+375769/625
+>> basis
+[(x-53/10)*(x-133/10)*(x-193/10)*(x-563/25)*(x-588/25), (-x+53/10)*(x-133/10)*(x-193/10)*(x-563/25)*(x-588/25), -x^2+375769/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000002
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 39 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 40 Test Weifeng
+>> input polynomial
+-x^2+1283689/10000
+>> basis
+[(x-97/25)*(x-217/50)*(x-399/50)*(x-933/100)*(x-1033/100), (-x+97/25)*(x-217/50)*(x-399/50)*(x-933/100)*(x-1033/100)]
+>> Time taken
+1.311000
+">> Sums of squares multipliers", [-x^2+1283689/10000-2258/596863*x^2*(x-97/25)
+*(x-217/50)*(x-399/50)*(x-933/100)*(x-1033/100)-2258/596863*(x+1)^2*(-x+97/25)*
+(x-217/50)*(x-399/50)*(x-933/100)*(x-1033/100), 2258/596863*x^2, 2258/596863*(x
++1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 40 Test Weifeng
+
+>> Test
+Batch: 40 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+1283689/10000
+>> basis
+[(x-97/25)*(x-217/50)*(x-399/50)*(x-933/100)*(x-1033/100), (-x+97/25)*(x-217/50)*(x-399/50)*(x-933/100)*(x-1033/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -13.999902
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 40 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 40 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+1283689/10000
+>> basis
+[(x-97/25)*(x-217/50)*(x-399/50)*(x-933/100)*(x-1033/100), (-x+97/25)*(x-217/50)*(x-399/50)*(x-933/100)*(x-1033/100), -x^2+1283689/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 40 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 41 Test Weifeng
+>> input polynomial
+-x^2+4977361/10000
+>> basis
+[(x-193/50)*(x-251/20)*(x-827/50)*(x-2031/100)*(x-2131/100), (-x+193/50)*(x-251/20)*(x-827/50)*(x-2031/100)*(x-2131/100)]
+>> Time taken
+1.177000
+">> Sums of squares multipliers", [-x^2+4977361/10000-284/693563*x^2*(x-193/50)
+*(x-251/20)*(x-827/50)*(x-2031/100)*(x-2131/100)-284/693563*(x+1)^2*(-x+193/50)
+*(x-251/20)*(x-827/50)*(x-2031/100)*(x-2131/100), 284/693563*x^2, 284/693563*(x
++1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 41 Test Weifeng
+
+>> Test
+Batch: 41 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+4977361/10000
+>> basis
+[(x-193/50)*(x-251/20)*(x-827/50)*(x-2031/100)*(x-2131/100), (-x+193/50)*(x-251/20)*(x-827/50)*(x-2031/100)*(x-2131/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.994740
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 41 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 41 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+4977361/10000
+>> basis
+[(x-193/50)*(x-251/20)*(x-827/50)*(x-2031/100)*(x-2131/100), (-x+193/50)*(x-251/20)*(x-827/50)*(x-2031/100)*(x-2131/100), -x^2+4977361/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 41 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 42 Test Weifeng
+>> input polynomial
+-x^2+13461561/10000
+>> basis
+[(x-227/25)*(x-789/50)*(x-88/5)*(x-3469/100)*(x-3569/100), (-x+227/25)*(x-789/50)*(x-88/5)*(x-3469/100)*(x-3569/100)]
+>> Time taken
+1.182000
+">> Sums of squares multipliers", [-x^2+13461561/10000-419/5295516*x^2*(x-227/
+25)*(x-789/50)*(x-88/5)*(x-3469/100)*(x-3569/100)-419/5295516*(x+1)^2*(-x+227/
+25)*(x-789/50)*(x-88/5)*(x-3469/100)*(x-3569/100), 419/5295516*x^2, 419/5295516
+*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 42 Test Weifeng
+
+>> Test
+Batch: 42 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+13461561/10000
+>> basis
+[(x-227/25)*(x-789/50)*(x-88/5)*(x-3469/100)*(x-3569/100), (-x+227/25)*(x-789/50)*(x-88/5)*(x-3469/100)*(x-3569/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.002492
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 42 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 42 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+13461561/10000
+>> basis
+[(x-227/25)*(x-789/50)*(x-88/5)*(x-3469/100)*(x-3569/100), (-x+227/25)*(x-789/50)*(x-88/5)*(x-3469/100)*(x-3569/100), -x^2+13461561/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.958796
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 42 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 43 Test Weifeng
+>> input polynomial
+-x^2+877969/2500
+>> basis
+[(x-51/25)*(x-467/100)*(x-927/100)*(x-837/50)*(x-887/50), (-x+51/25)*(x-467/100)*(x-927/100)*(x-837/50)*(x-887/50)]
+>> Time taken
+1.202000
+">> Sums of squares multipliers", [-x^2+877969/2500-244/129655*x^2*(x-51/25)*(x
+-467/100)*(x-927/100)*(x-837/50)*(x-887/50)-244/129655*(x+1)^2*(-x+51/25)*(x-\
+467/100)*(x-927/100)*(x-837/50)*(x-887/50), 244/129655*x^2, 244/129655*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 43 Test Weifeng
+
+>> Test
+Batch: 43 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+877969/2500
+>> basis
+[(x-51/25)*(x-467/100)*(x-927/100)*(x-837/50)*(x-887/50), (-x+51/25)*(x-467/100)*(x-927/100)*(x-837/50)*(x-887/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -7.150611
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 43 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 43 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+877969/2500
+>> basis
+[(x-51/25)*(x-467/100)*(x-927/100)*(x-837/50)*(x-887/50), (-x+51/25)*(x-467/100)*(x-927/100)*(x-837/50)*(x-887/50), -x^2+877969/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -80.142511
+>> Timeout RealCertify Batch: 43 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 44 Test Weifeng
+>> input polynomial
+-x^2+85849/100
+>> basis
+[(x-176/25)*(x-359/25)*(x-2183/100)*(x-273/10)*(x-283/10), (-x+176/25)*(x-359/25)*(x-2183/100)*(x-273/10)*(x-283/10)]
+>> Time taken
+1.824000
+">> Sums of squares multipliers", [-x^2+85849/100-420/4040149*x^2*(x-176/25)*(x
+-359/25)*(x-2183/100)*(x-273/10)*(x-283/10)-420/4040149*(x+1)^2*(-x+176/25)*(x-\
+359/25)*(x-2183/100)*(x-273/10)*(x-283/10), 420/4040149*x^2, 420/4040149*(x+1)^
+2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 44 Test Weifeng
+
+>> Test
+Batch: 44 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+85849/100
+>> basis
+[(x-176/25)*(x-359/25)*(x-2183/100)*(x-273/10)*(x-283/10), (-x+176/25)*(x-359/25)*(x-2183/100)*(x-273/10)*(x-283/10)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+>> Timeout RealCertify Batch: 44 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 44 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+85849/100
+>> basis
+[(x-176/25)*(x-359/25)*(x-2183/100)*(x-273/10)*(x-283/10), (-x+176/25)*(x-359/25)*(x-2183/100)*(x-273/10)*(x-283/10), -x^2+85849/100]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000002
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 44 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 45 Test Weifeng
+>> input polynomial
+-x^2+7991929/10000
+>> basis
+[(x-33/4)*(x-1087/100)*(x-1091/100)*(x-2627/100)*(x-2727/100), (-x+33/4)*(x-1087/100)*(x-1091/100)*(x-2627/100)*(x-2727/100)]
+>> Time taken
+1.346000
+">> Sums of squares multipliers", [-x^2+7991929/10000-327/1256098*x^2*(x-33/4)*
+(x-1087/100)*(x-1091/100)*(x-2627/100)*(x-2727/100)-327/1256098*(x+1)^2*(-x+33/
+4)*(x-1087/100)*(x-1091/100)*(x-2627/100)*(x-2727/100), 327/1256098*x^2, 327/
+1256098*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 45 Test Weifeng
+
+>> Test
+Batch: 45 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+7991929/10000
+>> basis
+[(x-33/4)*(x-1087/100)*(x-1091/100)*(x-2627/100)*(x-2727/100), (-x+33/4)*(x-1087/100)*(x-1091/100)*(x-2627/100)*(x-2727/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.895329
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 45 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 45 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+7991929/10000
+>> basis
+[(x-33/4)*(x-1087/100)*(x-1091/100)*(x-2627/100)*(x-2727/100), (-x+33/4)*(x-1087/100)*(x-1091/100)*(x-2627/100)*(x-2727/100), -x^2+7991929/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 45 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 46 Test Weifeng
+>> input polynomial
+-x^2+146689/625
+>> basis
+[(x-547/100)*(x-141/25)*(x-153/20)*(x-333/25)*(x-358/25), -(x-547/100)*(x-141/25)*(x-153/20)*(x-333/25)*(x-358/25)]
+>> Time taken
+1.450000
+">> Sums of squares multipliers", [-x^2+146689/625-985/574807*x^2*(x-547/100)*(
+x-141/25)*(x-153/20)*(x-333/25)*(x-358/25)+985/574807*(x+1)^2*(x-547/100)*(x-\
+141/25)*(x-153/20)*(x-333/25)*(x-358/25), 985/574807*x^2, 985/574807*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 46 Test Weifeng
+
+>> Test
+Batch: 46 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+146689/625
+>> basis
+[(x-547/100)*(x-141/25)*(x-153/20)*(x-333/25)*(x-358/25), -(x-547/100)*(x-141/25)*(x-153/20)*(x-333/25)*(x-358/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -13.476716
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 46 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 46 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+146689/625
+>> basis
+[(x-547/100)*(x-141/25)*(x-153/20)*(x-333/25)*(x-358/25), -(x-547/100)*(x-141/25)*(x-153/20)*(x-333/25)*(x-358/25), -x^2+146689/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000006
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 46 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 47 Test Weifeng
+>> input polynomial
+-x^2+6285049/10000
+>> basis
+[(x-267/100)*(x-31/10)*(x-327/25)*(x-2147/100)*(x-2307/100), -(x-267/100)*(x-31/10)*(x-327/25)*(x-2147/100)*(x-2307/100)]
+>> Time taken
+1.378000
+">> Sums of squares multipliers", [-x^2+6285049/10000-308/581813*x^2*(x-267/100
+)*(x-31/10)*(x-327/25)*(x-2147/100)*(x-2307/100)+308/581813*(x+1)^2*(x-267/100)
+*(x-31/10)*(x-327/25)*(x-2147/100)*(x-2307/100), 308/581813*x^2, 308/581813*(x+
+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 47 Test Weifeng
+
+>> Test
+Batch: 47 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+6285049/10000
+>> basis
+[(x-267/100)*(x-31/10)*(x-327/25)*(x-2147/100)*(x-2307/100), -(x-267/100)*(x-31/10)*(x-327/25)*(x-2147/100)*(x-2307/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -3.046421
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 47 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 47 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+6285049/10000
+>> basis
+[(x-267/100)*(x-31/10)*(x-327/25)*(x-2147/100)*(x-2307/100), -(x-267/100)*(x-31/10)*(x-327/25)*(x-2147/100)*(x-2307/100), -x^2+6285049/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 47 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 48 Test Weifeng
+>> input polynomial
+-x^2+1803649/2500
+>> basis
+[(x-214/25)*(x-917/100)*(x-909/50)*(x-2483/100)*(x-1243/50), -(x-214/25)*(x-917/100)*(x-909/50)*(x-2483/100)*(x-1243/50)]
+>> Time taken
+1.458000
+">> Sums of squares multipliers", [-x^2+1803649/2500-372/2065475*x^2*(x-214/25)
+*(x-917/100)*(x-909/50)*(x-2483/100)*(x-1243/50)+372/2065475*(x+1)^2*(x-214/25)
+*(x-917/100)*(x-909/50)*(x-2483/100)*(x-1243/50), 372/2065475*x^2, 372/2065475*
+(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 48 Test Weifeng
+
+>> Test
+Batch: 48 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+1803649/2500
+>> basis
+[(x-214/25)*(x-917/100)*(x-909/50)*(x-2483/100)*(x-1243/50), -(x-214/25)*(x-917/100)*(x-909/50)*(x-2483/100)*(x-1243/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.150101
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 48 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 48 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+1803649/2500
+>> basis
+[(x-214/25)*(x-917/100)*(x-909/50)*(x-2483/100)*(x-1243/50), -(x-214/25)*(x-917/100)*(x-909/50)*(x-2483/100)*(x-1243/50), -x^2+1803649/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 48 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 49 Test Weifeng
+>> input polynomial
+-x^2+2271049/2500
+>> basis
+[(x-91/25)*(x-307/50)*(x-1551/100)*(x-471/20)*(x-1407/50), -(x-91/25)*(x-307/50)*(x-1551/100)*(x-471/20)*(x-1407/50)]
+>> Time taken
+1.238000
+">> Sums of squares multipliers", [-x^2+2271049/2500-163/2208521*x^2*(x-91/25)*
+(x-307/50)*(x-1551/100)*(x-471/20)*(x-1407/50)+163/2208521*(x+1)^2*(x-91/25)*(x
+-307/50)*(x-1551/100)*(x-471/20)*(x-1407/50), 163/2208521*x^2, 163/2208521*(x+1
+)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 49 Test Weifeng
+
+>> Test
+Batch: 49 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+2271049/2500
+>> basis
+[(x-91/25)*(x-307/50)*(x-1551/100)*(x-471/20)*(x-1407/50), -(x-91/25)*(x-307/50)*(x-1551/100)*(x-471/20)*(x-1407/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.747792
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 49 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 49 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+2271049/2500
+>> basis
+[(x-91/25)*(x-307/50)*(x-1551/100)*(x-471/20)*(x-1407/50), -(x-91/25)*(x-307/50)*(x-1551/100)*(x-471/20)*(x-1407/50), -x^2+2271049/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 49 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 50 Test Weifeng
+>> input polynomial
+-x^2+106929/400
+>> basis
+[(x-367/100)*(x-157/25)*(x-287/20), (-x+367/100)*(x-157/25)*(x-287/20)]
+>> Time taken
+0.619000
+">> Sums of squares multipliers", [-x^2+106929/400-4377/208676*x^2*(x-367/100)*
+(x-157/25)*(x-287/20)-4377/208676*(x+1)^2*(-x+367/100)*(x-157/25)*(x-287/20), 
+4377/208676*x^2, 4377/208676*(x+1)^2]
+>> Degree size
+5
+>> Succeeds Weifeng Batch: 50 Test Weifeng
+
+>> Test
+Batch: 50 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+106929/400
+>> basis
+[(x-367/100)*(x-157/25)*(x-287/20), (-x+367/100)*(x-157/25)*(x-287/20)]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: -158.749682
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 50 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 50 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+106929/400
+>> basis
+[(x-367/100)*(x-157/25)*(x-287/20), (-x+367/100)*(x-157/25)*(x-287/20), -x^2+106929/400]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 50 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 51 Test Weifeng
+>> input polynomial
+-x^2+793881/2500
+>> basis
+[(x-147/100)*(x-109/25)*(x-127/20)*(x-103/10)*(x-791/50), -(x-147/100)*(x-109/25)*(x-127/20)*(x-103/10)*(x-791/50)]
+>> Time taken
+1.385000
+">> Sums of squares multipliers", [-x^2+793881/2500-253/853587*x^2*(x-147/100)*
+(x-109/25)*(x-127/20)*(x-103/10)*(x-791/50)+253/853587*(x+1)^2*(x-147/100)*(x-\
+109/25)*(x-127/20)*(x-103/10)*(x-791/50), 253/853587*x^2, 253/853587*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 51 Test Weifeng
+
+>> Test
+Batch: 51 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+793881/2500
+>> basis
+[(x-147/100)*(x-109/25)*(x-127/20)*(x-103/10)*(x-791/50), -(x-147/100)*(x-109/25)*(x-127/20)*(x-103/10)*(x-791/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.783504
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 51 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 51 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+793881/2500
+>> basis
+[(x-147/100)*(x-109/25)*(x-127/20)*(x-103/10)*(x-791/50), -(x-147/100)*(x-109/25)*(x-127/20)*(x-103/10)*(x-791/50), -x^2+793881/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 1.829789
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 51 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 52 Test Weifeng
+>> input polynomial
+-x^2+4541161/10000
+>> basis
+[(x-231/25)*(x-813/50)*(x-462/25)*(x-1927/100)*(x-1931/100), (-x+231/25)*(x-813/50)*(x-462/25)*(x-1927/100)*(x-1931/100)]
+>> Time taken
+1.809000
+">> Sums of squares multipliers", [-x^2+4541161/10000-(41/464042+(-7205/
+4650508656*x^6+5912423/46505086560*x^5-7634575069/1860203462400*x^4+
+3009760790641/46505086560000*x^3-3804399542789197/7750847760000000*x^2+
+86455204017069811/64590398000000000*x-54151386958097719/290656791000000000)^
+2267)*x^2*(x-231/25)*(x-813/50)*(x-462/25)*(x-1927/100)*(x-1931/100)-(41/464042
++(-7205/4650508656*x^6+5912423/46505086560*x^5-7634575069/1860203462400*x^4+
+3009760790641/46505086560000*x^3-3804399542789197/7750847760000000*x^2+
+86455204017069811/64590398000000000*x-54151386958097719/290656791000000000)^
+2267)*(x+1)^2*(-x+231/25)*(x-813/50)*(x-462/25)*(x-1927/100)*(x-1931/100), (41/
+464042+(-7205/4650508656*x^6+5912423/46505086560*x^5-7634575069/1860203462400*x
+^4+3009760790641/46505086560000*x^3-3804399542789197/7750847760000000*x^2+
+86455204017069811/64590398000000000*x-54151386958097719/290656791000000000)^
+2267)*x^2, (41/464042+(-7205/4650508656*x^6+5912423/46505086560*x^5-7634575069/
+1860203462400*x^4+3009760790641/46505086560000*x^3-3804399542789197/
+7750847760000000*x^2+86455204017069811/64590398000000000*x-54151386958097719/
+290656791000000000)^2267)*(x+1)^2]
+>> Degree size
+13609
+>> Succeeds Weifeng Batch: 52 Test Weifeng
+
+>> Test
+Batch: 52 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+4541161/10000
+>> basis
+[(x-231/25)*(x-813/50)*(x-462/25)*(x-1927/100)*(x-1931/100), (-x+231/25)*(x-813/50)*(x-462/25)*(x-1927/100)*(x-1931/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -3.532568
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 52 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 52 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+4541161/10000
+>> basis
+[(x-231/25)*(x-813/50)*(x-462/25)*(x-1927/100)*(x-1931/100), (-x+231/25)*(x-813/50)*(x-462/25)*(x-1927/100)*(x-1931/100), -x^2+4541161/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 52 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 53 Test Weifeng
+>> input polynomial
+-x^2+165649/100
+>> basis
+[(x-61/20)*(x-48/5)*(x-389/20)*(x-523/25)*(x-387/10), -(x-61/20)*(x-48/5)*(x-389/20)*(x-523/25)*(x-387/10)]
+>> Time taken
+1.470000
+">> Sums of squares multipliers", [-x^2+165649/100-22/5283199*x^2*(x-61/20)*(x-\
+48/5)*(x-389/20)*(x-523/25)*(x-387/10)+22/5283199*(x+1)^2*(x-61/20)*(x-48/5)*(x
+-389/20)*(x-523/25)*(x-387/10), 22/5283199*x^2, 22/5283199*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 53 Test Weifeng
+
+>> Test
+Batch: 53 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+165649/100
+>> basis
+[(x-61/20)*(x-48/5)*(x-389/20)*(x-523/25)*(x-387/10), -(x-61/20)*(x-48/5)*(x-389/20)*(x-523/25)*(x-387/10)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.187668
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 53 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 53 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+165649/100
+>> basis
+[(x-61/20)*(x-48/5)*(x-389/20)*(x-523/25)*(x-387/10), -(x-61/20)*(x-48/5)*(x-389/20)*(x-523/25)*(x-387/10), -x^2+165649/100]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 53 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 54 Test Weifeng
+>> input polynomial
+-x^2+594441/625
+>> basis
+[(x-811/100)*(x-279/20)*(x-387/25)*(x-498/25)*(x-721/25), (-x+811/100)*(x-279/20)*(x-387/25)*(x-498/25)*(x-721/25)]
+>> Time taken
+1.719000
+">> Sums of squares multipliers", [-x^2+594441/625-284/5280757*x^2*(x-811/100)*
+(x-279/20)*(x-387/25)*(x-498/25)*(x-721/25)-284/5280757*(x+1)^2*(-x+811/100)*(x
+-279/20)*(x-387/25)*(x-498/25)*(x-721/25), 284/5280757*x^2, 284/5280757*(x+1)^2
+]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 54 Test Weifeng
+
+>> Test
+Batch: 54 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+594441/625
+>> basis
+[(x-811/100)*(x-279/20)*(x-387/25)*(x-498/25)*(x-721/25), (-x+811/100)*(x-279/20)*(x-387/25)*(x-498/25)*(x-721/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.642714
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 54 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 54 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+594441/625
+>> basis
+[(x-811/100)*(x-279/20)*(x-387/25)*(x-498/25)*(x-721/25), (-x+811/100)*(x-279/20)*(x-387/25)*(x-498/25)*(x-721/25), -x^2+594441/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.930161
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 54 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 55 Test Weifeng
+>> input polynomial
+-x^2+3059001/10000
+>> basis
+[(x-106/25)*(x-831/100)*(x-267/25)*(x-1183/100)*(x-1549/100), -(x-106/25)*(x-831/100)*(x-267/25)*(x-1183/100)*(x-1549/100)]
+>> Time taken
+1.576000
+">> Sums of squares multipliers", [-x^2+3059001/10000-117/82931*x^2*(x-106/25)*
+(x-831/100)*(x-267/25)*(x-1183/100)*(x-1549/100)+117/82931*(x+1)^2*(x-106/25)*(
+x-831/100)*(x-267/25)*(x-1183/100)*(x-1549/100), 117/82931*x^2, 117/82931*(x+1)
+^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 55 Test Weifeng
+
+>> Test
+Batch: 55 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+3059001/10000
+>> basis
+[(x-106/25)*(x-831/100)*(x-267/25)*(x-1183/100)*(x-1549/100), -(x-106/25)*(x-831/100)*(x-267/25)*(x-1183/100)*(x-1549/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -7.406573
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 55 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 55 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+3059001/10000
+>> basis
+[(x-106/25)*(x-831/100)*(x-267/25)*(x-1183/100)*(x-1549/100), -(x-106/25)*(x-831/100)*(x-267/25)*(x-1183/100)*(x-1549/100), -x^2+3059001/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000005
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 55 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 56 Test Weifeng
+>> input polynomial
+-x^2+2380849/2500
+>> basis
+[(x-991/100)*(x-367/25)*(x-329/20)*(x-1443/50)*(x-1493/50), (-x+991/100)*(x-367/25)*(x-329/20)*(x-1443/50)*(x-1493/50)]
+>> Time taken
+1.348000
+">> Sums of squares multipliers", [-x^2+2380849/2500-238/2746813*x^2*(x-991/100
+)*(x-367/25)*(x-329/20)*(x-1443/50)*(x-1493/50)-238/2746813*(x+1)^2*(-x+991/100
+)*(x-367/25)*(x-329/20)*(x-1443/50)*(x-1493/50), 238/2746813*x^2, 238/2746813*(
+x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 56 Test Weifeng
+
+>> Test
+Batch: 56 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+2380849/2500
+>> basis
+[(x-991/100)*(x-367/25)*(x-329/20)*(x-1443/50)*(x-1493/50), (-x+991/100)*(x-367/25)*(x-329/20)*(x-1443/50)*(x-1493/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.145842
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 56 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 56 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+2380849/2500
+>> basis
+[(x-991/100)*(x-367/25)*(x-329/20)*(x-1443/50)*(x-1493/50), (-x+991/100)*(x-367/25)*(x-329/20)*(x-1443/50)*(x-1493/50), -x^2+2380849/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.937585
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 56 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 57 Test Weifeng
+>> input polynomial
+-x^2+151321/625
+>> basis
+[(x-36/25)*(x-57/10)*(x-187/25)*(x-1177/100)*(x-1309/100)*(x-339/25)*(x-364/25), -(x-36/25)*(x-57/10)*(x-187/25)*(x-1177/100)*(x-1309/100)*(x-339/25)*(x-364/25)]
+>> Time taken
+1.681000
+">> Sums of squares multipliers", [-x^2+151321/625-485/7969232*x^2*(x-36/25)*(x
+-57/10)*(x-187/25)*(x-1177/100)*(x-1309/100)*(x-339/25)*(x-364/25)+485/7969232*
+(x+1)^2*(x-36/25)*(x-57/10)*(x-187/25)*(x-1177/100)*(x-1309/100)*(x-339/25)*(x-\
+364/25), 485/7969232*x^2, 485/7969232*(x+1)^2]
+>> Degree size
+9
+>> Succeeds Weifeng Batch: 57 Test Weifeng
+
+>> Test
+Batch: 57 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+151321/625
+>> basis
+[(x-36/25)*(x-57/10)*(x-187/25)*(x-1177/100)*(x-1309/100)*(x-339/25)*(x-364/25), -(x-36/25)*(x-57/10)*(x-187/25)*(x-1177/100)*(x-1309/100)*(x-339/25)*(x-364/25)]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.376736
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 57 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 57 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+151321/625
+>> basis
+[(x-36/25)*(x-57/10)*(x-187/25)*(x-1177/100)*(x-1309/100)*(x-339/25)*(x-364/25), -(x-36/25)*(x-57/10)*(x-187/25)*(x-1177/100)*(x-1309/100)*(x-339/25)*(x-364/25), -x^2+151321/625]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000002
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 57 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 58 Test Weifeng
+>> input polynomial
+-x^2+1067089/2500
+>> basis
+[(x-39/25)*(x-117/20)*(x-199/25)*(x-933/50)*(x-983/50), (-x+39/25)*(x-117/20)*(x-199/25)*(x-933/50)*(x-983/50)]
+>> Time taken
+1.486000
+">> Sums of squares multipliers", [-x^2+1067089/2500-892/812801*x^2*(x-39/25)*(
+x-117/20)*(x-199/25)*(x-933/50)*(x-983/50)-892/812801*(x+1)^2*(-x+39/25)*(x-117
+/20)*(x-199/25)*(x-933/50)*(x-983/50), 892/812801*x^2, 892/812801*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 58 Test Weifeng
+
+>> Test
+Batch: 58 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+1067089/2500
+>> basis
+[(x-39/25)*(x-117/20)*(x-199/25)*(x-933/50)*(x-983/50), (-x+39/25)*(x-117/20)*(x-199/25)*(x-933/50)*(x-983/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -5.597573
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 58 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 58 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+1067089/2500
+>> basis
+[(x-39/25)*(x-117/20)*(x-199/25)*(x-933/50)*(x-983/50), (-x+39/25)*(x-117/20)*(x-199/25)*(x-933/50)*(x-983/50), -x^2+1067089/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 58 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 59 Test Weifeng
+>> input polynomial
+-x^2+8462281/10000
+>> basis
+[(x-41/25)*(x-27/4)*(x-237/20)*(x-1551/100)*(x-126/5)*(x-2709/100)*(x-2809/100), -(x-41/25)*(x-27/4)*(x-237/20)*(x-1551/100)*(x-126/5)*(x-2709/100)*(x-2809/100)]
+>> Time taken
+1.802000
+">> Sums of squares multipliers", [-x^2+8462281/10000-173/92401791*x^2*(x-41/25
+)*(x-27/4)*(x-237/20)*(x-1551/100)*(x-126/5)*(x-2709/100)*(x-2809/100)+173/
+92401791*(x+1)^2*(x-41/25)*(x-27/4)*(x-237/20)*(x-1551/100)*(x-126/5)*(x-2709/
+100)*(x-2809/100), 173/92401791*x^2, 173/92401791*(x+1)^2]
+>> Degree size
+9
+>> Succeeds Weifeng Batch: 59 Test Weifeng
+
+>> Test
+Batch: 59 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+8462281/10000
+>> basis
+[(x-41/25)*(x-27/4)*(x-237/20)*(x-1551/100)*(x-126/5)*(x-2709/100)*(x-2809/100), -(x-41/25)*(x-27/4)*(x-237/20)*(x-1551/100)*(x-126/5)*(x-2709/100)*(x-2809/100)]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.580456
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 59 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 59 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+8462281/10000
+>> basis
+[(x-41/25)*(x-27/4)*(x-237/20)*(x-1551/100)*(x-126/5)*(x-2709/100)*(x-2809/100), -(x-41/25)*(x-27/4)*(x-237/20)*(x-1551/100)*(x-126/5)*(x-2709/100)*(x-2809/100), -x^2+8462281/10000]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 59 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 60 Test Weifeng
+>> input polynomial
+-x^2+2053489/2500
+>> basis
+[(x-187/20)*(x-329/25)*(x-1419/100)*(x-519/25)*(x-1333/50), (-x+187/20)*(x-329/25)*(x-1419/100)*(x-519/25)*(x-1333/50)]
+>> Time taken
+1.428000
+">> Sums of squares multipliers", [-x^2+2053489/2500-381/2884438*x^2*(x-187/20)
+*(x-329/25)*(x-1419/100)*(x-519/25)*(x-1333/50)-381/2884438*(x+1)^2*(-x+187/20)
+*(x-329/25)*(x-1419/100)*(x-519/25)*(x-1333/50), 381/2884438*x^2, 381/2884438*(
+x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 60 Test Weifeng
+
+>> Test
+Batch: 60 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+2053489/2500
+>> basis
+[(x-187/20)*(x-329/25)*(x-1419/100)*(x-519/25)*(x-1333/50), (-x+187/20)*(x-329/25)*(x-1419/100)*(x-519/25)*(x-1333/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.788491
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 60 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 60 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+2053489/2500
+>> basis
+[(x-187/20)*(x-329/25)*(x-1419/100)*(x-519/25)*(x-1333/50), (-x+187/20)*(x-329/25)*(x-1419/100)*(x-519/25)*(x-1333/50), -x^2+2053489/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.911010
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 60 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 61 Test Weifeng
+>> input polynomial
+-x^2+2157961/10000
+>> basis
+[(x-38/25)*(x-45/4)*(x-1269/100), (-x+38/25)*(x-45/4)*(x-1269/100)]
+>> Time taken
+0.395000
+">> Sums of squares multipliers", [-x^2+2157961/10000-7769/29942*x^2*(x-38/25)*
+(x-45/4)*(x-1269/100)-7769/29942*(x+1)^2*(-x+38/25)*(x-45/4)*(x-1269/100), 7769
+/29942*x^2, 7769/29942*(x+1)^2]
+>> Degree size
+5
+>> Succeeds Weifeng Batch: 61 Test Weifeng
+
+>> Test
+Batch: 61 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+2157961/10000
+>> basis
+[(x-38/25)*(x-45/4)*(x-1269/100), (-x+38/25)*(x-45/4)*(x-1269/100)]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+>> Timeout RealCertify Batch: 61 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 61 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+2157961/10000
+>> basis
+[(x-38/25)*(x-45/4)*(x-1269/100), (-x+38/25)*(x-45/4)*(x-1269/100), -x^2+2157961/10000]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000000
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 61 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 62 Test Weifeng
+>> input polynomial
+-x^2+167281/625
+>> basis
+[(x-311/100)*(x-799/100)*(x-37/4)*(x-359/25)*(x-384/25), -(x-311/100)*(x-799/100)*(x-37/4)*(x-359/25)*(x-384/25)]
+>> Time taken
+1.419000
+">> Sums of squares multipliers", [-x^2+167281/625-1265/683988*x^2*(x-311/100)*
+(x-799/100)*(x-37/4)*(x-359/25)*(x-384/25)+1265/683988*(x+1)^2*(x-311/100)*(x-\
+799/100)*(x-37/4)*(x-359/25)*(x-384/25), 1265/683988*x^2, 1265/683988*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 62 Test Weifeng
+
+>> Test
+Batch: 62 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+167281/625
+>> basis
+[(x-311/100)*(x-799/100)*(x-37/4)*(x-359/25)*(x-384/25), -(x-311/100)*(x-799/100)*(x-37/4)*(x-359/25)*(x-384/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -8.877247
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 62 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 62 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+167281/625
+>> basis
+[(x-311/100)*(x-799/100)*(x-37/4)*(x-359/25)*(x-384/25), -(x-311/100)*(x-799/100)*(x-37/4)*(x-359/25)*(x-384/25), -x^2+167281/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 62 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 63 Test Weifeng
+>> input polynomial
+-x^2+185761/10000
+>> basis
+[(x-21/20)*(x-51/25)*(x-231/100), (-x+21/20)*(x-51/25)*(x-231/100)]
+>> Time taken
+0.649000
+">> Sums of squares multipliers", [-x^2+185761/10000-57891/30887*x^2*(x-21/20)*
+(x-51/25)*(x-231/100)-57891/30887*(x+1)^2*(-x+21/20)*(x-51/25)*(x-231/100), 
+57891/30887*x^2, 57891/30887*(x+1)^2]
+>> Degree size
+5
+>> Succeeds Weifeng Batch: 63 Test Weifeng
+
+>> Test
+Batch: 63 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+185761/10000
+>> basis
+[(x-21/20)*(x-51/25)*(x-231/100), (-x+21/20)*(x-51/25)*(x-231/100)]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1045.605111
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 63 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 63 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+185761/10000
+>> basis
+[(x-21/20)*(x-51/25)*(x-231/100), (-x+21/20)*(x-51/25)*(x-231/100), -x^2+185761/10000]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000005
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 63 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 64 Test Weifeng
+>> input polynomial
+-x^2+8767521/10000
+>> basis
+[(x-35/4)*(x-511/50)*(x-1649/100)*(x-2761/100)*(x-2861/100), (-x+35/4)*(x-511/50)*(x-1649/100)*(x-2761/100)*(x-2861/100)]
+>> Time taken
+1.526000
+">> Sums of squares multipliers", [-x^2+8767521/10000-119/747274*x^2*(x-35/4)*(
+x-511/50)*(x-1649/100)*(x-2761/100)*(x-2861/100)-119/747274*(x+1)^2*(-x+35/4)*(
+x-511/50)*(x-1649/100)*(x-2761/100)*(x-2861/100), 119/747274*x^2, 119/747274*(x
++1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 64 Test Weifeng
+
+>> Test
+Batch: 64 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+8767521/10000
+>> basis
+[(x-35/4)*(x-511/50)*(x-1649/100)*(x-2761/100)*(x-2861/100), (-x+35/4)*(x-511/50)*(x-1649/100)*(x-2761/100)*(x-2861/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.622090
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 64 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 64 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+8767521/10000
+>> basis
+[(x-35/4)*(x-511/50)*(x-1649/100)*(x-2761/100)*(x-2861/100), (-x+35/4)*(x-511/50)*(x-1649/100)*(x-2761/100)*(x-2861/100), -x^2+8767521/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.921575
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 64 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 65 Test Weifeng
+>> input polynomial
+-x^2+908209/2500
+>> basis
+[(x-133/50)*(x-371/100)*(x-657/100)*(x-197/25)*(x-853/50), -(x-133/50)*(x-371/100)*(x-657/100)*(x-197/25)*(x-853/50)]
+>> Time taken
+1.510000
+">> Sums of squares multipliers", [-x^2+908209/2500-59/496986*x^2*(x-133/50)*(x
+-371/100)*(x-657/100)*(x-197/25)*(x-853/50)+59/496986*(x+1)^2*(x-133/50)*(x-371
+/100)*(x-657/100)*(x-197/25)*(x-853/50), 59/496986*x^2, 59/496986*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 65 Test Weifeng
+
+>> Test
+Batch: 65 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+908209/2500
+>> basis
+[(x-133/50)*(x-371/100)*(x-657/100)*(x-197/25)*(x-853/50), -(x-133/50)*(x-371/100)*(x-657/100)*(x-197/25)*(x-853/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -5.735212
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 65 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 65 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+908209/2500
+>> basis
+[(x-133/50)*(x-371/100)*(x-657/100)*(x-197/25)*(x-853/50), -(x-133/50)*(x-371/100)*(x-657/100)*(x-197/25)*(x-853/50), -x^2+908209/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000005
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 65 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 66 Test Weifeng
+>> input polynomial
+-x^2+4592449/10000
+>> basis
+[(x-929/100)*(x-193/20)*(x-256/25)*(x-261/20)*(x-1943/100), (-x+929/100)*(x-193/20)*(x-256/25)*(x-261/20)*(x-1943/100)]
+>> Time taken
+2.056000
+">> Sums of squares multipliers", [-x^2+4592449/10000-535/1205664*x^2*(x-929/
+100)*(x-193/20)*(x-256/25)*(x-261/20)*(x-1943/100)-535/1205664*(x+1)^2*(-x+929/
+100)*(x-193/20)*(x-256/25)*(x-261/20)*(x-1943/100), 535/1205664*x^2, 535/
+1205664*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 66 Test Weifeng
+
+>> Test
+Batch: 66 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+4592449/10000
+>> basis
+[(x-929/100)*(x-193/20)*(x-256/25)*(x-261/20)*(x-1943/100), (-x+929/100)*(x-193/20)*(x-256/25)*(x-261/20)*(x-1943/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -2.153340
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 66 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 66 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+4592449/10000
+>> basis
+[(x-929/100)*(x-193/20)*(x-256/25)*(x-261/20)*(x-1943/100), (-x+929/100)*(x-193/20)*(x-256/25)*(x-261/20)*(x-1943/100), -x^2+4592449/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+>> Timeout RealCertify Batch: 66 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 67 Test Weifeng
+>> input polynomial
+-x^2+3025/4
+>> basis
+[(x-49/5)*(x-1091/100)*(x-344/25)*(x-51/2)*(x-53/2), (-x+49/5)*(x-1091/100)*(x-344/25)*(x-51/2)*(x-53/2)]
+>> Time taken
+0.979000
+">> Sums of squares multipliers", [-x^2+3025/4-383/2395873*x^2*(x-49/5)*(x-1091
+/100)*(x-344/25)*(x-51/2)*(x-53/2)-383/2395873*(x+1)^2*(-x+49/5)*(x-1091/100)*(
+x-344/25)*(x-51/2)*(x-53/2), 383/2395873*x^2, 383/2395873*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 67 Test Weifeng
+
+>> Test
+Batch: 67 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+3025/4
+>> basis
+[(x-49/5)*(x-1091/100)*(x-344/25)*(x-51/2)*(x-53/2), (-x+49/5)*(x-1091/100)*(x-344/25)*(x-51/2)*(x-53/2)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.848821
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 67 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 67 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+3025/4
+>> basis
+[(x-49/5)*(x-1091/100)*(x-344/25)*(x-51/2)*(x-53/2), (-x+49/5)*(x-1091/100)*(x-344/25)*(x-51/2)*(x-53/2), -x^2+3025/4]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.900696
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 67 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 68 Test Weifeng
+>> input polynomial
+-x^2+355216/625
+>> basis
+[(x-463/100)*(x-352/25)*(x-1039/50)*(x-546/25)*(x-571/25), (-x+463/100)*(x-352/25)*(x-1039/50)*(x-546/25)*(x-571/25)]
+>> Time taken
+1.504000
+">> Sums of squares multipliers", [-x^2+355216/625-415/1937053*x^2*(x-463/100)*
+(x-352/25)*(x-1039/50)*(x-546/25)*(x-571/25)-415/1937053*(x+1)^2*(-x+463/100)*(
+x-352/25)*(x-1039/50)*(x-546/25)*(x-571/25), 415/1937053*x^2, 415/1937053*(x+1)
+^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 68 Test Weifeng
+
+>> Test
+Batch: 68 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+355216/625
+>> basis
+[(x-463/100)*(x-352/25)*(x-1039/50)*(x-546/25)*(x-571/25), (-x+463/100)*(x-352/25)*(x-1039/50)*(x-546/25)*(x-571/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+>> Timeout RealCertify Batch: 68 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 68 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+355216/625
+>> basis
+[(x-463/100)*(x-352/25)*(x-1039/50)*(x-546/25)*(x-571/25), (-x+463/100)*(x-352/25)*(x-1039/50)*(x-546/25)*(x-571/25), -x^2+355216/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+>> Timeout RealCertify Batch: 68 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 69 Test Weifeng
+>> input polynomial
+-x^2+328329/400
+>> basis
+[(x-921/100)*(x-1157/100)*(x-449/25)*(x-647/25)*(x-533/20), (-x+921/100)*(x-1157/100)*(x-449/25)*(x-647/25)*(x-533/20)]
+>> Time taken
+1.578000
+">> Sums of squares multipliers", [-x^2+328329/400-227/1802777*x^2*(x-921/100)*
+(x-1157/100)*(x-449/25)*(x-647/25)*(x-533/20)-227/1802777*(x+1)^2*(-x+921/100)*
+(x-1157/100)*(x-449/25)*(x-647/25)*(x-533/20), 227/1802777*x^2, 227/1802777*(x+
+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 69 Test Weifeng
+
+>> Test
+Batch: 69 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+328329/400
+>> basis
+[(x-921/100)*(x-1157/100)*(x-449/25)*(x-647/25)*(x-533/20), (-x+921/100)*(x-1157/100)*(x-449/25)*(x-647/25)*(x-533/20)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.401507
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 69 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 69 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+328329/400
+>> basis
+[(x-921/100)*(x-1157/100)*(x-449/25)*(x-647/25)*(x-533/20), (-x+921/100)*(x-1157/100)*(x-449/25)*(x-647/25)*(x-533/20), -x^2+328329/400]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.909612
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 69 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 70 Test Weifeng
+>> input polynomial
+-x^2+219961/400
+>> basis
+[(x-303/100)*(x-107/20)*(x-483/50)*(x-261/25)*(x-429/20), -(x-303/100)*(x-107/20)*(x-483/50)*(x-261/25)*(x-429/20)]
+>> Time taken
+1.579000
+">> Sums of squares multipliers", [-x^2+219961/400-225/4397224*x^2*(x-303/100)*
+(x-107/20)*(x-483/50)*(x-261/25)*(x-429/20)+225/4397224*(x+1)^2*(x-303/100)*(x-\
+107/20)*(x-483/50)*(x-261/25)*(x-429/20), 225/4397224*x^2, 225/4397224*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 70 Test Weifeng
+
+>> Test
+Batch: 70 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+219961/400
+>> basis
+[(x-303/100)*(x-107/20)*(x-483/50)*(x-261/25)*(x-429/20), -(x-303/100)*(x-107/20)*(x-483/50)*(x-261/25)*(x-429/20)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -4.508348
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 70 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 70 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+219961/400
+>> basis
+[(x-303/100)*(x-107/20)*(x-483/50)*(x-261/25)*(x-429/20), -(x-303/100)*(x-107/20)*(x-483/50)*(x-261/25)*(x-429/20), -x^2+219961/400]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 70 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 71 Test Weifeng
+>> input polynomial
+-x^2+8288641/10000
+>> basis
+[(x-39/10)*(x-899/100)*(x-179/10)*(x-1841/100)*(x-2679/100), -(x-39/10)*(x-899/100)*(x-179/10)*(x-1841/100)*(x-2679/100)]
+>> Time taken
+1.723000
+">> Sums of squares multipliers", [-x^2+8288641/10000-217/3147716*x^2*(x-39/10)
+*(x-899/100)*(x-179/10)*(x-1841/100)*(x-2679/100)+217/3147716*(x+1)^2*(x-39/10)
+*(x-899/100)*(x-179/10)*(x-1841/100)*(x-2679/100), 217/3147716*x^2, 217/3147716
+*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 71 Test Weifeng
+
+>> Test
+Batch: 71 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+8288641/10000
+>> basis
+[(x-39/10)*(x-899/100)*(x-179/10)*(x-1841/100)*(x-2679/100), -(x-39/10)*(x-899/100)*(x-179/10)*(x-1841/100)*(x-2679/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.457633
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 71 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 71 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+8288641/10000
+>> basis
+[(x-39/10)*(x-899/100)*(x-179/10)*(x-1841/100)*(x-2679/100), -(x-39/10)*(x-899/100)*(x-179/10)*(x-1841/100)*(x-2679/100), -x^2+8288641/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.855836
+>> Timeout RealCertify Batch: 71 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 72 Test Weifeng
+>> input polynomial
+-x^2+4052169/10000
+>> basis
+[(x-27/10)*(x-41/5)*(x-1187/100)*(x-713/50)*(x-1813/100), -(x-27/10)*(x-41/5)*(x-1187/100)*(x-713/50)*(x-1813/100)]
+>> Time taken
+1.122000
+">> Sums of squares multipliers", [-x^2+4052169/10000-2290/2819119*x^2*(x-27/10
+)*(x-41/5)*(x-1187/100)*(x-713/50)*(x-1813/100)+2290/2819119*(x+1)^2*(x-27/10)*
+(x-41/5)*(x-1187/100)*(x-713/50)*(x-1813/100), 2290/2819119*x^2, 2290/2819119*(
+x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 72 Test Weifeng
+
+>> Test
+Batch: 72 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+4052169/10000
+>> basis
+[(x-27/10)*(x-41/5)*(x-1187/100)*(x-713/50)*(x-1813/100), -(x-27/10)*(x-41/5)*(x-1187/100)*(x-713/50)*(x-1813/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.166527
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 72 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 72 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+4052169/10000
+>> basis
+[(x-27/10)*(x-41/5)*(x-1187/100)*(x-713/50)*(x-1813/100), -(x-27/10)*(x-41/5)*(x-1187/100)*(x-713/50)*(x-1813/100), -x^2+4052169/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.202228
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 72 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 73 Test Weifeng
+>> input polynomial
+-x^2+47089/400
+>> basis
+[(x-657/100)*(x-39/5)*(x-869/100)*(x-177/20)*(x-197/20), (-x+657/100)*(x-39/5)*(x-869/100)*(x-177/20)*(x-197/20)]
+>> Time taken
+2.486000
+">> Sums of squares multipliers", [-x^2+47089/400-(1334/1387801+1/(-425867/
+6636742280*x^6+878563621/331837114000*x^5-1434396286193/33183711400000*x^4+
+287552638139/829592785000*x^3-35442467317061883/26546969120000000*x^2+
+459596535748284987/265469691200000000*x+71649886032853701/265469691200000000)^
+191)*x^2*(x-657/100)*(x-39/5)*(x-869/100)*(x-177/20)*(x-197/20)-(1334/1387801+1
+/(-425867/6636742280*x^6+878563621/331837114000*x^5-1434396286193/
+33183711400000*x^4+287552638139/829592785000*x^3-35442467317061883/
+26546969120000000*x^2+459596535748284987/265469691200000000*x+71649886032853701
+/265469691200000000)^191)*(x+1)^2*(-x+657/100)*(x-39/5)*(x-869/100)*(x-177/20)*
+(x-197/20), (1334/1387801+1/(-425867/6636742280*x^6+878563621/331837114000*x^5-\
+1434396286193/33183711400000*x^4+287552638139/829592785000*x^3-\
+35442467317061883/26546969120000000*x^2+459596535748284987/265469691200000000*x
++71649886032853701/265469691200000000)^191)*x^2, (1334/1387801+1/(-425867/
+6636742280*x^6+878563621/331837114000*x^5-1434396286193/33183711400000*x^4+
+287552638139/829592785000*x^3-35442467317061883/26546969120000000*x^2+
+459596535748284987/265469691200000000*x+71649886032853701/265469691200000000)^
+191)*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 73 Test Weifeng
+
+>> Test
+Batch: 73 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+47089/400
+>> basis
+[(x-657/100)*(x-39/5)*(x-869/100)*(x-177/20)*(x-197/20), (-x+657/100)*(x-39/5)*(x-869/100)*(x-177/20)*(x-197/20)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -16.934301
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 73 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 73 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+47089/400
+>> basis
+[(x-657/100)*(x-39/5)*(x-869/100)*(x-177/20)*(x-197/20), (-x+657/100)*(x-39/5)*(x-869/100)*(x-177/20)*(x-197/20), -x^2+47089/400]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 73 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 74 Test Weifeng
+>> input polynomial
+-x^2+692224/625
+>> basis
+[(x-287/50)*(x-228/25)*(x-441/25)*(x-513/25)*(x-782/25), -(x-287/50)*(x-228/25)*(x-441/25)*(x-513/25)*(x-782/25)]
+>> Time taken
+1.826000
+">> Sums of squares multipliers", [-x^2+692224/625-117/5431559*x^2*(x-287/50)*(
+x-228/25)*(x-441/25)*(x-513/25)*(x-782/25)+117/5431559*(x+1)^2*(x-287/50)*(x-\
+228/25)*(x-441/25)*(x-513/25)*(x-782/25), 117/5431559*x^2, 117/5431559*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 74 Test Weifeng
+
+>> Test
+Batch: 74 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+692224/625
+>> basis
+[(x-287/50)*(x-228/25)*(x-441/25)*(x-513/25)*(x-782/25), -(x-287/50)*(x-228/25)*(x-441/25)*(x-513/25)*(x-782/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.525092
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 74 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 74 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+692224/625
+>> basis
+[(x-287/50)*(x-228/25)*(x-441/25)*(x-513/25)*(x-782/25), -(x-287/50)*(x-228/25)*(x-441/25)*(x-513/25)*(x-782/25), -x^2+692224/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 74 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 75 Test Weifeng
+>> input polynomial
+-x^2+158404/625
+>> basis
+[(x-267/100)*(x-179/25)*(x-1039/100)*(x-348/25)*(x-373/25), (-x+267/100)*(x-179/25)*(x-1039/100)*(x-348/25)*(x-373/25)]
+>> Time taken
+1.294000
+">> Sums of squares multipliers", [-x^2+158404/625-1029/453836*x^2*(x-267/100)*
+(x-179/25)*(x-1039/100)*(x-348/25)*(x-373/25)-1029/453836*(x+1)^2*(-x+267/100)*
+(x-179/25)*(x-1039/100)*(x-348/25)*(x-373/25), 1029/453836*x^2, 1029/453836*(x+
+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 75 Test Weifeng
+
+>> Test
+Batch: 75 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+158404/625
+>> basis
+[(x-267/100)*(x-179/25)*(x-1039/100)*(x-348/25)*(x-373/25), (-x+267/100)*(x-179/25)*(x-1039/100)*(x-348/25)*(x-373/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.349503
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 75 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 75 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+158404/625
+>> basis
+[(x-267/100)*(x-179/25)*(x-1039/100)*(x-348/25)*(x-373/25), (-x+267/100)*(x-179/25)*(x-1039/100)*(x-348/25)*(x-373/25), -x^2+158404/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 75 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 76 Test Weifeng
+>> input polynomial
+-x^2+3651921/10000
+>> basis
+[(x-162/25)*(x-1389/100)*(x-1711/100), (-x+162/25)*(x-1389/100)*(x-1711/100)]
+>> Time taken
+0.408000
+">> Sums of squares multipliers", [-x^2+3651921/10000-9943/222313*x^2*(x-162/25
+)*(x-1389/100)*(x-1711/100)-9943/222313*(x+1)^2*(-x+162/25)*(x-1389/100)*(x-\
+1711/100), 9943/222313*x^2, 9943/222313*(x+1)^2]
+>> Degree size
+5
+>> Succeeds Weifeng Batch: 76 Test Weifeng
+
+>> Test
+Batch: 76 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+3651921/10000
+>> basis
+[(x-162/25)*(x-1389/100)*(x-1711/100), (-x+162/25)*(x-1389/100)*(x-1711/100)]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: -101.863842
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 76 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 76 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+3651921/10000
+>> basis
+[(x-162/25)*(x-1389/100)*(x-1711/100), (-x+162/25)*(x-1389/100)*(x-1711/100), -x^2+3651921/10000]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000005
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 76 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 77 Test Weifeng
+>> input polynomial
+-x^2+146689/400
+>> basis
+[(x-413/50)*(x-323/20)*(x-343/20), (-x+413/50)*(x-323/20)*(x-343/20)]
+>> Time taken
+0.340000
+">> Sums of squares multipliers", [-x^2+146689/400-4333/166753*x^2*(x-413/50)*(
+x-323/20)*(x-343/20)-4333/166753*(x+1)^2*(-x+413/50)*(x-323/20)*(x-343/20), 
+4333/166753*x^2, 4333/166753*(x+1)^2]
+>> Degree size
+5
+>> Succeeds Weifeng Batch: 77 Test Weifeng
+
+>> Test
+Batch: 77 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+146689/400
+>> basis
+[(x-413/50)*(x-323/20)*(x-343/20), (-x+413/50)*(x-323/20)*(x-343/20)]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: -109.760747
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 77 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 77 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+146689/400
+>> basis
+[(x-413/50)*(x-323/20)*(x-343/20), (-x+413/50)*(x-323/20)*(x-343/20), -x^2+146689/400]
+[x]
+Polynomial system with 1 variables and degree at most 4
+Size of monomial basis = 3
+Number of moment variables = 5
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 77 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 78 Test Weifeng
+>> input polynomial
+-x^2+769129/2500
+>> basis
+[(x-883/100)*(x-1121/100)*(x-1247/100)*(x-777/50)*(x-827/50), (-x+883/100)*(x-1121/100)*(x-1247/100)*(x-777/50)*(x-827/50)]
+>> Time taken
+2.382000
+">> Sums of squares multipliers", [-x^2+769129/2500-(230/996401+1/(-31356/
+5411129251*x^6+50240151/135278231275*x^5-25344121959/2705564625500*x^4+
+31290440302953/270556462550000*x^3-4235914911176793/6149010512500000*x^2+
+450078301798242741/307450525625000000*x-262313748235077399/6763911563750000000)
+^183)*x^2*(x-883/100)*(x-1121/100)*(x-1247/100)*(x-777/50)*(x-827/50)-(230/
+996401+1/(-31356/5411129251*x^6+50240151/135278231275*x^5-25344121959/
+2705564625500*x^4+31290440302953/270556462550000*x^3-4235914911176793/
+6149010512500000*x^2+450078301798242741/307450525625000000*x-262313748235077399
+/6763911563750000000)^183)*(x+1)^2*(-x+883/100)*(x-1121/100)*(x-1247/100)*(x-\
+777/50)*(x-827/50), (230/996401+1/(-31356/5411129251*x^6+50240151/135278231275*
+x^5-25344121959/2705564625500*x^4+31290440302953/270556462550000*x^3-\
+4235914911176793/6149010512500000*x^2+450078301798242741/307450525625000000*x-\
+262313748235077399/6763911563750000000)^183)*x^2, (230/996401+1/(-31356/
+5411129251*x^6+50240151/135278231275*x^5-25344121959/2705564625500*x^4+
+31290440302953/270556462550000*x^3-4235914911176793/6149010512500000*x^2+
+450078301798242741/307450525625000000*x-262313748235077399/6763911563750000000)
+^183)*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 78 Test Weifeng
+
+>> Test
+Batch: 78 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+769129/2500
+>> basis
+[(x-883/100)*(x-1121/100)*(x-1247/100)*(x-777/50)*(x-827/50), (-x+883/100)*(x-1121/100)*(x-1247/100)*(x-777/50)*(x-827/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -3.448976
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 78 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 78 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+769129/2500
+>> basis
+[(x-883/100)*(x-1121/100)*(x-1247/100)*(x-777/50)*(x-827/50), (-x+883/100)*(x-1121/100)*(x-1247/100)*(x-777/50)*(x-827/50), -x^2+769129/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000005
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 78 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 79 Test Weifeng
+>> input polynomial
+-x^2+3613801/10000
+>> basis
+[(x-77/25)*(x-102/25)*(x-367/50)*(x-1229/100)*(x-1701/100), -(x-77/25)*(x-102/25)*(x-367/50)*(x-1229/100)*(x-1701/100)]
+>> Time taken
+1.844000
+">> Sums of squares multipliers", [-x^2+3613801/10000-664/2085425*x^2*(x-77/25)
+*(x-102/25)*(x-367/50)*(x-1229/100)*(x-1701/100)+664/2085425*(x+1)^2*(x-77/25)*
+(x-102/25)*(x-367/50)*(x-1229/100)*(x-1701/100), 664/2085425*x^2, 664/2085425*(
+x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 79 Test Weifeng
+
+>> Test
+Batch: 79 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+3613801/10000
+>> basis
+[(x-77/25)*(x-102/25)*(x-367/50)*(x-1229/100)*(x-1701/100), -(x-77/25)*(x-102/25)*(x-367/50)*(x-1229/100)*(x-1701/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -8.544555
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 79 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 79 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+3613801/10000
+>> basis
+[(x-77/25)*(x-102/25)*(x-367/50)*(x-1229/100)*(x-1701/100), -(x-77/25)*(x-102/25)*(x-367/50)*(x-1229/100)*(x-1701/100), -x^2+3613801/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 79 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 80 Test Weifeng
+>> input polynomial
+-x^2+724201/2500
+>> basis
+[(x-36/5)*(x-329/25)*(x-667/50)*(x-751/50)*(x-801/50), (-x+36/5)*(x-329/25)*(x-667/50)*(x-751/50)*(x-801/50)]
+>> Time taken
+2.026000
+">> Sums of squares multipliers", [-x^2+724201/2500-(674/2900299+(-6346/
+999868835*x^6+10191676/24996720875*x^5-6427914168/624918021875*x^4+
+3949993994383/31245901093750*x^3-2320541307341563/3124590109375000*x^2+
+23842007435979063/15622950546875000*x-4596321377166/278981259765625)^1588)*x^2*
+(x-36/5)*(x-329/25)*(x-667/50)*(x-751/50)*(x-801/50)-(674/2900299+(-6346/
+999868835*x^6+10191676/24996720875*x^5-6427914168/624918021875*x^4+
+3949993994383/31245901093750*x^3-2320541307341563/3124590109375000*x^2+
+23842007435979063/15622950546875000*x-4596321377166/278981259765625)^1588)*(x+1
+)^2*(-x+36/5)*(x-329/25)*(x-667/50)*(x-751/50)*(x-801/50), (674/2900299+(-6346/
+999868835*x^6+10191676/24996720875*x^5-6427914168/624918021875*x^4+
+3949993994383/31245901093750*x^3-2320541307341563/3124590109375000*x^2+
+23842007435979063/15622950546875000*x-4596321377166/278981259765625)^1588)*x^2,
+(674/2900299+(-6346/999868835*x^6+10191676/24996720875*x^5-6427914168/
+624918021875*x^4+3949993994383/31245901093750*x^3-2320541307341563/
+3124590109375000*x^2+23842007435979063/15622950546875000*x-4596321377166/
+278981259765625)^1588)*(x+1)^2]
+>> Degree size
+9535
+>> Succeeds Weifeng Batch: 80 Test Weifeng
+
+>> Test
+Batch: 80 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+724201/2500
+>> basis
+[(x-36/5)*(x-329/25)*(x-667/50)*(x-751/50)*(x-801/50), (-x+36/5)*(x-329/25)*(x-667/50)*(x-751/50)*(x-801/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+>> Timeout RealCertify Batch: 80 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 80 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+724201/2500
+>> basis
+[(x-36/5)*(x-329/25)*(x-667/50)*(x-751/50)*(x-801/50), (-x+36/5)*(x-329/25)*(x-667/50)*(x-751/50)*(x-801/50), -x^2+724201/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 80 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 81 Test Weifeng
+>> input polynomial
+-x^2+1181569/10000
+>> basis
+[(x-31/20)*(x-178/25)*(x-36/5)*(x-887/100)*(x-987/100), (-x+31/20)*(x-178/25)*(x-36/5)*(x-887/100)*(x-987/100)]
+>> Time taken
+1.773000
+">> Sums of squares multipliers", [-x^2+1181569/10000-2172/284207*x^2*(x-31/20)
+*(x-178/25)*(x-36/5)*(x-887/100)*(x-987/100)-2172/284207*(x+1)^2*(-x+31/20)*(x-\
+178/25)*(x-36/5)*(x-887/100)*(x-987/100), 2172/284207*x^2, 2172/284207*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 81 Test Weifeng
+
+>> Test
+Batch: 81 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+1181569/10000
+>> basis
+[(x-31/20)*(x-178/25)*(x-36/5)*(x-887/100)*(x-987/100), (-x+31/20)*(x-178/25)*(x-36/5)*(x-887/100)*(x-987/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -15.661867
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 81 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 81 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+1181569/10000
+>> basis
+[(x-31/20)*(x-178/25)*(x-36/5)*(x-887/100)*(x-987/100), (-x+31/20)*(x-178/25)*(x-36/5)*(x-887/100)*(x-987/100), -x^2+1181569/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 81 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 82 Test Weifeng
+>> input polynomial
+-x^2+1760929/10000
+>> basis
+[(x-122/25)*(x-353/50)*(x-759/100)*(x-10)*(x-1127/100), -(x-122/25)*(x-353/50)*(x-759/100)*(x-10)*(x-1127/100)]
+>> Time taken
+1.512000
+">> Sums of squares multipliers", [-x^2+1760929/10000-1685/834511*x^2*(x-122/25
+)*(x-353/50)*(x-759/100)*(x-10)*(x-1127/100)+1685/834511*(x+1)^2*(x-122/25)*(x-\
+353/50)*(x-759/100)*(x-10)*(x-1127/100), 1685/834511*x^2, 1685/834511*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 82 Test Weifeng
+
+>> Test
+Batch: 82 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+1760929/10000
+>> basis
+[(x-122/25)*(x-353/50)*(x-759/100)*(x-10)*(x-1127/100), -(x-122/25)*(x-353/50)*(x-759/100)*(x-10)*(x-1127/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -11.813557
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 82 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 82 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+1760929/10000
+>> basis
+[(x-122/25)*(x-353/50)*(x-759/100)*(x-10)*(x-1127/100), -(x-122/25)*(x-353/50)*(x-759/100)*(x-10)*(x-1127/100), -x^2+1760929/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 82 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 83 Test Weifeng
+>> input polynomial
+-x^2+687241/625
+>> basis
+[(x-853/100)*(x-459/50)*(x-733/50)*(x-469/25)*(x-779/25), -(x-853/100)*(x-459/50)*(x-733/50)*(x-469/25)*(x-779/25)]
+>> Time taken
+1.743000
+">> Sums of squares multipliers", [-x^2+687241/625-249/14765407*x^2*(x-853/100)
+*(x-459/50)*(x-733/50)*(x-469/25)*(x-779/25)+249/14765407*(x+1)^2*(x-853/100)*(
+x-459/50)*(x-733/50)*(x-469/25)*(x-779/25), 249/14765407*x^2, 249/14765407*(x+1
+)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 83 Test Weifeng
+
+>> Test
+Batch: 83 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+687241/625
+>> basis
+[(x-853/100)*(x-459/50)*(x-733/50)*(x-469/25)*(x-779/25), -(x-853/100)*(x-459/50)*(x-733/50)*(x-469/25)*(x-779/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.778791
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 83 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 83 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+687241/625
+>> basis
+[(x-853/100)*(x-459/50)*(x-733/50)*(x-469/25)*(x-779/25), -(x-853/100)*(x-459/50)*(x-733/50)*(x-469/25)*(x-779/25), -x^2+687241/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+>> Timeout RealCertify Batch: 83 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 84 Test Weifeng
+>> input polynomial
+-x^2+8473921/10000
+>> basis
+[(x-201/50)*(x-443/50)*(x-1121/100)*(x-889/50)*(x-2711/100), -(x-201/50)*(x-443/50)*(x-1121/100)*(x-889/50)*(x-2711/100)]
+>> Time taken
+1.567000
+">> Sums of squares multipliers", [-x^2+8473921/10000-166/5562031*x^2*(x-201/50
+)*(x-443/50)*(x-1121/100)*(x-889/50)*(x-2711/100)+166/5562031*(x+1)^2*(x-201/50
+)*(x-443/50)*(x-1121/100)*(x-889/50)*(x-2711/100), 166/5562031*x^2, 166/5562031
+*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 84 Test Weifeng
+
+>> Test
+Batch: 84 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+8473921/10000
+>> basis
+[(x-201/50)*(x-443/50)*(x-1121/100)*(x-889/50)*(x-2711/100), -(x-201/50)*(x-443/50)*(x-1121/100)*(x-889/50)*(x-2711/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -2.048827
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 84 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 84 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+8473921/10000
+>> basis
+[(x-201/50)*(x-443/50)*(x-1121/100)*(x-889/50)*(x-2711/100), -(x-201/50)*(x-443/50)*(x-1121/100)*(x-889/50)*(x-2711/100), -x^2+8473921/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+>> Timeout RealCertify Batch: 84 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 85 Test Weifeng
+>> input polynomial
+-x^2+12321/25
+>> basis
+[(x-311/50)*(x-1081/100)*(x-147/10)*(x-101/5)*(x-106/5), (-x+311/50)*(x-1081/100)*(x-147/10)*(x-101/5)*(x-106/5)]
+>> Time taken
+1.999000
+">> Sums of squares multipliers", [-x^2+12321/25-250/871199*x^2*(x-311/50)*(x-\
+1081/100)*(x-147/10)*(x-101/5)*(x-106/5)-250/871199*(x+1)^2*(-x+311/50)*(x-1081
+/100)*(x-147/10)*(x-101/5)*(x-106/5), 250/871199*x^2, 250/871199*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 85 Test Weifeng
+
+>> Test
+Batch: 85 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+12321/25
+>> basis
+[(x-311/50)*(x-1081/100)*(x-147/10)*(x-101/5)*(x-106/5), (-x+311/50)*(x-1081/100)*(x-147/10)*(x-101/5)*(x-106/5)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.766383
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 85 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 85 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+12321/25
+>> basis
+[(x-311/50)*(x-1081/100)*(x-147/10)*(x-101/5)*(x-106/5), (-x+311/50)*(x-1081/100)*(x-147/10)*(x-101/5)*(x-106/5), -x^2+12321/25]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 85 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 86 Test Weifeng
+>> input polynomial
+-x^2+251001/625
+>> basis
+[(x-507/100)*(x-337/25)*(x-363/25)*(x-451/25)*(x-476/25), (-x+507/100)*(x-337/25)*(x-363/25)*(x-451/25)*(x-476/25)]
+>> Time taken
+1.951000
+">> Sums of squares multipliers", [-x^2+251001/625-564/1831775*x^2*(x-507/100)*
+(x-337/25)*(x-363/25)*(x-451/25)*(x-476/25)-564/1831775*(x+1)^2*(-x+507/100)*(x
+-337/25)*(x-363/25)*(x-451/25)*(x-476/25), 564/1831775*x^2, 564/1831775*(x+1)^2
+]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 86 Test Weifeng
+
+>> Test
+Batch: 86 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+251001/625
+>> basis
+[(x-507/100)*(x-337/25)*(x-363/25)*(x-451/25)*(x-476/25), (-x+507/100)*(x-337/25)*(x-363/25)*(x-451/25)*(x-476/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -3.245081
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 86 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 86 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+251001/625
+>> basis
+[(x-507/100)*(x-337/25)*(x-363/25)*(x-451/25)*(x-476/25), (-x+507/100)*(x-337/25)*(x-363/25)*(x-451/25)*(x-476/25), -x^2+251001/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 86 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 87 Test Weifeng
+>> input polynomial
+-x^2+100489/400
+>> basis
+[(x-71/50)*(x-343/100)*(x-93/10)*(x-597/50)*(x-277/20), (-x+71/50)*(x-343/100)*(x-93/10)*(x-597/50)*(x-277/20)]
+>> Time taken
+1.719000
+">> Sums of squares multipliers", [-x^2+100489/400-1831/480188*x^2*(x-71/50)*(x
+-343/100)*(x-93/10)*(x-597/50)*(x-277/20)-1831/480188*(x+1)^2*(-x+71/50)*(x-343
+/100)*(x-93/10)*(x-597/50)*(x-277/20), 1831/480188*x^2, 1831/480188*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 87 Test Weifeng
+
+>> Test
+Batch: 87 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+100489/400
+>> basis
+[(x-71/50)*(x-343/100)*(x-93/10)*(x-597/50)*(x-277/20), (-x+71/50)*(x-343/100)*(x-93/10)*(x-597/50)*(x-277/20)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -8.532322
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 87 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 87 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+100489/400
+>> basis
+[(x-71/50)*(x-343/100)*(x-93/10)*(x-597/50)*(x-277/20), (-x+71/50)*(x-343/100)*(x-93/10)*(x-597/50)*(x-277/20), -x^2+100489/400]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 87 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 88 Test Weifeng
+>> input polynomial
+-x^2+223729/400
+>> basis
+[(x-233/25)*(x-25/2)*(x-1739/100)*(x-433/20)*(x-453/20), (-x+233/25)*(x-25/2)*(x-1739/100)*(x-433/20)*(x-453/20)]
+>> Time taken
+2.174000
+">> Sums of squares multipliers", [-x^2+223729/400-(270/2334421+(-744/492452389
+*x^6+1543986/12311309725*x^5-2493860379/615565486250*x^4+70785435309/
+1119209975000*x^3-3619293268653/7694568578125*x^2+307639639746057/
+246226194500000*x-1545499587741/9849047780000)^338)*x^2*(x-233/25)*(x-25/2)*(x-\
+1739/100)*(x-433/20)*(x-453/20)-(270/2334421+(-744/492452389*x^6+1543986/
+12311309725*x^5-2493860379/615565486250*x^4+70785435309/1119209975000*x^3-\
+3619293268653/7694568578125*x^2+307639639746057/246226194500000*x-1545499587741
+/9849047780000)^338)*(x+1)^2*(-x+233/25)*(x-25/2)*(x-1739/100)*(x-433/20)*(x-\
+453/20), (270/2334421+(-744/492452389*x^6+1543986/12311309725*x^5-2493860379/
+615565486250*x^4+70785435309/1119209975000*x^3-3619293268653/7694568578125*x^2+
+307639639746057/246226194500000*x-1545499587741/9849047780000)^338)*x^2, (270/
+2334421+(-744/492452389*x^6+1543986/12311309725*x^5-2493860379/615565486250*x^4
++70785435309/1119209975000*x^3-3619293268653/7694568578125*x^2+307639639746057/
+246226194500000*x-1545499587741/9849047780000)^338)*(x+1)^2]
+>> Degree size
+2035
+>> Succeeds Weifeng Batch: 88 Test Weifeng
+
+>> Test
+Batch: 88 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+223729/400
+>> basis
+[(x-233/25)*(x-25/2)*(x-1739/100)*(x-433/20)*(x-453/20), (-x+233/25)*(x-25/2)*(x-1739/100)*(x-433/20)*(x-453/20)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.441522
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 88 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 88 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+223729/400
+>> basis
+[(x-233/25)*(x-25/2)*(x-1739/100)*(x-433/20)*(x-453/20), (-x+233/25)*(x-25/2)*(x-1739/100)*(x-433/20)*(x-453/20), -x^2+223729/400]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000002
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 88 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 89 Test Weifeng
+>> input polynomial
+-x^2+6889/16
+>> basis
+[(x-114/25)*(x-48/5)*(x-271/25)*(x-75/4)*(x-79/4), -(x-114/25)*(x-48/5)*(x-271/25)*(x-75/4)*(x-79/4)]
+>> Time taken
+1.236000
+">> Sums of squares multipliers", [-x^2+6889/16-3254/4574139*x^2*(x-114/25)*(x-\
+48/5)*(x-271/25)*(x-75/4)*(x-79/4)+3254/4574139*(x+1)^2*(x-114/25)*(x-48/5)*(x-\
+271/25)*(x-75/4)*(x-79/4), 3254/4574139*x^2, 3254/4574139*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 89 Test Weifeng
+
+>> Test
+Batch: 89 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+6889/16
+>> basis
+[(x-114/25)*(x-48/5)*(x-271/25)*(x-75/4)*(x-79/4), -(x-114/25)*(x-48/5)*(x-271/25)*(x-75/4)*(x-79/4)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -4.523269
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 89 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 89 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+6889/16
+>> basis
+[(x-114/25)*(x-48/5)*(x-271/25)*(x-75/4)*(x-79/4), -(x-114/25)*(x-48/5)*(x-271/25)*(x-75/4)*(x-79/4), -x^2+6889/16]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 89 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 90 Test Weifeng
+>> input polynomial
+-x^2+1560001/2500
+>> basis
+[(x-709/100)*(x-723/100)*(x-933/100)*(x-23/2)*(x-939/50)*(x-1149/50)*(x-1199/50), -(x-709/100)*(x-723/100)*(x-933/100)*(x-23/2)*(x-939/50)*(x-1149/50)*(x-1199/50)]
+>> Time taken
+1.893000
+">> Sums of squares multipliers", [-x^2+1560001/2500-65/18660458*x^2*(x-709/100
+)*(x-723/100)*(x-933/100)*(x-23/2)*(x-939/50)*(x-1149/50)*(x-1199/50)+65/
+18660458*(x+1)^2*(x-709/100)*(x-723/100)*(x-933/100)*(x-23/2)*(x-939/50)*(x-\
+1149/50)*(x-1199/50), 65/18660458*x^2, 65/18660458*(x+1)^2]
+>> Degree size
+9
+>> Succeeds Weifeng Batch: 90 Test Weifeng
+
+>> Test
+Batch: 90 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+1560001/2500
+>> basis
+[(x-709/100)*(x-723/100)*(x-933/100)*(x-23/2)*(x-939/50)*(x-1149/50)*(x-1199/50), -(x-709/100)*(x-723/100)*(x-933/100)*(x-23/2)*(x-939/50)*(x-1149/50)*(x-1199/50)]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+>> Timeout RealCertify Batch: 90 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 90 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+1560001/2500
+>> basis
+[(x-709/100)*(x-723/100)*(x-933/100)*(x-23/2)*(x-939/50)*(x-1149/50)*(x-1199/50), -(x-709/100)*(x-723/100)*(x-933/100)*(x-23/2)*(x-939/50)*(x-1149/50)*(x-1199/50), -x^2+1560001/2500]
+[x]
+Polynomial system with 1 variables and degree at most 8
+Size of monomial basis = 5
+Number of moment variables = 9
+SDPA starts...
+>> Timeout RealCertify Batch: 90 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 91 Test Weifeng
+>> input polynomial
+-x^2+1437601/2500
+>> basis
+[(x-499/100)*(x-159/25)*(x-373/50)*(x-213/10)*(x-1099/50), -(x-499/100)*(x-159/25)*(x-373/50)*(x-213/10)*(x-1099/50)]
+>> Time taken
+1.905000
+">> Sums of squares multipliers", [-x^2+1437601/2500-651/400493*x^2*(x-499/100)
+*(x-159/25)*(x-373/50)*(x-213/10)*(x-1099/50)+651/400493*(x+1)^2*(x-499/100)*(x
+-159/25)*(x-373/50)*(x-213/10)*(x-1099/50), 651/400493*x^2, 651/400493*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 91 Test Weifeng
+
+>> Test
+Batch: 91 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+1437601/2500
+>> basis
+[(x-499/100)*(x-159/25)*(x-373/50)*(x-213/10)*(x-1099/50), -(x-499/100)*(x-159/25)*(x-373/50)*(x-213/10)*(x-1099/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -3.855601
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 91 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 91 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+1437601/2500
+>> basis
+[(x-499/100)*(x-159/25)*(x-373/50)*(x-213/10)*(x-1099/50), -(x-499/100)*(x-159/25)*(x-373/50)*(x-213/10)*(x-1099/50), -x^2+1437601/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 91 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 92 Test Weifeng
+>> input polynomial
+-x^2+1545049/10000
+>> basis
+[(x-459/100)*(x-138/25)*(x-669/100)*(x-1043/100)*(x-1143/100), (-x+459/100)*(x-138/25)*(x-669/100)*(x-1043/100)*(x-1143/100)]
+>> Time taken
+2.055000
+">> Sums of squares multipliers", [-x^2+1545049/10000-2863/1046392*x^2*(x-459/
+100)*(x-138/25)*(x-669/100)*(x-1043/100)*(x-1143/100)-2863/1046392*(x+1)^2*(-x+
+459/100)*(x-138/25)*(x-669/100)*(x-1043/100)*(x-1143/100), 2863/1046392*x^2, 
+2863/1046392*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 92 Test Weifeng
+
+>> Test
+Batch: 92 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+1545049/10000
+>> basis
+[(x-459/100)*(x-138/25)*(x-669/100)*(x-1043/100)*(x-1143/100), (-x+459/100)*(x-138/25)*(x-669/100)*(x-1043/100)*(x-1143/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -11.942836
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 92 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 92 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+1545049/10000
+>> basis
+[(x-459/100)*(x-138/25)*(x-669/100)*(x-1043/100)*(x-1143/100), (-x+459/100)*(x-138/25)*(x-669/100)*(x-1043/100)*(x-1143/100), -x^2+1545049/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 92 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 93 Test Weifeng
+>> input polynomial
+-x^2+1216609/2500
+>> basis
+[(x-469/100)*(x-297/25)*(x-93/5)*(x-1003/50)*(x-1053/50), (-x+469/100)*(x-297/25)*(x-93/5)*(x-1003/50)*(x-1053/50)]
+>> Time taken
+2.079000
+">> Sums of squares multipliers", [-x^2+1216609/2500-591/2018465*x^2*(x-469/100
+)*(x-297/25)*(x-93/5)*(x-1003/50)*(x-1053/50)-591/2018465*(x+1)^2*(-x+469/100)*
+(x-297/25)*(x-93/5)*(x-1003/50)*(x-1053/50), 591/2018465*x^2, 591/2018465*(x+1)
+^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 93 Test Weifeng
+
+>> Test
+Batch: 93 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+1216609/2500
+>> basis
+[(x-469/100)*(x-297/25)*(x-93/5)*(x-1003/50)*(x-1053/50), (-x+469/100)*(x-297/25)*(x-93/5)*(x-1003/50)*(x-1053/50)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.969863
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 93 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 93 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+1216609/2500
+>> basis
+[(x-469/100)*(x-297/25)*(x-93/5)*(x-1003/50)*(x-1053/50), (-x+469/100)*(x-297/25)*(x-93/5)*(x-1003/50)*(x-1053/50), -x^2+1216609/2500]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 93 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 94 Test Weifeng
+>> input polynomial
+-x^2+279841/625
+>> basis
+[(x-118/25)*(x-173/20)*(x-1017/100)*(x-11)*(x-479/25), -(x-118/25)*(x-173/20)*(x-1017/100)*(x-11)*(x-479/25)]
+>> Time taken
+1.898000
+">> Sums of squares multipliers", [-x^2+279841/625-391/1851659*x^2*(x-118/25)*(
+x-173/20)*(x-1017/100)*(x-11)*(x-479/25)+391/1851659*(x+1)^2*(x-118/25)*(x-173/
+20)*(x-1017/100)*(x-11)*(x-479/25), 391/1851659*x^2, 391/1851659*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 94 Test Weifeng
+
+>> Test
+Batch: 94 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+279841/625
+>> basis
+[(x-118/25)*(x-173/20)*(x-1017/100)*(x-11)*(x-479/25), -(x-118/25)*(x-173/20)*(x-1017/100)*(x-11)*(x-479/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -4.628256
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 94 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 94 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+279841/625
+>> basis
+[(x-118/25)*(x-173/20)*(x-1017/100)*(x-11)*(x-479/25), -(x-118/25)*(x-173/20)*(x-1017/100)*(x-11)*(x-479/25), -x^2+279841/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000002
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 94 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 95 Test Weifeng
+>> input polynomial
+-x^2+480249/625
+>> basis
+[(x-251/50)*(x-46/5)*(x-332/25)*(x-1387/100)*(x-643/25), -(x-251/50)*(x-46/5)*(x-332/25)*(x-1387/100)*(x-643/25)]
+>> Time taken
+2.004000
+">> Sums of squares multipliers", [-x^2+480249/625-163/4359388*x^2*(x-251/50)*(
+x-46/5)*(x-332/25)*(x-1387/100)*(x-643/25)+163/4359388*(x+1)^2*(x-251/50)*(x-46
+/5)*(x-332/25)*(x-1387/100)*(x-643/25), 163/4359388*x^2, 163/4359388*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 95 Test Weifeng
+
+>> Test
+Batch: 95 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+480249/625
+>> basis
+[(x-251/50)*(x-46/5)*(x-332/25)*(x-1387/100)*(x-643/25), -(x-251/50)*(x-46/5)*(x-332/25)*(x-1387/100)*(x-643/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+>> Timeout RealCertify Batch: 95 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 95 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+480249/625
+>> basis
+[(x-251/50)*(x-46/5)*(x-332/25)*(x-1387/100)*(x-643/25), -(x-251/50)*(x-46/5)*(x-332/25)*(x-1387/100)*(x-643/25), -x^2+480249/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000001
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 95 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 96 Test Weifeng
+>> input polynomial
+-x^2+508369/625
+>> basis
+[(x-831/100)*(x-51/5)*(x-2529/100)*(x-663/25)*(x-688/25), (-x+831/100)*(x-51/5)*(x-2529/100)*(x-663/25)*(x-688/25)]
+>> Time taken
+1.993000
+">> Sums of squares multipliers", [-x^2+508369/625-428/3987515*x^2*(x-831/100)*
+(x-51/5)*(x-2529/100)*(x-663/25)*(x-688/25)-428/3987515*(x+1)^2*(-x+831/100)*(x
+-51/5)*(x-2529/100)*(x-663/25)*(x-688/25), 428/3987515*x^2, 428/3987515*(x+1)^2
+]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 96 Test Weifeng
+
+>> Test
+Batch: 96 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+508369/625
+>> basis
+[(x-831/100)*(x-51/5)*(x-2529/100)*(x-663/25)*(x-688/25), (-x+831/100)*(x-51/5)*(x-2529/100)*(x-663/25)*(x-688/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -0.881983
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 96 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 96 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+508369/625
+>> basis
+[(x-831/100)*(x-51/5)*(x-2529/100)*(x-663/25)*(x-688/25), (-x+831/100)*(x-51/5)*(x-2529/100)*(x-663/25)*(x-688/25), -x^2+508369/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000004
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 96 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 97 Test Weifeng
+>> input polynomial
+-x^2+238144/625
+>> basis
+[(x-327/50)*(x-147/20)*(x-781/50)*(x-823/50)*(x-438/25), -(x-327/50)*(x-147/20)*(x-781/50)*(x-823/50)*(x-438/25)]
+>> Time taken
+1.321000
+">> Sums of squares multipliers", [-x^2+238144/625-484/1025589*x^2*(x-327/50)*(
+x-147/20)*(x-781/50)*(x-823/50)*(x-438/25)+484/1025589*(x+1)^2*(x-327/50)*(x-\
+147/20)*(x-781/50)*(x-823/50)*(x-438/25), 484/1025589*x^2, 484/1025589*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 97 Test Weifeng
+
+>> Test
+Batch: 97 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+238144/625
+>> basis
+[(x-327/50)*(x-147/20)*(x-781/50)*(x-823/50)*(x-438/25), -(x-327/50)*(x-147/20)*(x-781/50)*(x-823/50)*(x-438/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -2.946513
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 97 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 97 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+238144/625
+>> basis
+[(x-327/50)*(x-147/20)*(x-781/50)*(x-823/50)*(x-438/25), -(x-327/50)*(x-147/20)*(x-781/50)*(x-823/50)*(x-438/25), -x^2+238144/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 97 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 98 Test Weifeng
+>> input polynomial
+-x^2+2866249/10000
+>> basis
+[(x-29/4)*(x-913/100)*(x-681/50)*(x-1493/100)*(x-1593/100), (-x+29/4)*(x-913/100)*(x-681/50)*(x-1493/100)*(x-1593/100)]
+>> Time taken
+2.134000
+">> Sums of squares multipliers", [-x^2+2866249/10000-(619/1795660+1/(-78604/
+8757947279*x^6+118613436/218948681975*x^5-27953409943/2189486819750*x^4+
+79771063634379/547371704937500*x^3-173208587042562619/218948681975000000*x^2+
+81603686745913143/54737170493750000*x+30673152383568563/875794727900000000)^124
+)*x^2*(x-29/4)*(x-913/100)*(x-681/50)*(x-1493/100)*(x-1593/100)-(619/1795660+1/
+(-78604/8757947279*x^6+118613436/218948681975*x^5-27953409943/2189486819750*x^4
++79771063634379/547371704937500*x^3-173208587042562619/218948681975000000*x^2+
+81603686745913143/54737170493750000*x+30673152383568563/875794727900000000)^124
+)*(x+1)^2*(-x+29/4)*(x-913/100)*(x-681/50)*(x-1493/100)*(x-1593/100), (619/
+1795660+1/(-78604/8757947279*x^6+118613436/218948681975*x^5-27953409943/
+2189486819750*x^4+79771063634379/547371704937500*x^3-173208587042562619/
+218948681975000000*x^2+81603686745913143/54737170493750000*x+30673152383568563/
+875794727900000000)^124)*x^2, (619/1795660+1/(-78604/8757947279*x^6+118613436/
+218948681975*x^5-27953409943/2189486819750*x^4+79771063634379/547371704937500*x
+^3-173208587042562619/218948681975000000*x^2+81603686745913143/
+54737170493750000*x+30673152383568563/875794727900000000)^124)*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 98 Test Weifeng
+
+>> Test
+Batch: 98 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+2866249/10000
+>> basis
+[(x-29/4)*(x-913/100)*(x-681/50)*(x-1493/100)*(x-1593/100), (-x+29/4)*(x-913/100)*(x-681/50)*(x-1493/100)*(x-1593/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -3.750073
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 98 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 98 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+2866249/10000
+>> basis
+[(x-29/4)*(x-913/100)*(x-681/50)*(x-1493/100)*(x-1593/100), (-x+29/4)*(x-913/100)*(x-681/50)*(x-1493/100)*(x-1593/100), -x^2+2866249/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+>> Timeout RealCertify Batch: 98 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 99 Test Weifeng
+>> input polynomial
+-x^2+470596/625
+>> basis
+[(x-453/50)*(x-1761/100)*(x-933/50)*(x-636/25)*(x-661/25), (-x+453/50)*(x-1761/100)*(x-933/50)*(x-636/25)*(x-661/25)]
+>> Time taken
+2.390000
+">> Sums of squares multipliers", [-x^2+470596/625-(83/1176037+(-531/753481664*
+x^6+5135301/75348166400*x^5-9645502959/3767408320000*x^4+8724705919857/
+188370416000000*x^3-3735139721101947/9418520800000000*x^2+282801761608578453/
+235463020000000000*x-13449907631162659/58865755000000000)^456)*x^2*(x-453/50)*(
+x-1761/100)*(x-933/50)*(x-636/25)*(x-661/25)-(83/1176037+(-531/753481664*x^6+
+5135301/75348166400*x^5-9645502959/3767408320000*x^4+8724705919857/
+188370416000000*x^3-3735139721101947/9418520800000000*x^2+282801761608578453/
+235463020000000000*x-13449907631162659/58865755000000000)^456)*(x+1)^2*(-x+453/
+50)*(x-1761/100)*(x-933/50)*(x-636/25)*(x-661/25), (83/1176037+(-531/753481664*
+x^6+5135301/75348166400*x^5-9645502959/3767408320000*x^4+8724705919857/
+188370416000000*x^3-3735139721101947/9418520800000000*x^2+282801761608578453/
+235463020000000000*x-13449907631162659/58865755000000000)^456)*x^2, (83/1176037
++(-531/753481664*x^6+5135301/75348166400*x^5-9645502959/3767408320000*x^4+
+8724705919857/188370416000000*x^3-3735139721101947/9418520800000000*x^2+
+282801761608578453/235463020000000000*x-13449907631162659/58865755000000000)^
+456)*(x+1)^2]
+>> Degree size
+2743
+>> Succeeds Weifeng Batch: 99 Test Weifeng
+
+>> Test
+Batch: 99 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+470596/625
+>> basis
+[(x-453/50)*(x-1761/100)*(x-933/50)*(x-636/25)*(x-661/25), (-x+453/50)*(x-1761/100)*(x-933/50)*(x-636/25)*(x-661/25)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.009878
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 99 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 99 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+470596/625
+>> basis
+[(x-453/50)*(x-1761/100)*(x-933/50)*(x-636/25)*(x-661/25), (-x+453/50)*(x-1761/100)*(x-933/50)*(x-636/25)*(x-661/25), -x^2+470596/625]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.892300
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 99 Test - RealCertify with Archimedean polynomial
+
+>> Test
+Batch: 100 Test Weifeng
+>> input polynomial
+-x^2+5424241/10000
+>> basis
+[(x-154/25)*(x-1031/100)*(x-597/50)*(x-2129/100)*(x-2229/100), (-x+154/25)*(x-1031/100)*(x-597/50)*(x-2129/100)*(x-2229/100)]
+>> Time taken
+2.012000
+">> Sums of squares multipliers", [-x^2+5424241/10000-140/365797*x^2*(x-154/25)
+*(x-1031/100)*(x-597/50)*(x-2129/100)*(x-2229/100)-140/365797*(x+1)^2*(-x+154/
+25)*(x-1031/100)*(x-597/50)*(x-2129/100)*(x-2229/100), 140/365797*x^2, 140/
+365797*(x+1)^2]
+>> Degree size
+7
+>> Succeeds Weifeng Batch: 100 Test Weifeng
+
+>> Test
+Batch: 100 Test - RealCertify without Archimedean polynomial
+>> input polynomial
+-x^2+5424241/10000
+>> basis
+[(x-154/25)*(x-1031/100)*(x-597/50)*(x-2129/100)*(x-2229/100), (-x+154/25)*(x-1031/100)*(x-597/50)*(x-2129/100)*(x-2229/100)]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: -1.543821
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 100 Test - RealCertify without Archimedean polynomial
+
+>> Test
+Batch: 100 Test - RealCertify with Archimedean polynomial
+>> input polynomial
+-x^2+5424241/10000
+>> basis
+[(x-154/25)*(x-1031/100)*(x-597/50)*(x-2129/100)*(x-2229/100), (-x+154/25)*(x-1031/100)*(x-597/50)*(x-2129/100)*(x-2229/100), -x^2+5424241/10000]
+[x]
+Polynomial system with 1 variables and degree at most 6
+Size of monomial basis = 4
+Number of moment variables = 7
+SDPA starts...
+Numerical SDP ended
+Lower bound: 0.000003
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... done.
+Cholesky decomposition ... Warning, Matrix is not positive-definite
+>> Timeout RealCertify Batch: 100 Test - RealCertify with Archimedean polynomial

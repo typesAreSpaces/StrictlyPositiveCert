@@ -1,0 +1,6249 @@
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .47e-1
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .6e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .47e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .101
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .24e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .36e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .22e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .33e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .25e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .36e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .19e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .652
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .683
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .16e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .762
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .790
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .16e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .676
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .704
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .15e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .772
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .799
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: averkov_lemma_7 1
+Time: .24e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .79e-1
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .141
+End: Last_step 1
+Time: .143
+End: find_certificate 0
+Time: .257
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .582
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .612
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .569
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .599
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .16e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .426
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .183
+End: Last_step 1
+Time: .184
+End: find_certificate 0
+Time: .637
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .675
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .704
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .23e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .36e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .22e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: .1e-2
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .34e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .23e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .34e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .22e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .34e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .789
+Start: Last_step 1
+End: Last_step 1
+Time: .4e-2
+End: find_certificate 0
+Time: .820
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .656
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .685
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .16e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .656
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .686
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .582
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .612
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .732
+Start: Last_step 1
+End: Last_step 1
+Time: .4e-2
+End: find_certificate 0
+Time: .763
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .24e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .35e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .16e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .453
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .482
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .11e-1
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .24e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .38e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .23e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .34e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .23e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .35e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .25e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .88e-1
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .172
+End: Last_step 1
+Time: .174
+End: find_certificate 0
+Time: .298
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .686
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .95e-1
+End: Last_step 1
+Time: .96e-1
+End: find_certificate 0
+Time: .812
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .736
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .766
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .660
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .95e-1
+End: Last_step 1
+Time: .97e-1
+End: find_certificate 0
+Time: .786
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .580
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .612
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .692
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .721
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: averkov_lemma_7 1
+Time: .18e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .570
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .86e-1
+End: Last_step 1
+Time: .89e-1
+End: find_certificate 0
+Time: .687
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .760
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .791
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .659
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .91e-1
+End: Last_step 1
+Time: .93e-1
+End: find_certificate 0
+Time: .780
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .25e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .37e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .18e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .579
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .610
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .25e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .37e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .25e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .36e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .26e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .86e-1
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .263
+End: Last_step 1
+Time: .265
+End: find_certificate 0
+Time: .389
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .18e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .617
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .647
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .25e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .38e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .18e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .720
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .751
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .10e-1
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .27e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .40e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .26e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .37e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .29e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .235
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .148
+End: Last_step 1
+Time: .150
+End: find_certificate 0
+Time: .425
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .25e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .38e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .27e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .75e-1
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .137
+End: Last_step 1
+Time: .140
+End: find_certificate 0
+Time: .252
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .18e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .645
+Start: Last_step 1
+End: Last_step 1
+Time: .4e-2
+End: find_certificate 0
+Time: .677
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .17e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .622
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .249
+End: Last_step 1
+Time: .251
+End: find_certificate 0
+Time: .902
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .18e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .551
+Start: Last_step 1
+End: Last_step 1
+Time: .4e-2
+End: find_certificate 0
+Time: .583
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .28e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .238
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .140
+End: Last_step 1
+Time: .141
+End: find_certificate 0
+Time: .419
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .18e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .517
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .88e-1
+End: Last_step 1
+Time: .89e-1
+End: find_certificate 0
+Time: .634
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .182
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .671
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .865
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .28e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .252
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .294
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .18e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .603
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .94e-1
+End: Last_step 1
+Time: .96e-1
+End: find_certificate 0
+Time: .727
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .212
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: .1e-2
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .225
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .26e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .39e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .19e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .519
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .551
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .26e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .39e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .26e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .39e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .18e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .713
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .95e-1
+End: Last_step 1
+Time: .97e-1
+End: find_certificate 0
+Time: .840
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .19e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .767
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .800
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: averkov_lemma_7 1
+Time: .28e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .84e-1
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .154
+End: Last_step 1
+Time: .155
+End: find_certificate 0
+Time: .278
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .30e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .260
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .154
+End: Last_step 1
+Time: .155
+End: find_certificate 0
+Time: .456
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .18e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .852
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .884
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .30e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .87e-1
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .139
+End: Last_step 1
+Time: .141
+End: find_certificate 0
+Time: .269
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: averkov_lemma_7 1
+Time: .28e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: .1e-2
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .41e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .27e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .39e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .23e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .35e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: averkov_lemma_7 1
+Time: .19e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .823
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .856
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .27e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .39e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .20e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .630
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .91e-1
+End: Last_step 1
+Time: .93e-1
+End: find_certificate 0
+Time: .753
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .19e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .485
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .516
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: averkov_lemma_7 1
+Time: .20e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .723
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .756
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .28e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .41e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: averkov_lemma_7 1
+Time: .18e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .815
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .846
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: averkov_lemma_7 1
+Time: .27e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .40e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .19e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .934
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .966
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: averkov_lemma_7 1
+Time: .19e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .656
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .687
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .19e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .575
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .607
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .195
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .32e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .231
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .30e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .84e-1
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .158
+End: Last_step 1
+Time: .162
+End: find_certificate 0
+Time: .287
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .29e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .41e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .28e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .41e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .27e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: .1e-2
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .40e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .19e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .678
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .710
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .19e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .419
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .452
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .20e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .728
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .98e-1
+End: Last_step 1
+Time: .102
+End: find_certificate 0
+Time: .861
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .25e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .38e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .29e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .42e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+End: averkov_lemma_7 1
+Time: .20e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .761
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .96e-1
+End: Last_step 1
+Time: .98e-1
+End: find_certificate 0
+Time: .890
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .29e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: .1e-2
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .41e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .19e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: 1.021
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: 1.053
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .10e-1
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .30e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .43e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .29e-1
+Start: Lower_bound_poly 1
+End: Lower_bound_poly 1
+Time: 0.
+Start: Last_step 1
+End: Last_step 1
+Time: .1e-2
+End: find_certificate 0
+Time: .41e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .20e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .593
+Start: Last_step 1
+Start: findPositiveConstantAvoidExponent 2
+End: findPositiveConstantAvoidExponent 2
+Time: .338
+End: Last_step 1
+Time: .339
+End: find_certificate 0
+Time: .962
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .20e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .627
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .661
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .10e-1
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: averkov_lemma_7 1
+Time: .21e-1
+Start: Lower_bound_poly 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .855
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .890

@@ -1,0 +1,834 @@
+                                       1
+
+                                       8
+
+Warning, (in SOSDecomp) `s` is implicitly declared local
+|univsos/univsos1.mm:54|
+Warning, (in CheckTvalue) `s` is implicitly declared local
+|univsos/univsos1.mm:370|
+Warning, (in oldCheckTvalue) `s` is implicitly declared local
+|univsos/univsos1.mm:402|
+Warning, (in UnivariateSumOfSquaresDecItv) `i` is implicitly declared local
+|univsos/univsos1.mm:468|
+Warning, (in UnivariateSumOfSquaresDecItv) `c` is implicitly declared local
+|univsos/univsos1.mm:476|
+Warning, (in UnivariateSumOfSquaresDecItv) `si` is implicitly declared local
+|univsos/univsos1.mm:479|
+Warning, (in UnivariateSumOfSquaresDecItv) `r` is implicitly declared local
+|univsos/univsos1.mm:484|
+Warning, (in UnivariateSumOfSquaresDecItv) `j` is implicitly declared local
+|univsos/univsos1.mm:484|
+Warning, (in UnivariateSumOfSquaresDecItv) `t` is implicitly declared local
+|univsos/univsos1.mm:485|
+Warning, (in HdTailList) `i` is implicitly declared local
+|univsos/univsos1.mm:507|
+Warning, (in univsos2) `se` is implicitly declared local
+|univsos/univsos2.mm:23|
+Warning, (in univsos2) `so` is implicitly declared local
+|univsos/univsos2.mm:24|
+Warning, (in UnivariateSumOfSquaresDecItv2) `i` is implicitly declared local
+|univsos/univsos2.mm:129|
+Warning, (in UnivariateSumOfSquaresDecItv2) `c` is implicitly declared local
+|univsos/univsos2.mm:137|
+Warning, (in UnivariateSumOfSquaresDecItv2) `si` is implicitly declared local
+|univsos/univsos2.mm:140|
+Warning, (in UnivariateSumOfSquaresDecItv2) `r` is implicitly declared local
+|univsos/univsos2.mm:145|
+Warning, (in UnivariateSumOfSquaresDecItv2) `j` is implicitly declared local
+|univsos/univsos2.mm:145|
+Warning, (in UnivariateSumOfSquaresDecItv2) `t` is implicitly declared local
+|univsos/univsos2.mm:146|
+Warning, (in univsos3) `se` is implicitly declared local
+|univsos/univsos3.mm:21|
+Warning, (in univsos3) `so` is implicitly declared local
+|univsos/univsos3.mm:22|
+Warning, (in UnivariateSumOfSquaresDecItv3) `i` is implicitly declared local
+|univsos/univsos3.mm:111|
+Warning, (in UnivariateSumOfSquaresDecItv3) `c` is implicitly declared local
+|univsos/univsos3.mm:120|
+Warning, (in UnivariateSumOfSquaresDecItv3) `si` is implicitly declared local
+|univsos/univsos3.mm:123|
+Warning, (in UnivariateSumOfSquaresDecItv3) `r` is implicitly declared local
+|univsos/univsos3.mm:128|
+Warning, (in UnivariateSumOfSquaresDecItv3) `j` is implicitly declared local
+|univsos/univsos3.mm:128|
+Warning, (in UnivariateSumOfSquaresDecItv3) `t` is implicitly declared local
+|univsos/univsos3.mm:129|
+Warning, (in sositv3) `se` is implicitly declared local
+|univsos/univsos3.mm:324|
+Warning, (in sositv3) `so` is implicitly declared local
+|univsos/univsos3.mm:325|
+Warning, (in checkPositivityOverSAS) `interval` is implicitly declared local
+|weifeng_certificates_using_bounds.mpl:585|
+Warning, (in SOSDecomp) `s` is implicitly declared local
+|univsos/univsos1.mm:54|
+Warning, (in CheckTvalue) `s` is implicitly declared local
+|univsos/univsos1.mm:370|
+Warning, (in oldCheckTvalue) `s` is implicitly declared local
+|univsos/univsos1.mm:402|
+Warning, (in UnivariateSumOfSquaresDecItv) `i` is implicitly declared local
+|univsos/univsos1.mm:468|
+Warning, (in UnivariateSumOfSquaresDecItv) `c` is implicitly declared local
+|univsos/univsos1.mm:476|
+Warning, (in UnivariateSumOfSquaresDecItv) `si` is implicitly declared local
+|univsos/univsos1.mm:479|
+Warning, (in UnivariateSumOfSquaresDecItv) `r` is implicitly declared local
+|univsos/univsos1.mm:484|
+Warning, (in UnivariateSumOfSquaresDecItv) `j` is implicitly declared local
+|univsos/univsos1.mm:484|
+Warning, (in UnivariateSumOfSquaresDecItv) `t` is implicitly declared local
+|univsos/univsos1.mm:485|
+Warning, (in HdTailList) `i` is implicitly declared local
+|univsos/univsos1.mm:507|
+Warning, (in univsos2) `se` is implicitly declared local
+|univsos/univsos2.mm:23|
+Warning, (in univsos2) `so` is implicitly declared local
+|univsos/univsos2.mm:24|
+Warning, (in UnivariateSumOfSquaresDecItv2) `i` is implicitly declared local
+|univsos/univsos2.mm:129|
+Warning, (in UnivariateSumOfSquaresDecItv2) `c` is implicitly declared local
+|univsos/univsos2.mm:137|
+Warning, (in UnivariateSumOfSquaresDecItv2) `si` is implicitly declared local
+|univsos/univsos2.mm:140|
+Warning, (in UnivariateSumOfSquaresDecItv2) `r` is implicitly declared local
+|univsos/univsos2.mm:145|
+Warning, (in UnivariateSumOfSquaresDecItv2) `j` is implicitly declared local
+|univsos/univsos2.mm:145|
+Warning, (in UnivariateSumOfSquaresDecItv2) `t` is implicitly declared local
+|univsos/univsos2.mm:146|
+Warning, (in univsos3) `se` is implicitly declared local
+|univsos/univsos3.mm:21|
+Warning, (in univsos3) `so` is implicitly declared local
+|univsos/univsos3.mm:22|
+Warning, (in UnivariateSumOfSquaresDecItv3) `i` is implicitly declared local
+|univsos/univsos3.mm:111|
+Warning, (in UnivariateSumOfSquaresDecItv3) `c` is implicitly declared local
+|univsos/univsos3.mm:120|
+Warning, (in UnivariateSumOfSquaresDecItv3) `si` is implicitly declared local
+|univsos/univsos3.mm:123|
+Warning, (in UnivariateSumOfSquaresDecItv3) `r` is implicitly declared local
+|univsos/univsos3.mm:128|
+Warning, (in UnivariateSumOfSquaresDecItv3) `j` is implicitly declared local
+|univsos/univsos3.mm:128|
+Warning, (in UnivariateSumOfSquaresDecItv3) `t` is implicitly declared local
+|univsos/univsos3.mm:129|
+Warning, (in sositv3) `se` is implicitly declared local
+|univsos/univsos3.mm:324|
+Warning, (in sositv3) `so` is implicitly declared local
+|univsos/univsos3.mm:325|
+Warning, (in checkPositivityOverSAS) `interval` is implicitly declared local
+|weifeng_certificates_using_bounds.mpl:585|
+Warning, (in monshom) `i` is implicitly declared local
+|multivsos/multivsos.mm:20|
+Warning, (in revmons) `i` is implicitly declared local
+|multivsos/multivsos.mm:26|
+Warning, (in revmons2) `i` is implicitly declared local
+|multivsos/multivsos.mm:33|
+Warning, (in mymons) `m` is implicitly declared local
+|multivsos/multivsos.mm:48|
+Warning, (in mymons) `v` is implicitly declared local
+|multivsos/multivsos.mm:48|
+Warning, (in anonymous procedure within mons) `i` is implicitly declared local
+|multivsos/multivsos.mm:54|
+Warning, (in support) `m` is implicitly declared local
+|multivsos/multivsos.mm:62|
+Warning, (in dense_perturbation) `m` is implicitly declared local
+|multivsos/multivsos.mm:68|
+Warning, (in absorber_PP) `im` is implicitly declared local
+|multivsos/multivsos.mm:350|
+Warning, (in relaxordermin) `gi` is implicitly declared local
+|multivsos/multivsos.mm:625|
+Warning, (in locmatsizes) `gi` is implicitly declared local
+|multivsos/multivsos.mm:629|
+Warning, (in preliminary_test_negativity) `x` is implicitly declared local
+|multivsos/multivsos.mm:651|
+Warning, (in permutepoly) `i` is implicitly declared local
+|multivsos/multivsos.mm:678|
+Warning, (in is_homogeneous) `v` is implicitly declared local
+|multivsos/multivsos.mm:708|
+Warning, (in multivsos) `i` is implicitly declared local
+|multivsos/multivsos.mm:719|
+Warning, (in multivsos_internal) `m` is implicitly declared local
+|multivsos/multivsos.mm:815|
+Warning, (in BitSizeSos) `p` is implicitly declared local
+|multivsos/multivsos.mm:996|
+Warning, (in BitSizePolSeq3) `p` is implicitly declared local
+|multivsos/multivsos.mm:1004|
+Warning, (in BitSizePolSeq) `p` is implicitly declared local
+|multivsos/multivsos.mm:1008|
+Warning, (in BitSizeSeq) `c` is implicitly declared local
+|multivsos/multivsos.mm:1018|
+Warning, (in productGensBenchmark) `random_point` is implicitly declared local
+|benchmarking.mpl:186|
+
+>> Start
+
+>> Start benchmark
+
+>> Test
+Left Natural Generator Test
+>> input polynomial
+x+1
+>> basis
+[-(x+1)*(x-1), (x+1)*(x-1)]
+>> Time taken
+0.024000
+">> Sums of squares multipliers", [x+1+1/2*(x+1)*(x-1), 1/2, 0]
+>> Degree size
+2
+
+>> Test
+In between Natural Generator Test 1
+>> input polynomial
+(x+1)*(x-1)
+>> basis
+[-(x+1)*(x-1), (x+1)*(x-1)]
+>> Time taken
+0.184000
+">> Sums of squares multipliers", [(x+1)*(x-1)+(7486/29907*(x+999/1000)^2+12933
+/37639)*(x^2-1)^2*(x+1)*(x-1)-(x+1)*(x-1)*(1/4*(x-1)^2*(x+2)^2+1/4*(x+1)^2*(x-2
+)^2), (7486/29907*(x+999/1000)^2+12933/37639)*(x^2-1)^2, 1/4*(x-1)^2*(x+2)^2+1/
+4*(x+1)^2*(x-2)^2]
+>> Degree size
+8
+
+>> Test
+Right Natural Generator Test
+>> input polynomial
+-x+1
+>> basis
+[-(x+1)*(x-1), (x+1)*(x-1)]
+>> Time taken
+0.005000
+">> Sums of squares multipliers", [-x+1+1/2*(x+1)*(x-1), 1/2, 0]
+>> Degree size
+2
+
+>> Start benchmark
+
+>> Test
+Left Natural Generator Test
+>> input polynomial
+x+2
+>> basis
+[-(x+2)*(x+1)*(x-1)*(x-2), (x+2)*(x+1)*(x-1)*(x-2)]
+>> Time taken
+0.018000
+">> Sums of squares multipliers", [x+2+1/12*(x+2)*(x+1)*(x-1)*(x-2), 1/12, 0]
+>> Degree size
+4
+
+>> Test
+In between Natural Generator Test 1
+>> input polynomial
+(x+2)*(x+1)
+>> basis
+[-(x+2)*(x+1)*(x-1)*(x-2), (x+2)*(x+1)*(x-1)*(x-2)]
+>> Time taken
+0.401000
+">> Sums of squares multipliers", [(x+2)*(x+1)+(7126/417947*(x+1999/1000)^2+
+53953/20665*(-485016000/667132643*(x+2)*(x+1)*(x-1)*(x-2)-546188643/667132643)^
+12)*(x^2+3*x+2)^2*(x+2)*(x+1)*(x-1)*(x-2)-(1849/6912*(x+1)^2*(x+110/43)^2+169/
+864*(x+2)^2*(x+1/13)^2)*(x+2)*(x+1)*(x-1)*(x-2), (7126/417947*(x+1999/1000)^2+
+53953/20665*(-485016000/667132643*(x+2)*(x+1)*(x-1)*(x-2)-546188643/667132643)^
+12)*(x^2+3*x+2)^2, 1849/6912*(x+1)^2*(x+110/43)^2+169/864*(x+2)^2*(x+1/13)^2]
+>> Degree size
+56
+
+>> Test
+In between Natural Generator Test 2
+>> input polynomial
+(x+1)*(x-1)
+>> basis
+[-(x+2)*(x+1)*(x-1)*(x-2), (x+2)*(x+1)*(x-1)*(x-2)]
+>> Time taken
+0.014000
+">> Sums of squares multipliers", [(x+1)*(x-1)+(x+2)*(x+1)*(x-1)*(x-2)*(1/27*(x
+-1)^2*(x+5/2)^2+1/27*(x+1)^2*(x-5/2)^2), 1/27*(x-1)^2*(x+5/2)^2+1/27*(x+1)^2*(x
+-5/2)^2, 0]
+>> Degree size
+8
+
+>> Test
+In between Natural Generator Test 3
+>> input polynomial
+(x-1)*(x-2)
+>> basis
+[-(x+2)*(x+1)*(x-1)*(x-2), (x+2)*(x+1)*(x-1)*(x-2)]
+>> Time taken
+1.075000
+">> Sums of squares multipliers", [(x-1)*(x-2)+(3689/104044*(x+1999/1000)^2+
+12069/6575*(-596552000/727632121*(x+2)*(x+1)*(x-1)*(x-2)-671792121/727632121)^
+18)*(x^2-3*x+2)^2*(x+2)*(x+1)*(x-1)*(x-2)-(169/864*(x-2)^2*(x-1/13)^2+1849/6912
+*(x-1)^2*(x-110/43)^2)*(x+2)*(x+1)*(x-1)*(x-2), (3689/104044*(x+1999/1000)^2+
+12069/6575*(-596552000/727632121*(x+2)*(x+1)*(x-1)*(x-2)-671792121/727632121)^
+18)*(x^2-3*x+2)^2, 169/864*(x-2)^2*(x-1/13)^2+1849/6912*(x-1)^2*(x-110/43)^2]
+>> Degree size
+80
+
+>> Test
+Right Natural Generator Test
+>> input polynomial
+-x+2
+>> basis
+[-(x+2)*(x+1)*(x-1)*(x-2), (x+2)*(x+1)*(x-1)*(x-2)]
+>> Time taken
+0.012000
+">> Sums of squares multipliers", [-x+2+1/12*(x+2)*(x+1)*(x-1)*(x-2), 1/12, 0]
+>> Degree size
+4
+
+>> Start benchmark
+
+>> Test
+Left Natural Generator Test
+>> input polynomial
+x+3
+>> basis
+[-(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3), (x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)]
+>> Time taken
+0.019000
+">> Sums of squares multipliers", [x+3+1/240*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3
+), 1/240, 0]
+>> Degree size
+6
+
+>> Test
+In between Natural Generator Test 1
+>> input polynomial
+(x+3)*(x+2)
+>> basis
+[-(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3), (x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)]
+>> Time taken
+11.521000
+">> Sums of squares multipliers", [(x+3)*(x+2)+(549/1519256*(x+2999/1000)^2+
+78907/113447*(-15926500/312498677*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-286963677
+/312498677)^46)*(x^2+5*x+6)^2*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-(61009/
+3456000*(x+2)^2*(x+861/247)^2+5329/864000*(x+3)^2*(x+26/73)^2)*(x+3)*(x+2)*(x+1
+)*(x-1)*(x-2)*(x-3), (549/1519256*(x+2999/1000)^2+78907/113447*(-15926500/
+312498677*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-286963677/312498677)^46)*(x^2+5*x
++6)^2, 61009/3456000*(x+2)^2*(x+861/247)^2+5329/864000*(x+3)^2*(x+26/73)^2]
+>> Degree size
+286
+
+>> Test
+In between Natural Generator Test 2
+>> input polynomial
+(x+2)*(x+1)
+>> basis
+[-(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3), (x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)]
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 960
+">>> N before ENABLE_BINARY_SEARCH", 123.
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 
+1036
+">>> N after ENABLE_BINARY_SEARCH", 5.
+>> Time taken
+3.850000
+">> Sums of squares multipliers", [(x+2)*(x+1)+(27889/864000*(x+1)^2*(x+454/167
+)^2+841/27648*(x+2)^2*(x+5/29)^2+1981/86420*(-54898/1008327*(x+3)*(x+2)*(x+1)*(
+x-1)*(x-2)*(x-3)-329388/336109)^10*(x^2+3*x+2)^2)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)
+*(x-3)-1981/86420*(54898/1008327*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-329388/
+336109)^10*(x^2+3*x+2)^2*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3), 27889/864000*(x+1
+)^2*(x+454/167)^2+841/27648*(x+2)^2*(x+5/29)^2+1981/86420*(-54898/1008327*(x+3)
+*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-329388/336109)^10*(x^2+3*x+2)^2, 1981/86420*(
+54898/1008327*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-329388/336109)^10*(x^2+3*x+2)
+^2]
+>> Degree size
+70
+
+>> Test
+In between Natural Generator Test 3
+>> input polynomial
+(x+1)*(x-1)
+>> basis
+[-(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3), (x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)]
+>> Time taken
+0.467000
+">> Sums of squares multipliers", [(x+1)*(x-1)+(407/2377746*(x+2999/1000)^2+
+15694/60989*(-7119500/193497151*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-128279151/
+193497151)^10)*(x^2-1)^2*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-(169/55296*(x-1)^2
+*(x+37/13)^2+169/55296*(x+1)^2*(x-37/13)^2)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)
+, (407/2377746*(x+2999/1000)^2+15694/60989*(-7119500/193497151*(x+3)*(x+2)*(x+1
+)*(x-1)*(x-2)*(x-3)-128279151/193497151)^10)*(x^2-1)^2, 169/55296*(x-1)^2*(x+37
+/13)^2+169/55296*(x+1)^2*(x-37/13)^2]
+>> Degree size
+70
+
+>> Test
+In between Natural Generator Test 4
+>> input polynomial
+(x-1)*(x-2)
+>> basis
+[-(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3), (x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)]
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 960
+">>> N before ENABLE_BINARY_SEARCH", 123.
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 
+1036
+">>> N after ENABLE_BINARY_SEARCH", 5.
+>> Time taken
+3.716000
+">> Sums of squares multipliers", [(x-1)*(x-2)+(841/27648*(x-2)^2*(x-5/29)^2+
+27889/864000*(x-1)^2*(x-454/167)^2+1981/86420*(-54898/1008327*(x+3)*(x+2)*(x+1)
+*(x-1)*(x-2)*(x-3)-329388/336109)^10*(x^2-3*x+2)^2)*(x+3)*(x+2)*(x+1)*(x-1)*(x-\
+2)*(x-3)-1981/86420*(54898/1008327*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-329388/
+336109)^10*(x^2-3*x+2)^2*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3), 841/27648*(x-2)^2
+*(x-5/29)^2+27889/864000*(x-1)^2*(x-454/167)^2+1981/86420*(-54898/1008327*(x+3)
+*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-329388/336109)^10*(x^2-3*x+2)^2, 1981/86420*(
+54898/1008327*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-329388/336109)^10*(x^2-3*x+2)
+^2]
+>> Degree size
+70
+
+>> Test
+In between Natural Generator Test 5
+>> input polynomial
+(x-2)*(x-3)
+>> basis
+[-(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3), (x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)]
+>> Time taken
+0.423000
+">> Sums of squares multipliers", [(x-2)*(x-3)+(411/479386*(x+2999/1000)^2+
+14761/43600*(-219750/4115593*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-7918911/
+8231186)^202)*(x^2-5*x+6)^2*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)-(x+3)*(x+2)*(x+
+1)*(x-1)*(x-2)*(x-3)*(5329/864000*(x-3)^2*(x-26/73)^2+61009/3456000*(x-2)^2*(x-\
+861/247)^2), (411/479386*(x+2999/1000)^2+14761/43600*(-219750/4115593*(x+3)*(x+
+2)*(x+1)*(x-1)*(x-2)*(x-3)-7918911/8231186)^202)*(x^2-5*x+6)^2, 5329/864000*(x-\
+3)^2*(x-26/73)^2+61009/3456000*(x-2)^2*(x-861/247)^2]
+>> Degree size
+1222
+
+>> Test
+Right Natural Generator Test
+>> input polynomial
+-x+3
+>> basis
+[-(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3), (x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)]
+>> Time taken
+0.019000
+">> Sums of squares multipliers", [-x+3+1/240*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-\
+3), 1/240, 0]
+>> Degree size
+6
+
+>> Start benchmark
+
+>> Test
+Left Natural Generator Test
+>> input polynomial
+x+4
+>> basis
+[-(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)]
+>> Time taken
+0.026000
+">> Sums of squares multipliers", [x+4+1/10080*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x
+-2)*(x-3)*(x-4), 1/10080, 0]
+>> Degree size
+8
+
+>> Test
+In between Natural Generator Test 1
+>> input polynomial
+(x+4)*(x+3)
+>> basis
+[-(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)]
+>> Time taken
+1.166000
+">> Sums of squares multipliers", [(x+4)*(x+3)+(23/4874959*(x+3999/1000)^2+6331
+/125477*(-5727850/4025367143*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-\
+3830321450/4025367143)^206)*(x^2+7*x+12)^2*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*
+(x-3)*(x-4)-(173889/351232000*(x+3)^2*(x+5564/1251)^2+1/1680*(x+4)^2)*(x+4)*(x+
+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (23/4874959*(x+3999/1000)^2+6331/125477
+*(-5727850/4025367143*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-\
+3830321450/4025367143)^206)*(x^2+7*x+12)^2, 173889/351232000*(x+3)^2*(x+5564/
+1251)^2+1/1680*(x+4)^2]
+>> Degree size
+1660
+
+>> Test
+In between Natural Generator Test 2
+>> input polynomial
+(x+3)*(x+2)
+>> basis
+[-(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)]
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 960
+">>> N before ENABLE_BINARY_SEARCH", 451.
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 
+1036
+">>> N after ENABLE_BINARY_SEARCH", 13.
+>> Time taken
+10.271000
+">> Sums of squares multipliers", [(x+3)*(x+2)+(1874161/1185408000*(x+2)^2*(x+
+4947/1369)^2+961/1152000*(x+3)^2*(x+22/31)^2+574/656491*(-5634/3794471*(x+4)*(x
++3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-3769146/3794471)^26*(x^2+5*x+6)^2)*(x+4
+)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-574/656491*(5634/3794471*(x+4)*(x+3
+)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-3769146/3794471)^26*(x^2+5*x+6)^2*(x+4)*(
+x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), 1874161/1185408000*(x+2)^2*(x+4947/
+1369)^2+961/1152000*(x+3)^2*(x+22/31)^2+574/656491*(-5634/3794471*(x+4)*(x+3)*(
+x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-3769146/3794471)^26*(x^2+5*x+6)^2, 574/
+656491*(5634/3794471*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-3769146/
+3794471)^26*(x^2+5*x+6)^2]
+>> Degree size
+220
+
+>> Test
+In between Natural Generator Test 3
+>> input polynomial
+(x+2)*(x+1)
+>> basis
+[-(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)]
+>> Time taken
+0.843000
+">> Sums of squares multipliers", [(x+2)*(x+1)+(128/3701375*(x+3999/1000)^2+
+6300/11329*(-17220161/11653255345*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-\
+4)-11515446817/11653255345)^1002)*(x^2+3*x+2)^2*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(
+x-2)*(x-3)*(x-4)-(2401/1152000*(x+1)^2*(x+138/49)^2+289/128000*(x+2)^2*(x+11/51
+)^2)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (128/3701375*(x+3999/1000
+)^2+6300/11329*(-17220161/11653255345*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)
+*(x-4)-11515446817/11653255345)^1002)*(x^2+3*x+2)^2, 2401/1152000*(x+1)^2*(x+
+138/49)^2+289/128000*(x+2)^2*(x+11/51)^2]
+>> Degree size
+8028
+
+>> Test
+In between Natural Generator Test 4
+>> input polynomial
+(x+1)*(x-1)
+>> basis
+[-(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)]
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 960
+">>> N before ENABLE_BINARY_SEARCH", 3.
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 
+1036
+">>> N after ENABLE_BINARY_SEARCH", 1.
+>> Time taken
+10.000000
+">> Sums of squares multipliers", [(x+1)*(x-1)+(1/1440*(x-1)^2+1/1440*(x+1)^2+(
+370/8351853*(-3065/2874234*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-\
+683495/958078)^2+287/1147038*(-2020691/1401919050*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)
+*(x-2)*(x-3)*(x-4)-1351274227/1401919050)^22)*(x^2-1)^2)*(x+4)*(x+3)*(x+2)*(x+1
+)*(x-1)*(x-2)*(x-3)*(x-4)-370/8351853*(3065/2874234*(x+4)*(x+3)*(x+2)*(x+1)*(x-\
+1)*(x-2)*(x-3)*(x-4)-683495/958078)^2*(x^2-1)^2*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(
+x-2)*(x-3)*(x-4), 1/1440*(x-1)^2+1/1440*(x+1)^2+(370/8351853*(-3065/2874234*(x+
+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-683495/958078)^2+287/1147038*(-\
+2020691/1401919050*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-1351274227/
+1401919050)^22)*(x^2-1)^2, 370/8351853*(3065/2874234*(x+4)*(x+3)*(x+2)*(x+1)*(x
+-1)*(x-2)*(x-3)*(x-4)-683495/958078)^2*(x^2-1)^2]
+>> Degree size
+188
+
+>> Test
+In between Natural Generator Test 5
+>> input polynomial
+(x-1)*(x-2)
+>> basis
+[-(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)]
+>> Time taken
+0.938000
+">> Sums of squares multipliers", [(x-1)*(x-2)+(143/3919951*(x+3999/1000)^2+
+29423/41629*(-17905141/12042967573*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x
+-4)-11973505877/12042967573)^2102)*(x^2-3*x+2)^2*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*
+(x-2)*(x-3)*(x-4)-(289/128000*(x-2)^2*(x-11/51)^2+2401/1152000*(x-1)^2*(x-138/
+49)^2)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (143/3919951*(x+3999/
+1000)^2+29423/41629*(-17905141/12042967573*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*
+(x-3)*(x-4)-11973505877/12042967573)^2102)*(x^2-3*x+2)^2, 289/128000*(x-2)^2*(x
+-11/51)^2+2401/1152000*(x-1)^2*(x-138/49)^2]
+>> Degree size
+16828
+
+>> Test
+In between Natural Generator Test 6
+>> input polynomial
+(x-2)*(x-3)
+>> basis
+[-(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)]
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 960
+">>> N before ENABLE_BINARY_SEARCH", 451.
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 
+1036
+">>> N after ENABLE_BINARY_SEARCH", 13.
+>> Time taken
+10.134000
+">> Sums of squares multipliers", [(x-2)*(x-3)+(961/1152000*(x-3)^2*(x-22/31)^2
++1874161/1185408000*(x-2)^2*(x-4947/1369)^2+574/656491*(-5634/3794471*(x+4)*(x+
+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-3769146/3794471)^26*(x^2-5*x+6)^2)*(x+4)
+*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-574/656491*(5634/3794471*(x+4)*(x+3)
+*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-3769146/3794471)^26*(x^2-5*x+6)^2*(x+4)*(x
++3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), 961/1152000*(x-3)^2*(x-22/31)^2+
+1874161/1185408000*(x-2)^2*(x-4947/1369)^2+574/656491*(-5634/3794471*(x+4)*(x+3
+)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-3769146/3794471)^26*(x^2-5*x+6)^2, 574/
+656491*(5634/3794471*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-3769146/
+3794471)^26*(x^2-5*x+6)^2]
+>> Degree size
+220
+
+>> Test
+In between Natural Generator Test 7
+>> input polynomial
+(x-3)*(x-4)
+>> basis
+[-(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)]
+>> Time taken
+1.010000
+">> Sums of squares multipliers", [(x-3)*(x-4)+(26/4706153*(x+3999/1000)^2+7906
+/112279*(-18575949/12715835621*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-\
+12422087853/12715835621)^448)*(x^2-7*x+12)^2*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2
+)*(x-3)*(x-4)-(1/1680*(x-4)^2+173889/351232000*(x-3)^2*(x-5564/1251)^2)*(x+4)*(
+x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (26/4706153*(x+3999/1000)^2+7906/
+112279*(-18575949/12715835621*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)-\
+12422087853/12715835621)^448)*(x^2-7*x+12)^2, 1/1680*(x-4)^2+173889/351232000*(
+x-3)^2*(x-5564/1251)^2]
+>> Degree size
+3596
+
+>> Test
+Right Natural Generator Test
+>> input polynomial
+-x+4
+>> basis
+[-(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4), (x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)]
+>> Time taken
+0.025000
+">> Sums of squares multipliers", [-x+4+1/10080*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(
+x-2)*(x-3)*(x-4), 1/10080, 0]
+>> Degree size
+8
+
+>> Start benchmark
+
+>> Test
+Left Natural Generator Test
+>> input polynomial
+x+5
+>> basis
+[-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)]
+>> Time taken
+0.033000
+">> Sums of squares multipliers", [x+5+1/725760*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(
+x-1)*(x-2)*(x-3)*(x-4)*(x-5), 1/725760, 0]
+>> Degree size
+10
+
+>> Test
+In between Natural Generator Test 1
+>> input polynomial
+(x+5)*(x+4)
+>> basis
+[-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)]
+>> Time taken
+2.181000
+">> Sums of squares multipliers", [(x+5)*(x+4)+(12/269724601*(x+4999/1000)^2+
+1025/255386*(-43719/1996477541*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*
+(x-4)*(x-5)-1936598300/1996477541)^404)*(x^2+9*x+20)^2*(x+5)*(x+4)*(x+3)*(x+2)*
+(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-(142014889/18435465216000*(x+4)^2*(x+64625/
+11917)^2+1/90720*(x+5)^2)*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)
+*(x-5), (12/269724601*(x+4999/1000)^2+1025/255386*(-43719/1996477541*(x+5)*(x+4
+)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-1936598300/1996477541)^404)*(
+x^2+9*x+20)^2, 142014889/18435465216000*(x+4)^2*(x+64625/11917)^2+1/90720*(x+5)
+^2]
+>> Degree size
+4054
+
+>> Test
+In between Natural Generator Test 2
+>> input polynomial
+(x+4)*(x+3)
+>> basis
+[-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)]
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 960
+">>> N before ENABLE_BINARY_SEARCH", 1133.
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 
+1036
+">>> N after ENABLE_BINARY_SEARCH", 28.
+>> Time taken
+32.791000
+">> Sums of squares multipliers", [(x+4)*(x+3)+(81342361/2304433152000*(x+3)^2*
+(x+41116/9019)^2+877969/75866112000*(x+4)^2*(x+1131/937)^2+128/7508221*(-3289/
+145987540*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-145548117
+/145987540)^56*(x^2+7*x+12)^2)*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*
+(x-4)*(x-5)-128/7508221*(3289/145987540*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-\
+2)*(x-3)*(x-4)*(x-5)-145548117/145987540)^56*(x^2+7*x+12)^2*(x+5)*(x+4)*(x+3)*(
+x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), 81342361/2304433152000*(x+3)^2*(x+
+41116/9019)^2+877969/75866112000*(x+4)^2*(x+1131/937)^2+128/7508221*(-3289/
+145987540*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-145548117
+/145987540)^56*(x^2+7*x+12)^2, 128/7508221*(3289/145987540*(x+5)*(x+4)*(x+3)*(x
++2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-145548117/145987540)^56*(x^2+7*x+12)^2]
+>> Degree size
+574
+
+>> Test
+In between Natural Generator Test 3
+>> input polynomial
+(x+3)*(x+2)
+>> basis
+[-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)]
+>> Time taken
+1.515000
+">> Sums of squares multipliers", [(x+3)*(x+2)+(10/15617881*(x+4999/1000)^2+
+21549/259123*(-6669/296368183*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(
+x-4)*(x-5)-295413300/296368183)^4596)*(x^2+5*x+6)^2*(x+5)*(x+4)*(x+3)*(x+2)*(x+
+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-(5870929/75866112000*(x+2)^2*(x+8949/2423)^2+
+534361/10668672000*(x+3)^2*(x+622/731)^2)*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(
+x-2)*(x-3)*(x-4)*(x-5), (10/15617881*(x+4999/1000)^2+21549/259123*(-6669/
+296368183*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-295413300
+/296368183)^4596)*(x^2+5*x+6)^2, 5870929/75866112000*(x+2)^2*(x+8949/2423)^2+
+534361/10668672000*(x+3)^2*(x+622/731)^2]
+>> Degree size
+45974
+
+>> Test
+In between Natural Generator Test 4
+>> input polynomial
+(x+2)*(x+1)
+>> basis
+[-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)]
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 960
+">>> N before ENABLE_BINARY_SEARCH", 2905.
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 
+1036
+">>> N after ENABLE_BINARY_SEARCH", 65.
+>> Time taken
+119.119000
+">> Sums of squares multipliers", [(x+2)*(x+1)+(900601/10668672000*(x+1)^2*(x+
+2738/949)^2+6241/62208000*(x+2)^2*(x+19/79)^2+271/4067621*(-3521/156020241*(x+5
+)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-51938271/52006747)^130*
+(x^2+3*x+2)^2)*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-271/
+4067621*(3521/156020241*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(
+x-5)-51938271/52006747)^130*(x^2+3*x+2)^2*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(
+x-2)*(x-3)*(x-4)*(x-5), 900601/10668672000*(x+1)^2*(x+2738/949)^2+6241/62208000
+*(x+2)^2*(x+19/79)^2+271/4067621*(-3521/156020241*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)
+*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-51938271/52006747)^130*(x^2+3*x+2)^2, 271/
+4067621*(3521/156020241*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(
+x-5)-51938271/52006747)^130*(x^2+3*x+2)^2]
+>> Degree size
+1314
+
+>> Test
+In between Natural Generator Test 5
+>> input polynomial
+(x+1)*(x-1)
+>> basis
+[-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)]
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 960
+">>> N before ENABLE_BINARY_SEARCH", 49.
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 
+1036
+">>> N after ENABLE_BINARY_SEARCH", 7.
+>> Time taken
+1.856000
+">> Sums of squares multipliers", [(x+1)*(x-1)+217/97038493*(-167/7645253*(x+5)
+*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-671841/695023)^14*(x^2-1
+)^2*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-(1/34560*(x-1)^
+2+1/34560*(x+1)^2+217/97038493*(167/7645253*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)
+*(x-2)*(x-3)*(x-4)*(x-5)-671841/695023)^14*(x^2-1)^2)*(x+5)*(x+4)*(x+3)*(x+2)*(
+x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), 217/97038493*(-167/7645253*(x+5)*(x+4)*(x+3
+)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-671841/695023)^14*(x^2-1)^2, 1/
+34560*(x-1)^2+1/34560*(x+1)^2+217/97038493*(167/7645253*(x+5)*(x+4)*(x+3)*(x+2)
+*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-671841/695023)^14*(x^2-1)^2]
+>> Degree size
+154
+
+>> Test
+In between Natural Generator Test 6
+>> input polynomial
+(x-1)*(x-2)
+>> basis
+[-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)]
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 960
+">>> N before ENABLE_BINARY_SEARCH", 2905.
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 
+1036
+">>> N after ENABLE_BINARY_SEARCH", 65.
+>> Time taken
+123.115000
+">> Sums of squares multipliers", [(x-1)*(x-2)+(6241/62208000*(x-2)^2*(x-19/79)
+^2+900601/10668672000*(x-1)^2*(x-2738/949)^2+271/4067621*(-3521/156020241*(x+5)
+*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-51938271/52006747)^130*(
+x^2-3*x+2)^2)*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-271/
+4067621*(3521/156020241*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(
+x-5)-51938271/52006747)^130*(x^2-3*x+2)^2*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(
+x-2)*(x-3)*(x-4)*(x-5), 6241/62208000*(x-2)^2*(x-19/79)^2+900601/10668672000*(x
+-1)^2*(x-2738/949)^2+271/4067621*(-3521/156020241*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)
+*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-51938271/52006747)^130*(x^2-3*x+2)^2, 271/
+4067621*(3521/156020241*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(
+x-5)-51938271/52006747)^130*(x^2-3*x+2)^2]
+>> Degree size
+1314
+
+>> Test
+In between Natural Generator Test 7
+>> input polynomial
+(x-2)*(x-3)
+>> basis
+[-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)]
+>> Time taken
+1.878000
+">> Sums of squares multipliers", [(x-2)*(x-3)+(23/34114565*(x+4999/1000)^2+
+6737/64394*(-234897/10421708108*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)
+*(x-4)*(x-5)-371611175/372203861)^9450)*(x^2-5*x+6)^2*(x+5)*(x+4)*(x+3)*(x+2)*(
+x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-(534361/10668672000*(x-3)^2*(x-622/731)^2+
+5870929/75866112000*(x-2)^2*(x-8949/2423)^2)*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1
+)*(x-2)*(x-3)*(x-4)*(x-5), (23/34114565*(x+4999/1000)^2+6737/64394*(-234897/
+10421708108*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-\
+371611175/372203861)^9450)*(x^2-5*x+6)^2, 534361/10668672000*(x-3)^2*(x-622/731
+)^2+5870929/75866112000*(x-2)^2*(x-8949/2423)^2]
+>> Degree size
+94514
+
+>> Test
+In between Natural Generator Test 8
+>> input polynomial
+(x-3)*(x-4)
+>> basis
+[-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)]
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 960
+">>> N before ENABLE_BINARY_SEARCH", 1133.
+">> Debugging file ", "weifeng_certificates_using_bounds.mpl", " at line ", 
+1036
+">>> N after ENABLE_BINARY_SEARCH", 28.
+>> Time taken
+29.522000
+">> Sums of squares multipliers", [(x-3)*(x-4)+(877969/75866112000*(x-4)^2*(x-\
+1131/937)^2+81342361/2304433152000*(x-3)^2*(x-41116/9019)^2+142/8329405*(-3289/
+145987540*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-145548117
+/145987540)^56*(x^2-7*x+12)^2)*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*
+(x-4)*(x-5)-142/8329405*(3289/145987540*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-\
+2)*(x-3)*(x-4)*(x-5)-145548117/145987540)^56*(x^2-7*x+12)^2*(x+5)*(x+4)*(x+3)*(
+x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), 877969/75866112000*(x-4)^2*(x-1131/
+937)^2+81342361/2304433152000*(x-3)^2*(x-41116/9019)^2+142/8329405*(-3289/
+145987540*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-145548117
+/145987540)^56*(x^2-7*x+12)^2, 142/8329405*(3289/145987540*(x+5)*(x+4)*(x+3)*(x
++2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-145548117/145987540)^56*(x^2-7*x+12)^2]
+>> Degree size
+574
+
+>> Test
+In between Natural Generator Test 9
+>> input polynomial
+(x-4)*(x-5)
+>> basis
+[-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)]
+>> Time taken
+1.710000
+">> Sums of squares multipliers", [(x-4)*(x-5)+(15/211695911*(x+4999/1000)^2+
+1092/363611*(-3363/151165112*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x
+-4)*(x-5)-5320325/5398754)^820)*(x^2-9*x+20)^2*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x
+-1)*(x-2)*(x-3)*(x-4)*(x-5)-(1/90720*(x-5)^2+142014889/18435465216000*(x-4)^2*(
+x-64625/11917)^2)*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5),
+(15/211695911*(x+4999/1000)^2+1092/363611*(-3363/151165112*(x+5)*(x+4)*(x+3)*(x
++2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)-5320325/5398754)^820)*(x^2-9*x+20)^2, 1
+/90720*(x-5)^2+142014889/18435465216000*(x-4)^2*(x-64625/11917)^2]
+>> Degree size
+8214
+
+>> Test
+Right Natural Generator Test
+>> input polynomial
+-x+5
+>> basis
+[-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)]
+>> Time taken
+0.033000
+">> Sums of squares multipliers", [-x+5+1/725760*(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*
+(x-1)*(x-2)*(x-3)*(x-4)*(x-5), 1/725760, 0]
+>> Degree size
+10

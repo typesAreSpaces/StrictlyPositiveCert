@@ -1,5 +1,6 @@
 $define ENABLE_DEBUGGING      false
 $define ENABLE_VERIFICATION   false
+# TODO Figure out why the code break if ENABLE_BINARY_SEARCH is true
 $define ENABLE_BINARY_SEARCH  false
 $define ENABLE_N_HEURISTIC    false
 $define ENABLE_AVERKOV_CHECK  false

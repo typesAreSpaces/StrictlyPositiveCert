@@ -1,0 +1,8538 @@
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .42e-1
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .17e-1
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .7e-2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::compute_eps 2
+Time: .22e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .66e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .131
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .25e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .206
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .10e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .29e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .70e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: .1e-2
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .97e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .10e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .59e-1
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .31e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .121
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .147
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .2e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .10e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::compute_mu 2
+Time: .7e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .70e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .108
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .135
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .30e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .30e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .12e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .29e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .4e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .2e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .7e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .25e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .59e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .79e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .154
+End: find_certificate 0
+Time: .302
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .4e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .12e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .30e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .4e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: .1e-2
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .117
+End: find_certificate 0
+Time: .146
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .74e-1
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .6e-2
+End: averkov_lemma_7 1
+Time: .6e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .98e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .10e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .7e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .27e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .64e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .92e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .10e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .7e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .26e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .64e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .90e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .10e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .76e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .114
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .142
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .10e-1
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .9e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .31e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .74e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .21e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .109
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .4e-2
+End: find_certificate 0
+Time: .32e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .4e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .91e-1
+End: averkov_lemma_7 1
+Time: .91e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .118
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .4e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .29e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .2e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .19e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .54e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .79e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .30e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .10e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .41e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .76e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .101
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .10e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .30e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .65e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .92e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .30e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .70e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .97e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .80e-1
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .20e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .7e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .17e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .8e-2
+End: averkov_lemma_7 1
+Time: .139
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .158
+End: find_certificate 0
+Time: .322
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .143
+End: find_certificate 0
+Time: .171
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .4e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .12e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .30e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .226
+End: find_certificate 0
+Time: .254
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .4e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: .1e-2
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .4e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .12e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .30e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .4e-2
+End: Last_step 1
+Time: .126
+End: find_certificate 0
+Time: .153
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .134
+End: find_certificate 0
+Time: .163
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .32e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .72e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: .1e-2
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .104
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .190
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .10e-1
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .32e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .7e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .28e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .12e-1
+End: averkov_lemma_7 1
+Time: .66e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .138
+End: find_certificate 0
+Time: .228
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .29e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .12e-1
+End: averkov_lemma_7 1
+Time: .70e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .96e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .30e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .8e-2
+End: averkov_lemma_7 1
+Time: .66e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .361
+End: find_certificate 0
+Time: .453
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .10e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .27e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .66e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .93e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .30e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .10e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .28e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .63e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .90e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .34e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .70e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .243
+End: find_certificate 0
+Time: .338
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .10e-1
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .7e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .34e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .8e-2
+End: averkov_lemma_7 1
+Time: .69e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .529
+End: find_certificate 0
+Time: .624
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .31e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .71e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .110
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .195
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .11e-1
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .6e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .8e-2
+End: averkov_lemma_7 1
+Time: .49e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .144
+End: find_certificate 0
+Time: .219
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .4e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .132
+End: find_certificate 0
+Time: .161
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .34e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .29e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .66e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .105
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .4e-2
+End: Last_step 1
+Time: .138
+End: find_certificate 0
+Time: .327
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .129
+End: find_certificate 0
+Time: .157
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .7e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .17e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .53e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: 3.572
+End: find_certificate 0
+Time: 3.650
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .6e-2
+End: averkov_lemma_7 1
+Time: .6e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .125
+End: find_certificate 0
+Time: .154
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .31e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .72e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .4e-2
+End: find_certificate 0
+Time: .100
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .56e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .15e-1
+End: averkov_lemma_7 1
+Time: .99e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .15e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .127
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .6e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .109
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .14e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .31e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .12e-1
+End: averkov_lemma_7 1
+Time: .178
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: .1e-2
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .205
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .87e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .127
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .153
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .125
+End: find_certificate 0
+Time: .153
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .11e-1
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .7e-2
+End: averkov_lemma_7 1
+Time: .7e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .5e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .18e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .40e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .22e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .61e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .4e-2
+End: Last_step 1
+Time: .269
+End: find_certificate 0
+Time: .354
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .13e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .9e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .18e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .59e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .214
+End: find_certificate 0
+Time: .297
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .9e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .20e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .58e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .4e-2
+End: Last_step 1
+Time: .263
+End: find_certificate 0
+Time: .344
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .6e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .36e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .10e-1
+End: averkov_lemma_7 1
+Time: .74e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .15e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .148
+End: find_certificate 0
+Time: .247
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .28e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .70e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .96e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .9e-2
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .31e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .14e-1
+End: averkov_lemma_7 1
+Time: .73e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .8e-2
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .95e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .34e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .6e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .125
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .29e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .181
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .4e-2
+End: Last_step 1
+Time: .140
+End: find_certificate 0
+Time: .345
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .124
+End: find_certificate 0
+Time: .152
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .6e-2
+End: averkov_lemma_7 1
+Time: .6e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .26e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .69e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .97e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .32e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .12e-1
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .6e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .29e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .12e-1
+End: averkov_lemma_7 1
+Time: .72e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .101
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .6e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .30e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .12e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .31e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .35e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .77e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .4e-2
+End: find_certificate 0
+Time: .104
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .6e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .9e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .30e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .9e-2
+End: averkov_lemma_7 1
+Time: .70e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .332
+End: find_certificate 0
+Time: .428
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .7e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .28e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .70e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .4e-2
+End: find_certificate 0
+Time: .99e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .3e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .22e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .64e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .4e-2
+End: find_certificate 0
+Time: .91e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .2e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .11e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .31e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .73e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .100
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .32e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .6e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .32e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .264
+End: find_certificate 0
+Time: .294
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: 0.
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .6e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .9e-2
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .7e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .29e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .68e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .7e-2
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .88e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .25e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .12e-1
+End: averkov_lemma_7 1
+Time: .68e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .94e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .6e-2
+End: averkov_lemma_7 1
+Time: .6e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .1e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .129
+End: find_certificate 0
+Time: .158
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .31e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .73e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .2e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .5e-2
+End: find_certificate 0
+Time: .103
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .32e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: .1e-2
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .6e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_mu 2
+Time: .9e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .161
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .206
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .232
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: .1e-2
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: .1e-2
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+Start: averkov_lemma_7::compute_gamma 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_gamma 2
+Time: .4e-2
+Start: averkov_lemma_7::compute_eps 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::compute_eps 2
+Time: .12e-1
+Start: averkov_lemma_7::compute_mu 2
+Start: bound_info 3
+End: bound_info 3
+Time: .1e-2
+End: averkov_lemma_7::compute_mu 2
+Time: .8e-2
+Start: averkov_lemma_7::compute_N_heuristic 2
+End: averkov_lemma_7::compute_N_heuristic 2
+Time: .39e-1
+Start: averkov_lemma_7::compute_N_binary_search 2
+End: averkov_lemma_7::compute_N_binary_search 2
+Time: .13e-1
+End: averkov_lemma_7 1
+Time: .82e-1
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .109
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: .1e-2
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .8e-2
+Start: Sqf 1
+End: Sqf 1
+Time: .1e-2
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+Start: bound_info 2
+End: bound_info 2
+Time: .2e-2
+Start: bound_info 2
+End: bound_info 2
+Time: .3e-2
+End: Last_step 1
+Time: .133
+End: find_certificate 0
+Time: .161
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: .1e-2
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .5e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: .1e-2
+End: Lower_bound_poly 1
+Time: .14e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .2e-2
+End: find_certificate 0
+Time: .32e-1
+Start: find_certificate 0
+Start: Fixing_points 1
+Start: bound_info 2
+End: bound_info 2
+Time: 0.
+Start: Type_of_Point 2
+Start: Type_of_poly 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_poly 3
+Time: 0.
+Start: Type_of_P 3
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Ord 4
+End: Ord 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+Start: Eps 4
+End: Eps 4
+Time: 0.
+End: Type_of_P 3
+Time: 0.
+End: Type_of_Point 2
+Time: .1e-2
+End: Fixing_points 1
+Time: .9e-2
+Start: Sqf 1
+End: Sqf 1
+Time: 0.
+Start: bound_poly 1
+End: bound_poly 1
+Time: 0.
+Start: averkov_lemma_7 1
+Start: averkov_lemma_7::Minimization_f 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: averkov_lemma_7::Minimization_f 2
+Time: .5e-2
+End: averkov_lemma_7 1
+Time: .6e-2
+Start: Lower_bound_poly 1
+Start: Lower_bound_poly::expand(poly) 2
+End: Lower_bound_poly::expand(poly) 2
+Time: 0.
+Start: Lower_bound_poly::SemiAlgebraic(g) 2
+Start: bound_info 3
+End: bound_info 3
+Time: 0.
+End: Lower_bound_poly::SemiAlgebraic(g) 2
+Time: .3e-2
+Start: Lower_bound_poly::Minimization_problem 2
+End: Lower_bound_poly::Minimization_problem 2
+Time: 0.
+End: Lower_bound_poly 1
+Time: .13e-1
+Start: Last_step 1
+End: Last_step 1
+Time: .3e-2
+End: find_certificate 0
+Time: .32e-1
