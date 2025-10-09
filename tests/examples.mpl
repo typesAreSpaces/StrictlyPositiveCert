@@ -408,4 +408,25 @@ printf("\n>> Start Examples\n");
 #checkWeifeng(-1, [-(x+1), x-1], x, "PASSED");
 #checkWeifeng((x+1)*(x-1), [-1, x, x^2], x, "PASSED");
 
-checkWeifeng(x+2, [(x+1), -(x-1)], x, "PASSED");
+#checkWeifeng(x+2, [(x+1), -(x-1)], x, "PASSED");
+
+#g1 := -(x+2)*(x+1)^3*x^2*(x-1)*(x-2);
+#g2 := (x+1)*(x+1/2);
+#checkWeifeng((x+7/8)*(x+1/8), [g1, g2], x, "PASSED");
+#checkWeifeng((x-1/4)*(x-3/4), [g1, g2], x, "PASSED");
+
+#g1 := -(x+2)*(x+1)^3*(x-1)*(x-2);
+#checkWeifeng((x+1/4)*(x-1/2), [g1], x, "PASSED");
+
+#g := -(x+2)*(x+1)*(x-1)*(x-3);
+#sigma := -1/24*x+5/24;
+#tau := -1/24*x+1/4;
+
+#checkWeifeng(sigma, [g], x, "PASSED");
+#checkWeifeng(tau, [g], x, "PASSED");
+
+#checkWeifeng(x+1, [-(x-1)^2], x, "PASSED");
+
+#checkWeifeng(x+1, [-x*(x-2)], x, "PASSED");
+
+checkWeifeng(-(x-1), [-(x+2)*x], x, "PASSED");
