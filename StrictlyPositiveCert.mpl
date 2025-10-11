@@ -1082,6 +1082,7 @@ $endif
     # We just need a lowerbound, not the
     # tightest lowerbound [to discuss later]
     _gamma := convert(1/2*evalf(1.001*maximize(g)), rational);
+    _gamma := max(_gamma, 1);
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
 
