@@ -429,4 +429,6 @@ printf("\n>> Start Examples\n");
 
 #checkWeifeng(x+1, [-x*(x-2)], x, "PASSED");
 
-checkWeifeng(-(x-1), [-(x+2)*x], x, "PASSED");
+#checkWeifeng(-(x-1), [-(x+2)*x], x, "PASSED");
+
+checkWeifeng((x+1)*(x-1), [-(x+3)*(x+2)*(x-2)*(x-3)], x, "PASSED");
