@@ -565,6 +565,10 @@ $endif
         return map(g_i -> 0, basis);
     end if;
 
+    # The following is needed because in the `optimization step' (Find N) staring on
+    # line 662 breaks otherwise
+    M := max(M, 1);
+
     m := numelems(basis);
 
     #
