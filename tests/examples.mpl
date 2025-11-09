@@ -122,19 +122,19 @@ oldProblematicExamples2 := proc()
         (x-7)*(x - (7 + 1/10)),
         [(x-118/25)*(x-657/100)*(x-89/10)*(x-413/20)*(x-561/25),
          (-x+118/25)*(x-657/100)*(x-89/10)*(x-413/20)*(x-561/25)],
-        x, "PASSED");
+        x, "PASS");
 
     checkWeifeng(
         (x-7)*(x - (7 + 1/10)),
         [(x-118/25)*(x-657/100)*(x-89/10)*(x-413/20)*(x-561/25),
          (-x+118/25)^3*(x-657/100)*(x-89/10)*(x-413/20)*(x-561/25)],
-        x, "FAILS");
+        x, "FAIL");
 
     checkWeifeng(
         (x-10)*(x - 15),
         [(x-118/25)*(x-657/100)*(x-89/10)*(x-413/20)*(x-561/25),
          (-x+118/25)^3*(x-657/100)*(x-89/10)*(x-413/20)*(x-561/25)],
-        x, "PASSED");
+        x, "PASS");
 end proc;
 
 realcertify_problematic_example := proc()
@@ -159,12 +159,12 @@ complex_examples := proc()
     #checkWeifeng(
     #-81/16*x^4 + 369/16*x^3 - 63/2*x^2 + 19/2*x + 5,
     #[x, x*(x-1), (x-1)*(x-2), -(x-2), 10 - x^2],
-    #x, "PASSED");
+    #x, "PASS");
 
     #checkWeifeng(
     #-81/16*x^4 + 369/16*x^3 - 63/2*x^2 + 19/2*x + 5,
     #[x, x*(x-1), (x-1)*(x-2), -(x-2)],
-    #x, "PASSED");
+    #x, "PASS");
 
     # RealCertify cannot handle this example
     #checkRealCertify(
@@ -188,11 +188,11 @@ complex_examples := proc()
     #checkWeifeng(
     #100-x^2,
     #[(x+3), (x+3)*x^2*(x-3), -(x-3)],
-    #x, "PASSED");
+    #x, "PASS");
     #checkWeifeng(
     #55-x^2,
     #[(x+3), (x+3)*x^2*(x-3), -(x-3)],
-    #x, "PASSED");
+    #x, "PASS");
     #checkWeifeng(
     #53-x^2,
     #[(x+3), (x+3)*x^2*(x-3), -(x-3)],
@@ -207,7 +207,7 @@ complex_examples := proc()
     #checkWeifeng(
     #(x+2)*(x+1),
     #[(x+3), (x+3)*x^2*(x-3), -(x-3)],
-    #x, "PASSED");
+    #x, "PASS");
     #checkRealCertify(
     #(x+2)*(x+1),
     #[(x+3), (x+3)*x^2*(x-3), -(x-3)],
@@ -215,7 +215,7 @@ complex_examples := proc()
     #checkRealCertify(
     #(x+2)*(x+1),
     #[(x+3), (x+3)*x^2*(x-3), -(x-3), 10 - x^2],
-    #x, "PASSED");
+    #x, "PASS");
     # -------------------------------------------------------------
 
     # -------------------------------------------------------------
@@ -226,7 +226,7 @@ complex_examples := proc()
     #checkWeifeng(
     #-(x+3)^3*(x-3)^3,
     #[(x+3)^3, (x+3)*x^2*(x-3), -(x-3)^3],
-    #x, "PASSED");
+    #x, "PASS");
 
     #checkWeifeng(
     #-(x+3)^2*x^2*(x-3)^2,
@@ -236,7 +236,7 @@ complex_examples := proc()
     #checkWeifeng(
     #-(x+3)^2*(x-3)^2,
     #[(x+3), (x+3)*(x-3), -(x-3)],
-    #x, "PASSED");
+    #x, "PASS");
 
     #checkWeifeng(
     #-(x+3)^6*(x-3)^6,
@@ -246,7 +246,7 @@ complex_examples := proc()
     #checkWeifeng(
     #14000 - x^2,
     #map(poly -> 1/1*poly, [(x+3)^5, (x+3)^5*(x-3)^5, -(x-3)^5]),
-    #x, "PASSED");
+    #x, "PASS");
 
     #checkRealCertify(
     #-(x+(3+962/100000))*(x-(3+962/100000)),
@@ -263,20 +263,20 @@ complex_examples := proc()
     #checkRealCertify(
     #-(x+(3+962/100000))*(x-(3+962/100000)),
     #[(x+3)^3, (x+3)^3*(x-3)^3, -(x-3)^3, 9 - x^2],
-    #x, "PASSED");
+    #x, "PASS");
 
     #checkWeifeng(
     #-(x+3)*(x-3),
     #[(x+3), (x+3)*x^2*(x-3), -(x-3)],
-    #x, "PASSED");
+    #x, "PASS");
     #checkWeifeng(
     #(x+2)*(x+1)*(x-1)*(x-2),
     #[(x+3), (x+3)*x^2*(x-3), -(x-3)],
-    #x, "PASSED");
+    #x, "PASS");
     #checkRealCertify(
     #(x+2)*(x+1)*(x-1)*(x-2),
     #[(x+3), (x+3)*x^2*(x-3), -(x-3)],
-    #x, "PASSED");
+    #x, "PASS");
     # -------------------------------------------------------------
 end proc;
 
@@ -293,7 +293,7 @@ printf("\n>> Start RealCertify\n");
             checkRealCertify(
                 1+eps+x,
                 [(1-x^2)^(2*i+1), 4 - x^2],
-                "PASSED");
+                "PASS");
         catch:
             printf(">> RealCertify fails test with k: %d\n", 2*i+1);
         end try;
@@ -305,7 +305,7 @@ printf("\n>> Start Weifeng\n");
             checkWeifeng(
                 1+eps+x,
                 [(1-x^2)^(2*i+1)],
-                x, "PASSED");
+                x, "PASS");
         catch:
             printf(">> Weifeng fails test with k: %d\n", 2*i+1);
         end try;
@@ -316,31 +316,31 @@ simple_test1 := proc()
     checkWeifeng(
         (x+3)*(x+2),
         [-(x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5), (x+5)*(x+4)*(x+3)*(x+2)*(x+1)*(x-1)*(x-2)*(x-3)*(x-4)*(x-5)],
-        x, "PASSED");
+        x, "PASS");
 end proc;
 
 simple_test2 := proc()
     checkWeifeng(
         -(x-1)^2,
         [x-1, -(x-1)],
-        x, "PASSED");
+        x, "PASS");
 
     checkWeifeng(
         x+2,
         [x-1, -(x-1)],
-        x, "PASSED");
+        x, "PASS");
 
     checkWeifeng(
         x+100,
         [x-1, -(x-1)],
-        x, "PASSED");
+        x, "PASS");
 end proc;
 
 example_11_paper := proc()
     checkWeifeng(
         -26*x^7 + 13*x^6 + 87*x^5 + 49*x^4 - 464*x^3 + 1512*x^2 - 2211*x + 1092,
         [x*(x-1/2)*(x-1)^2*(x-2), -x*(x-1)*(x-2)],
-        x, "PASSED");
+        x, "PASS");
 end proc;
 
 problematic_case := proc() 
@@ -387,10 +387,10 @@ printf("\n>> Start Examples\n");
 #close_to_semialgebraic(1/5);
 #comparison_realcertify_fails();
 
-#checkWeifeng(x+2, [-(x+1), (x-1)], x, "PASSED");
-#checkWeifeng(x+1/2, [-(x+1), (x-1)], x, "PASSED");
+#checkWeifeng(x+2, [-(x+1), (x-1)], x, "PASS");
+#checkWeifeng(x+1/2, [-(x+1), (x-1)], x, "PASS");
 
-#checkWeifeng(-(x-5), [x-1, -(x+2)*(x+1)*(x-2)*(x-3), (x+1)*(x-4)], x, "PASSED");
+#checkWeifeng(-(x-5), [x-1, -(x+2)*(x+1)*(x-2)*(x-3), (x+1)*(x-4)], x, "PASS");
 
 #g1 := x + 3;
 #g2 := (x + 2)*(x + 1);
@@ -398,44 +398,46 @@ printf("\n>> Start Examples\n");
 #g4 := -(x - 3);
 #sigma1 := -1/240*x + 1/40;
 #tau1 := -1/240*x^3 + 11/40 + 9/80*x;
-#checkWeifeng(sigma1, [g1*g2*g3*g4], x, "PASSED");
-#checkWeifeng(tau1, [g1*g2*g3*g4], x, "PASSED");
+#checkWeifeng(sigma1, [g1*g2*g3*g4], x, "PASS");
+#checkWeifeng(tau1, [g1*g2*g3*g4], x, "PASS");
 #sigma3 := 1/12*x^2-1/4*x+1/6+2113829/1318494300*(x+2)*(x+1)*(-x+3);
 #tau3 := 51766519/659247150-2113829/1318494300*x;
-#checkWeifeng(sigma3, [g1*g2*g4], x, "PASSED");
-#checkWeifeng(tau3, [g1*g2*g4], x, "PASSED");
+#checkWeifeng(sigma3, [g1*g2*g4], x, "PASS");
+#checkWeifeng(tau3, [g1*g2*g4], x, "PASS");
 
-#checkWeifeng(-1, [-(x+1), x-1], x, "PASSED");
-#checkWeifeng((x+1)*(x-1), [-1, x, x^2], x, "PASSED");
+#checkWeifeng(-1, [-(x+1), x-1], x, "PASS");
+#checkWeifeng((x+1)*(x-1), [-1, x, x^2], x, "PASS");
 
-#checkWeifeng(x+2, [(x+1), -(x-1)], x, "PASSED");
+#checkWeifeng(x+2, [(x+1), -(x-1)], x, "PASS");
 
 #g1 := -(x+2)*(x+1)^3*x^2*(x-1)*(x-2);
 #g2 := (x+1)*(x+1/2);
-#checkWeifeng((x+7/8)*(x+1/8), [g1, g2], x, "PASSED");
-#checkWeifeng((x-1/4)*(x-3/4), [g1, g2], x, "PASSED");
+#checkWeifeng((x+7/8)*(x+1/8), [g1, g2], x, "PASS");
+#checkWeifeng((x-1/4)*(x-3/4), [g1, g2], x, "PASS");
 
 #g1 := -(x+2)*(x+1)^3*(x-1)*(x-2);
-#checkWeifeng((x+1/4)*(x-1/2), [g1], x, "PASSED");
+#checkWeifeng((x+1/4)*(x-1/2), [g1], x, "PASS");
 
 #g := -(x+2)*(x+1)*(x-1)*(x-3);
 #sigma := -1/24*x+5/24;
 #tau := -1/24*x+1/4;
 
-#checkWeifeng(sigma, [g], x, "PASSED");
-#checkWeifeng(tau, [g], x, "PASSED");
+#checkWeifeng(sigma, [g], x, "PASS");
+#checkWeifeng(tau, [g], x, "PASS");
 
-#checkWeifeng(x+1, [-(x-1)^2], x, "PASSED");
+#checkWeifeng(x+1, [-(x-1)^2], x, "PASS");
 
-#checkWeifeng(x+1, [-x*(x-2)], x, "PASSED");
+#checkWeifeng(x+1, [-x*(x-2)], x, "PASS");
 
-#checkWeifeng(-(x-1), [-(x+2)*x], x, "PASSED");
+#checkWeifeng(-(x-1), [-(x+2)*x], x, "PASS");
 
-#checkWeifeng((x+1)*(x-1), [-(x+3)*(x+2)*(x-2)*(x-3)], x, "PASSED");
+#checkWeifeng((x+1)*(x-1), [-(x+3)*(x+2)*(x-2)*(x-3)], x, "PASS");
 
-#checkWeifeng(-(x-2), [-(x+2)*(x-1)], x, "PASSED");
+#checkWeifeng(-(x-2), [-(x+2)*(x-1)], x, "PASS");
 
-#checkWeifeng((x+2), [-(x+1)*(x-2)], x, "PASSED");
+#checkWeifeng((x+2), [-(x+1)*(x-2)], x, "PASS");
 
-#checkWeifeng(-(x+2)*(x-2), [-(x+2)*(x-1) -(x+1)*(x-2)], x, "PASSED");
-checkWeifeng(-(x+2)*(x-2), [-(x+2)*(x-1), -(x+1)*(x-2)], x, "PASSED");
+#checkWeifeng(-(x+2)*(x-2), [-(x+2)*(x-1) -(x+1)*(x-2)], x, "PASS");
+#checkWeifeng(-(x+2)*(x-2), [-(x+2)*(x-1), -(x+1)*(x-2)], x, "PASS");
+
+checkWeifeng(-(x+1)*(x-1), [-(x+2)*(x-1), -(x+1)*(x-2)], x, "??");

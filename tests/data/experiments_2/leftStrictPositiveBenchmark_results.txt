@@ -5299,15 +5299,15 @@ oldProblematicExamples2 := proc()
     checkWeifeng((x - 7)*(x - 71/10), [
         (x - 118/25)*(x - 657/100)*(x - 89/10)*(x - 413/20)*(x - 561/25),
         (-x + 118/25)*(x - 657/100)*(x - 89/10)*(x - 413/20)*(x - 561/25)],
-        x, "PASSED");
+        x, "PASS");
     checkWeifeng((x - 7)*(x - 71/10), [
         (x - 118/25)*(x - 657/100)*(x - 89/10)*(x - 413/20)*(x - 561/25),
         (-x + 118/25)^3*(x - 657/100)*(x - 89/10)*(x - 413/20)*(x - 561/25)
-        ], x, "FAILS");
+        ], x, "FAIL");
     checkWeifeng((x - 10)*(x - 15), [
         (x - 118/25)*(x - 657/100)*(x - 89/10)*(x - 413/20)*(x - 561/25),
         (-x + 118/25)^3*(x - 657/100)*(x - 89/10)*(x - 413/20)*(x - 561/25)
-        ], x, "PASSED")
+        ], x, "PASS")
 end proc
 
 leftStrictPositiveBenchmark := proc(num_iterations, basisGeneratorFunc, maxtime
@@ -5545,15 +5545,15 @@ runBenchmark2 := proc()
 end proc
 
 simple_test := proc()
-    checkWeifeng(-(x - 1)^2, [x - 1, -x + 1], x, "PASSED");
-    checkWeifeng(x + 2, [x - 1, -x + 1], x, "PASSED");
-    checkWeifeng(x + 100, [x - 1, -x + 1], x, "PASSED")
+    checkWeifeng(-(x - 1)^2, [x - 1, -x + 1], x, "PASS");
+    checkWeifeng(x + 2, [x - 1, -x + 1], x, "PASS");
+    checkWeifeng(x + 100, [x - 1, -x + 1], x, "PASS")
 end proc
 
 example_11_paper := proc()
     checkWeifeng(-26*x^7 + 13*x^6 + 87*x^5 + 49*x^4 - 464*x^3 + 1512*x^2
          - 2211*x + 1092,
-        [x*(x - 1/2)*(x - 1)^2*(x - 2), -x*(x - 1)*(x - 2)], x, "PASSED")
+        [x*(x - 1/2)*(x - 1)^2*(x - 2), -x*(x - 1)*(x - 2)], x, "PASS")
 end proc
 
 

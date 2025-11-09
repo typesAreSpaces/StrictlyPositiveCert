@@ -69,7 +69,7 @@ left_comparison_benchmark(1);
 
 printf("\n>> Start benchmark\n");
 
-#checkWeifeng(-(x-1), [-(x+2)*x], x, "PASSED");
+#checkWeifeng(-(x-1), [-(x+2)*x], x, "PASS");
 
 local n_max := 9;
 for i from 1 to n_max do

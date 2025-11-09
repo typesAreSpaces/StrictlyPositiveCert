@@ -124,7 +124,7 @@ end proc;
 
 # This assumes isolated points case
 runBenchmark1 := proc()
-#Status PASSED
+#Status PASS
 #Heuristics: -D USE_BOUNDS
     for d from 1 to 7 do:
       natGensBenchmark2(x, d);
@@ -134,19 +134,19 @@ end proc;
 certificates_of_strictly_positive_polynomials_benchmark := proc()
 local num_iterations := 100;
 local max_time := 300;
-#Status PASSED
+#Status PASS
 #Heuristics: No heuristics, -D USE_BOUNDS
     runBenchmark(leftStrictPositiveBenchmark(num_iterations, linearBasisNoBoundedPoly), max_time);
 
-#Status PASSED
+#Status PASS
 #Heuristics: No heuristics, -D USE_BOUNDS
     runBenchmark(rightStrictPositiveBenchmark(num_iterations, linearBasisNoBoundedPoly), max_time);
 
-#Status PASSED
+#Status PASS
 #Heuristics: No heuristics, -D USE_BOUNDS
     runBenchmark(productGensBenchmark(num_iterations, linearBasisNoBoundedPoly), max_time);
 
-#Status PASSED
+#Status PASS
 #Heuristics: -D USE_BOUNDS
     runBenchmark(archimedeanBenchmark(num_iterations, linearBasisNoBoundedPoly), max_time);
 end proc;

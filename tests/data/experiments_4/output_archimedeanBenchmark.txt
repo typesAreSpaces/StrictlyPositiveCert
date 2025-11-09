@@ -11694,7 +11694,7 @@ time= 0.120000secs
 >> Succeeds RealCertify Batch: 89 Test 1 - RealCertify with Archimedean polynomial
 
 >> Test
-PASSED
+PASS
 >> input polynomial
 -x^2+6969641/10000
 >> basis
