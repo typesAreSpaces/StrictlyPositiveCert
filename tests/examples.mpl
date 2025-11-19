@@ -440,4 +440,8 @@ printf("\n>> Start Examples\n");
 #checkWeifeng(-(x+2)*(x-2), [-(x+2)*(x-1) -(x+1)*(x-2)], x, "PASS");
 #checkWeifeng(-(x+2)*(x-2), [-(x+2)*(x-1), -(x+1)*(x-2)], x, "PASS");
 
-checkWeifeng(-(x+1)*(x-1), [-(x+2)*(x-1), -(x+1)*(x-2)], x, "??");
+#checkWeifeng(-(x+1)*(x-1), [-(x+2)*(x-1), -(x+1)*(x-2)], x, "??");
+
+g1 := (x+1)*x*(x-1);
+g2 := -g1;
+checkWeifeng(-(x-2), [g1, g2], x, "??");
