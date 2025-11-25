@@ -224,11 +224,12 @@ printf("\n>> Start Benchmarks\n");
 
 #runBenchmark1();
 #certificates_of_strictly_positive_polynomials_benchmark();
-strictly_positive_polynomials_close_to_semialgebraic_sets_benchmark();
+#strictly_positive_polynomials_close_to_semialgebraic_sets_benchmark();
 #strictly_positive_polynomials_stengle_benchmark();
 
 #runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/left.mpl"));
 #runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/right.mpl"));
 #runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/lifted.mpl"));
 #runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/arch.mpl"));
-
+#runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/left_saturated_thesis.mpl"));
+runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/right_saturated_thesis.mpl"));
