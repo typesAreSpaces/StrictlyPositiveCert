@@ -442,6 +442,24 @@ printf("\n>> Start Examples\n");
 
 #checkWeifeng(-(x+1)*(x-1), [-(x+2)*(x-1), -(x+1)*(x-2)], x, "??");
 
-g1 := (x+1)*x*(x-1);
-g2 := -g1;
-checkWeifeng(-(x-2), [g1, g2], x, "??");
+#g1 := (x+1)*x*(x-1);
+#g2 := -g1;
+#checkWeifeng(-(x-2), [g1, g2], x, "??");
+
+#g1 := -(x + 2)*(x + 1)^3*x^2*(x - 1)*(x - 2);
+#g2 := (x + 1)*(x + 1/2);
+#checkWeifeng(x + 3, [g1, g2], x, "PASS");
+#checkWeifeng((x+7/8)*(x+1/4), [g1], x, "??");
+
+#checkWeifeng((x+1/4)*(x-1/2), [-(x + 2)*(x + 1)^3*(x - 1)*(x - 2)], x, "??");
+
+f := 51 + 3*x + x^2 - 3*x^3 - 2*x^4;
+g := -(x + 2)*(x + 1)^3*(x - 1)*(x - 2);
+
+checkWeifeng(f, [g], x, "??");
+
+#sigma := -2/27*x+5/27+7097/121897*(-2/27*x+5/27)*(x+1)^3*(x-1)*(x+2)*(x-2);
+#tau := -2/27*x^3+1/27*x^2+2/27*x+8/27+7097/121897*(-2/27*x+5/27)*(x+1)^6*(x-1)^2;
+
+#checkWeifeng(sigma, [g], x, "??");
+#checkWeifeng(tau, [g], x, "??");
