@@ -1,4 +1,4 @@
-$define ENABLE_DEBUGGING      true
+$define ENABLE_DEBUGGING      false
 $define ENABLE_VERIFICATION   false
 # TODO Figure out why the code break if ENABLE_BINARY_SEARCH is true
 $define ENABLE_BINARY_SEARCH  false
