@@ -454,6 +454,7 @@ local num_roots := 0;
     end do;
   end do;
   DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> partition_roots", evalf(partition_roots)));
+  partition_roots := sort(convert(partition_roots, list));
 
   i := 1;
 local interval;
@@ -485,6 +486,7 @@ local left_endpoint := interval[1];
       left_endpoint := partition_roots[i];
       i := i + 1;
     end do;
+
     #refined_intervals := [op(refined_intervals), [left_endpoint, interval[2]]];
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> sample_point", samplePoint(left_endpoint, interval[2])));
     curr_g := gMinPoint(x, basis, samplePoint(left_endpoint, interval[2]));
