@@ -216,7 +216,7 @@ local eps, f, g;
 
   #for r from 3 to 8 do
   #r:=4;
-  for eps in [5, 1, 1/2, 1/3, 1/10] do
+  for eps in [5, (5+1)/2, 1, (1+1/2)/2, 1/2, (1/2+1/3)/2, 1/3] do
     f := 1 - x^2 + eps;
     g := [(1 - x^2)^3];
 
