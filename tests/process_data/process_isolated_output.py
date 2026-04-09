@@ -59,12 +59,12 @@ class State:
     def print1(self):
         if len(self.times) > 0:
             print(
-                    self.num_isolated_points, "&", 
-                    max(self.degrees), "&", 
-                    average(self.degrees), "&",
-                    _median(self.degrees), "&",
-                    average(self.times), "&", 
-                    _median(self.times), "&",
+                    self.num_isolated_points,                 "&", 
+                    max(self.degrees),                        "&", 
+                    average(self.degrees),                    "&",
+                    _median(self.degrees),                    "&",
+                    average(self.times),                      "&", 
+                    _median(self.times),                      "&",
                     round(sum(self.times), NUM_DIGITS_ROUND), "&", 
                     str(self.num_solved) + '/' + str(self.num_tests), "\\\\") 
         elif self.num_tests > 0:

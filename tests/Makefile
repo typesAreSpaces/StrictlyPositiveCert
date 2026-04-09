@@ -10,8 +10,8 @@ TEMP_LOG_FILE=${REALCERTIFY_PATH}/log_time.txt
 SUFFIX=
 OUTPUT_FILE=output${SUFFIX}.txt
 LOG_FILE=log_time${SUFFIX}.txt
-FILE=benchmarking.mpl
 FILE=examples.mpl
+FILE=benchmarking.mpl
 
 QUIET_MODE=
 HEURISTICS=-D USE_BOUNDS
