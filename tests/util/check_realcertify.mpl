@@ -51,7 +51,8 @@ local out, isvalid, certificates, s, h;
     if isvalid then
       printf(">> Time taken\n%f\n", st);
       lprint(">> Sums of squares multipliers", certificates);
-      printf(">> Degree size\n%s\n", convert(foldl((_x, _y) -> max(_x, _y), 0, op(map(h -> quickdegree(h, x), certificates))), string));
+local _degree := foldl((_x, _y) -> max(_x, _y), 0, op(map(h -> quickdegree(h, x), certificates)));
+      printf(">> Degree size\n%s\n", convert(_degree, string));
       #printf(">> Bitsize complexity of certificates: %s\n", convert(add(bitsizeP(h), h in certificates), string));
 
 $ifdef SHOW_CHECK_REALCERTIFY

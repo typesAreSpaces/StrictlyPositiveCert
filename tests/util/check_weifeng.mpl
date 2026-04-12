@@ -16,7 +16,8 @@ local st := time();
 local H := spCertificates(f, basis, x);
     printf(">> Time taken\n%f\n", time() - st);
     lprint(">> Sums of squares multipliers", H);
-    printf(">> Degree size\n%s\n", convert(foldl((_x, _y) -> max(_x, _y), 0, op(map(h -> quickdegree(h, x), H))), string));
+local _degree := foldl((_x, _y) -> max(_x, _y), 0, op(map(h -> quickdegree(h, x), H)));
+    printf(">> Degree size\n%s\n", convert(_degree, string));
     #printf(">> Bitsize complexity of certificates: %s\n", convert(add(bitsizeP(h, x), h in H), string));
 
 $ifdef SHOW_CHECK_WEIFENG
