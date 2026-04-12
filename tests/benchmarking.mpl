@@ -8,6 +8,7 @@ kernelopts(numcpus);
 
 printlevel := -1;
 #printlevel := 8;
+#printlevel := 3;
 
 read "util/gen_benchmarks.mpl";
 read "util/check_weifeng.mpl";
@@ -292,10 +293,10 @@ printf("\n>> Start Benchmarks\n");
 #runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/arch.mpl"));
 
 ## 7.1.2 Comparison of degree of certificates
-#strictly_positive_polynomials_close_to_semialgebraic_sets_benchmark();
+strictly_positive_polynomials_close_to_semialgebraic_sets_benchmark();
 
 ## 7.1.3 Solving Stengle's Example
-solving_stengle_example();
+#solving_stengle_example();
 
 ## 7.2.2 Lifted products in hypercube
 #lifted_prods_hypercube();

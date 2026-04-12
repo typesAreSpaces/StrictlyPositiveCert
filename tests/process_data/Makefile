@@ -15,8 +15,8 @@ FILE=../output.txt
 
 .PHONY: certificates_of_strictly_positive_polynomials strictly_positive_polynomials_close_to_semialgebraic_sets solving_stengles_example
 
-#all: certificates_of_strictly_positive_polynomials 
-all: solving_stengles_example
+all: certificates_of_strictly_positive_polynomials
+#all: solving_stengles_example
 #all: strictly_positive_polynomials_close_to_semialgebraic_sets
 
 certificates_of_strictly_positive_polynomials:
