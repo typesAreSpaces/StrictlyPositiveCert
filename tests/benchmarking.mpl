@@ -211,13 +211,18 @@ end proc;
 solving_stengle_example := proc()
   printf("\n>> Start benchmark\n");
 local test_name := "Solving Stengle's Example";
-local max_time := 300;
+#local max_time := 300;
+local max_time := 5000;
 local eps, f, g;
 #local r;
 
   #for r from 3 to 8 do
   #r:=4;
-  for eps in [5, (5+1)/2, 1, (1+1/2)/2, 1/2, (1/2+1/3)/2, 1/3] do
+  #for eps in [5, (5+1)/2, 1, (1+1/2)/2, 1/2, (1/2+1/3)/2, 1/3, 1/4, 62/320] do
+  #for eps in [5, 121/27, 107/27, 31/9, 79/27, 65/27, 17/9, 37/27, 23/27, 1/3] do
+  for eps in [60/320] do
+  #for eps1 from 61 to 60 by -1 do
+    #eps := eps1/320;
     f := 1 - x^2 + eps;
     g := [(1 - x^2)^3];
 
@@ -234,7 +239,10 @@ local eps, f, g;
     catch:
       printf(">> Timeout Weifeng %s\n", test_name);
     end try;
+    #gc();
+    #forget(all);
   end do;
+
   return 0;
 end proc;
 
