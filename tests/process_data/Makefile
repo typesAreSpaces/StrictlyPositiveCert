@@ -1,7 +1,7 @@
-PROG=./process_output.py
+PROG=./process_isolated_output.py
 PROG=./process_time.py
 
-PROG=./process_output.py
+PROG=./process_isolated_output.py
 
 FILE=../data/experiments_8/output_archimedeanBenchmark.txt
 FILE=../data/experiments_9/output_strictly_positive_polynomials_close_to_semialgebraic_sets.txt
@@ -13,13 +13,17 @@ FILE=../output_4_300.txt
 FILE=../output_5_300.txt
 FILE=../output.txt
 
-.PHONY: certificates_of_strictly_positive_polynomials strictly_positive_polynomials_close_to_semialgebraic_sets
+.PHONY: certificates_of_strictly_positive_polynomials strictly_positive_polynomials_close_to_semialgebraic_sets solving_stengles_example
 
-#all: certificates_of_strictly_positive_polynomials 
-all: strictly_positive_polynomials_close_to_semialgebraic_sets
+all: certificates_of_strictly_positive_polynomials
+#all: solving_stengles_example
+#all: strictly_positive_polynomials_close_to_semialgebraic_sets
 
 certificates_of_strictly_positive_polynomials:
 	${PROG} ${FILE} 3 0
+
+solving_stengles_example:
+	${PROG} ${FILE} 2 0
 
 strictly_positive_polynomials_close_to_semialgebraic_sets:
 	${PROG} ${FILE} 72 1

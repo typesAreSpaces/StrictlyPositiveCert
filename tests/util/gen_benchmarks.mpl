@@ -68,7 +68,7 @@ local benchmarks := [];
         isolated_points1 := [random_point];
         archimedean_poly1 := getArchimedeanPolynomial(x, isolated_points1, 2);
 
-        f1 := basis1[1]*basis1[2] + 35;
+        f1 := basis1[1]*basis1[2] + 1;
         benchmarks := [op(benchmarks), [f1, basis1, archimedean_poly1]];
 # -----------------------------------------------------------------------------------------------------
     end do;
@@ -90,7 +90,7 @@ local benchmarks := [];
         isolated_points1 := getIsolatedPoints(intervals1);
         archimedean_poly1 := getArchimedeanPolynomial(x, isolated_points1, 2);
 
-        f1 := archimedean_poly1 + 10;
+        f1 := archimedean_poly1 + 1;
         benchmarks := [op(benchmarks), [f1, basis1, archimedean_poly1]];
 # -----------------------------------------------------------------------------------------------------
     end do;
