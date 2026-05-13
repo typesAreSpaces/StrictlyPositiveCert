@@ -12,7 +12,7 @@ read "util/check_realcertify.mpl";
 
 # Load RealCertify
 currentdir(homedir);
-currentdir("Documents/GithubProjects/RealCertify");
+currentdir("Documents/Projects/dev/RealCertify");
 read "multivsos/multivsos.mm";
 
 left_comparison_benchmark := proc(n)

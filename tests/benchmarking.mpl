@@ -16,8 +16,10 @@ read "util/check_realcertify.mpl";
 
 # Load RealCertify
 currentdir(homedir);
-currentdir("Documents/GithubProjects/RealCertify");
-read "multivsos/multivsos.mm";interface(echo=0);
+currentdir("Documents/Projects/dev/RealCertify");
+read "multivsos/multivsos.mm";
+
+interface(echo=0);
 
 natGensBenchmark := proc(num_iterations, basisGeneratorFunc, max_time)
 local i;

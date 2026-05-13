@@ -14,7 +14,7 @@ read "util/check_realcertify.mpl";
 
 # Load RealCertify
 currentdir(homedir);
-currentdir("Documents/GithubProjects/RealCertify");
+currentdir("Documents/Projects/dev/RealCertify");
 read "multivsos/multivsos.mm";
 
 # Original Weifeng examples
