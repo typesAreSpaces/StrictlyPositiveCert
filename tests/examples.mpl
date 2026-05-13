@@ -567,6 +567,13 @@ printf("\n>> Start Examples\n");
 #fpos := 49*x^5 + 92*x^4 - 21*x^3 - 70*x^2 - 122*x + 108;
 #checkWeifeng(fpos, [g4], x, "??");
 
+# TODO Review this example
+#Gfix := [x + 3, (x + 2)*(x - 1), (x + 1)*(x - 2), -x + 3, -(x + 3)*(x - 3)];
+#Gfix := [x + 3, (x + 2)*(x - 1), (x + 1)*(x - 2), -x + 3];
+#sigma := 259/150000 + 6775181/225000000*(x + 2)*(x - 2);
+#tau := 1 - 26159/150000*(x + 2)*(x - 2);
+#checkWeifeng(sigma, Gfix, x, "FAIL");
+
 g1 := -7*x^4 + 21*x^3;
 g2 := -2*x^5 + 18*x^4 - 64*x^3 + 112*x^2 - 96*x + 32;
 g3 := -1/2*x^7 + 7*x^6 - 42*x^5 + 140*x^4 - 280*x^3 + 336*x^2 - 224*x + 64;
