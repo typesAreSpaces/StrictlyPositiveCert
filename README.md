@@ -30,19 +30,22 @@ The directory `tests` contains benchmarks and examples reported in
 
 For a simple example, we can execute
 
-    with(StrictlyPositiveCert, spCertificates);
+    libname := libname, "../StrictlyPositiveCert.mla":
+    with(StrictlyPositiveCert);
 
     spCertificates(x+1, [-x^2], x);
 
 The output is
 
-    > with(StrictlyPositiveCert, spCertificates);
-                                                               [spCertificates]
+
+    > libname := libname, "../StrictlyPositiveCert.mla":
+    > with(StrictlyPositiveCert);
+                                                            [bound_info, dot_product, findEps, spCertificates]
 
 
     > spCertificates(x+1, [-x^2], x);
-                                                                          2
-                                                           [x + 1 + 9/10 x , 9/10]
+                                                                                         2
+                                                                          [x + 1 + 9/10 x , 9/10]
 
 We can verify $$x+1 = (x+1+\frac{9}{10}x^2 + \frac{9}{10} \dot (-x^2))$$ and
 $$x+1+\frac{9}{10}x^2 = (\frac{1}{2}x+1)^2+\frac{13}{20}x^2$$
