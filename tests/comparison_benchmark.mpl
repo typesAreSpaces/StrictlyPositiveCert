@@ -1,5 +1,3 @@
-with(StrictlyPositiveCert, spCertificates);
-
 interface(echo=0);
 getenv(OMP_NUM_THREADS);
 kernelopts(numcpus);
@@ -10,27 +8,22 @@ printlevel := -1;
 read "util/check_weifeng.mpl";
 read "util/check_realcertify.mpl";
 
-# Load RealCertify
-currentdir(homedir);
-currentdir("Documents/Projects/dev/RealCertify");
-read "multivsos/multivsos.mm";
-
 left_comparison_benchmark := proc(n)
 local i, x, f, g;
 
     f := x + n;
     g := simplify(-product((x^2 - i^2)^2, i = 1 .. n)/(x + n)^2);
 
-    #try
-        #checkRealCertify((x+n)^2*f, [(x+n)^2*g], "Comparison benchmark using RealCertify");
-    #catch:
-        #printf(">> RealCertify fails\n");
-    #end try;
-    #try
-        #checkRealCertify(f, [g], "Comparison benchmark using RealCertify");
-    #catch:
-        #printf(">> RealCertify fails\n");
-    #end try;
+    try
+        checkRealCertify((x+n)^2*f, [(x+n)^2*g], "Comparison benchmark using RealCertify");
+    catch:
+        printf(">> RealCertify fails\n");
+    end try;
+    try
+        checkRealCertify(f, [g], "Comparison benchmark using RealCertify");
+    catch:
+        printf(">> RealCertify fails\n");
+    end try;
     try
         checkWeifeng(f, [g], x, "Comparison benchmark using approach");
     catch:

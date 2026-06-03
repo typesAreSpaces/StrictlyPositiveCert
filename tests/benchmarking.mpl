@@ -1,7 +1,3 @@
-with(StrictlyPositiveCert, spCertificates);
-
-benchmarking_pwd := currentdir();
-
 interface(echo=0);
 getenv(OMP_NUM_THREADS);
 kernelopts(numcpus);
@@ -13,11 +9,6 @@ printlevel := -1;
 read "util/gen_benchmarks.mpl";
 read "util/check_weifeng.mpl";
 read "util/check_realcertify.mpl";
-
-# Load RealCertify
-currentdir(homedir);
-currentdir("Documents/Projects/dev/RealCertify");
-read "multivsos/multivsos.mm";
 
 interface(echo=0);
 
@@ -297,20 +288,20 @@ printf("\n>> Start Benchmarks\n");
 
 ## 7.1.1  Certificates of strictly positive polynomials
 #certificates_of_strictly_positive_polynomials_benchmark();
-#runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/left.mpl"));
-#runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/right.mpl"));
-#runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/lifted.mpl"));
-#runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/arch.mpl"));
+#runExternalBenchmark("./benchmarks/left.mpl");
+#runExternalBenchmark("./benchmarks/right.mpl");
+#runExternalBenchmark("./benchmarks/lifted.mpl");
+runExternalBenchmark("./benchmarks/arch.mpl");
 
 ## 7.1.2 Comparison of degree of certificates
 #strictly_positive_polynomials_close_to_semialgebraic_sets_benchmark();
 
 ## 7.1.3 Solving Stengle's Example
-solving_stengle_example();
+#solving_stengle_example();
 
 ## 7.2.2 Lifted products in hypercube
 #lifted_prods_hypercube();
 
 # Thesis examples
-#runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/left_saturated_thesis.mpl"));
-#runExternalBenchmark(cat(benchmarking_pwd, "/benchmarks/right_saturated_thesis.mpl"));
+#runExternalBenchmark("./benchmarks/left_saturated_thesis.mpl");
+#runExternalBenchmark("./benchmarks/right_saturated_thesis.mpl");

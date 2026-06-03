@@ -1,10 +1,7 @@
-_pwd := currentdir();
-currentdir(FileTools[ParentDirectory](__FILE__));
+with(StrictlyPositiveCert, spCertificates);
 
-$include "bitsize.mpl";
-$include "quickdegree.mpl";
-
-currentdir(_pwd);
+read "util/bitsize.mpl";
+read "util/quickdegree.mpl";
 
 #$define SHOW_CHECK_WEIFENG
 

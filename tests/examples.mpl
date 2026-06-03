@@ -1,5 +1,3 @@
-with(StrictlyPositiveCert, spCertificates);
-
 interface(echo=0);
 getenv(OMP_NUM_THREADS);
 kernelopts(numcpus);
@@ -9,13 +7,6 @@ printlevel := -1;
 
 read "util/check_weifeng.mpl";
 read "util/check_realcertify.mpl";
-
-# Load implementation
-
-# Load RealCertify
-currentdir(homedir);
-currentdir("Documents/Projects/dev/RealCertify");
-read "multivsos/multivsos.mm";
 
 # Original Weifeng examples
 weifengExamples := proc()
