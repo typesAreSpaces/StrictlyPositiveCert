@@ -17,8 +17,7 @@ $define INIT_START_LOG_TIME(X, S) local fd;START_LOG_TIME(X, S)
 
 with(SolveTools, SemiAlgebraic);
 with(RootFinding, Isolate);
-with(Optimization, Maximize, Minimize);
-with(ListTools, FlattenOnce);
+with(Optimization, Minimize);
 with(RegularChains, SemiAlgebraicSetTools, PolynomialRing);
 
 StrictlyPositiveCert := module() option package;
