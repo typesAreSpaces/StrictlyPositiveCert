@@ -48,7 +48,7 @@ The output is
                                                                           [x + 1 + 9/10 x , 9/10]
 
 We can verify $$x+1 = (x+1+\frac{9}{10}x^2 + \frac{9}{10} \dot (-x^2))$$ and
-$$x+1+\frac{9}{10}x^2 = (\frac{1}{2}x+1)^2+\frac{13}{20}x^2$$
+$$x+1+\frac{9}{10}x^2 = (\frac{1}{2}x+1)^2+\frac{13}{20}x^2$$ is a sums of squares.
 
 ## References
 
