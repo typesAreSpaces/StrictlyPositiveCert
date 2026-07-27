@@ -9,8 +9,8 @@ SUFFIX=
 OUTPUT_FILE=output${SUFFIX}.txt
 LOG_FILE=log_time${SUFFIX}.txt
 FILE=benchmarking.mpl
-FILE=examples.mpl
 FILE=comparison_benchmark.mpl
+FILE=examples.mpl
 
 QUIET_MODE=
 HEURISTICS=-D USE_BOUNDS

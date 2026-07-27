@@ -1,11 +1,16 @@
-$define ENABLE_DEBUGGING      false
-$define ENABLE_VERIFICATION   false
-# TODO Figure out why the code break if ENABLE_BINARY_SEARCH is true
-$define ENABLE_BINARY_SEARCH  false
-$define ENABLE_N_HEURISTIC    false
-$define ENABLE_AVERKOV_CHECK  false
-$define BINARY_SEARCH_TRIGGER 100
+$define ENABLE_DEBUGGING          true
+$define ENABLE_VERIFICATION       false
+$define ENABLE_BINARY_SEARCH_AVKL true
+$define ENABLE_BINARY_SEARCH_LS   false
+$define ENABLE_N_HEURISTIC        false
+$define ENABLE_AVERKOV_CHECK      false
+#$define EPS_FACTOR               17/10
+#$define EPS_FACTOR               1/10
+$define EPS_FACTOR                1/100
+$define ENABLE_POST_OPT           false
 #$define WEIFENG_OPTIMIZATION
+$define N_GUESS_AVKL              70
+$define N_GUESS_LS                600
 #$define LOG_TIME
 
 $define DEBUG_EXIT lprint(">> Debugging, getting out"); return 0
@@ -151,7 +156,6 @@ $endif
     else
         i1 := simplify(op(bound[1])[1]);
         j1 := simplify(op(bound[1])[2]);
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Ok", bound));
         if type(bound[1], `=`) then
             if evalb(i1 = x) and evalb(j1 = x) then
 $ifdef LOG_TIME
@@ -195,6 +199,7 @@ local checkPositivityOverSAS := proc(S, poly, x)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("checkPositivityOverSAS",0)
 $endif
+local interval;
 local local_poly := realroot(diff(poly, x), 1/10000);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> local_poly", evalf(local_poly)));
 local curr_point;
@@ -410,9 +415,11 @@ export findEps;
         return -7/10*convert(eps, rational);
     end proc;
 
+# Obtains argmin_{g \in basis}(g(sample_point))
 local gMinPoint := proc(x, basis, sample_point)
 DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis", basis));
 local g_min := basis[1];
+local g;
   for g in basis do
     if (evalf(subs(x=sample_point, g-g_min)) <= 0) then
       g_min := g;
@@ -421,6 +428,7 @@ local g_min := basis[1];
   return g_min;
 end proc;
 
+# Returns a point strictly contained in [left, right]
 local samplePoint := proc(left, right)
   if (left = -infinity and right = infinity) then
     return 0;
@@ -438,13 +446,17 @@ local gMinSeq := proc(x, basis, f)
 local i, j;
 local l := nops(basis);
 local sol;
+local interval;
+local _interval;
+
+DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis @ gMinSeq", basis));
+DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f @ gMinSeq", f));
 
 local partition_roots := {};
 local num_roots := 0;
   for i from 1 to l-1 do
     for j from i+1 to l do
-      #for sol in solve(basis[i] = basis[j], x) do
-      for sol in map(interval -> interval[1], realroot(basis[i] - basis[j], 1/10000)) do
+      for sol in map(_interval -> _interval[1], realroot(basis[i] - basis[j], 1/10000)) do
         if evalf(subs(x=sol, basis[i])<0) then
           partition_roots := partition_roots union {sol};
           num_roots := num_roots + 1;
@@ -456,14 +468,11 @@ local num_roots := 0;
   partition_roots := sort(convert(partition_roots, list));
 
   i := 1;
-local interval;
-#local refined_intervals := [];
-#local g_min_seq := [];
 local min_epsilon := infinity, curr_epsilon, curr_g;
 local S := SemiAlgebraic([-f>=0], [x]);
 DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
 DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> S", S));
-  for interval in map(interval -> bound_info(x, interval, 0), S) do
+  for interval in map(_interval -> bound_info(x, _interval, 0), S) do
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> interval", evalf(interval)));
     while (i <= num_roots and evalf(partition_roots[i] <= interval[1])) do
       i := i + 1;
@@ -472,9 +481,7 @@ DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> S", S));
 local left_endpoint := interval[1];
 
     while (i <= num_roots and evalf(partition_roots[i] < interval[2])) do
-      #refined_intervals := [op(refined_intervals), [left_endpoint, partition_roots[i]]];
       curr_g := gMinPoint(x, basis, samplePoint(left_endpoint, partition_roots[i]));
-      #g_min_seq := [op(g_min_seq), curr_g];
       curr_epsilon := -maximize(curr_g, x = left_endpoint .. partition_roots[i]);
       DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_epsilon", evalf(curr_epsilon)));
       DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_g", curr_g));
@@ -486,10 +493,8 @@ local left_endpoint := interval[1];
       i := i + 1;
     end do;
 
-    #refined_intervals := [op(refined_intervals), [left_endpoint, interval[2]]];
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> sample_point", samplePoint(left_endpoint, interval[2])));
     curr_g := gMinPoint(x, basis, samplePoint(left_endpoint, interval[2]));
-    #g_min_seq := [op(g_min_seq), curr_g];
     curr_epsilon := -maximize(curr_g, x = left_endpoint .. interval[2]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_epsilon", evalf(curr_epsilon)));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_g", curr_g));
@@ -500,9 +505,6 @@ local left_endpoint := interval[1];
 
   DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> min_epsilon", evalf(min_epsilon)));
 
-  #return refined_intervals;
-  #return g_min_seq;
-  #return 1/2*min_epsilon;
   return min_epsilon;
 end proc;
 
@@ -632,7 +634,7 @@ $endif
 $ifdef LOG_TIME
     START_LOG_TIME("averkov_lemma_7::compute_mu",4);
 $endif
-local semialgebraic_for_mu := SemiAlgebraic([B_poly >= 0, op(map(g_i -> g_i + 17/10*eps >= 0, basis))], [x]);
+local semialgebraic_for_mu := SemiAlgebraic([B_poly >= 0, op(map(g_i -> g_i + EPS_FACTOR*eps >= 0, basis))], [x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> semialgebraic_for_mu", semialgebraic_for_mu));
     mu := min(
         map(proc(bound)
@@ -670,6 +672,9 @@ local pos_coeff1, pos_coeff2, N1, N2;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", evalf(eps)));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _exp1", _exp1));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _exp2", _exp2));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _exp3", _exp3));
 
     # 1.
     if evalf(subs(alpha=1, simplify(_exp1) <= simplify(_exp2) and simplify(_exp2) <= simplify(_exp3))) then
@@ -776,7 +781,7 @@ local pos_coeff1, pos_coeff2, N1, N2;
         N := 1;
     end if;
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> N before ENABLE_BINARY_SEARCH", evalf(N)));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> N before ENABLE_BINARY_SEARCH_AVKL", evalf(N)));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N pos_coeff", N, pos_coeff));
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::compute_N_heuristic",5);
@@ -808,9 +813,7 @@ $endif
     # f - g > 0 over SemiAlgebraic(B)
     # we use a binary search to refine N
     #
-    # TODO Decide a threshold to trigger binary search optimization
-    #if ENABLE_BINARY_SEARCH and N < BINARY_SEARCH_TRIGGER then
-    if ENABLE_BINARY_SEARCH then
+    if ENABLE_BINARY_SEARCH_AVKL then
         local N_top := N;
         local N_bottom := 0;
         local N_old := N_top;
@@ -846,7 +849,7 @@ $endif
             N := N_top;
         end if;
 
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> N after ENABLE_BINARY_SEARCH", evalf(N)));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> N after ENABLE_BINARY_SEARCH_AVKL", evalf(N)));
     end if;
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N: ", N));
@@ -874,9 +877,9 @@ end proc;
 
 # We assume:
 # 1. SemiAlgebraic(g) is bounded
-# Return: list of polynomials l
-# such that poly - l[2] has a lowerbound
-# over \mathbb{}
+# Return: a polynomial l
+# such that poly - l has a lowerbound
+# over \mathbb{R}
 local Lower_bound_poly := proc(x, poly, g)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("Lower_bound_poly",0)
@@ -885,12 +888,12 @@ local i;
 local d_poly, c_poly;
 local d_g, h;
 local S, _point;
-local G, C;
+local G, c;
 # The following is used in the
 # minimization problem to find
-# C in order to avoid the boundary
+# c in order to avoid the boundary
 # points
-local eps := 1/1000;
+local eps := 1/100;
 
 $ifdef LOG_TIME
     START_LOG_TIME("Lower_bound_poly::expand(poly)",1);
@@ -919,7 +922,9 @@ $endif
         SemiAlgebraic([g >= 0], [x]));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> S", S));
     d_g := degree(expand(g), x); # quick_degree
+    # TODO Is there a way to *NOT* fix this point?
     _point := S[1][1];
+    _point := -120;
     # ToDiscuss Is it needed to make this point a rational number?
     _point := convert(evalf(_point), rational);
 $ifdef LOG_TIME
@@ -931,15 +936,16 @@ $endif
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> d_poly", d_poly));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
 
+    h := 1;
     # TODO Compute h using 'more diverse' _points
+    # TODO How define h such that N in Last_step isn't that big
+    # or the resulting polynomial is a sums of squares?
     if d_g <= d_poly then
         if type(d_poly - d_g, even) then
             h := (x - _point)^(d_poly - d_g + 2);
         else
             h := (x - _point)^(d_poly - d_g + 1);
         end if;
-    else
-        h := 1;
     end if;
     G := h*g;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h", h));
@@ -955,7 +961,7 @@ $ifdef LOG_TIME
 $endif
     # We just need a lowerbound, not the
     # tightest lowerbound [to discuss later]
-    C := 9/10*min(
+    c := 9/10*min(
         seq(
             if evalb(S[i][1] = S[i][2]) then
                 # If we are minimizing over
@@ -977,16 +983,12 @@ $ifdef LOG_TIME
     END_LOG_TIME("Lower_bound_poly::Minimization_problem",3);
 $endif
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> C", C));
-    C := evalf(C);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> C as float", C));
-    C := convert(C, rational);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> C as rational", C));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h", h));
+    c := convert(evalf(c), rational);
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> c as rational", c));
 $ifdef LOG_TIME
     END_LOG_TIME("Lower_bound_poly",0)
 $endif
-    return C*h;
+    return c*h;
 end proc;
 
 # Return: If f is not a non-negative polynomial
@@ -1038,7 +1040,7 @@ end proc;
 # 1. _poly is strictly positive over SemiAlgebraic([g >= 0], [x])
 # 2. _poly has a lowerbound over \mathbb{R}, i.e., SemiAlgebraic([_poly <= 0], [x]) is bounded
 # 3. SemiAlgebraic([g >= 0], [x]) is bounded
-local Last_step := proc(x, _poly, g)
+local Last_step := proc(x, _poly, g, N_guess)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("Last_step",0)
 $endif
@@ -1082,40 +1084,43 @@ $endif
         end if;
     end if;
 
-    pos_coeff := 1;
-
+    #
+    # Compute gamma
+    #
     # We just need a lowerbound, not the
     # tightest lowerbound [to discuss later]
     _gamma := convert(1/2*evalf(1.001*maximize(g)), rational);
     _gamma := max(_gamma, 1);
-
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
-
+ 
     #
-    # Find exponent eps
+    # Compute exponent eps
     #
-
-    eps := 1/2*convert(evalf(gMinSeq(x, [g], poly)), rational);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps:", eps));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g:", g));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly:", poly));
+    eps := evalf(gMinSeq(x, [g], poly));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps:", eps));
+    eps := 1/2*convert(eps, rational);
 
     semialgebraic_eps_lifted := SemiAlgebraic(
-        [g + 17/10*eps >= 0], [x]);
+        [g + EPS_FACTOR*eps >= 0], [x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done computation of semialgebraic_eps_lifted", semialgebraic_eps_lifted));
     
+    #
+    # Compute mu
+    #
     mu := computeMin(semialgebraic_eps_lifted, poly, x);
     mu := convert(evalf(mu), rational);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
-   
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Compute exponent N"));
     #
     # Find exponent N
     #
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", eps));
+
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Compute exponent N"));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma @ Last_step:", evalf(_gamma)));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu @ Last_step:", evalf(mu)));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps @ Last_step:", evalf(eps)));
 #local _exp1 := (log(2*_gamma) - log(alpha*mu))/(log(_gamma + eps) - log(_gamma));
 #local _exp2 := (log(-alpha*m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps));
     #pos_coeff := convert(
@@ -1126,11 +1131,25 @@ local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
     N := ceil(evalf(_exp1));
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N: ", N));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N_guess: ", N_guess));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> pos_coeff: ", pos_coeff));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _poly: ", _poly));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g: ", g));
 
-    while true do
+    if (N > N_guess) then
+        _g := 1/pos_coeff*g*((g - _gamma)/(_gamma + eps))^(2*N_guess);
+        # Check is _poly - _g is non-negative over \mathbb{R}
+        #if SemiAlgebraic([_g - _poly >= 0], [x]) = [] then
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Isolate(_poly - _g)", _poly - _g));
+        if Isolate(_poly - _g) = [] then
+          N := N_guess;
+          DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> N_guess was ok @ Last_step"));
+        else
+          DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> N_guess was not ok @ Last_step"));
+        end if;
+    end if;
+
+    while ENABLE_POST_OPT do
         _g := 1/pos_coeff*g*((g - _gamma)/(_gamma + eps))^(2*N);
         # Check is _poly - _g is non-negative over \mathbb{R}
         #if SemiAlgebraic([_g - _poly >= 0], [x]) = [] then
@@ -1141,11 +1160,7 @@ local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N", N));
     end do;
 
-    # TODO Decide a threshold to trigger binary search optimization
-    #if ENABLE_BINARY_SEARCH and N < BINARY_SEARCH_TRIGGER then
-    if true then
-        #if ENABLE_BINARY_SEARCH then
-        #if false then
+    if ENABLE_BINARY_SEARCH_LS then
         local N_top := N;
         local N_bottom := 0;
         local N_old := N_top;
@@ -1216,7 +1231,7 @@ $endif
 
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Poly f for averkov_lemma_7", f));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Poly g[1] for averkov_lemma_7", g[1]));
-        H2 := averkov_lemma_7(x, f, basis, g[1], 70);
+        H2 := averkov_lemma_7(x, f, basis, g[1], N_GUESS_AVKL);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with averkov_lemma_7"));
 
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> H2", H2));
@@ -1237,7 +1252,7 @@ $else
 $endif
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f3", f3));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g[1]", g[1]));
-        H4 := Last_step(x, f3, g[1]);
+        H4 := Last_step(x, f3, g[1], N_GUESS_LS);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with Last_step"));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> H4", H4));
 
@@ -1257,7 +1272,7 @@ $endif
 
         certificates := [f - dot_product(basis, certificates), op(certificates)];
         DEBUG(__FILE__, __LINE__, ENABLE_VERIFICATION, lprint(">> This should be zero", expand(f - dot_product([1, op(basis)], certificates))));
-        DEBUG(__FILE__, __LINE__, ENABLE_VERIFICATION, lprint(">> Certificates found", op(certificates)));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Certificates found", op(certificates)));
 $ifdef LOG_TIME
         END_LOG_TIME("spCertificates",0);
 $endif
