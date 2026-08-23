@@ -880,6 +880,7 @@ end proc;
 # Return: a polynomial l
 # such that poly - l has a lowerbound
 # over \mathbb{R}
+# and an epsilon (eps_LS) for Last_step
 local Lower_bound_poly := proc(x, poly, g)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("Lower_bound_poly",0)
@@ -894,6 +895,8 @@ local G, c;
 # c in order to avoid the boundary
 # points
 local eps := 1/100;
+# This variable is passed to Last_step
+local eps_LS := -1;
 
 $ifdef LOG_TIME
     START_LOG_TIME("Lower_bound_poly::expand(poly)",1);
@@ -911,7 +914,7 @@ $endif
 $ifdef LOG_TIME
         END_LOG_TIME("Lower_bound_poly",0)
 $endif
-        return 0;
+        return 0, eps_LS;
     end if;
 
 $ifdef LOG_TIME
@@ -922,8 +925,9 @@ $endif
         SemiAlgebraic([g >= 0], [x]));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> S", S));
     d_g := degree(expand(g), x); # quick_degree
-    # TODO Is there a way to *NOT* fix this point?
-    _point := S[1][1];
+
+    # TODO Is there a way to *NOT* to keep fixed this point?
+    #_point := S[1][1];
     _point := -120;
     # ToDiscuss Is it needed to make this point a rational number?
     _point := convert(evalf(_point), rational);
@@ -988,7 +992,7 @@ $endif
 $ifdef LOG_TIME
     END_LOG_TIME("Lower_bound_poly",0)
 $endif
-    return c*h;
+    return c*h, eps_LS;
 end proc;
 
 # Return: If f is not a non-negative polynomial
@@ -1040,7 +1044,7 @@ end proc;
 # 1. _poly is strictly positive over SemiAlgebraic([g >= 0], [x])
 # 2. _poly has a lowerbound over \mathbb{R}, i.e., SemiAlgebraic([_poly <= 0], [x]) is bounded
 # 3. SemiAlgebraic([g >= 0], [x]) is bounded
-local Last_step := proc(x, _poly, g, N_guess)
+local Last_step := proc(x, _poly, g, N_guess, eps_LS)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("Last_step",0)
 $endif
@@ -1096,11 +1100,15 @@ $endif
     #
     # Compute exponent eps
     #
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g:", g));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly:", poly));
-    eps := evalf(gMinSeq(x, [g], poly));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps:", eps));
-    eps := 1/2*convert(eps, rational);
+    if (eps_LS = -1) then
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g:", g));
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly:", poly));
+      eps := evalf(gMinSeq(x, [g], poly));
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps:", eps));
+      eps := 1/2*convert(eps, rational);
+    else
+      eps := eps_LS;
+    end;
 
     semialgebraic_eps_lifted := SemiAlgebraic(
         [g + EPS_FACTOR*eps >= 0], [x]);
@@ -1240,7 +1248,7 @@ $endif
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f2", f2));
 
 $ifndef WEIFENG_OPTIMIZATION
-        H3 := Lower_bound_poly(x, f2, g[1]);
+        H3, eps_LS := Lower_bound_poly(x, f2, g[1]);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with Lower_bound_poly"));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> H3", H3));
 $endif
@@ -1252,7 +1260,7 @@ $else
 $endif
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f3", f3));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g[1]", g[1]));
-        H4 := Last_step(x, f3, g[1], N_GUESS_LS);
+        H4 := Last_step(x, f3, g[1], N_GUESS_LS, eps_LS);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with Last_step"));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> H4", H4));
 
