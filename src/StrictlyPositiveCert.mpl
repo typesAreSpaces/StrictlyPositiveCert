@@ -442,6 +442,8 @@ local samplePoint := proc(left, right)
   return (left + right)/2;
 end proc;
 
+# Outputs minimal eps such that
+# f > 0 over Semialgebraic(basis + 2*eps)
 local gMinSeq := proc(x, basis, f)
 local i, j;
 local l := nops(basis);
@@ -781,7 +783,7 @@ local pos_coeff1, pos_coeff2, N1, N2;
         N := 1;
     end if;
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> N before ENABLE_BINARY_SEARCH_AVKL", evalf(N)));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N before ENABLE_BINARY_SEARCH_AVKL", evalf(N)));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N pos_coeff", N, pos_coeff));
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::compute_N_heuristic",5);
@@ -849,7 +851,7 @@ $endif
             N := N_top;
         end if;
 
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> N after ENABLE_BINARY_SEARCH_AVKL", evalf(N)));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N after ENABLE_BINARY_SEARCH_AVKL", evalf(N)));
     end if;
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N: ", N));
@@ -881,14 +883,14 @@ end proc;
 # such that poly - l has a lowerbound
 # over \mathbb{R}
 # and an epsilon (eps_LS) for Last_step
-local Lower_bound_poly := proc(x, poly, g)
+local Lower_bound_poly := proc(x, f, g)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("Lower_bound_poly",0)
 $endif
 local i;
-local d_poly, c_poly;
+local d_f, c_f;
 local d_g, h;
-local S, _point;
+local S, _point, _point_candidates;
 local G, c;
 # The following is used in the
 # minimization problem to find
@@ -896,21 +898,23 @@ local G, c;
 # points
 local eps := 1/100;
 # This variable is passed to Last_step
-local eps_LS := -1;
+local eps_LS := -1, curr_eps_LS := -1;
+local A;
+local disc, roots_disc;
 
 $ifdef LOG_TIME
-    START_LOG_TIME("Lower_bound_poly::expand(poly)",1);
+    START_LOG_TIME("Lower_bound_poly::expand(f)",1);
 $endif
-    d_poly := degree(expand(poly), x); # quick_degree
-    c_poly := coeff(poly, x^d_poly);
+    d_f := degree(expand(f), x); # quick_degree
+    c_f := coeff(f, x^d_f);
 $ifdef LOG_TIME
-    END_LOG_TIME("Lower_bound_poly::expand(poly)",1);
+    END_LOG_TIME("Lower_bound_poly::expand(f)",1);
 $endif
 
-    # If poly has a lowerbound over \mathbb{R}
-    # then make no changes to poly
-    if type(d_poly, even) and evalb(evalf(c_poly) > 0) then
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly is bounded: "));
+    # If f has a lowerbound over \mathbb{R}
+    # then make no changes to f
+    if type(d_f, even) and evalb(evalf(c_f) > 0) then
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f is bounded: "));
 $ifdef LOG_TIME
         END_LOG_TIME("Lower_bound_poly",0)
 $endif
@@ -920,78 +924,84 @@ $endif
 $ifdef LOG_TIME
     START_LOG_TIME("Lower_bound_poly::SemiAlgebraic(g)",2);
 $endif
-    S := map(
-        bound -> bound_info(x, bound, eps),
-        SemiAlgebraic([g >= 0], [x]));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> S", S));
     d_g := degree(expand(g), x); # quick_degree
 
     # TODO Is there a way to *NOT* to keep fixed this point?
-    #_point := S[1][1];
-    _point := -120;
-    # ToDiscuss Is it needed to make this point a rational number?
-    _point := convert(evalf(_point), rational);
+
+    # Loop to choose optimal _point
+    # KEEP WORKING HERE
+    disc := diff(f,x)*g - f*diff(g, x);
+    A := x - 2*f*g/disc; # TODO Fix `A := ...'
+    roots_disc := select(_root -> evalf(subs(_root, g)) > 0,
+        Isolate(disc, maxprec=1000, digits=30));
+    _point_candidates := map(
+      _root -> convert(subs({x=round(op(_root)[2]*1000)/1000}, A), rational),
+      roots_disc);
+    for _point in _point_candidates do
 $ifdef LOG_TIME
     END_LOG_TIME("Lower_bound_poly::SemiAlgebraic(g)",2);
 $endif
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> d_g", d_g));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g", g));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> d_poly", d_poly));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _point", _point));
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> d_g", d_g));
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g", g));
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> d_f", d_f));
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
 
-    h := 1;
-    # TODO Compute h using 'more diverse' _points
-    # TODO How define h such that N in Last_step isn't that big
-    # or the resulting polynomial is a sums of squares?
-    if d_g <= d_poly then
-        if type(d_poly - d_g, even) then
-            h := (x - _point)^(d_poly - d_g + 2);
-        else
-            h := (x - _point)^(d_poly - d_g + 1);
-        end if;
-    end if;
-    G := h*g;
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h", h));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> G", G));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> To optimize", diff(poly,x)*G - poly*diff(G, x) ));
+      h := 1;
+      # TODO Compute h using 'more diverse' _points
+      # TODO How define h such that N in Last_step isn't that big
+      # or the resulting polynomial is a sums of squares?
+      if d_g <= d_f then
+         if type(d_f - d_g, even) then
+             h := (x - _point)^(d_f - d_g + 2);
+         else
+             h := (x - _point)^(d_f - d_g + 1);
+         end if;
+      end if;
+      G := h*g;
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> G", G));
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> To optimize", diff(f,x)*G - f*diff(G, x) ));
 
-    #Digits:=30;
-local opt_roots := map(out -> op(out)[2], Isolate(diff(poly,x)*G - poly*diff(G, x), maxprec=1000, digits=30));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> opt_roots", opt_roots));
+local opt_roots := Isolate(diff(f,x)*G - f*diff(G, x), maxprec=1000, digits=30);
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> opt_roots", opt_roots));
 
 $ifdef LOG_TIME
     START_LOG_TIME("Lower_bound_poly::Minimization_problem",3);
 $endif
-    # We just need a lowerbound, not the
-    # tightest lowerbound [to discuss later]
-    c := 9/10*min(
-        seq(
-            if evalb(S[i][1] = S[i][2]) then
-                # If we are minimizing over
-                # an isolated point of S(g), any value of
-                # C satisfy the minimization condition
-                1
-            else
-                min(
-                    map(
-                        x_arg -> subs({x=x_arg}, poly/G),
-                        select(_root -> evalf(S[i][1] <= _root) and evalf(_root <= S[i][2]), opt_roots)))
-                        #opt_roots))
-                #minimize(
-                #simplify(poly/G),
-                #x = S[i][1] .. S[i][2])
-            end if,
-            i = 1 .. numelems(S)));
+      # We just need a lowerbound, not the
+      # tightest lowerbound [to discuss later]
+      # TODO Figure out `optimal' constant (i.e., 9/10, 99/100, ...)
+      # to avoid eps_LS become a negative number
+      #c := 9/10*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
+      c := 999/1000*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
 $ifdef LOG_TIME
     END_LOG_TIME("Lower_bound_poly::Minimization_problem",3);
 $endif
-
-    c := convert(evalf(c), rational);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> c as rational", c));
+      c := convert(evalf(c), rational);
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> c as rational", c));
 $ifdef LOG_TIME
     END_LOG_TIME("Lower_bound_poly",0)
 $endif
+
+    # Want we want is maximize eps_LS
+$ifdef WEIFENG_OPTIMIZATION
+      curr_eps_LS := evalf(gMinSeq(x, [g], f));
+$else
+      curr_eps_LS := evalf(gMinSeq(x, [g], f - c*h*g));
+$endif
+      curr_eps_LS := 1/2*convert(curr_eps_LS, rational);
+      if eps_LS < curr_eps_LS then
+        eps_LS := curr_eps_LS;
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> hahah ", evalf(_point)));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> hahah ", _point));
+      end if;
+      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> eps_LS", evalf(eps_LS)));
+      #if true then
+        #return c*h, eps_LS;
+      #end if;
+    end do;
     return c*h, eps_LS;
 end proc;
 
@@ -1223,7 +1233,7 @@ $endif
         if SemiAlgebraic([f < 0], [x]) = [] then
             return [f, op(map(0, basis))];
         end if;
-    local g, H2, f2, H3, f3, H4, certificates;
+    local g, H2, f2, H3, f3, H4, certificates, eps_LS;
     local i;
         certificates := map(gen -> 0, basis);
         for i from 1 to nops(basis) do
