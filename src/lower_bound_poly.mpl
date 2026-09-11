@@ -92,9 +92,9 @@ $endif
 
         # We want is maximize eps_LS
 $ifdef WEIFENG_OPTIMIZATION
-        curr_eps_LS := evalf(gMinSeq(x, [g], f));
+        curr_eps_LS := evalf(findEps(x, [g], f));
 $else
-        curr_eps_LS := evalf(gMinSeq(x, [g], f - c*h*g));
+        curr_eps_LS := evalf(findEps(x, [g], f - c*h*g));
 $endif
         curr_eps_LS := 1/2*convert(curr_eps_LS, rational);
         if eps_LS < curr_eps_LS then

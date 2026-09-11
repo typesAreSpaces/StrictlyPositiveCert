@@ -1,5 +1,5 @@
 # Obtains argmin_{g \in basis}(g(sample_point))
-local gMinPoint := proc(x, basis, sample_point)
+local min_g_at_point := proc(x, basis, sample_point)
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis", basis));
 local g_min := basis[1];
 local g;
@@ -27,15 +27,15 @@ end proc;
 
 # Outputs minimal eps such that
 # f > 0 over Semialgebraic(basis + 2*eps)
-local gMinSeq := proc(x, basis, f)
+local findEps := proc(x, basis, f)
 local i, j;
 local l := nops(basis);
 local sol;
 local interval;
 local _interval;
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis @ gMinSeq", basis));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f @ gMinSeq", f));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis @ findEps", basis));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f @ findEps", f));
 
 local partition_roots := {};
 local num_roots := 0;
@@ -66,7 +66,7 @@ local S := SemiAlgebraic([-f>=0], [x]);
         local left_endpoint := interval[1];
 
         while (i <= num_roots and evalf(partition_roots[i] < interval[2])) do
-            curr_g := gMinPoint(x, basis, samplePoint(left_endpoint, partition_roots[i]));
+            curr_g := min_g_at_point(x, basis, samplePoint(left_endpoint, partition_roots[i]));
             curr_epsilon := -maximize(curr_g, x = left_endpoint .. partition_roots[i]);
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_epsilon", evalf(curr_epsilon)));
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_g", curr_g));
@@ -79,7 +79,7 @@ local S := SemiAlgebraic([-f>=0], [x]);
         end do;
 
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> sample_point", samplePoint(left_endpoint, interval[2])));
-        curr_g := gMinPoint(x, basis, samplePoint(left_endpoint, interval[2]));
+        curr_g := min_g_at_point(x, basis, samplePoint(left_endpoint, interval[2]));
         curr_epsilon := -maximize(curr_g, x = left_endpoint .. interval[2]);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_epsilon", evalf(curr_epsilon)));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_g", curr_g));

@@ -108,7 +108,7 @@ local T := SemiAlgebraic([B_poly >= 0, f < 0], [x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> semialgebraic_of_B", semialgebraic_of_B));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> T", evalf(T)));
 
-    eps := 1/2*convert(evalf(gMinSeq(x, basis, f)), rational);
+    eps := 1/2*convert(evalf(findEps(x, basis, f)), rational);
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", eps));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", evalf(eps)));
@@ -389,7 +389,7 @@ local R := PolynomialRing([x]);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
     # Check is poly is non-negative over \mathbb{R}
     #if SemiAlgebraic([poly < 0],[x]) = [] then
-    if Isolate(poly) = [] then
+    if isSOS(poly) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done because poly is a sos"));
 $ifdef LOG_TIME
         END_LOG_TIME("averkov_extended_lemma",0)
@@ -431,7 +431,7 @@ $endif
     if (eps_LS = -1) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g:", g));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly:", poly));
-        eps := evalf(gMinSeq(x, [g], poly));
+        eps := evalf(findEps(x, [g], poly));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps:", eps));
         eps := 1/2*convert(eps, rational);
     else
@@ -477,7 +477,7 @@ local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
         # Check is _poly - _g is non-negative over \mathbb{R}
         #if SemiAlgebraic([_g - _poly >= 0], [x]) = [] then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Isolate(_poly - _g)", _poly - _g));
-        if Isolate(_poly - _g) = [] then
+        if isSOS(_poly - _g) then
             N := N_guess;
             DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> N_guess was ok @ averkov_extended_lemma"));
         else
@@ -489,7 +489,7 @@ local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
         _g := 1/pos_coeff*g*((g - _gamma)/(_gamma + eps))^(2*N);
         # Check is _poly - _g is non-negative over \mathbb{R}
         #if SemiAlgebraic([_g - _poly >= 0], [x]) = [] then
-        if Isolate(_poly - _g) = [] then
+        if isSOS(_poly - _g) then
             break;
         end if;
         N := N+1;
@@ -511,7 +511,7 @@ local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
             _g := 1/pos_coeff*g*((g - _gamma)/(_gamma + eps))^(2*N_curr);
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current _g", _g));
             #if SemiAlgebraic([_g - _poly >= 0], [x]) = [] then
-            if Isolate(_poly - _g) = [] then
+            if isSOS(_poly - _g) then
                 N_top := N_curr;
             else
                 N_bottom := N_curr;

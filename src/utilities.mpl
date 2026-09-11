@@ -168,3 +168,7 @@ $ifdef LOG_TIME
 $endif
     return 0;
 end proc;
+
+local isSOS := proc(poly)
+    return evalb(Isolate(poly) = []);
+end proc;
