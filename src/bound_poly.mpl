@@ -58,8 +58,8 @@ $endif
 $ifdef LOG_TIME
             END_LOG_TIME("bound_poly",0)
 $endif
-DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h1", h1));
-DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h2", h2));
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h1", h1));
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h2", h2));
             return [expand(h1*basis[i] + h2*basis[j]), h1, h2, i, j];
         end do;
     end do;

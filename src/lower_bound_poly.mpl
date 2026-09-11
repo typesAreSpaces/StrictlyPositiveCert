@@ -45,64 +45,64 @@ $endif
     d_g := degree(expand(g), x); # quick_degree
     d_diff := d_f - d_g;
     if 0 <= d_diff then
-      if type(d_diff, even) then
-        d_diff := d_diff + 2;
-      else
-        d_diff := d_diff + 1;
-      end if;
+        if type(d_diff, even) then
+            d_diff := d_diff + 2;
+        else
+            d_diff := d_diff + 1;
+        end if;
     end if;
 
     disc := diff(f,x)*g - f*diff(g, x);
     A := x - d_diff*f*g/disc;
     roots_disc := select(_root -> evalf(subs(_root, g)) > 0,
-        Isolate(disc, maxprec=1000, digits=30));
+                         Isolate(disc, maxprec=1000, digits=30));
     _point_candidates := map(
-      _root -> convert(subs({x=round(op(_root)[2]*1000)/1000}, A), rational),
-      roots_disc);
+        _root -> convert(subs({x=round(op(_root)[2]*1000)/1000}, A), rational),
+        roots_disc);
 
     # Loop to choose optimal _point
     for _point in _point_candidates do
-      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _point", _point));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _point", _point));
 
-      # TODO Compute h using 'more diverse' _points
-      h := (x - _point)^d_diff;
-      G := h*g;
-      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h", h));
+        # TODO Compute h using 'more diverse' _points
+        h := (x - _point)^d_diff;
+        G := h*g;
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h", h));
 
-local opt_roots := Isolate(diff(f,x)*G - f*diff(G, x), maxprec=1000, digits=30);
-      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> opt_roots", opt_roots));
+        local opt_roots := Isolate(diff(f,x)*G - f*diff(G, x), maxprec=1000, digits=30);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> opt_roots", opt_roots));
 
 $ifdef LOG_TIME
-    START_LOG_TIME("lower_bound_poly::Minimization_problem",3);
+        START_LOG_TIME("lower_bound_poly::Minimization_problem",3);
 $endif
-      # We just need a lowerbound, not the
-      # tightest lowerbound [to discuss later]
-      # TODO Figure out `optimal' constant (i.e., 9/10, 99/100, ...)
-      # to avoid eps_LS become a negative number
-      #c := 9/10*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
-      c := 999/1000*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
+        # We just need a lowerbound, not the
+        # tightest lowerbound [to discuss later]
+        # TODO Figure out `optimal' constant (i.e., 9/10, 99/100, ...)
+        # to avoid eps_LS become a negative number
+        #c := 9/10*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
+        c := 999/1000*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
 $ifdef LOG_TIME
-    END_LOG_TIME("lower_bound_poly::Minimization_problem",3);
+        END_LOG_TIME("lower_bound_poly::Minimization_problem",3);
 $endif
-      c := convert(evalf(c), rational);
-      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> c as rational", c));
+        c := convert(evalf(c), rational);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> c as rational", c));
 $ifdef LOG_TIME
-    END_LOG_TIME("lower_bound_poly",0)
+        END_LOG_TIME("lower_bound_poly",0)
 $endif
 
-    # We want is maximize eps_LS
+        # We want is maximize eps_LS
 $ifdef WEIFENG_OPTIMIZATION
-      curr_eps_LS := evalf(gMinSeq(x, [g], f));
+        curr_eps_LS := evalf(gMinSeq(x, [g], f));
 $else
-      curr_eps_LS := evalf(gMinSeq(x, [g], f - c*h*g));
+        curr_eps_LS := evalf(gMinSeq(x, [g], f - c*h*g));
 $endif
-      curr_eps_LS := 1/2*convert(curr_eps_LS, rational);
-      if eps_LS < curr_eps_LS then
-        eps_LS := curr_eps_LS;
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> evalf(_point)", evalf(_point)));
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> _point", _point));
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> current eps_LS", evalf(eps_LS)));
-      end if;
+        curr_eps_LS := 1/2*convert(curr_eps_LS, rational);
+        if eps_LS < curr_eps_LS then
+            eps_LS := curr_eps_LS;
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> evalf(_point)", evalf(_point)));
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> _point", _point));
+            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> current eps_LS", evalf(eps_LS)));
+        end if;
     end do;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> Final eps_LS", evalf(eps_LS)));
     return c*h, eps_LS;

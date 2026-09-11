@@ -41,7 +41,7 @@ $include "src/bound_poly.mpl";
 $include "src/lower_bound_poly.mpl";
 $include "src/averkov_constructions.mpl";
 
-spCertificates := proc(f, basis, x)
+    spCertificates := proc(f, basis, x)
 $ifdef LOG_TIME
         INIT_START_LOG_TIME("spCertificates",0)
 $endif
@@ -52,10 +52,10 @@ $endif
     local i;
         certificates := map(gen -> 0, basis);
         for i from 1 to nops(basis) do
-          if basis[i] = -1 then
-            certificates[i] := ((f - 1)/2)^2;
-            return [((f + 1)/2)^2, op(certificates)];
-          end if;
+            if basis[i] = -1 then
+                certificates[i] := ((f - 1)/2)^2;
+                return [((f + 1)/2)^2, op(certificates)];
+            end if;
         end do;
 
         g := bound_poly(basis, x);

@@ -429,13 +429,13 @@ $endif
     # Compute exponent eps
     #
     if (eps_LS = -1) then
-      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g:", g));
-      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly:", poly));
-      eps := evalf(gMinSeq(x, [g], poly));
-      DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps:", eps));
-      eps := 1/2*convert(eps, rational);
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g:", g));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly:", poly));
+        eps := evalf(gMinSeq(x, [g], poly));
+        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps:", eps));
+        eps := 1/2*convert(eps, rational);
     else
-      eps := eps_LS;
+        eps := eps_LS;
     end;
 
     semialgebraic_eps_lifted := SemiAlgebraic(
@@ -460,7 +460,7 @@ $endif
 #local _exp1 := (log(2*_gamma) - log(alpha*mu))/(log(_gamma + eps) - log(_gamma));
 #local _exp2 := (log(-alpha*m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps));
     #pos_coeff := convert(
-        #evalf(solve(_exp1 = _exp2, alpha, 'maxsols'=1)), rational);
+    #evalf(solve(_exp1 = _exp2, alpha, 'maxsols'=1)), rational);
     #N := ceil(1/2*subs(alpha=pos_coeff, _exp1));
 local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
     pos_coeff := 1;
@@ -478,10 +478,10 @@ local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
         #if SemiAlgebraic([_g - _poly >= 0], [x]) = [] then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Isolate(_poly - _g)", _poly - _g));
         if Isolate(_poly - _g) = [] then
-          N := N_guess;
-          DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> N_guess was ok @ averkov_extended_lemma"));
+            N := N_guess;
+            DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> N_guess was ok @ averkov_extended_lemma"));
         else
-          DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> N_guess was not ok @ averkov_extended_lemma"));
+            DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> N_guess was not ok @ averkov_extended_lemma"));
         end if;
     end if;
 
@@ -490,7 +490,7 @@ local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
         # Check is _poly - _g is non-negative over \mathbb{R}
         #if SemiAlgebraic([_g - _poly >= 0], [x]) = [] then
         if Isolate(_poly - _g) = [] then
-          break;
+            break;
         end if;
         N := N+1;
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N", N));
