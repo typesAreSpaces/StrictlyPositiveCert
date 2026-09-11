@@ -101,7 +101,6 @@ local eps := -infinity, _eps;
             end if;
         end do;
     end do;
-    # TODO Figure out a `better` multiplier
-    #
+
     return -7/10*convert(eps, rational);
 end proc;

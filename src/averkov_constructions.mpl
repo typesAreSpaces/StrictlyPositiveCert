@@ -320,7 +320,6 @@ $endif
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g", g));
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f - g", f-g));
-            # TODO This is a bottle neck
             #if SemiAlgebraic([B_poly >= 0, g - f >= 0], [x]) = [] then
             if checkPositivityOverSAS(semialgebraic_of_B, f - g, x) then
                 N_top := N_curr;
@@ -343,7 +342,7 @@ $endif
     end if;
 
     # TODO Remove this, this is just for testing purposes
-    N:=10;
+    N := 10;
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N: ", N));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps: ", eps));
