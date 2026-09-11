@@ -40,7 +40,6 @@ $include "src/signature_constructions.mpl";
 $include "src/bound_poly.mpl";
 $include "src/lower_bound_poly.mpl";
 $include "src/eps_computation.mpl";
-# $include "src/eps_computation_archive.mpl";
 $include "src/averkov_constructions.mpl";
 
     spCertificates := proc(f, basis, x)
