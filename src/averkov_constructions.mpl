@@ -341,15 +341,10 @@ $endif
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N after ENABLE_BINARY_SEARCH_AVKL", evalf(N)));
     end if;
 
-    # TODO Remove this, this is just for testing purposes
+    # FIX Remove this, this is just for testing purposes
     N := 10;
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N: ", N));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps: ", eps));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma: ", _gamma));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f: ", f));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis: ", basis));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> B_poly: ", B_poly));
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::compute_N_binary_search",6);
 $endif
