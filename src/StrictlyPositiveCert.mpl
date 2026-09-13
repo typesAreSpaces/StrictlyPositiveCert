@@ -13,6 +13,7 @@ $define N_GUESS_AVKL              70
 $define N_GUESS_LS                600
 #$define LOG_TIME
 $define SOS_DELAY_SEARCH          5
+$define AVERKOV_EXPR(N)           add(term, term in map(g_i -> 1/pos_coeff*g_i*((g_i - _gamma)/(_gamma + eps))^(2*N), basis))
 
 $define DEBUG_EXIT lprint(">> Debugging, getting out"); return 0
 $define DEBUG(F, L, y, x) if (y) then lprint(">> Debugging file ", F, " at line ", L); x; end if

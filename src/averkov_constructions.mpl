@@ -16,7 +16,6 @@ local M, mu, m, N_list, temp_bound_N;
 local pos_coeff, _pos_coeff;
 local _error := 1/1000;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Start @averkov_lemma_7"));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> args"));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis", basis));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> B_poly", B_poly));
@@ -26,6 +25,7 @@ $ifdef LOG_TIME
 $endif
     semialgebraic_of_B := SemiAlgebraic(
         [B_poly >= 0], [x]);
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> semialgebraic_of_B", semialgebraic_of_B));
 
     if evalb(semialgebraic_of_B = []) then
         return map(g_i -> 0, basis);
@@ -47,7 +47,6 @@ $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::Minimization_f",1);
 $endif
     # DEBUG if problems
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> M", M));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> M", evalf(M)));
     # M := convert(evalf(M), rational);
     if evalf(M < 0) then
@@ -91,10 +90,7 @@ $endif
     # We just need a bound, it doesn't need to be
     # the tightest bound [to discuss later]
     _gamma := max(ceil(evalf(_gamma)), 1);
-
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> B_poly", B_poly));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
 
     #
     # Find exponent eps
@@ -103,17 +99,10 @@ $ifdef LOG_TIME
     START_LOG_TIME("averkov_lemma_7::compute_eps",3);
 $endif
 local T := SemiAlgebraic([B_poly >= 0, f < 0], [x]);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis", basis));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> semialgebraic_of_B", semialgebraic_of_B));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> T", evalf(T)));
 
     eps := 1/2*convert(evalf(findEps(x, basis, f)), rational);
-
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", eps));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", evalf(eps)));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis", basis));
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::compute_eps",3);
 $endif
@@ -140,7 +129,6 @@ local semialgebraic_for_mu := SemiAlgebraic([B_poly >= 0, op(map(g_i -> g_i + EP
              );
 
     # DEBUG if problems
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
     mu := convert(evalf(mu), rational);
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
 $ifdef LOG_TIME
@@ -157,11 +145,6 @@ local _exp1 := (log(2*m*_gamma) - log(alpha*mu))/(log(_gamma + eps) - log(_gamma
 local _exp2 := (log(2*m*_gamma) - log(alpha*M))/(log(_gamma + eps) - log(_gamma));
 local _exp3 := (log(alpha*M) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps));
 local pos_coeff1, pos_coeff2, N1, N2;
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> M", M));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> m", m));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps", evalf(eps)));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _exp1", _exp1));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _exp2", _exp2));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _exp3", _exp3));
@@ -272,16 +255,12 @@ local pos_coeff1, pos_coeff2, N1, N2;
     end if;
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N before ENABLE_BINARY_SEARCH_AVKL", evalf(N)));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N pos_coeff", N, pos_coeff));
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::compute_N_heuristic",5);
 $endif
 
     if (N > N_guess) then
-        g := add(term,
-                 term in map(g_i -> 1/pos_coeff*g_i*((g_i - _gamma)/(_gamma + eps))^(2*N_guess), basis));
-        DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> B_poly", B_poly));
-        DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> g - f", g - f));
+        g := AVERKOV_EXPR(N_guess);
         #if SemiAlgebraic([B_poly >= 0, g - f >= 0], [x]) = [] then
         if checkPositivityOverSAS(semialgebraic_of_B, f - g, x) then
             N := N_guess;
@@ -291,8 +270,7 @@ $endif
         end if;
     end if;
 
-    g := add(term,
-             term in map(g_i -> 1/pos_coeff*g_i*((g_i - _gamma)/(_gamma + eps))^(2*N), basis));
+    g := AVERKOV_EXPR(N);
     DEBUG(__FILE__, __LINE__, ENABLE_AVERKOV_CHECK, print(">> 1. Checking correctness of averkov_lemma_7", SemiAlgebraic([B_poly >= 0, g - f >= 0], [x])));
 
 $ifdef LOG_TIME
@@ -314,12 +292,7 @@ $endif
             DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> Current N_bottom", N_bottom));
             N_curr := iquo(N_top + N_bottom, 2);
             DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> Current N_curr", N_curr));
-            g := add(term,
-                     term in map(g_i -> 1/pos_coeff*g_i*((g_i - _gamma)/(_gamma + eps))^(2*N_curr), basis));
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> B_poly", B_poly));
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g", g));
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f - g", f-g));
+            g := AVERKOV_EXPR(N_curr);
             #if SemiAlgebraic([B_poly >= 0, g - f >= 0], [x]) = [] then
             if checkPositivityOverSAS(semialgebraic_of_B, f - g, x) then
                 N_top := N_curr;
@@ -341,7 +314,7 @@ $endif
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N after ENABLE_BINARY_SEARCH_AVKL", evalf(N)));
     end if;
 
-    # FIX Remove this, this is just for testing purposes
+    # FIX remove this
     N := 10;
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N: ", N));
@@ -381,6 +354,7 @@ local m, mu, interval, lowerbound, upperbound;
 local R := PolynomialRing([x]);
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g", g));
     # Check is poly is non-negative over \mathbb{R}
     #if SemiAlgebraic([poly < 0],[x]) = [] then
     if isSOS(poly) then
@@ -394,9 +368,6 @@ $endif
     # Since poly is not a non-negative
     # polynomial, we can assume the min value
     # for `poly` is negative
-
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly", poly));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g", g));
 
     if ENABLE_N_HEURISTIC then
         pos_coeff := findPositiveConstantAvoidExponent(poly, g);
@@ -417,20 +388,18 @@ $endif
     # tightest lowerbound [to discuss later]
     _gamma := convert(1/2*evalf(1.001*maximize(g)), rational);
     _gamma := max(_gamma, 1);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma", _gamma));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma @ averkov_extended_lemma:", evalf(_gamma)));
 
     #
     # Compute exponent eps
     #
     if (eps_LS = -1) then
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g:", g));
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> poly:", poly));
         eps := evalf(findEps(x, [g], poly));
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps:", eps));
         eps := 1/2*convert(eps, rational);
     else
         eps := eps_LS;
     end;
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps @ averkov_extended_lemma:", evalf(eps)));
 
     semialgebraic_eps_lifted := SemiAlgebraic(
         [g + EPS_FACTOR*eps >= 0], [x]);
@@ -441,16 +410,13 @@ $endif
     #
     mu := computeMin(semialgebraic_eps_lifted, poly, x);
     mu := convert(evalf(mu), rational);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu", mu));
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu @ averkov_extended_lemma:", evalf(mu)));
 
     #
     # Find exponent N
     #
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Compute exponent N"));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _gamma @ averkov_extended_lemma:", evalf(_gamma)));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> mu @ averkov_extended_lemma:", evalf(mu)));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> eps @ averkov_extended_lemma:", evalf(eps)));
 #local _exp1 := (log(2*_gamma) - log(alpha*mu))/(log(_gamma + eps) - log(_gamma));
 #local _exp2 := (log(-alpha*m) - log(2*eps))/(log(_gamma + 2*eps) - log(_gamma + eps));
     #pos_coeff := convert(
@@ -462,9 +428,6 @@ local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
 
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N: ", N));
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> N_guess: ", N_guess));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> pos_coeff: ", pos_coeff));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _poly: ", _poly));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g: ", g));
 
     if (N > N_guess) then
         _g := 1/pos_coeff*g*((g - _gamma)/(_gamma + eps))^(2*N_guess);
@@ -501,7 +464,6 @@ local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current N_bottom", N_bottom));
             N_curr := iquo(N_top + N_bottom, 2);
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current N_curr", N_curr));
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current pos_coeff", pos_coeff));
             _g := 1/pos_coeff*g*((g - _gamma)/(_gamma + eps))^(2*N_curr);
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current _g", _g));
             #if SemiAlgebraic([_g - _poly >= 0], [x]) = [] then
