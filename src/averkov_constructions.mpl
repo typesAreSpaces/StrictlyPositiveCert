@@ -284,13 +284,12 @@ $endif
     if ENABLE_BINARY_SEARCH_AVKL then
         local N_top := N;
         local N_bottom := 0;
-        local N_old := N_top;
         local N_curr;
 
-        while true do
+        while N_top - N_bottom > 1 do
+            N_curr := iquo(N_top + N_bottom, 2);
             DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> Current N_top", N_top));
             DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> Current N_bottom", N_bottom));
-            N_curr := iquo(N_top + N_bottom, 2);
             DEBUG(__FILE__, __LINE__,ENABLE_DEBUGGING, lprint(">> Current N_curr", N_curr));
             g := AVERKOV_EXPR(N_curr);
             #if SemiAlgebraic([B_poly >= 0, g - f >= 0], [x]) = [] then
@@ -299,10 +298,6 @@ $endif
             else
                 N_bottom := N_curr;
             end if;
-            if N_curr = N_old then
-                break;
-            end if;
-            N_old := N_curr;
         end do;
 
         if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([B_poly >= 0, f <= 0], R) then
@@ -456,10 +451,9 @@ local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
     if ENABLE_BINARY_SEARCH_LS then
         local N_top := N;
         local N_bottom := 0;
-        local N_old := N_top;
         local N_curr;
 
-        while true do
+        while N_top - N_bottom > 1 do
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current N_top", N_top));
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current N_bottom", N_bottom));
             N_curr := iquo(N_top + N_bottom, 2);
@@ -472,10 +466,6 @@ local _exp1 := (log(2*_gamma) - log(mu))/(log(_gamma + eps) - log(_gamma));
             else
                 N_bottom := N_curr;
             end if;
-            if N_curr = N_old then
-                break;
-            end if;
-            N_old := N_curr;
         end do;
 
         if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([_poly <= 0], R) then
