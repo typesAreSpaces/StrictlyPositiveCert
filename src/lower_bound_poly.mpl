@@ -32,8 +32,8 @@ $ifdef LOG_TIME
     END_LOG_TIME("lower_bound_poly::expand(f)",1);
 $endif
 
-    # If f has a lowerbound over \mathbb{R}
-    # then make no changes to f
+# If f has a lowerbound over \mathbb{R}
+# then make no changes to f
     if type(d_f, even) and evalb(evalf(c_f) > 0) then
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f is bounded: "));
 $ifdef LOG_TIME
@@ -60,11 +60,11 @@ $endif
         _root -> convert(subs({x=round(op(_root)[2]*1000)/1000}, A), rational),
         roots_disc);
 
-    # Loop to choose optimal _point
+# Loop to choose optimal _point
     for _point in _point_candidates do
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _point", _point));
 
-        # TODO Compute h using 'more diverse' _points
+# TODO Compute h using 'more diverse' _points
         h := (x - _point)^d_diff;
         G := h*g;
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h", h));
@@ -75,11 +75,11 @@ $endif
 $ifdef LOG_TIME
         START_LOG_TIME("lower_bound_poly::Minimization_problem",3);
 $endif
-        # We just need a lowerbound, not the
-        # tightest lowerbound [to discuss later]
-        # TODO Figure out `optimal' constant (i.e., 9/10, 99/100, ...)
-        # to avoid eps_LS become a negative number
-        #c := 9/10*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
+# We just need a lowerbound, not the
+# tightest lowerbound [to discuss later]
+# TODO Figure out `optimal' constant (i.e., 9/10, 99/100, ...)
+# to avoid eps_LS become a negative number
+#c := 9/10*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
         c := 999/1000*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
 $ifdef LOG_TIME
         END_LOG_TIME("lower_bound_poly::Minimization_problem",3);
@@ -90,7 +90,7 @@ $ifdef LOG_TIME
         END_LOG_TIME("lower_bound_poly",0)
 $endif
 
-        # We want is maximize eps_LS
+# We want is maximize eps_LS
 $ifdef WEIFENG_OPTIMIZATION
         curr_eps_LS := evalf(findEps(x, [g], f));
 $else

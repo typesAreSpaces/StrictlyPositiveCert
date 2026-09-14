@@ -40,7 +40,7 @@ $ifdef LOG_TIME
 $endif
             return false;
         end if;
-
+        
         if j > nops(local_poly) then
             break;
         end if;
@@ -87,26 +87,26 @@ local interval;
     for i from 1 to nops(S) do
         interval := bound_info(x, S[i], 0);
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Current interval", evalf(interval)));
-
+        
         curr_point := evalf(subs(x=convert(interval[1], rational), poly));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
         if evalf(curr_point <= curr_min) then
             curr_min := curr_point;
         end if;
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
-
+        
         curr_point := evalf(subs(x=convert(interval[2], rational), poly));
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_point", curr_point));
         if evalf(curr_point <= curr_min) then
             curr_min := curr_point;
         end if;
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_min", curr_min));
-
+        
         while j <= num_roots and evalf(roots_poly[j] < interval[1]) do
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @1", j));
             j := j + 1;
         end do;
-
+        
         while j <= num_roots and evalf(roots_poly[j] < interval[2]) do
             DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> j @2", j));
             curr_point := evalf(subs(x=convert(roots_poly[j], rational), poly));
@@ -136,10 +136,10 @@ local i, _args, curr_condition, conditions, pos_coeff;
 local sol := solve(
     {c > 0, c * f - g >= 0},
     {x}, 'parametric', 'real', 'parameters' = {c});
-
+    
     _args := op(sol);
     conditions := [];
-
+    
     for i from 1 to nops(sol)/2 do
         if(evalb(_args[2*i] = [[x = x]])) then
             conditions := [evalf(_args[2*i - 1]), op(conditions)];
@@ -150,8 +150,8 @@ $ifdef LOG_TIME
 $endif
                 return 1;
             else
-                # We return the inverse because we actually need
-                # to produce a multiplier for `g`
+# We return the inverse because we actually need
+# to produce a multiplier for `g`
 $ifdef LOG_TIME
                 END_LOG_TIME("findPositiveConstantAvoidExponent",0)
 $endif
@@ -162,7 +162,7 @@ $endif
         conditions := [op(0, curr_condition)(seq(map(v -> -evalf(v + 1/100), [op(curr_condition)]))),
                        op(conditions)];
     end do;
-
+    
 $ifdef LOG_TIME
     END_LOG_TIME("findPositiveConstantAvoidExponent",0)
 $endif

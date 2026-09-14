@@ -3,7 +3,7 @@ $ifdef LOG_TIME
     INIT_START_LOG_TIME("bound_info",0)
 $endif
 local i1, i2, j1, j2;
-    # This is a bounded bounduality
+# This is a bounded bounduality
     if(nops(bound) = 2) then
         i1 := simplify(op(bound[1])[1]);
         i2 := simplify(op(bound[1])[2]);
@@ -34,7 +34,7 @@ $endif
                 return [min(i1, j1)+eps, max(i1, j1)-eps];
             end if;
         end if;
-        # This is an equality or unbounded bounduality
+# This is an equality or unbounded bounduality
     else
         i1 := simplify(op(bound[1])[1]);
         j1 := simplify(op(bound[1])[2]);
