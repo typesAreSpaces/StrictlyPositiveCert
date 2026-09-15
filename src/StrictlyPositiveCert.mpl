@@ -12,7 +12,6 @@ $define ENABLE_POST_OPT           false
 $define N_GUESS_AVKL              70
 $define N_GUESS_LS                600
 #$define LOG_TIME
-$define SOS_DELAY_SEARCH          5
 $define AVERKOV_SOS(g, N)         1/pos_coeff*((g - gamma)/(gamma + eps))^(2*N)
 $define AVERKOV_1_EXPR(g, N)      AVERKOV_SOS(g, N)*g
 $define AVERKOV_EXPR(N)           add(term, term in map(g_i -> AVERKOV_1_EXPR(g_i, N), basis))
