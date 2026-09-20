@@ -44,6 +44,7 @@ $endif
 
     d_g := degree(expand(g), x); # quick_degree
     d_diff := d_f - d_g;
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> d_diff", d_diff));
     if 0 <= d_diff then
         if type(d_diff, even) then
             d_diff := d_diff + 2;
