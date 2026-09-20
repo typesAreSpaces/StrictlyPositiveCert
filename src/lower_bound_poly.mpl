@@ -51,6 +51,8 @@ $endif
         else
             d_diff := d_diff + 1;
         end if;
+    else
+      d_diff := 0;
     end if;
 
     disc := diff(f,x)*g - f*diff(g, x);
