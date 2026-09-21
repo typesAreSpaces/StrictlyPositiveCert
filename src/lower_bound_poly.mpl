@@ -12,7 +12,7 @@ local d_f, c_f;
 local d_g, d_diff;
 local A, disc, roots_disc;
 local h, _point, _point_candidates;
-local G, c;
+local c;
 # The following is used in the
 # minimization problem to find
 # c in order to avoid the boundary
@@ -52,7 +52,8 @@ $endif
             d_diff := d_diff + 1;
         end if;
     else
-      d_diff := 0;
+        c := find_constant_lower_bound_poly(f, 1, g, x, eps);
+        return c, eps_LS;
     end if;
 
     disc := diff(f,x)*g - f*diff(g, x);
@@ -69,29 +70,9 @@ $endif
 
 # TODO Compute h using 'more diverse' _points
         h := (x - _point)^d_diff;
-        G := h*g;
         DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h", h));
 
-        local opt_roots := Isolate(diff(f,x)*G - f*diff(G, x), maxprec=1000, digits=30);
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> opt_roots", opt_roots));
-
-$ifdef LOG_TIME
-        START_LOG_TIME("lower_bound_poly::Minimization_problem",3);
-$endif
-# We just need a lowerbound, not the
-# tightest lowerbound [to discuss later]
-# TODO Figure out `optimal' constant (i.e., 9/10, 99/100, ...)
-# to avoid eps_LS become a negative number
-#c := 9/10*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
-        c := 999/1000*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
-$ifdef LOG_TIME
-        END_LOG_TIME("lower_bound_poly::Minimization_problem",3);
-$endif
-        c := convert(evalf(c), rational);
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> c as rational", c));
-$ifdef LOG_TIME
-        END_LOG_TIME("lower_bound_poly",0)
-$endif
+        c := find_constant_lower_bound_poly(f, h, g, x, eps);
 
 # We want is maximize eps_LS
 $ifdef WEIFENG_OPTIMIZATION
@@ -109,4 +90,33 @@ $endif
     end do;
     DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> Final eps_LS", evalf(eps_LS)));
     return c*h, eps_LS;
+end proc;
+
+local find_constant_lower_bound_poly := proc(f, h, g, x, eps)
+local c, G := h*g;
+local opt_roots := Isolate(diff(f,x)*G - f*diff(G, x), maxprec=1000, digits=30);
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> opt_roots", opt_roots));
+
+# We just need a lowerbound, not the
+# tightest lowerbound [to discuss later]
+# TODO Figure out `optimal' constant (i.e., 9/10, 99/100, ...)
+# to avoid eps_LS become a negative number
+#c := 9/10*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
+    c := 999/1000*min(
+        map(x_arg ->
+            if (evalf(subs(x_arg, G)) < eps) then
+                # If we are minimizing over
+                # an isolated point of S(g), any value of
+                # C satisfy the minimization condition
+                1
+            else
+                subs(x_arg, f/G)
+            end if,
+            select(_root-> evalf(subs(_root, g)) >= 0, opt_roots))
+                     );
+
+    c := convert(evalf(c), rational);
+    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> c as rational", c));
+
+    return c;
 end proc;
