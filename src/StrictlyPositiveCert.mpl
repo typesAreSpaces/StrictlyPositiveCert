@@ -4,8 +4,8 @@ $define ENABLE_BINARY_SEARCH_AVKL true
 $define ENABLE_BINARY_SEARCH_LS   false
 $define ENABLE_N_HEURISTIC        false
 $define ENABLE_AVERKOV_CHECK      false
-#$define EPS_FACTOR               17/10
-#$define EPS_FACTOR               1/10
+#$define EPS_FACTOR                17/10
+#$define EPS_FACTOR                1/10
 $define EPS_FACTOR                1/100
 $define ENABLE_POST_OPT           false
 #$define WEIFENG_OPTIMIZATION
