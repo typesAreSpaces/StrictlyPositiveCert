@@ -169,6 +169,23 @@ $endif
     return 0;
 end proc;
 
-local isSOS := proc(poly)
+isSOS := proc(poly, x)
+    if evalb(degree(poly, x) = 0) then
+      return poly > 0;
+    end if;
     return evalb(Isolate(poly) = []);
+end proc;
+
+quickCertificates := proc(f, basis, x)
+local certificates := map(gen -> 0, basis);
+local q, r, i;
+  for i from 1 to nops(basis) do
+    q := quo(basis[i], f, x);
+    r := rem(basis[i], f, x);
+    if isSOS(q, x) and isSOS(r, x) then
+      certificates[i] := q;
+      return true, [r, op(certificates)];
+    end if;
+  end do; 
+  return false, [];
 end proc;

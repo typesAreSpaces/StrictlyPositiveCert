@@ -7,13 +7,21 @@ $endif
     end if;
 local g, H2, f2, H3, f3, H4, certificates, eps_LS;
 local i;
+local quickcheck, quickcertificates;
     certificates := map(gen -> 0, basis);
+
     for i from 1 to nops(basis) do
         if basis[i] = -1 then
             certificates[i] := ((f - 1)/2)^2;
             return [((f + 1)/2)^2, op(certificates)];
         end if;
     end do;
+
+    quickcheck, quickcertificates := quickCertificates(f, basis, x);
+    if quickcheck then
+      DEBUG(__FILE__, __LINE__, lprint(">> Quick certificates found", op(quickcertificates)));
+      return quickcertificates;
+    end if;
 
     g := bound_poly(basis, x);
     DEBUG(__FILE__, __LINE__, lprint(">> Done with bound_poly"));

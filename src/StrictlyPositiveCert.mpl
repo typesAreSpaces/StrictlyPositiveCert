@@ -19,6 +19,8 @@ with(RegularChains, SemiAlgebraicSetTools, PolynomialRing);
 
 StrictlyPositiveCert := module() option package;
 
+export isSOS;
+export quickCertificates;
 export dot_product;
 export bound_info;
 export spCertificates;

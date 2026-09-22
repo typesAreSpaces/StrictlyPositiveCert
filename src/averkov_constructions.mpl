@@ -295,7 +295,7 @@ $ifdef ENABLE_BINARY_SEARCH_AVKL
     N_top := N;
     N_bot := 0;
 
-    if isSOS(f - g) then
+    if isSOS(f - g, x) then
         init_sos := true;
     end if;
 
@@ -308,7 +308,7 @@ $ifdef ENABLE_BINARY_SEARCH_AVKL
         g := AVERKOV_EXPR(N_cur);
 
         if init_sos then
-            predicate_bin_search:= isSOS(f - g);
+            predicate_bin_search:= isSOS(f - g, x);
         else
             #predicate_bin_search := SemiAlgebraic([B_poly >= 0, g - f >= 0], [x]) = [];
             predicate_bin_search := checkPositivityOverSAS(semialgebraic_of_B, f - g, x);
@@ -367,7 +367,7 @@ local N_top, N_bot, N_cur;
     DEBUG(__FILE__, __LINE__, lprint(">> g", g));
     # Check is f is non-negative over \mathbb{R}
     #if SemiAlgebraic([f < 0],[x]) = [] then
-    if isSOS(f) then
+    if isSOS(f, x) then
         DEBUG(__FILE__, __LINE__, lprint(">> Done because f is a sos"));
 $ifdef LOG_TIME
         END_LOG_TIME("averkov_extended_lemma",0)
@@ -437,7 +437,7 @@ $endif
         # Check is f - averkov_poly is non-negative over \mathbb{R}
         #if SemiAlgebraic([averkov_poly - f >= 0], [x]) = [] then
         DEBUG(__FILE__, __LINE__, lprint(">> Isolate(f - averkov_poly)", f - averkov_poly));
-        if isSOS(f - averkov_poly) then
+        if isSOS(f - averkov_poly, x) then
             N := N_guess;
             DEBUG(__FILE__, __LINE__, lprint(">> N_guess was ok @ averkov_extended_lemma"));
         else
@@ -450,7 +450,7 @@ $ifdef ENABLE_POST_OPT
         averkov_poly := AVERKOV_1_EXPR(g, N);
         # Check is f - averkov_poly is non-negative over \mathbb{R}
         #if SemiAlgebraic([averkov_poly - f >= 0], [x]) = [] then
-        if isSOS(f - averkov_poly) then
+        if isSOS(f - averkov_poly, x) then
             break;
         end if;
         N := N+1;
@@ -469,7 +469,7 @@ $ifdef ENABLE_BINARY_SEARCH_LS
         DEBUG(__FILE__, __LINE__, lprint(">> Current N_cur", N_cur));
         averkov_poly := AVERKOV_1_EXPR(g, N_cur);
         #if SemiAlgebraic([averkov_poly - f >= 0], [x]) = [] then
-        if isSOS(f - averkov_poly) then
+        if isSOS(f - averkov_poly, x) then
             N_top := N_cur;
         else
             N_bot := N_cur;
