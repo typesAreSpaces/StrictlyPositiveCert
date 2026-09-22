@@ -570,4 +570,4 @@ printf("\n>> Start Examples\n");
 #g3 := -1/2*x^7 + 7*x^6 - 42*x^5 + 140*x^4 - 280*x^3 + 336*x^2 - 224*x + 64;
 #checkWeifeng(-(x-2), [g1,-(x-1)], x, "??");
 
-checkWeifeng(x+4, [-(x+4)*(x+3)*(x+2)*(x+1)*(x-1)], x, "??");
+checkWeifeng(x+5, [-(x + 4)*(x + 3)*(x + 2)*(x + 1)*(x - 1)*(x - 2)*(x - 3)*(x - 4)], x, "??");
