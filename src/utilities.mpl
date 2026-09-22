@@ -169,11 +169,13 @@ $endif
     return 0;
 end proc;
 
+# TODO
+# The name is misleading
+# This checks if `poly' is
+# strictly positive
+# It's given an it's non-negative
 isSOS := proc(poly, x)
-    if evalb(degree(poly, x) = 0) then
-      return poly > 0;
-    end if;
-    return evalb(Isolate(poly) = []);
+    return evalb(Isolate(poly, x) = []);
 end proc;
 
 quickCertificates := proc(f, basis, x)
