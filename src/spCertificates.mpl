@@ -17,11 +17,13 @@ local quickcheck, quickcertificates;
         end if;
     end do;
 
+$ifdef ENABLE_QUICK_CERT
     quickcheck, quickcertificates := quickCertificates(f, basis, x);
     if quickcheck then
       DEBUG(__FILE__, __LINE__, lprint(">> Quick certificates found", op(quickcertificates)));
       return quickcertificates;
     end if;
+$endif
 
     g := bound_poly(basis, x);
     DEBUG(__FILE__, __LINE__, lprint(">> Done with bound_poly"));
