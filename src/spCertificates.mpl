@@ -16,23 +16,26 @@ local i;
     end do;
 
     g := bound_poly(basis, x);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with bound_poly"));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> bound_poly g", g));
+    DEBUG(__FILE__, __LINE__, lprint(">> Done with bound_poly"));
+    DEBUG(__FILE__, __LINE__, lprint(">> bound_poly g", g));
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Poly f for averkov_lemma_7", f));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Poly g[1] for averkov_lemma_7", g[1]));
+    DEBUG(__FILE__, __LINE__, lprint(">> Poly f for averkov_lemma_7", f));
+    DEBUG(__FILE__, __LINE__, lprint(">> Poly g[1] for averkov_lemma_7", g[1]));
     H2 := averkov_lemma_7(x, f, basis, g[1], N_GUESS_AVKL);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with averkov_lemma_7"));
+    DEBUG(__FILE__, __LINE__, lprint(">> Done with averkov_lemma_7"));
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> H2", H2));
+    DEBUG(__FILE__, __LINE__, lprint(">> H2", H2));
     f2 := f - dot_product(basis, H2);
-    DEBUG(__FILE__, __LINE__, ENABLE_AVERKOV_CHECK, print(">> 2. Checking correctness of averkov_lemma_7", SemiAlgebraic([g[1] >= 0, f2 <= 0], [x])));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f2", f2));
+$ifdef ENABLE_AVERKOV_CHECK
+    lprint(">> 2. Checking correctness of averkov_lemma_7",
+           SemiAlgebraic([g[1] >= 0, f2 <= 0], [x]));
+$endif
+    DEBUG(__FILE__, __LINE__, lprint(">> f2", f2));
 
 $ifndef WEIFENG_OPTIMIZATION
     H3, eps_LS := lower_bound_poly(x, f2, g[1]);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with Lower_bound_poly"));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> H3", H3));
+    DEBUG(__FILE__, __LINE__, lprint(">> Done with Lower_bound_poly"));
+    DEBUG(__FILE__, __LINE__, lprint(">> H3", H3));
 $endif
 
 $ifdef WEIFENG_OPTIMIZATION
@@ -40,11 +43,11 @@ $ifdef WEIFENG_OPTIMIZATION
 $else
     f3 := f2 - g[1]*H3;
 $endif
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f3", f3));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g[1]", g[1]));
+    DEBUG(__FILE__, __LINE__, lprint(">> f3", f3));
+    DEBUG(__FILE__, __LINE__, lprint(">> g[1]", g[1]));
     H4 := averkov_extended_lemma(x, f3, g[1], N_GUESS_LS, eps_LS);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Done with Last_step"));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> H4", H4));
+    DEBUG(__FILE__, __LINE__, lprint(">> Done with Last_step"));
+    DEBUG(__FILE__, __LINE__, lprint(">> H4", H4));
 
     certificates := H2;
 $ifdef WEIFENG_OPTIMIZATION
@@ -61,8 +64,10 @@ $endif
     end if;
 
     certificates := [f - dot_product(basis, certificates), op(certificates)];
-    DEBUG(__FILE__, __LINE__, ENABLE_VERIFICATION, lprint(">> This should be zero", expand(f - dot_product([1, op(basis)], certificates))));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> Certificates found", op(certificates)));
+$ifdef ENABLE_VERIFICATION
+    lprint(">> This should be zero", expand(f - dot_product([1, op(basis)], certificates)));
+$endif
+    DEBUG(__FILE__, __LINE__, lprint(">> Certificates found", op(certificates)));
 $ifdef LOG_TIME
     END_LOG_TIME("spCertificates",0);
 $endif

@@ -10,11 +10,11 @@ $endif
 local degrees, fst_coeffs, snd_coeffs, h1, h2;
 local i, j;
     degrees := map(poly -> degree(poly, x), basis);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> degrees", degrees));
+    DEBUG(__FILE__, __LINE__, lprint(">> degrees", degrees));
 
     fst_coeffs := map[indices](
         i -> coeff(basis[i], x^degrees[i]), basis);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> fst_coeffs", fst_coeffs));
+    DEBUG(__FILE__, __LINE__, lprint(">> fst_coeffs", fst_coeffs));
 
     snd_coeffs := map[indices](
         i ->
@@ -23,7 +23,7 @@ local i, j;
         else
             coeff(basis[i]/abs(fst_coeffs[i]), x^(degrees[i] - 1))
         end if, basis);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> snd_coeffs", snd_coeffs));
+    DEBUG(__FILE__, __LINE__, lprint(">> snd_coeffs", snd_coeffs));
 
     for i from 1 to nops(basis) do
         if type(degrees[i], even) and fst_coeffs[i] < 0 then
@@ -58,8 +58,8 @@ $endif
 $ifdef LOG_TIME
             END_LOG_TIME("bound_poly",0)
 $endif
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h1", h1));
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h2", h2));
+            DEBUG(__FILE__, __LINE__, lprint(">> h1", h1));
+            DEBUG(__FILE__, __LINE__, lprint(">> h2", h2));
             return [expand(h1*basis[i] + h2*basis[j]), h1, h2, i, j];
         end do;
     end do;

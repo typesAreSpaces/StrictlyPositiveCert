@@ -1,6 +1,6 @@
 # Obtains argmin_{g \in basis}(g(sample_point))
 local min_g_at_point := proc(x, basis, sample_point)
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis", basis));
+    DEBUG(__FILE__, __LINE__, lprint(">> basis", basis));
 local g_min := basis[1];
 local g;
     for g in basis do
@@ -34,8 +34,8 @@ local sol;
 local interval;
 local _interval;
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> basis @ findEps", basis));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f @ findEps", f));
+    DEBUG(__FILE__, __LINE__, lprint(">> basis @ findEps", basis));
+    DEBUG(__FILE__, __LINE__, lprint(">> f @ findEps", f));
 
 local partition_roots := {};
 local num_roots := 0;
@@ -49,16 +49,16 @@ local num_roots := 0;
             end do;
         end do;
     end do;
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> partition_roots", evalf(partition_roots)));
+    DEBUG(__FILE__, __LINE__, lprint(">> partition_roots", evalf(partition_roots)));
     partition_roots := sort(convert(partition_roots, list));
 
     i := 1;
 local min_epsilon := infinity, curr_epsilon, curr_g;
 local S := SemiAlgebraic([-f>=0], [x]);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> S", S));
+    DEBUG(__FILE__, __LINE__, lprint(">> f", f));
+    DEBUG(__FILE__, __LINE__, lprint(">> S", S));
     for interval in map(_interval -> bound_info(x, _interval, 0), S) do
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> interval", evalf(interval)));
+        DEBUG(__FILE__, __LINE__, lprint(">> interval", evalf(interval)));
         while (i <= num_roots and evalf(partition_roots[i] <= interval[1])) do
             i := i + 1;
         end do;
@@ -68,8 +68,8 @@ local S := SemiAlgebraic([-f>=0], [x]);
         while (i <= num_roots and evalf(partition_roots[i] < interval[2])) do
             curr_g := min_g_at_point(x, basis, samplePoint(left_endpoint, partition_roots[i]));
             curr_epsilon := -maximize(curr_g, x = left_endpoint .. partition_roots[i]);
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_epsilon", evalf(curr_epsilon)));
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_g", curr_g));
+            DEBUG(__FILE__, __LINE__, lprint(">> curr_epsilon", evalf(curr_epsilon)));
+            DEBUG(__FILE__, __LINE__, lprint(">> curr_g", curr_g));
             if (evalf(min_epsilon > curr_epsilon)) then
                 min_epsilon := curr_epsilon;
             end if;
@@ -78,17 +78,17 @@ local S := SemiAlgebraic([-f>=0], [x]);
             i := i + 1;
         end do;
 
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> sample_point", samplePoint(left_endpoint, interval[2])));
+        DEBUG(__FILE__, __LINE__, lprint(">> sample_point", samplePoint(left_endpoint, interval[2])));
         curr_g := min_g_at_point(x, basis, samplePoint(left_endpoint, interval[2]));
         curr_epsilon := -maximize(curr_g, x = left_endpoint .. interval[2]);
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_epsilon", evalf(curr_epsilon)));
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> curr_g", curr_g));
+        DEBUG(__FILE__, __LINE__, lprint(">> curr_epsilon", evalf(curr_epsilon)));
+        DEBUG(__FILE__, __LINE__, lprint(">> curr_g", curr_g));
         if (evalf(min_epsilon > curr_epsilon)) then
             min_epsilon := curr_epsilon;
         end if;
     end do;
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> min_epsilon", evalf(min_epsilon)));
+    DEBUG(__FILE__, __LINE__, lprint(">> min_epsilon", evalf(min_epsilon)));
 
     return min_epsilon;
 end proc;

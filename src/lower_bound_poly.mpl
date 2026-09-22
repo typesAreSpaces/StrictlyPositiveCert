@@ -21,8 +21,8 @@ local eps := 1/100;
 # This variable is passed to Last_step
 local eps_LS := -1, curr_eps_LS := -1;
 
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f", f));
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> g", g));
+    DEBUG(__FILE__, __LINE__, lprint(">> f", f));
+    DEBUG(__FILE__, __LINE__, lprint(">> g", g));
 $ifdef LOG_TIME
     START_LOG_TIME("lower_bound_poly::expand(f)",1);
 $endif
@@ -35,7 +35,7 @@ $endif
 # If f has a lowerbound over \mathbb{R}
 # then make no changes to f
     if type(d_f, even) and evalb(evalf(c_f) > 0) then
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> f is bounded: "));
+        DEBUG(__FILE__, __LINE__, lprint(">> f is bounded: "));
 $ifdef LOG_TIME
         END_LOG_TIME("lower_bound_poly",0)
 $endif
@@ -44,7 +44,7 @@ $endif
 
     d_g := degree(expand(g), x); # quick_degree
     d_diff := d_f - d_g;
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> d_diff", d_diff));
+    DEBUG(__FILE__, __LINE__, lprint(">> d_diff", d_diff));
     if 0 < d_diff then
         if type(d_diff, even) then
             d_diff := d_diff + 2;
@@ -66,11 +66,11 @@ $endif
 
 # Loop to choose optimal _point
     for _point in _point_candidates do
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> _point", _point));
+        DEBUG(__FILE__, __LINE__, lprint(">> _point", _point));
 
 # TODO Compute h using 'more diverse' _points
         h := (x - _point)^d_diff;
-        DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> h", h));
+        DEBUG(__FILE__, __LINE__, lprint(">> h", h));
 
         c := find_constant_lower_bound_poly(f, h, g, x, eps);
 
@@ -83,19 +83,19 @@ $endif
         curr_eps_LS := 1/2*convert(curr_eps_LS, rational);
         if eps_LS < curr_eps_LS then
             eps_LS := curr_eps_LS;
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> evalf(_point)", evalf(_point)));
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> _point", _point));
-            DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> current eps_LS", evalf(eps_LS)));
+            DEBUG(__FILE__, __LINE__, lprint(">>> evalf(_point)", evalf(_point)));
+            DEBUG(__FILE__, __LINE__, lprint(">>> _point", _point));
+            DEBUG(__FILE__, __LINE__, lprint(">>> current eps_LS", evalf(eps_LS)));
         end if;
     end do;
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">>> Final eps_LS", evalf(eps_LS)));
+    DEBUG(__FILE__, __LINE__, lprint(">>> Final eps_LS", evalf(eps_LS)));
     return c*h, eps_LS;
 end proc;
 
 local find_constant_lower_bound_poly := proc(f, h, g, x, eps)
 local c, G := h*g;
 local opt_roots := Isolate(diff(f,x)*G - f*diff(G, x), maxprec=1000, digits=30);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> opt_roots", opt_roots));
+    DEBUG(__FILE__, __LINE__, lprint(">> opt_roots", opt_roots));
 
 # We just need a lowerbound, not the
 # tightest lowerbound [to discuss later]
@@ -116,7 +116,7 @@ local opt_roots := Isolate(diff(f,x)*G - f*diff(G, x), maxprec=1000, digits=30);
                      );
 
     c := convert(evalf(c), rational);
-    DEBUG(__FILE__, __LINE__, ENABLE_DEBUGGING, lprint(">> c as rational", c));
+    DEBUG(__FILE__, __LINE__, lprint(">> c as rational", c));
 
     return c;
 end proc;
