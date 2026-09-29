@@ -46,6 +46,7 @@ $ifndef WEIFENG_OPTIMIZATION
     H3, eps_LS := lower_bound_poly(x, f2, g[1]);
     DEBUG(__FILE__, __LINE__, lprint(">> Done with Lower_bound_poly"));
     DEBUG(__FILE__, __LINE__, lprint(">> H3", H3));
+    DEBUG(__FILE__, __LINE__, lprint(">> eps_LS", eps_LS));
 $endif
 
 $ifdef WEIFENG_OPTIMIZATION

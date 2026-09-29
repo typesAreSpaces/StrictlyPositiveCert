@@ -409,7 +409,7 @@ $endif
     else
         eps := eps_LS;
     end;
-    DEBUG(__FILE__, __LINE__, lprint(">> eps @ averkov_extended_lemma:", evalf(eps)));
+    DEBUG(__FILE__, __LINE__, lprint(">> eps @ averkov_extended_lemma:", eps));
 
     semialgebraic_eps_lifted := SemiAlgebraic(
         [g + EPS_FACTOR*eps >= 0], [x]);
@@ -427,6 +427,7 @@ $endif
     #
 
     DEBUG(__FILE__, __LINE__, lprint(">> Compute exponent N"));
+    # TODO Add missing branch of N to compute a max
     N := ceil(evalf((log(2*gamma) - log(mu))/(log(gamma + eps) - log(gamma))));
 
     DEBUG(__FILE__, __LINE__, lprint(">> N: ", N));
