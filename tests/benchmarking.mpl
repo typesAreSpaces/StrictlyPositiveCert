@@ -288,7 +288,7 @@ printf("\n>> Start Benchmarks\n");
 
 ## 7.1.1  Certificates of strictly positive polynomials
 #certificates_of_strictly_positive_polynomials_benchmark();
-#runExternalBenchmark("./benchmarks/left.mpl");
+runExternalBenchmark("./benchmarks/left.mpl");
 #runExternalBenchmark("./benchmarks/right.mpl");
 #runExternalBenchmark("./benchmarks/lifted.mpl");
 runExternalBenchmark("./benchmarks/arch.mpl");
