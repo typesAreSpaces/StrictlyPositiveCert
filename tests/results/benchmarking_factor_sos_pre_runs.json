@@ -1,0 +1,2812 @@
+{
+  "flags": [
+    "-DENABLE_BINARY_SEARCH_AVKL",
+    "-DENABLE_DEBUGGING",
+    "-DEPS_FACTOR=17/20",
+    "-DN_GUESS_AVKL=70",
+    "-DN_GUESS_LS=600"
+  ],
+  "repetitions": 7,
+  "runs": [
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.075,
+      "degree": 4
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.167,
+      "degree": 2
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.038,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.038,
+      "degree": 2
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.016,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.027,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.042,
+      "degree": 2
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.022,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.039,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.028,
+      "degree": 2
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.031,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.051,
+      "degree": 4
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.043,
+      "degree": 2
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.405,
+      "degree": 1386
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.09,
+      "degree": 4
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.158,
+      "degree": 2
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.031,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.014,
+      "degree": 4
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.033,
+      "degree": 2
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.016,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.037,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.042,
+      "degree": 2
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.042,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.034,
+      "degree": 2
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.049,
+      "degree": 6
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.028,
+      "degree": 2
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 1,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.417,
+      "degree": 1386
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.076,
+      "degree": 4
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.144,
+      "degree": 2
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.024,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.048,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.033,
+      "degree": 2
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.012,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.042,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 4
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.031,
+      "degree": 2
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.013,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.037,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 4
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.035,
+      "degree": 2
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.053,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.028,
+      "degree": 2
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.417,
+      "degree": 1386
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.064,
+      "degree": 4
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.102,
+      "degree": 2
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.018,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.033,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.029,
+      "degree": 2
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.026,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.027,
+      "degree": 2
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.011,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.032,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.013,
+      "degree": 4
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.031,
+      "degree": 2
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.011,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.033,
+      "degree": 6
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.042,
+      "degree": 4
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.047,
+      "degree": 2
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 2,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.383,
+      "degree": 1386
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.064,
+      "degree": 4
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.129,
+      "degree": 2
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.039,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.007,
+      "degree": 4
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.028,
+      "degree": 2
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.033,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.034,
+      "degree": 2
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.037,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.011,
+      "degree": 4
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.031,
+      "degree": 2
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.011,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.034,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.052,
+      "degree": 4
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.035,
+      "degree": 2
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.344,
+      "degree": 1386
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.07,
+      "degree": 4
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.114,
+      "degree": 2
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.007,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.053,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 4
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.026,
+      "degree": 2
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.042,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.03,
+      "degree": 2
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.04,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.011,
+      "degree": 4
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.039,
+      "degree": 2
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.071,
+      "degree": 6
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 4
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.02,
+      "degree": 2
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 3,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.387,
+      "degree": 1386
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.06,
+      "degree": 4
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.127,
+      "degree": 2
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.042,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.017,
+      "degree": 4
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.029,
+      "degree": 2
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.029,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.026,
+      "degree": 2
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.013,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.049,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.036,
+      "degree": 2
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.042,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.017,
+      "degree": 4
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.031,
+      "degree": 2
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.413,
+      "degree": 1386
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.068,
+      "degree": 4
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.112,
+      "degree": 2
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.007,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.037,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.028,
+      "degree": 2
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.017,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.03,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.007,
+      "degree": 4
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.031,
+      "degree": 2
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.035,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.011,
+      "degree": 4
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.033,
+      "degree": 2
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.029,
+      "degree": 6
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.033,
+      "degree": 4
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.046,
+      "degree": 2
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 4,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.356,
+      "degree": 1386
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.073,
+      "degree": 4
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.092,
+      "degree": 2
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.013,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.039,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.027,
+      "degree": 2
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.035,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.034,
+      "degree": 2
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.036,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 4
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.026,
+      "degree": 2
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.017,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.03,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.042,
+      "degree": 4
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.041,
+      "degree": 2
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.389,
+      "degree": 1386
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.068,
+      "degree": 4
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.133,
+      "degree": 2
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.043,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.007,
+      "degree": 4
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.03,
+      "degree": 2
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.011,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.038,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.027,
+      "degree": 2
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.035,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.023,
+      "degree": 2
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.024,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.048,
+      "degree": 6
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.034,
+      "degree": 2
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 5,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.403,
+      "degree": 1386
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.059,
+      "degree": 4
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.126,
+      "degree": 2
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.016,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.029,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.03,
+      "degree": 2
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.011,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.039,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.024,
+      "degree": 2
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.012,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.041,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.011,
+      "degree": 4
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.018,
+      "degree": 2
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.02,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.084,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 4
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.031,
+      "degree": 2
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.361,
+      "degree": 1386
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.073,
+      "degree": 4
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.125,
+      "degree": 2
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.018,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.035,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.028,
+      "degree": 2
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.033,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.028,
+      "degree": 2
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.013,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.043,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.007,
+      "degree": 4
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.032,
+      "degree": 2
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.026,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.03,
+      "degree": 6
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.049,
+      "degree": 4
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.033,
+      "degree": 2
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 6,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.334,
+      "degree": 1386
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.073,
+      "degree": 4
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.129,
+      "degree": 2
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.035,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.031,
+      "degree": 2
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.019,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.042,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.007,
+      "degree": 4
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.041,
+      "degree": 2
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.035,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.03,
+      "degree": 2
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.036,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.051,
+      "degree": 4
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.038,
+      "degree": 2
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": false,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.371,
+      "degree": 1386
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.079,
+      "degree": 4
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.115,
+      "degree": 2
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "10",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.054,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 4
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.036,
+      "degree": 2
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.008,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "5",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.036,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.016,
+      "degree": 4
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.029,
+      "degree": 2
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.01,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.028,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.022,
+      "degree": 4
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.036,
+      "degree": 2
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.019,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/2",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.079,
+      "degree": 6
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.009,
+      "degree": 4
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 1,
+      "status": "success",
+      "cpu_seconds": 0.026,
+      "degree": 2
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "RealCertify",
+      "d": "1/3",
+      "k": 3,
+      "status": "no_certificate",
+      "cpu_seconds": null,
+      "degree": null
+    },
+    {
+      "repeat": 7,
+      "factor_sos_pre": true,
+      "method": "StrictlyPositiveCert",
+      "d": "1/3",
+      "k": 3,
+      "status": "success",
+      "cpu_seconds": 0.372,
+      "degree": 1386
+    }
+  ]
+}
