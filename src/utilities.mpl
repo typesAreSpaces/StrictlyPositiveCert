@@ -41,16 +41,12 @@ $endif
             return false;
         end if;
 
-        if j > nops(local_poly) then
-            break;
-        end if;
-        curr_point := (local_poly[j,1]+local_poly[j,2])/2;
-        while j <= nops(local_poly) and evalf(interval[1] > curr_point) do
-            curr_point := (local_poly[j,1]+local_poly[j,2])/2;
+        while j <= nops(local_poly) and
+              evalf(interval[1] > (local_poly[j,1]+local_poly[j,2])/2) do
             j := j + 1;
         end do;
-        DEBUG(__FILE__, __LINE__, lprint(">> curr_point", curr_point));
-        while j <= nops(local_poly) and evalf(curr_point <= interval[2]) do
+        while j <= nops(local_poly) and
+              evalf((local_poly[j,1]+local_poly[j,2])/2 <= interval[2]) do
             curr_point := (local_poly[j,1]+local_poly[j,2])/2;
             DEBUG(__FILE__, __LINE__, lprint(">> Show evalf", evalf(subs(x=curr_point, poly)) ));
             if evalf(subs(x=curr_point, poly) <= 0) then
@@ -169,26 +165,34 @@ $endif
     return 0;
 end proc;
 
-# TODO
-# The name is misleading
-# This checks if `poly' is
-# strictly positive
-# It's given an it's non-negative
+# Despite its name, this predicate checks strict positivity (no real zeros).
+# Positive factors cannot remove real roots, so test poly directly
+# and reject negative constants/definite polynomials with one evaluation.
 isSOS := proc(poly, x)
-    return evalb(Isolate(poly, x) = []);
+    return evalb(subs(x=0, poly) > 0) and evalb(Isolate(poly, x) = []);
+end proc;
+
+# Try poly = q*g + r with q and r nonnegative over R (hence SOS).
+local divisionCertificate := proc(poly, g, x)
+local q := quo(poly, g, x);
+local r := rem(poly, g, x);
+    if SemiAlgebraic([q < 0], [x]) = [] and
+       SemiAlgebraic([r < 0], [x]) = [] then
+        return true, q, r;
+    end if;
+    return false, 0, poly;
 end proc;
 
 quickCertificates := proc(f, basis, x)
 local certificates := map(gen -> 0, basis);
-local q, r, i;
+local found, q, r, i;
   for i from 1 to nops(basis) do
-    q := quo(basis[i], f, x);
-    r := rem(basis[i], f, x);
-    if isSOS(q, x) and isSOS(r, x) then
+    found, q, r := divisionCertificate(f, basis[i], x);
+    if found then
       certificates[i] := q;
       return true, [r, op(certificates)];
     end if;
-  end do; 
+  end do;
   return false, [];
 end proc;
 
@@ -199,9 +203,9 @@ SplitNonnegativeFactor := proc(poly, x)
 local L, item, factor_poly, multiplicity, factor_sign;
 local fnonneg := 1;
 local fpos2;
-    #if degree(poly, x) <= 0 then
-        #return 1, poly;
-    #end if;
+    if degree(poly, x) <= 0 then
+        return 1, poly;
+    end if;
     L := factors(poly);
     fpos2 := L[1];
     for item in L[2] do
