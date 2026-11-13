@@ -24,6 +24,7 @@ export quickCertificates;
 export dot_product;
 export bound_info;
 export spCertificates;
+export SplitNonnegativeFactor;
 
 $ifdef LOG_TIME
 local stack_level := -1;

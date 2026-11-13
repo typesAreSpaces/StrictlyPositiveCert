@@ -191,3 +191,28 @@ local q, r, i;
   end do; 
   return false, [];
 end proc;
+
+# Split poly = fnonneg*fpos2 over the coefficient field. Factors without
+# real roots have constant sign; normalize them to be strictly positive.
+# Factors with real roots stay in fpos2, preserving rational coefficients.
+SplitNonnegativeFactor := proc(poly, x)
+local L, item, factor_poly, multiplicity, factor_sign;
+local fnonneg := 1;
+local fpos2;
+    #if degree(poly, x) <= 0 then
+        #return 1, poly;
+    #end if;
+    L := factors(poly);
+    fpos2 := L[1];
+    for item in L[2] do
+        factor_poly, multiplicity := op(item);
+        if sturm(factor_poly, x, -infinity, infinity) = 0 then
+            factor_sign := sign(lcoeff(factor_poly, x));
+            fnonneg := fnonneg*(factor_sign*factor_poly)^multiplicity;
+            fpos2 := fpos2*factor_sign^multiplicity;
+        else
+            fpos2 := fpos2*factor_poly^multiplicity;
+        end if;
+    end do;
+    return fnonneg, fpos2;
+end proc;
