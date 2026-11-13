@@ -16,6 +16,19 @@ adding the following two lines at the beginning of your maple file:
     libname := libname, "<PATH-TO-STRICTLYPOSITIVECERT>/StrictlyPositiveCert.mla":
     with(StrictlyPositiveCert):
 
+Optional heuristics are enabled by uncommenting their line in the `Makefile`
+and rebuilding with `make -B`. (Passing `FLAGS=...` on the command line
+replaces the Makefile's default flags.)
+
+- `FACTOR_SOS_PRE` removes strictly positive factors from the input and from
+  each intermediate remainder in `spCertificates`. The implementation tracks
+  cumulative factors and restores them in every certificate coefficient,
+  including the final SOS remainder. Factors with real roots are retained.
+- `ENABLE_STAGE_DIVISION` tries `f = q*g + r`, with `g` the bound polynomial
+  and `q`, `r` SOS, before `lower_bound_poly` and before the final Averkov
+  step. When it succeeds, the corresponding high-degree construction is
+  skipped.
+
 ## Usage and examples
 
 The command `spCertificate` has the following inputs:
