@@ -19,8 +19,11 @@ FLAGS=-D LOG_TIME
 .PHONY: all clean impl
 
 all: impl
+	
+library:
+	$(MAKE) -C ..
 
-impl:
+impl: library
 	maple ${FILE} ${QUIET_MODE} ${HEURISTICS} ${FLAGS} > ${OUTPUT_FILE}
 
 clean:
