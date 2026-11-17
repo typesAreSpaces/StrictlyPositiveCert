@@ -12,7 +12,7 @@ local d_f, c_f;
 local d_g, d_diff;
 local A, disc, roots_disc;
 local h, _point, _point_candidates;
-local c;
+local c, best_poly;
 # The following is used in the
 # minimization problem to find
 # c in order to avoid the boundary
@@ -83,13 +83,14 @@ $endif
         curr_eps_LS := 1/2*convert(curr_eps_LS, rational);
         if eps_LS < curr_eps_LS then
             eps_LS := curr_eps_LS;
+            best_poly := c*h;
             DEBUG(__FILE__, __LINE__, lprint(">>> evalf(_point)", evalf(_point)));
             DEBUG(__FILE__, __LINE__, lprint(">>> _point", _point));
             DEBUG(__FILE__, __LINE__, lprint(">>> current eps_LS", evalf(eps_LS)));
         end if;
     end do;
     DEBUG(__FILE__, __LINE__, lprint(">>> Final eps_LS", evalf(eps_LS)));
-    return c*h, eps_LS;
+    return best_poly, eps_LS;
 end proc;
 
 local find_constant_lower_bound_poly := proc(f, h, g, x, eps)
