@@ -356,6 +356,7 @@ local averkov_extended_lemma := proc(x, f, g, N_guess, eps_LS)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("averkov_extended_lemma",0)
 $endif
+local M;
 local pos_coeff := 1;
 local R := PolynomialRing([x]);
 local averkov_poly;
@@ -390,6 +391,10 @@ $endif
         return pos_coeff;
     end if;
 $endif
+
+    # This is positive as f is negative
+    # at some point
+    M := -minimize(f);
 
     #
     # Compute gamma
@@ -430,8 +435,8 @@ $endif
     #
 
     DEBUG(__FILE__, __LINE__, lprint(">> Compute exponent N"));
-    # TODO Add missing branch of N to compute a max
     N := ceil(evalf((log(2*gamma) - log(mu))/(log(gamma + eps) - log(gamma))));
+    N := max(N, ceil(evalf((log(M + mu) - log(2*eps))/(log(gamma + 2*eps) - log(gamma + eps)))));
 
     DEBUG(__FILE__, __LINE__, lprint(">> N: ", N));
     DEBUG(__FILE__, __LINE__, lprint(">> N_guess: ", N_guess));

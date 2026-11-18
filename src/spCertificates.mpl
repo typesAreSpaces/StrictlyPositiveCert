@@ -51,7 +51,7 @@ $endif
     H4 := averkov_extended_lemma(x, f3, g[1], N_GUESS_LS, eps_LS);
     DEBUG(__FILE__, __LINE__, lprint(">> f3", f3));
     DEBUG(__FILE__, __LINE__, lprint(">> g[1]", g[1]));
-    DEBUG(__FILE__, __LINE__, lprint(">> Done with Last_step"));
+    DEBUG(__FILE__, __LINE__, lprint(">> Done with averkov_extended_lemma"));
     DEBUG(__FILE__, __LINE__, lprint(">> H4", H4));
 
     certificates := H2;
