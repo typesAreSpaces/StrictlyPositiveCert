@@ -1,4 +1,6 @@
 dir := FileTools:-JoinPath([currentdir(), "StrictlyPositiveCert.mla"]);
-march('create', dir);
+if not FileTools:-Exists(dir) then
+    march('create', dir);
+end if;
 $include "src/StrictlyPositiveCert.mpl";
 savelib('StrictlyPositiveCert', dir);

@@ -1,18 +1,19 @@
-spCertificates := proc(f, basis, x)
+spCertificates := proc(f, basis, x,
+    {max_k::nonnegint := 100, max_bisection::nonnegint := 200})
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("spCertificates",0)
 $endif
     if SemiAlgebraic([f < 0], [x]) = [] then
         return [f, op(map(0, basis))];
     end if;
-local g, H2, f2, H3, f3, H4, certificates, eps_LS;
+local g, H2, f2, monogenic, certificates;
 local i;
 local quickcheck, quickcertificates;
     certificates := map(gen -> 0, basis);
 
     for i from 1 to nops(basis) do
-        if basis[i] = -1 then
-            certificates[i] := ((f - 1)/2)^2;
+        if type(basis[i], rational) and basis[i] < 0 then
+            certificates[i] := ((f - 1)/2)^2/(-basis[i]);
             return [((f + 1)/2)^2, op(certificates)];
         end if;
     end do;
@@ -42,22 +43,15 @@ $ifdef ENABLE_AVERKOV_CHECK
 $endif
     DEBUG(__FILE__, __LINE__, lprint(">> f2", f2));
 
-    H3, eps_LS := lower_bound_poly(x, f2, g[1]);
-    DEBUG(__FILE__, __LINE__, lprint(">> Done with Lower_bound_poly"));
-    DEBUG(__FILE__, __LINE__, lprint(">> H3", H3));
-    DEBUG(__FILE__, __LINE__, lprint(">> eps_LS", eps_LS));
-
-    f3 := f2 - g[1]*H3;
-    H4 := averkov_extended_lemma(x, f3, g[1], N_GUESS_LS, eps_LS);
-    DEBUG(__FILE__, __LINE__, lprint(">> f3", f3));
-    DEBUG(__FILE__, __LINE__, lprint(">> g[1]", g[1]));
-    DEBUG(__FILE__, __LINE__, lprint(">> Done with averkov_extended_lemma"));
-    DEBUG(__FILE__, __LINE__, lprint(">> H4", H4));
+    # Global keyword names avoid substitution of the caller's parameter values.
+    monogenic := monogenicCertificates(f2, g[1], x,
+        ':-max_k'=max_k, ':-max_bisection'=max_bisection);
+    DEBUG(__FILE__, __LINE__, lprint(">> Done with monogenicCertificates"));
 
     certificates := H2;
-    certificates[g[4]] := certificates[g[4]] + (H3+H4)*g[2];
+    certificates[g[4]] := certificates[g[4]] + monogenic[2]*g[2];
     if g[3] <> 0 then
-        certificates[g[5]] := certificates[g[5]] + (H3+H4)*g[3];
+        certificates[g[5]] := certificates[g[5]] + monogenic[2]*g[3];
     end if;
 
     certificates := [f - dot_product(basis, certificates), op(certificates)];

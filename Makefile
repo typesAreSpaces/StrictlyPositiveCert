@@ -3,10 +3,7 @@ PROJECT_NAME=StrictlyPositiveCert
 # OPTIONS:
 #FLAGS+=-DENABLE_VERIFICATION
 #FLAGS+=-DENABLE_BINARY_SEARCH_AVKL
-#FLAGS+=-DENABLE_BINARY_SEARCH_LS
-#FLAGS+=-DENABLE_N_HEURISTIC
 #FLAGS+=-DENABLE_AVERKOV_CHECK
-#FLAGS+=-DENABLE_POST_OPT
 #FLAGS+=-DENABLE_QUICK_CERT
 #FLAGS+=-DFACTOR_SOS_PRE
 #FLAGS+=-DLOG_TIME
@@ -15,7 +12,6 @@ PROJECT_NAME=StrictlyPositiveCert
 
 #VALUES+=-DEPS_FACTOR=<rational>
 #VALUES+=-DN_GUESS_AVKL=<integer>
-#VALUES+=-DN_GUESS_LS=<integer>
 
 FLAGS=
 DEBUG_MODE=
@@ -24,15 +20,18 @@ VALUES=
 FLAGS+=-DENABLE_BINARY_SEARCH_AVKL
 VALUES+=-DEPS_FACTOR=17/20
 VALUES+=-DN_GUESS_AVKL=70
-VALUES+=-DN_GUESS_LS=600
 DEBUG_MODE+=-DENABLE_DEBUGGING
 
-.PHONY: clean
+.PHONY: clean test
 
 all: ${PROJECT_NAME}.mla
 
-${PROJECT_NAME}.mla: src/${PROJECT_NAME}.mpl
-	maple ${FLAGS} ${DEBUG_MODE} ${VALUES} ./scripts/installation_script.mpl
+${PROJECT_NAME}.mla: $(wildcard src/*.mpl) scripts/installation_script.mpl
+	maple -q ${FLAGS} ${DEBUG_MODE} ${VALUES} ./scripts/installation_script.mpl
 
 clean:
 	rm -rf ${PROJECT_NAME}.mla
+
+# Maple can exit successfully after reporting an error; the runner checks output too.
+test:
+	python3 tests/run_regressions.py ${FLAGS} ${VALUES}

@@ -24,6 +24,7 @@ export quickCertificates;
 export dot_product;
 export bound_info;
 export spCertificates;
+export monogenicCertificates;
 export SplitNonnegativeFactor;
 
 $ifdef LOG_TIME
@@ -36,6 +37,7 @@ $include "src/bound_poly.mpl";
 $include "src/lower_bound_poly.mpl";
 $include "src/eps_computation.mpl";
 $include "src/averkov_constructions.mpl";
+$include "src/monogenic_certificates.mpl";
 $include "src/spCertificates.mpl";
 
 end module;
