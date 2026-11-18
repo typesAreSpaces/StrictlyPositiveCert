@@ -13,6 +13,7 @@ FILE=comparison_benchmark.mpl
 FILE=examples.mpl
 
 FILE=benchmarking.mpl
+FILE=examples.mpl
 QUIET_MODE=
 HEURISTICS=-D USE_BOUNDS
 FLAGS=-D LOG_TIME
