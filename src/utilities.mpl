@@ -169,12 +169,12 @@ $endif
     return 0;
 end proc;
 
-# TODO
-# The name is misleading
-# This checks if `poly' is
-# strictly positive
-# It's given an it's non-negative
+# Despite its name, this checks strict positivity, not general SOS membership.
+# A real polynomial without real roots has constant sign, so test x = 0 first.
 isSOS := proc(poly, x)
+    if not evalb(subs(x = 0, poly) > 0) then
+        return false;
+    end if;
     return evalb(Isolate(poly, x) = []);
 end proc;
 
@@ -182,8 +182,12 @@ quickCertificates := proc(f, basis, x)
 local certificates := map(gen -> 0, basis);
 local q, r, i;
   for i from 1 to nops(basis) do
-    q := quo(basis[i], f, x);
-    r := rem(basis[i], f, x);
+    if basis[i] = 0 then
+      next;
+    end if;
+    # f = q*basis[i] + r gives the certificate multipliers directly.
+    q := quo(f, basis[i], x);
+    r := rem(f, basis[i], x);
     if isSOS(q, x) and isSOS(r, x) then
       certificates[i] := q;
       return true, [r, op(certificates)];

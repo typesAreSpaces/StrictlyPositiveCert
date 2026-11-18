@@ -13,11 +13,6 @@ local d_g, d_diff;
 local A, disc, roots_disc;
 local h, _point, _point_candidates;
 local c, best_poly;
-# The following is used in the
-# minimization problem to find
-# c in order to avoid the boundary
-# points
-local eps := 1/100;
 # This variable is passed to Last_step
 local eps_LS := -1, curr_eps_LS := -1;
 
@@ -52,7 +47,7 @@ $endif
             d_diff := d_diff + 1;
         end if;
     else
-        c := find_constant_lower_bound_poly(f, 1, g, x, eps);
+        c := find_constant_lower_bound_poly(f, 1, g, x);
         return c, eps_LS;
     end if;
 
@@ -72,14 +67,10 @@ $endif
         h := (x - _point)^d_diff;
         DEBUG(__FILE__, __LINE__, lprint(">> h", h));
 
-        c := find_constant_lower_bound_poly(f, h, g, x, eps);
+        c := find_constant_lower_bound_poly(f, h, g, x);
 
 # We want is maximize eps_LS
-$ifdef WEIFENG_OPTIMIZATION
-        curr_eps_LS := evalf(findEps(x, [g], f));
-$else
         curr_eps_LS := evalf(findEps(x, [g], f - c*h*g));
-$endif
         curr_eps_LS := 1/2*convert(curr_eps_LS, rational);
         if eps_LS < curr_eps_LS then
             eps_LS := curr_eps_LS;
@@ -93,7 +84,7 @@ $endif
     return best_poly, eps_LS;
 end proc;
 
-local find_constant_lower_bound_poly := proc(f, h, g, x, eps)
+local find_constant_lower_bound_poly := proc(f, h, g, x)
 local c, G := h*g;
 local opt_roots := Isolate(diff(f,x)*G - f*diff(G, x), maxprec=1000, digits=30);
     DEBUG(__FILE__, __LINE__, lprint(">> opt_roots", opt_roots));
@@ -105,10 +96,9 @@ local opt_roots := Isolate(diff(f,x)*G - f*diff(G, x), maxprec=1000, digits=30);
 #c := 9/10*min(map(x_arg -> subs(x_arg, f/G), select(_root-> evalf(subs(_root, g)) > 0, opt_roots)));
     c := 999/1000*min(
         map(x_arg ->
-            if (evalf(subs(x_arg, G)) < eps) then
-                # If we are minimizing over
-                # an isolated point of S(g), any value of
-                # C satisfy the minimization condition
+            if evalb(subs(x_arg, G) = 0) then
+                # At a zero of G, subtracting c*G does not change f.
+                # Small positive values must still contribute f/G.
                 1
             else
                 subs(x_arg, f/G)

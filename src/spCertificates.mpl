@@ -42,36 +42,22 @@ $ifdef ENABLE_AVERKOV_CHECK
 $endif
     DEBUG(__FILE__, __LINE__, lprint(">> f2", f2));
 
-$ifndef WEIFENG_OPTIMIZATION
     H3, eps_LS := lower_bound_poly(x, f2, g[1]);
     DEBUG(__FILE__, __LINE__, lprint(">> Done with Lower_bound_poly"));
     DEBUG(__FILE__, __LINE__, lprint(">> H3", H3));
     DEBUG(__FILE__, __LINE__, lprint(">> eps_LS", eps_LS));
-$endif
 
-$ifdef WEIFENG_OPTIMIZATION
-    f3 := f2;
-$else
     f3 := f2 - g[1]*H3;
-$endif
+    H4 := averkov_extended_lemma(x, f3, g[1], N_GUESS_LS, eps_LS);
     DEBUG(__FILE__, __LINE__, lprint(">> f3", f3));
     DEBUG(__FILE__, __LINE__, lprint(">> g[1]", g[1]));
-    H4 := averkov_extended_lemma(x, f3, g[1], N_GUESS_LS, eps_LS);
     DEBUG(__FILE__, __LINE__, lprint(">> Done with Last_step"));
     DEBUG(__FILE__, __LINE__, lprint(">> H4", H4));
 
     certificates := H2;
-$ifdef WEIFENG_OPTIMIZATION
-    certificates[g[4]] := certificates[g[4]] + H4*g[2];
-$else
     certificates[g[4]] := certificates[g[4]] + (H3+H4)*g[2];
-$endif
     if g[3] <> 0 then
-$ifdef WEIFENG_OPTIMIZATION
-        certificates[g[5]] := certificates[g[5]] + H4*g[3];
-$else
         certificates[g[5]] := certificates[g[5]] + (H3+H4)*g[3];
-$endif
     end if;
 
     certificates := [f - dot_product(basis, certificates), op(certificates)];

@@ -422,6 +422,9 @@ $endif
     mu := convert(evalf(mu), rational);
     DEBUG(__FILE__, __LINE__, lprint(">> mu @ averkov_extended_lemma:", evalf(mu)));
 
+    # To make sure N below is positive
+    gamma := max(gamma, mu);
+
     #
     # Find exponent N
     #
