@@ -32,25 +32,24 @@ local i, j;
 local l := nops(basis);
 local sol;
 local interval;
-local _interval;
 
     DEBUG(__FILE__, __LINE__, lprint(">> basis @ findEps", basis));
     DEBUG(__FILE__, __LINE__, lprint(">> f @ findEps", f));
 
 local partition_roots := {};
-local num_roots := 0;
+local num_roots;
     for i from 1 to l-1 do
         for j from i+1 to l do
             for sol in map(_interval -> _interval[1], realroot(basis[i] - basis[j], 1/10000)) do
                 if evalf(subs(x=sol, basis[i])<0) then
                     partition_roots := partition_roots union {sol};
-                    num_roots := num_roots + 1;
                 end if;
             end do;
         end do;
     end do;
     DEBUG(__FILE__, __LINE__, lprint(">> partition_roots", evalf(partition_roots)));
     partition_roots := sort(convert(partition_roots, list));
+    num_roots := nops(partition_roots);
 
     i := 1;
 local min_epsilon := infinity, curr_epsilon, curr_g;

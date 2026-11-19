@@ -10,12 +10,12 @@ local gamma, interval, lowerbound, upperbound;
 local eps;
 local N, g, term;
 local semialgebraic_of_B;
-local R := PolynomialRing([x]);
 local M, mu, m;
 # DEBUG This is only to work out one particular example
 local pos_coeff;
-local _error := 1/1000;
+$ifdef ENABLE_DEBUGGING
 local T;
+$endif
 local semialgebraic_for_mu;
 local _exp1, _exp2, _exp3;
 local pos_coeff1, pos_coeff2, N1, N2;
@@ -104,8 +104,10 @@ $endif
 $ifdef LOG_TIME
     START_LOG_TIME("averkov_lemma_7::compute_eps",3);
 $endif
+$ifdef ENABLE_DEBUGGING
     T := SemiAlgebraic([B_poly >= 0, f < 0], [x]);
     DEBUG(__FILE__, __LINE__, lprint(">> T", evalf(T)));
+$endif
 
     eps := 1/2*convert(evalf(findEps(x, basis, f)), rational);
     DEBUG(__FILE__, __LINE__, lprint(">> eps", evalf(eps)));
@@ -321,7 +323,7 @@ $ifdef ENABLE_BINARY_SEARCH_AVKL
         end if;
     end do;
 
-    if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([B_poly >= 0, f <= 0], R) then
+    if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([B_poly >= 0, f <= 0], PolynomialRing([x])) then
         N := -1;
     else
         N := N_top;
@@ -358,7 +360,6 @@ $ifdef LOG_TIME
 $endif
 local M;
 local pos_coeff := 1;
-local R := PolynomialRing([x]);
 local averkov_poly;
 local semialgebraic_eps_lifted;
 local gamma, eps, mu, N;
@@ -485,7 +486,7 @@ $ifdef ENABLE_BINARY_SEARCH_LS
         end if;
     end do;
 
-    if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([f <= 0], R) then
+    if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([f <= 0], PolynomialRing([x])) then
         N := -1;
     else
         N := N_top;

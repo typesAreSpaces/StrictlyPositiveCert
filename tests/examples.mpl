@@ -572,5 +572,5 @@ printf("\n>> Start Examples\n");
 
 #checkWeifeng(x+5, [-(x + 4)*(x + 3)*(x + 2)*(x + 1)*(x - 1)*(x - 2)*(x - 3)*(x - 4)], x, "??");
 
-f := 1+(1-x^2)*(x/2)^20+x^24/2^50;
-spCertificates(f, [1-x^2], x);
+#f := 1+(1-x^2)*(x/2)^20+x^24/2^50;
+#spCertificates(f, [1-x^2], x);

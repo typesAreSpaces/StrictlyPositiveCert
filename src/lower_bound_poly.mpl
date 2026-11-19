@@ -14,7 +14,7 @@ local A, disc, roots_disc;
 local h, _point, _point_candidates;
 local c, best_poly;
 # This variable is passed to Last_step
-local eps_LS := -1, curr_eps_LS := -1;
+local eps_LS := -1, curr_eps_LS;
 
     DEBUG(__FILE__, __LINE__, lprint(">> f", f));
     DEBUG(__FILE__, __LINE__, lprint(">> g", g));

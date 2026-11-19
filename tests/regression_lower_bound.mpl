@@ -43,6 +43,11 @@ local x, scales, f, g, h, eps_LS, residual, certificates, multiplier;
             error "certificate multiplier is not nonnegative";
         end if;
     end do;
-    printf("PASS: three scaling cases, zero-G case, and public certificate regression\n");
+    # Shared negative intersection roots must be counted after deduplication.
+    # On {f <= 0} = (-infinity, 3/4], max(min(basis)) = -1/4.
+    if StrictlyPositiveCert:-findEps(x,[x-1,2*x-1,3*x-1,4-x^2],x-3/4) <> 1/4 then
+        error "epsilon computation failed for coincident generator intersections";
+    end if;
+    printf("PASS: scaling, zero-G, public certificates, and duplicate-intersection epsilon\n");
 end proc:
 check_lower_bound():

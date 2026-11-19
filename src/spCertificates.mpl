@@ -9,10 +9,9 @@ $endif
 local g, H2, f2, monogenic, certificates;
 local i;
 local quickcheck, quickcertificates;
-    certificates := map(gen -> 0, basis);
-
     for i from 1 to nops(basis) do
         if type(basis[i], rational) and basis[i] < 0 then
+            certificates := map(gen -> 0, basis);
             certificates[i] := ((f - 1)/2)^2/(-basis[i]);
             return [((f + 1)/2)^2, op(certificates)];
         end if;
@@ -54,7 +53,7 @@ $endif
         certificates[g[5]] := certificates[g[5]] + monogenic[2]*g[3];
     end if;
 
-    certificates := [f - dot_product(basis, certificates), op(certificates)];
+    certificates := [monogenic[1], op(certificates)];
 $ifdef ENABLE_VERIFICATION
     lprint(">> This should be zero", expand(f - dot_product([1, op(basis)], certificates)));
 $endif
