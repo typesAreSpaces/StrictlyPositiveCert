@@ -11,7 +11,6 @@ local eps;
 local N, g, term;
 local semialgebraic_of_B;
 local M, mu, m;
-# DEBUG This is only to work out one particular example
 local pos_coeff;
 $ifdef ENABLE_DEBUGGING
 local T;
@@ -19,8 +18,9 @@ $endif
 local semialgebraic_for_mu;
 local _exp1, _exp2, _exp3;
 local pos_coeff1, pos_coeff2, N1, N2;
-local N_top, N_bot, N_cur;
-local init_sos := false, predicate_bin_search;
+$ifdef ENABLE_BINARY_SEARCH_AVKL
+local N_top, N_bot, N_cur, init_sos, predicate_bin_search;
+$endif
     DEBUG(__FILE__, __LINE__, lprint(">> Start @averkov_lemma_7"));
     DEBUG(__FILE__, __LINE__, lprint(">> f", f));
     DEBUG(__FILE__, __LINE__, lprint(">> basis", basis));
@@ -52,9 +52,7 @@ $endif
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::Minimization_f",1);
 $endif
-    # DEBUG if problems
     DEBUG(__FILE__, __LINE__, lprint(">> M", evalf(M)));
-    # M := convert(evalf(M), rational);
     if evalf(M < 0) then
         DEBUG(__FILE__, __LINE__, lprint(">> Done because f is strictly positive over SemiAlgebraic(B_poly)"));
 $ifdef LOG_TIME
@@ -63,8 +61,7 @@ $endif
         return map(g_i -> 0, basis);
     end if;
 
-    # The following is needed because in the `optimization step' (Find N) staring on
-    # line 662 breaks otherwise
+    # Keep the logarithms in the exponent heuristic defined.
     M := max(M, 1);
 
     m := numelems(basis);
@@ -136,7 +133,6 @@ $endif
             semialgebraic_for_mu)
              );
 
-    # DEBUG if problems
     mu := convert(evalf(mu), rational);
     DEBUG(__FILE__, __LINE__, lprint(">> mu", mu));
 $ifdef LOG_TIME
@@ -267,7 +263,6 @@ $endif
 
     if (N > N_guess) then
         g := AVERKOV_EXPR(N_guess);
-        #if SemiAlgebraic([B_poly >= 0, g - f >= 0], [x]) = [] then
         if checkPositivityOverSAS(semialgebraic_of_B, f - g, x) then
             N := N_guess;
             DEBUG(__FILE__, __LINE__, lprint(">> N_guess was ok"));
@@ -276,9 +271,15 @@ $endif
         end if;
     end if;
 
+$ifdef ENABLE_BINARY_SEARCH_AVKL
     g := AVERKOV_EXPR(N);
+$else
 $ifdef ENABLE_AVERKOV_CHECK
-    lprint(">> 1. Checking correctness of averkov_lemma_7", SemiAlgebraic([B_poly >= 0, g - f >= 0], [x]))
+    g := AVERKOV_EXPR(N);
+$endif
+$endif
+$ifdef ENABLE_AVERKOV_CHECK
+    lprint(">> 1. Checking correctness of averkov_lemma_7", SemiAlgebraic([B_poly >= 0, g - f >= 0], [x]));
 $endif
 
 $ifdef LOG_TIME
@@ -297,9 +298,7 @@ $ifdef ENABLE_BINARY_SEARCH_AVKL
     N_top := N;
     N_bot := 0;
 
-    if isSOS(f - g, x) then
-        init_sos := true;
-    end if;
+    init_sos := isSOS(f - g, x);
 
     while N_top - N_bot > 1 do
         N_cur := iquo(N_top + N_bot, 2);
@@ -312,7 +311,6 @@ $ifdef ENABLE_BINARY_SEARCH_AVKL
         if init_sos then
             predicate_bin_search:= isSOS(f - g, x);
         else
-            #predicate_bin_search := SemiAlgebraic([B_poly >= 0, g - f >= 0], [x]) = [];
             predicate_bin_search := checkPositivityOverSAS(semialgebraic_of_B, f - g, x);
         end if;
 
@@ -347,163 +345,5 @@ $ifdef LOG_TIME
         END_LOG_TIME("averkov_lemma_7",0)
 $endif
         return map(g_i -> AVERKOV_SOS(g_i, N), basis);
-    end if;
-end proc;
-
-# We assume:
-# 1. f is strictly positive over SemiAlgebraic([g >= 0], [x])
-# 2. f has a lowerbound over \mathbb{R}, i.e., SemiAlgebraic([f <= 0], [x]) is bounded
-# 3. SemiAlgebraic([g >= 0], [x]) is bounded
-local averkov_extended_lemma := proc(x, f, g, N_guess, eps_LS)
-$ifdef LOG_TIME
-    INIT_START_LOG_TIME("averkov_extended_lemma",0)
-$endif
-local M;
-local pos_coeff := 1;
-local averkov_poly;
-local semialgebraic_eps_lifted;
-local gamma, eps, mu, N;
-local N_top, N_bot, N_cur;
-
-    DEBUG(__FILE__, __LINE__, lprint(">> f", f));
-    DEBUG(__FILE__, __LINE__, lprint(">> g", g));
-    # Check is f is non-negative over \mathbb{R}
-    #if SemiAlgebraic([f < 0],[x]) = [] then
-    if isSOS(f, x) then
-        DEBUG(__FILE__, __LINE__, lprint(">> Done because f is a sos"));
-$ifdef LOG_TIME
-        END_LOG_TIME("averkov_extended_lemma",0)
-$endif
-        return 0;
-    end if;
-
-    # Since f is not a non-negative
-    # polynomial, we can assume the min value
-    # for `f` is negative
-
-$ifdef ENABLE_N_HEURISTIC
-    pos_coeff := findPositiveConstantAvoidExponent(f, g);
-    if(pos_coeff > 0) then
-        DEBUG(__FILE__, __LINE__, lprint(">> Done with pos_coeff"));
-        DEBUG(__FILE__, __LINE__, lprint(">> pos_coeff", pos_coeff));
-$ifdef LOG_TIME
-        END_LOG_TIME("averkov_extended_lemma",0)
-$endif
-        return pos_coeff;
-    end if;
-$endif
-
-    # This is positive as f is negative
-    # at some point
-    M := -minimize(f);
-
-    #
-    # Compute gamma
-    #
-    # We just need a lowerbound, not the
-    # tightest lowerbound [to discuss later]
-    gamma := convert(1/2*evalf(1.001*maximize(g)), rational);
-    gamma := max(gamma, 1);
-    DEBUG(__FILE__, __LINE__, lprint(">> gamma @ averkov_extended_lemma:", evalf(gamma)));
-
-    #
-    # Compute exponent eps
-    #
-    if (eps_LS = -1) then
-        eps := evalf(findEps(x, [g], f));
-        eps := 1/2*convert(eps, rational);
-    else
-        eps := eps_LS;
-    end;
-    DEBUG(__FILE__, __LINE__, lprint(">> eps @ averkov_extended_lemma:", eps));
-
-    semialgebraic_eps_lifted := SemiAlgebraic(
-        [g + EPS_FACTOR*eps >= 0], [x]);
-    DEBUG(__FILE__, __LINE__, lprint(">> Done computation of semialgebraic_eps_lifted", semialgebraic_eps_lifted));
-
-    #
-    # Compute mu
-    #
-    mu := computeMin(semialgebraic_eps_lifted, f, x);
-    mu := convert(evalf(mu), rational);
-    DEBUG(__FILE__, __LINE__, lprint(">> mu @ averkov_extended_lemma:", evalf(mu)));
-
-    # To make sure N below is positive
-    gamma := max(gamma, mu);
-
-    #
-    # Find exponent N
-    #
-
-    DEBUG(__FILE__, __LINE__, lprint(">> Compute exponent N"));
-    N := ceil(evalf((log(2*gamma) - log(mu))/(log(gamma + eps) - log(gamma))));
-    N := max(N, ceil(evalf((log(M + mu) - log(2*eps))/(log(gamma + 2*eps) - log(gamma + eps)))));
-
-    DEBUG(__FILE__, __LINE__, lprint(">> N: ", N));
-    DEBUG(__FILE__, __LINE__, lprint(">> N_guess: ", N_guess));
-
-    if (N > N_guess) then
-        averkov_poly := AVERKOV_1_EXPR(g, N_guess);
-        # Check is f - averkov_poly is non-negative over \mathbb{R}
-        #if SemiAlgebraic([averkov_poly - f >= 0], [x]) = [] then
-        DEBUG(__FILE__, __LINE__, lprint(">> Isolate(f - averkov_poly)", f - averkov_poly));
-        if isSOS(f - averkov_poly, x) then
-            N := N_guess;
-            DEBUG(__FILE__, __LINE__, lprint(">> N_guess was ok @ averkov_extended_lemma"));
-        else
-            DEBUG(__FILE__, __LINE__, lprint(">> N_guess was not ok @ averkov_extended_lemma"));
-        end if;
-    end if;
-
-$ifdef ENABLE_POST_OPT
-    while true do
-        averkov_poly := AVERKOV_1_EXPR(g, N);
-        # Check is f - averkov_poly is non-negative over \mathbb{R}
-        #if SemiAlgebraic([averkov_poly - f >= 0], [x]) = [] then
-        if isSOS(f - averkov_poly, x) then
-            break;
-        end if;
-        N := N+1;
-        DEBUG(__FILE__, __LINE__, lprint(">> N", N));
-    end do;
-$endif
-
-$ifdef ENABLE_BINARY_SEARCH_LS
-    N_top := N;
-    N_bot := 0;
-
-    while N_top - N_bot > 1 do
-        N_cur := iquo(N_top + N_bot, 2);
-        DEBUG(__FILE__, __LINE__, lprint(">> Current N_top", N_top));
-        DEBUG(__FILE__, __LINE__, lprint(">> Current N_bot", N_bot));
-        DEBUG(__FILE__, __LINE__, lprint(">> Current N_cur", N_cur));
-        averkov_poly := AVERKOV_1_EXPR(g, N_cur);
-        #if SemiAlgebraic([averkov_poly - f >= 0], [x]) = [] then
-        if isSOS(f - averkov_poly, x) then
-            N_top := N_cur;
-        else
-            N_bot := N_cur;
-        end if;
-    end do;
-
-    if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([f <= 0], PolynomialRing([x])) then
-        N := -1;
-    else
-        N := N_top;
-    end if;
-
-    DEBUG(__FILE__, __LINE__, lprint(">> N after ENABLE_BINARY_SEARCH", evalf(N)));
-$endif
-
-    if N = -1 then
-$ifdef LOG_TIME
-        END_LOG_TIME("averkov_extended_lemma",0)
-$endif
-        return 0;
-    else
-$ifdef LOG_TIME
-        END_LOG_TIME("averkov_extended_lemma",0)
-$endif
-        return AVERKOV_SOS(g, N);
     end if;
 end proc;

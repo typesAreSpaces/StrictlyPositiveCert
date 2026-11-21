@@ -14,7 +14,6 @@ $define INIT_START_LOG_TIME(X, S) local fd;START_LOG_TIME(X, S)
 
 with(SolveTools, SemiAlgebraic);
 with(RootFinding, Isolate);
-with(Optimization, Minimize);
 with(RegularChains, SemiAlgebraicSetTools, PolynomialRing);
 
 StrictlyPositiveCert := module() option package;
@@ -34,7 +33,6 @@ $endif
 $include "src/utilities.mpl";
 $include "src/signature_constructions.mpl";
 $include "src/bound_poly.mpl";
-$include "src/lower_bound_poly.mpl";
 $include "src/eps_computation.mpl";
 $include "src/averkov_constructions.mpl";
 $include "src/monogenic_certificates.mpl";

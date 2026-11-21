@@ -11,8 +11,11 @@ LOG_FILE=log_time${SUFFIX}.txt
 FILE=benchmarking.mpl
 FILE=comparison_benchmark.mpl
 FILE=examples.mpl
+FILE=tests.mpl
+FILE=review_findings.mpl
 
-FILE=benchmarking.mpl
+FILE=tests.mpl
+FILE=review_findings.mpl
 QUIET_MODE=
 HEURISTICS=-D USE_BOUNDS
 FLAGS=-D LOG_TIME

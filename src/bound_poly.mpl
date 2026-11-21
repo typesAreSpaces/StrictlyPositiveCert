@@ -35,11 +35,19 @@ $endif
     end do;
 
 # At this point, every element in the basis has odd degree
+# or even degree with positive leading term
     for i from 1 to nops(basis) - 1 do
+        if type(degrees[i], 'even') then
+            next;
+        end if;
         for j from i + 1 to nops(basis) do
+            if type(degrees[j], 'even') then
+                next;
+            end if;
             if fst_coeffs[i]*fst_coeffs[j] > 0 then
                 next;
             end if;
+
             if degrees[i] = degrees[j] then
                 h1 := x^2/abs(fst_coeffs[i]);
                 h2 := (x + sign(fst_coeffs[i])*(1/2*snd_coeffs[i] + 1/2*snd_coeffs[j] + 1))^2

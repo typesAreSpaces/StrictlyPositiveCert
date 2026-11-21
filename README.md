@@ -70,22 +70,37 @@ After constructing a compact bound polynomial `B` and applying
 with positive rational `lambda`. Real-root counting and exact semialgebraic
 feasibility checks verify that `sigma0 = f2-sigma1*B` is strictly positive
 on the real line. The multiplier is then distributed over the original
-basis using the SOS representation of `B`. This replaces the calls to
-`lower_bound_poly` and `averkov_extended_lemma` in `spCertificates`.
+basis using the SOS representation of `B`.
 The return format remains `[sigma0, sigma1, ..., sigman]`, satisfying
 `f = sigma0 + add(sigmai*basis[i], i=1..nops(basis))`.
 
 For a single compact generator, the monogenic method is also available directly:
 
     monogenicCertificates(10^9*(1-x^2)+1, 1-x^2, x);
-    # [1, 1000000000]
+    # Returns [sigma0, sigma1]; the first verified search returns its certificate.
 
-Both `spCertificates` and `monogenicCertificates` accept the keyword limits
-`max_k=100` and `max_bisection=200`. Exhausted limits raise an error;
-they do not indicate that no certificate exists. Inputs to the monogenic
-method must be univariate polynomials with rational coefficients, with
-`g` having even degree and a negative leading coefficient, and `f` strictly
-positive on `{g >= 0}`. Empty and singleton feasible sets are supported.
+Both `spCertificates` and `monogenicCertificates` accept `max_k=100` and
+`max_bisection=200`. The search advances every active multiplier search once per round. Exponent
+`k` is admitted by round `k^2` (earlier if no searches remain active), limiting
+high-degree work while lower-degree searches are still progressing. Each exponent retains its own
+multiplier and brackets; it does not have to exhaust its budget before the
+next exponent is tried. `max_bisection` retains the initial trial plus that
+many updates for each exponent. The first verified certificate is returned;
+interleaving and timeouts can change its degree compared with a depth-first
+search. The output is not guaranteed to have the smallest degree.
+
+A trial starts with `query_time_limit=1/10` second. On a timeout, the same trial
+is deferred to the next round with twice its previous allowance, up to
+`max_query_retries=4` retries. A timeout never establishes infeasibility or
+moves the multiplier bracket. `max_search_time=300` bounds elapsed search
+time, including normalization; each trial is also capped by the remaining
+budget. These limits are cooperative Maple time limits. Explicit SOS square
+decomposition has its own iteration budget and is outside the search deadline.
+Exhausted budgets raise an error; they do not indicate that no certificate
+exists. Inputs to the monogenic method must be univariate polynomials with
+rational coefficients, with `g` having even degree and a negative leading
+coefficient, and `f` strictly positive on `{g >= 0}`. Empty and singleton
+feasible sets are supported.
 
 The default output contains polynomial multipliers, which are SOS because
 strictly positive univariate real polynomials are SOS. To obtain explicit

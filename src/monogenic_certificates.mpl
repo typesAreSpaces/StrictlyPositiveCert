@@ -22,21 +22,31 @@ local h := expand(f-lambda*sg), too_big, too_small;
     end if;
 end proc;
 
-local monogenic_find_lambda := proc(f, g, sg, lambda0, x, max_bisection)
-local lambda := lambda0, lo := 0, hi := 0, status, iteration;
-    for iteration from 0 to max_bisection do
-        status := monogenic_status_lambda(f, g, sg, lambda, x);
-        if status = "ok" then return lambda;
-        elif status = "infeasible" then return FAIL;
-        elif status = "small" then lo := lambda;
-        else hi := lambda;
+# One resumable search trial. Polynomial construction is included in its time limit.
+local monogenic_search_trial := proc(f, g, x, k, M, base0, sg0, lambda)
+local base := base0, sg := sg0;
+    if base = FAIL then
+        base := expand(((M-g)/M)^k);
+        sg := expand(base^2*g);
+    end if;
+    return [base, sg, monogenic_status_lambda(f, g, sg, lambda, x)];
+end proc;
+
+# Normalize once, under the overall search time limit.
+local monogenic_search_bounds := proc(f, g, x)
+local m := 1, M := 1;
+    if SemiAlgebraic([g >= 0], [x]) <> [] then
+        if SemiAlgebraic([g >= 0, f <= 0], [x]) <> [] then
+            error "f must be strictly positive on the nonnegative set of g";
         end if;
-        if lo = 0 then lambda := hi/2;
-        elif hi = 0 then lambda := 2*lo;
-        else lambda := (lo+hi)/2;
-        end if;
-    end do;
-    return FAIL;
+        while SemiAlgebraic([g >= 0, f < 2*m], [x]) = [] do m := 2*m; end do;
+        while SemiAlgebraic([g >= 0, f < m], [x]) <> [] do m := m/2; end do;
+        while SemiAlgebraic([g >= 0, g > M], [x]) <> [] do M := 2*M; end do;
+        while M > 1/2^20 and SemiAlgebraic([g >= 0, g > M/2], [x]) = [] do
+            M := M/2;
+        end do;
+    end if;
+    return [m, M];
 end proc;
 
 # Bisect a rational isolating interval for a square-free polynomial.
@@ -107,9 +117,13 @@ end proc;
 
 monogenicCertificates := proc(f0, g0, x::name,
     {max_k::nonnegint := 100, max_bisection::nonnegint := 200,
+     query_time_limit::positive := 1/10, max_query_retries::nonnegint := 4,
+     max_search_time::positive := 300,
      max_sos_iterations::nonnegint := 64, output_sos::truefalse := false})
-local f := expand(f0), g := expand(g0), dg, df, m := 1, M := 1;
-local k, base, sg, lambda, h, squares;
+local f := expand(f0), g := expand(g0), dg, df, m, M, bounds;
+local k, next_k := 0, round := 0, active := 0, lambda, lo, hi, iteration, retries;
+local states := table(), bases := table(), products := table();
+local trial, status, base, h, started := time[real](), remaining, allowance;
     if not type(f, polynom(rational, x)) or not type(g, polynom(rational, x)) then
         error "f and g must be univariate polynomials with rational coefficients";
     end if;
@@ -118,33 +132,73 @@ local k, base, sg, lambda, h, squares;
     if not type(dg, even) or lcoeff(g, x) >= 0 then
         error "g must have even degree and negative leading coefficient";
     end if;
-    if SemiAlgebraic([g >= 0], [x]) <> [] then
-        if SemiAlgebraic([g >= 0, f <= 0], [x]) <> [] then
-            error "f must be strictly positive on the nonnegative set of g";
-        end if;
-        while SemiAlgebraic([g >= 0, f < 2*m], [x]) = [] do m := 2*m; end do;
-        while SemiAlgebraic([g >= 0, f < m], [x]) <> [] do m := m/2; end do;
-        while SemiAlgebraic([g >= 0, g > M], [x]) <> [] do M := 2*M; end do;
-        while M > 1/2^20 and SemiAlgebraic([g >= 0, g > M/2], [x]) = [] do
-            M := M/2;
-        end do;
-    end if;
-    for k from 0 to max_k do
-        base := expand(((M-g)/M)^k);
-        sg := expand(base^2*g);
-        if degree(sg, x) < df and not (type(df, even) and lcoeff(f, x) > 0) then
-            next;
-        end if;
-        lambda := monogenic_find_lambda(f, g, sg, m*(2*k+1)/(2*M), x, max_bisection);
-        if lambda <> FAIL then
-            h := expand(f-lambda*sg);
-            DEBUG(__FILE__, __LINE__, lprint(">> monogenic certificate k, lambda", k, lambda));
-            if output_sos then
-                squares := monogenic_exact_sos(h, x, max_sos_iterations);
-                return [squares, [[lambda, base]]];
+    bounds := timelimit(max_search_time, monogenic_search_bounds(f, g, x));
+    m, M := op(bounds);
+
+    # Admit higher degrees gradually; advance every active lambda search once.
+    # Square-spaced admission avoids building many high-degree states while a
+    # low-degree search is still making progress. If none remain, admit immediately.
+    # State = [lambda, lower bracket, upper bracket, completed trials, retries].
+    while active > 0 or next_k <= max_k do
+        if next_k <= max_k and (round >= next_k^2 or active = 0) then
+            k := next_k;
+            next_k := next_k+1;
+            states[k] := FAIL;
+            if not (dg*(2*k+1) < df and
+                    not (type(df, even) and lcoeff(f, x) > 0)) then
+                states[k] := [m*(2*k+1)/(2*M), 0, 0, 0, 0];
+                bases[k] := FAIL;
+                products[k] := FAIL;
+                active := active+1;
             end if;
-            return [h, expand(lambda*base^2)];
         end if;
+        for k from 0 to next_k-1 do
+            if states[k] = FAIL then next; end if;
+            lambda, lo, hi, iteration, retries := op(states[k]);
+            remaining := max_search_time-(time[real]()-started);
+            if remaining <= 0 then
+                error "monogenic certificate search exhausted max_search_time=%1", max_search_time;
+            end if;
+            allowance := min(query_time_limit*2^retries, remaining);
+            try
+                trial := timelimit(allowance,
+                    monogenic_search_trial(f, g, x, k, M, bases[k], products[k], lambda));
+            catch "time expired":
+                DEBUG(__FILE__, __LINE__, lprint(">> Deferred monogenic trial k, iteration, retry", k, iteration, retries));
+                if retries >= max_query_retries then
+                    states[k] := FAIL;
+                    bases[k] := FAIL; products[k] := FAIL;
+                    active := active-1;
+                else
+                    # Keep the same lambda and brackets; timeouts prove nothing.
+                    states[k] := [lambda, lo, hi, iteration, retries+1];
+                end if;
+                next;
+            end try;
+            bases[k], products[k], status := op(trial);
+            if status = "ok" then
+                base := bases[k];
+                h := expand(f-lambda*products[k]);
+                DEBUG(__FILE__, __LINE__, lprint(">> monogenic certificate k, lambda", k, lambda));
+                if output_sos then
+                    return [monogenic_exact_sos(h, x, max_sos_iterations), [[lambda, base]]];
+                end if;
+                return [h, expand(lambda*base^2)];
+            end if;
+            if status = "infeasible" or iteration >= max_bisection then
+                states[k] := FAIL;
+                bases[k] := FAIL; products[k] := FAIL;
+                active := active-1;
+                next;
+            end if;
+            if status = "small" then lo := lambda; else hi := lambda; end if;
+            if lo = 0 then lambda := hi/2;
+            elif hi = 0 then lambda := 2*lo;
+            else lambda := (lo+hi)/2;
+            end if;
+            states[k] := [lambda, lo, hi, iteration+1, 0];
+        end do;
+        round := round+1;
     end do;
-    error "monogenic certificate search exhausted max_k=%1 and max_bisection=%2", max_k, max_bisection;
+    error "monogenic certificate search exhausted max_k=%1, max_bisection=%2, and max_query_retries=%3", max_k, max_bisection, max_query_retries;
 end proc;
