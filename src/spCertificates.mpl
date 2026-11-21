@@ -1,7 +1,7 @@
 spCertificates := proc(f, basis, x,
-    {max_k::nonnegint := 100, max_bisection::nonnegint := 200,
-     query_time_limit::positive := 1/10, max_query_retries::nonnegint := 4,
-     max_search_time::positive := 300})
+                       {max_k::nonnegint := 100, max_bisection::nonnegint := 200,
+                        query_time_limit::positive := 1/10, max_query_retries::nonnegint := 4,
+                        max_search_time::positive := 300})
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("spCertificates",0)
 $endif
@@ -24,8 +24,8 @@ $endif
 $ifdef ENABLE_QUICK_CERT
     quickcheck, quickcertificates := quickCertificates(f, basis, x);
     if quickcheck then
-      DEBUG(__FILE__, __LINE__, lprint(">> Quick certificates found", op(quickcertificates)));
-      return quickcertificates;
+        DEBUG(__FILE__, __LINE__, lprint(">> Quick certificates found", op(quickcertificates)));
+        return quickcertificates;
     end if;
 $endif
 
@@ -48,9 +48,9 @@ $endif
 
     # Global keyword names avoid substitution of the caller's parameter values.
     monogenic := monogenicCertificates(f2, g[1], x,
-        ':-max_k'=max_k, ':-max_bisection'=max_bisection,
-        ':-query_time_limit'=query_time_limit, ':-max_query_retries'=max_query_retries,
-        ':-max_search_time'=max_search_time);
+                                       ':-max_k'=max_k, ':-max_bisection'=max_bisection,
+                                       ':-query_time_limit'=query_time_limit, ':-max_query_retries'=max_query_retries,
+                                       ':-max_search_time'=max_search_time);
     DEBUG(__FILE__, __LINE__, lprint(">> Done with monogenicCertificates"));
 
     certificates[g[4]] := certificates[g[4]] + monogenic[2]*g[2];

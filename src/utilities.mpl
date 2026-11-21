@@ -80,19 +80,19 @@ end proc;
 quickCertificates := proc(f, basis, x)
 local certificates := map(gen -> 0, basis);
 local q, r, i;
-  for i from 1 to nops(basis) do
-    if basis[i] = 0 then
-      next;
-    end if;
-    # f = q*basis[i] + r gives the certificate multipliers directly.
-    q := quo(f, basis[i], x);
-    r := rem(f, basis[i], x);
-    if isSOS(q, x) and isSOS(r, x) then
-      certificates[i] := q;
-      return true, [r, op(certificates)];
-    end if;
-  end do; 
-  return false, [];
+    for i from 1 to nops(basis) do
+        if basis[i] = 0 then
+            next;
+        end if;
+        # f = q*basis[i] + r gives the certificate multipliers directly.
+        q := quo(f, basis[i], x);
+        r := rem(f, basis[i], x);
+        if isSOS(q, x) and isSOS(r, x) then
+            certificates[i] := q;
+            return true, [r, op(certificates)];
+        end if;
+    end do;
+    return false, [];
 end proc;
 
 # Split poly = fnonneg*fpos2 over the coefficient field. Factors without

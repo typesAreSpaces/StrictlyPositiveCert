@@ -8,7 +8,7 @@ local p := expand(poly), d;
     if p = 0 then return false; end if;
     d := degree(p, x);
     return type(d, even) and lcoeff(p, x) > 0
-           and (d = 0 or sturm(p, x, -infinity, infinity) = 0);
+    and (d = 0 or sturm(p, x, -infinity, infinity) = 0);
 end proc;
 
 local monogenic_status_lambda := proc(f, g, sg, lambda, x)
@@ -81,7 +81,7 @@ local iteration, interval, t, ft, fpt, p, r;
         candidates := {};
         for interval in intervals do
             candidates := candidates union
-                {interval[1]-width, interval[1], interval[2], interval[2]+width};
+            {interval[1]-width, interval[1], interval[2], interval[2]+width};
         end do;
         for t in sort(convert(candidates, list)) do
             ft := subs(x=t, f); fpt := subs(x=t, fp);
@@ -116,10 +116,10 @@ local f := expand(poly), squares := [], pref := 1, step, term;
 end proc;
 
 monogenicCertificates := proc(f0, g0, x::name,
-    {max_k::nonnegint := 100, max_bisection::nonnegint := 200,
-     query_time_limit::positive := 1/10, max_query_retries::nonnegint := 4,
-     max_search_time::positive := 300,
-     max_sos_iterations::nonnegint := 64, output_sos::truefalse := false})
+                              {max_k::nonnegint := 100, max_bisection::nonnegint := 200,
+                               query_time_limit::positive := 1/10, max_query_retries::nonnegint := 4,
+                               max_search_time::positive := 300,
+                               max_sos_iterations::nonnegint := 64, output_sos::truefalse := false})
 local f := expand(f0), g := expand(g0), dg, df, m, M, bounds;
 local k, next_k := 0, round := 0, active := 0, lambda, lo, hi, iteration, retries;
 local states := table(), bases := table(), products := table();
@@ -162,7 +162,7 @@ local trial, status, base, h, started := time[real](), remaining, allowance;
             allowance := min(query_time_limit*2^retries, remaining);
             try
                 trial := timelimit(allowance,
-                    monogenic_search_trial(f, g, x, k, M, bases[k], products[k], lambda));
+                                   monogenic_search_trial(f, g, x, k, M, bases[k], products[k], lambda));
             catch "time expired":
                 DEBUG(__FILE__, __LINE__, lprint(">> Deferred monogenic trial k, iteration, retry", k, iteration, retries));
                 if retries >= max_query_retries then
