@@ -10,7 +10,7 @@ local gamma, interval, lowerbound, upperbound;
 local eps;
 local N, g, term;
 local semialgebraic_of_B;
-local M, mu, m;
+local M, mu, m, i;
 local pos_coeff;
 $ifdef ENABLE_DEBUGGING
 local T;
@@ -29,8 +29,7 @@ $endif
 $ifdef LOG_TIME
     START_LOG_TIME("averkov_lemma_7::Minimization_f",1);
 $endif
-    semialgebraic_of_B := SemiAlgebraic(
-        [B_poly >= 0], [x]);
+    semialgebraic_of_B := univariate_sign_set([B_poly],["nonnegative"],x);
     DEBUG(__FILE__, __LINE__, lprint(">> semialgebraic_of_B", semialgebraic_of_B));
 
     if evalb(semialgebraic_of_B = []) then
@@ -102,7 +101,7 @@ $ifdef LOG_TIME
     START_LOG_TIME("averkov_lemma_7::compute_eps",3);
 $endif
 $ifdef ENABLE_DEBUGGING
-    T := SemiAlgebraic([B_poly >= 0, f < 0], [x]);
+    T := univariate_sign_set([B_poly,f],["nonnegative","negative"],x);
     DEBUG(__FILE__, __LINE__, lprint(">> T", evalf(T)));
 $endif
 
@@ -118,7 +117,8 @@ $endif
 $ifdef LOG_TIME
     START_LOG_TIME("averkov_lemma_7::compute_mu",4);
 $endif
-    semialgebraic_for_mu := SemiAlgebraic([B_poly >= 0, op(map(g_i -> g_i + EPS_FACTOR*eps >= 0, basis))], [x]);
+    semialgebraic_for_mu := univariate_sign_set([B_poly,op(map(g_i -> g_i+EPS_FACTOR*eps,basis))],
+                                                [seq("nonnegative",i=1..nops(basis)+1)],x);
     DEBUG(__FILE__, __LINE__, lprint(">> semialgebraic_for_mu", semialgebraic_for_mu));
     mu := min(
         map(proc(bound)
@@ -279,7 +279,7 @@ $ifdef ENABLE_AVERKOV_CHECK
 $endif
 $endif
 $ifdef ENABLE_AVERKOV_CHECK
-    lprint(">> 1. Checking correctness of averkov_lemma_7", SemiAlgebraic([B_poly >= 0, g - f >= 0], [x]));
+    lprint(">> 1. Checking correctness of averkov_lemma_7", univariate_sign_set([B_poly,g-f],["nonnegative","nonnegative"],x));
 $endif
 
 $ifdef LOG_TIME
@@ -321,7 +321,7 @@ $ifdef ENABLE_BINARY_SEARCH_AVKL
         end if;
     end do;
 
-    if N_top = 0 and SemiAlgebraicSetTools:-IsEmpty([B_poly >= 0, f <= 0], PolynomialRing([x])) then
+    if N_top = 0 and checkPositivityOverSAS(semialgebraic_of_B,f,x) then
         N := -1;
     else
         N := N_top;

@@ -31,6 +31,7 @@ local stack_level := -1;
 $endif
 
 $include "src/utilities.mpl";
+$include "src/univariate_signs.mpl";
 $include "src/signature_constructions.mpl";
 $include "src/bound_poly.mpl";
 $include "src/eps_computation.mpl";

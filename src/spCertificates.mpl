@@ -5,7 +5,7 @@ spCertificates := proc(f, basis, x,
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("spCertificates",0)
 $endif
-    if SemiAlgebraic([f < 0], [x]) = [] then
+    if univariate_nonnegative_on_R(f,x) then
         return [f, op(map(0, basis))];
     end if;
 local g, f2, monogenic, certificates;
@@ -42,7 +42,7 @@ $endif
     f2 := f - dot_product(basis, certificates);
 $ifdef ENABLE_AVERKOV_CHECK
     lprint(">> 2. Checking correctness of averkov_lemma_7",
-           SemiAlgebraic([g[1] >= 0, f2 <= 0], [x]));
+           univariate_sign_set([g[1],f2],["nonnegative","nonpositive"],x));
 $endif
     DEBUG(__FILE__, __LINE__, lprint(">> f2", f2));
 

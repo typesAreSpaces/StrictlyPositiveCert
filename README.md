@@ -119,3 +119,19 @@ output does not require this decomposition and is not subject to that limit.
 Run the source regressions with `make test` (Maple and Python 3 required).
 The tests check polynomial identities, nonnegativity, explicit square
 representations, search limits, and the public multi-generator integration.
+
+## Exact univariate sign decisions
+
+The certificate routines use exact real-root isolation and Sturm counts in place
+of general `SemiAlgebraic` calls. The monogenic search constructs the sign cells
+of its fixed generator once and reuses them for normalization and lambda trials.
+Its dyadic bounds retain the same equality conventions and minimum cap as before.
+
+Strict positivity rejects every included zero. Nonnegativity instead uses the
+odd-multiplicity part from a square-free decomposition, allowing even-multiplicity
+zeros. Sign cells retain exact algebraic endpoints and distinguish open intervals,
+closed intervals, isolated points, and unbounded components. Averkov and epsilon
+computations obtain their interval sets from these same sign constructions.
+
+The regression suite compares set boundaries, positivity decisions, lambda
+classification, and dyadic bounds against `SemiAlgebraic` as an independent oracle.

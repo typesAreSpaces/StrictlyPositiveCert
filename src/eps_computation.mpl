@@ -53,7 +53,7 @@ local num_roots;
 
     i := 1;
 local min_epsilon := infinity, curr_epsilon, curr_g;
-local S := SemiAlgebraic([-f>=0], [x]);
+local S := univariate_sign_set([-f],["nonnegative"],x);
     DEBUG(__FILE__, __LINE__, lprint(">> f", f));
     DEBUG(__FILE__, __LINE__, lprint(">> S", S));
     for interval in map(_interval -> bound_info(x, _interval, 0), S) do

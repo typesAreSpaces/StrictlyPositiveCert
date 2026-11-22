@@ -11,11 +11,12 @@ local p := expand(poly), d;
     and (d = 0 or sturm(p, x, -infinity, infinity) = 0);
 end proc;
 
-local monogenic_status_lambda := proc(f, g, sg, lambda, x)
-local h := expand(f-lambda*sg), too_big, too_small;
+local monogenic_status_lambda := proc(f, g, sg, lambda, x, regions := FAIL)
+local h := expand(f-lambda*sg), too_big, too_small, cells := regions;
     if monogenic_positive_on_R(h, x) then return "ok"; end if;
-    too_big := evalb(SemiAlgebraic([g > 0, h <= 0], [x]) <> []);
-    too_small := evalb(SemiAlgebraic([g <= 0, h <= 0], [x]) <> []);
+    if cells=FAIL then cells := monogenic_sign_regions(g,x); end if;
+    too_big := not univariate_positive_on_cells(h,cells[1],x);
+    too_small := not univariate_positive_on_cells(h,cells[3],x);
     if too_big and too_small then return "infeasible";
     elif too_big then return "big";
     else return "small";
@@ -23,30 +24,38 @@ local h := expand(f-lambda*sg), too_big, too_small;
 end proc;
 
 # One resumable search trial. Polynomial construction is included in its time limit.
-local monogenic_search_trial := proc(f, g, x, k, M, base0, sg0, lambda)
+local monogenic_search_trial := proc(f, g, x, k, M, base0, sg0, lambda, regions := FAIL)
 local base := base0, sg := sg0;
     if base = FAIL then
         base := expand(((M-g)/M)^k);
         sg := expand(base^2*g);
     end if;
-    return [base, sg, monogenic_status_lambda(f, g, sg, lambda, x)];
+    return [base, sg, monogenic_status_lambda(f, g, sg, lambda, x, regions)];
 end proc;
 
-# Normalize once, under the overall search time limit.
+# The sign chart of g is shared by normalization and every lambda trial.
+local monogenic_sign_regions := proc(g, x)
+local chart := univariate_sign_chart(g,x);
+    return [univariate_select_cells(chart,"positive"),
+            univariate_select_cells(chart,"nonnegative"),
+            univariate_select_cells(chart,"nonpositive")];
+end proc;
+
+# Normalize once, under the overall search time limit. Keep the original
+# dyadic choices of m and M, including equality and the lower cap for M.
 local monogenic_search_bounds := proc(f, g, x)
-local m := 1, M := 1;
-    if SemiAlgebraic([g >= 0], [x]) <> [] then
-        if SemiAlgebraic([g >= 0, f <= 0], [x]) <> [] then
+local m := 1, M := 1, regions := monogenic_sign_regions(g,x);
+    if regions[2] <> [] then
+        if not univariate_positive_on_cells(f,regions[2],x) then
             error "f must be strictly positive on the nonnegative set of g";
         end if;
-        while SemiAlgebraic([g >= 0, f < 2*m], [x]) = [] do m := 2*m; end do;
-        while SemiAlgebraic([g >= 0, f < m], [x]) <> [] do m := m/2; end do;
-        while SemiAlgebraic([g >= 0, g > M], [x]) <> [] do M := 2*M; end do;
-        while M > 1/2^20 and SemiAlgebraic([g >= 0, g > M/2], [x]) = [] do
-            M := M/2;
-        end do;
+        while univariate_positive_on_cells(f-2*m,regions[2],x,false) do m:=2*m; end do;
+        while not univariate_positive_on_cells(f-m,regions[2],x,false) do m:=m/2; end do;
+        # Since M>0, {g>=0,g>M} equals {g>M} on the whole real line.
+        while not univariate_nonnegative_on_R(M-g,x) do M:=2*M; end do;
+        while M>1/2^20 and univariate_nonnegative_on_R(M/2-g,x) do M:=M/2; end do;
     end if;
-    return [m, M];
+    return [m,M,regions];
 end proc;
 
 # Bisect a rational isolating interval for a square-free polynomial.
@@ -120,7 +129,7 @@ monogenicCertificates := proc(f0, g0, x::name,
                                query_time_limit::positive := 1/10, max_query_retries::nonnegint := 4,
                                max_search_time::positive := 300,
                                max_sos_iterations::nonnegint := 64, output_sos::truefalse := false})
-local f := expand(f0), g := expand(g0), dg, df, m, M, bounds;
+local f := expand(f0), g := expand(g0), dg, df, m, M, bounds, regions;
 local k, next_k := 0, round := 0, active := 0, lambda, lo, hi, iteration, retries;
 local states := table(), bases := table(), products := table();
 local trial, status, base, h, started := time[real](), remaining, allowance;
@@ -133,7 +142,7 @@ local trial, status, base, h, started := time[real](), remaining, allowance;
         error "g must have even degree and negative leading coefficient";
     end if;
     bounds := timelimit(max_search_time, monogenic_search_bounds(f, g, x));
-    m, M := op(bounds);
+    m, M, regions := op(bounds);
 
     # Admit higher degrees gradually; advance every active lambda search once.
     # Square-spaced admission avoids building many high-degree states while a
@@ -162,7 +171,7 @@ local trial, status, base, h, started := time[real](), remaining, allowance;
             allowance := min(query_time_limit*2^retries, remaining);
             try
                 trial := timelimit(allowance,
-                                   monogenic_search_trial(f, g, x, k, M, bases[k], products[k], lambda));
+                                   monogenic_search_trial(f, g, x, k, M, bases[k], products[k], lambda, regions));
             catch "time expired":
                 DEBUG(__FILE__, __LINE__, lprint(">> Deferred monogenic trial k, iteration, retry", k, iteration, retries));
                 if retries >= max_query_retries then

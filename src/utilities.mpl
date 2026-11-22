@@ -20,44 +20,13 @@ local checkPositivityOverSAS := proc(S, poly, x)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("checkPositivityOverSAS",0)
 $endif
-local interval, a, b, sample, sequence := FAIL;
-local p := expand(poly), positive := true;
-    # Empty sets are vacuous; constant polynomials need no root counting.
-    if nops(S) = 0 then
-        positive := true;
-    elif not has(p, x) then
-        positive := is(p > 0);
-    else
-        # Build at most one exact Sturm sequence, only if a root count is needed.
-        for interval in S do
-            a, b := op(bound_info(x, interval, 0));
-            if a = b then
-                positive := is(subs(x = a, p) > 0);
-            else
-                # sturm counts (a,b], so test a separately when finite.
-                if a <> -infinity then
-                    sample := a;
-                elif b <> infinity then
-                    sample := b - 1;
-                else
-                    sample := 0;
-                end if;
-                positive := is(subs(x = sample, p) > 0);
-                if positive = true then
-                    if sequence = FAIL then
-                        sequence := sturmseq(p, x);
-                    end if;
-                    positive := evalb(sturm(sequence, x, a, b) = 0);
-                end if;
-            end if;
-            if positive <> true then
-                break;
-            end if;
-        end do;
-    end if;
-    if positive = FAIL then
-        error "could not determine an exact polynomial sign";
-    end if;
+local bounds, cells := [], interval, positive;
+    for interval in S do
+        bounds := bound_info(x,interval,0);
+        cells := [op(cells),[op(bounds),evalb(bounds[1]<>-infinity),
+                             evalb(bounds[2]<>infinity)]];
+    end do;
+    positive := univariate_positive_on_cells(poly,cells,x);
 $ifdef LOG_TIME
     END_LOG_TIME("checkPositivityOverSAS",0)
 $endif
