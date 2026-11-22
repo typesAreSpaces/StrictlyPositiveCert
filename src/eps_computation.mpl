@@ -1,9 +1,9 @@
-# Obtains argmin_{g \in basis}(g(sample_point))
-local min_g_at_point := proc(x, basis, sample_point)
-    DEBUG(__FILE__, __LINE__, lprint(">> basis", basis));
-local g_min := basis[1];
+# Obtains argmin_{g \in gens}(g(sample_point))
+local min_g_at_point := proc(x, gens, sample_point)
+    DEBUG(__FILE__, __LINE__, lprint(">> gens", gens));
+local g_min := gens[1];
 local g;
-    for g in basis do
+    for g in gens do
         if (evalf(subs(x=sample_point, g-g_min)) <= 0) then
             g_min := g;
         end if;
@@ -26,22 +26,22 @@ local samplePoint := proc(left, right)
 end proc;
 
 # Outputs minimal eps such that
-# f > 0 over Semialgebraic(basis + 2*eps)
-local findEps := proc(x, basis, f)
+# f > 0 over Semialgebraic(gens + 2*eps)
+local findEps := proc(x, gens, f)
 local i, j;
-local l := nops(basis);
+local l := nops(gens);
 local sol;
 local interval;
 
-    DEBUG(__FILE__, __LINE__, lprint(">> basis @ findEps", basis));
+    DEBUG(__FILE__, __LINE__, lprint(">> gens @ findEps", gens));
     DEBUG(__FILE__, __LINE__, lprint(">> f @ findEps", f));
 
 local partition_roots := {};
 local num_roots;
     for i from 1 to l-1 do
         for j from i+1 to l do
-            for sol in map(_interval -> _interval[1], realroot(basis[i] - basis[j], 1/10000)) do
-                if evalf(subs(x=sol, basis[i])<0) then
+            for sol in map(_interval -> _interval[1], realroot(gens[i] - gens[j], 1/10000)) do
+                if evalf(subs(x=sol, gens[i])<0) then
                     partition_roots := partition_roots union {sol};
                 end if;
             end do;
@@ -65,7 +65,7 @@ local S := univariate_sign_set([-f],["nonnegative"],x);
         local left_endpoint := interval[1];
 
         while (i <= num_roots and evalf(partition_roots[i] < interval[2])) do
-            curr_g := min_g_at_point(x, basis, samplePoint(left_endpoint, partition_roots[i]));
+            curr_g := min_g_at_point(x, gens, samplePoint(left_endpoint, partition_roots[i]));
             curr_epsilon := -maximize(curr_g, x = left_endpoint .. partition_roots[i]);
             DEBUG(__FILE__, __LINE__, lprint(">> curr_epsilon", evalf(curr_epsilon)));
             DEBUG(__FILE__, __LINE__, lprint(">> curr_g", curr_g));
@@ -78,7 +78,7 @@ local S := univariate_sign_set([-f],["nonnegative"],x);
         end do;
 
         DEBUG(__FILE__, __LINE__, lprint(">> sample_point", samplePoint(left_endpoint, interval[2])));
-        curr_g := min_g_at_point(x, basis, samplePoint(left_endpoint, interval[2]));
+        curr_g := min_g_at_point(x, gens, samplePoint(left_endpoint, interval[2]));
         curr_epsilon := -maximize(curr_g, x = left_endpoint .. interval[2]);
         DEBUG(__FILE__, __LINE__, lprint(">> curr_epsilon", evalf(curr_epsilon)));
         DEBUG(__FILE__, __LINE__, lprint(">> curr_g", curr_g));

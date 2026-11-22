@@ -141,6 +141,14 @@ local trial, status, base, h, started := time[real](), remaining, allowance;
     if not type(dg, even) or lcoeff(g, x) >= 0 then
         error "g must have even degree and negative leading coefficient";
     end if;
+    # A negative constant makes the feasible set empty. The search family
+    # has only constant multipliers here, so use an explicit square identity.
+    if dg = 0 then
+        if output_sos then
+            return [[[1, (f+1)/2]], [[-1/g, (f-1)/2]]];
+        end if;
+        return [expand(((f+1)/2)^2), expand(-((f-1)/2)^2/g)];
+    end if;
     bounds := timelimit(max_search_time, monogenic_search_bounds(f, g, x));
     m, M, regions := op(bounds);
 

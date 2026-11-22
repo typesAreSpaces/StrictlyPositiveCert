@@ -42,16 +42,16 @@ isSOS := proc(poly, x)
     return evalb(Isolate(poly, x) = []);
 end proc;
 
-quickCertificates := proc(f, basis, x)
-local certificates := map(gen -> 0, basis);
+quickCertificates := proc(f, gens, x)
+local certificates := map(gen -> 0, gens);
 local q, r, i;
-    for i from 1 to nops(basis) do
-        if basis[i] = 0 then
+    for i from 1 to nops(gens) do
+        if gens[i] = 0 then
             next;
         end if;
-        # f = q*basis[i] + r gives the certificate multipliers directly.
-        q := quo(f, basis[i], x);
-        r := rem(f, basis[i], x);
+        # f = q*gens[i] + r gives the certificate multipliers directly.
+        q := quo(f, gens[i], x);
+        r := rem(f, gens[i], x);
         if isSOS(q, x) and isSOS(r, x) then
             certificates[i] := q;
             return true, [r, op(certificates)];

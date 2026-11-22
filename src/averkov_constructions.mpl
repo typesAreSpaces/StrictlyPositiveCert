@@ -1,8 +1,8 @@
 # We assume:
 # 1. SemiAlgebraic(B_poly) is compact
 # Return: list of sums of squares multipliers l
-# such that f - dot_product(l, basis) > 0 over SemiAlgebraic(B_poly)
-local averkov_lemma_7 := proc(x, f, basis, B_poly, N_guess)
+# such that f - dot_product(l, gens) > 0 over SemiAlgebraic(B_poly)
+local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("averkov_lemma_7",0)
 $endif
@@ -23,7 +23,7 @@ local N_top, N_bot, N_cur, init_sos, predicate_bin_search;
 $endif
     DEBUG(__FILE__, __LINE__, lprint(">> Start @averkov_lemma_7"));
     DEBUG(__FILE__, __LINE__, lprint(">> f", f));
-    DEBUG(__FILE__, __LINE__, lprint(">> basis", basis));
+    DEBUG(__FILE__, __LINE__, lprint(">> gens", gens));
     DEBUG(__FILE__, __LINE__, lprint(">> B_poly", B_poly));
 
 $ifdef LOG_TIME
@@ -33,7 +33,7 @@ $endif
     DEBUG(__FILE__, __LINE__, lprint(">> semialgebraic_of_B", semialgebraic_of_B));
 
     if evalb(semialgebraic_of_B = []) then
-        return map(g_i -> 0, basis);
+        return map(g_i -> 0, gens);
     end if;
 
     M := -min(
@@ -57,13 +57,13 @@ $endif
 $ifdef LOG_TIME
         END_LOG_TIME("averkov_lemma_7",0)
 $endif
-        return map(g_i -> 0, basis);
+        return map(g_i -> 0, gens);
     end if;
 
     # Keep the logarithms in the exponent heuristic defined.
     M := max(M, 1);
 
-    m := numelems(basis);
+    m := numelems(gens);
 
     #
     # Find gamma
@@ -85,7 +85,7 @@ $endif
                     end proc,
                     semialgebraic_of_B)
             end proc,
-            basis));
+            gens));
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::compute_gamma",2);
 $endif
@@ -105,7 +105,7 @@ $ifdef ENABLE_DEBUGGING
     DEBUG(__FILE__, __LINE__, lprint(">> T", evalf(T)));
 $endif
 
-    eps := 1/2*convert(evalf(findEps(x, basis, f)), rational);
+    eps := 1/2*convert(evalf(findEps(x, gens, f)), rational);
     DEBUG(__FILE__, __LINE__, lprint(">> eps", evalf(eps)));
 $ifdef LOG_TIME
     END_LOG_TIME("averkov_lemma_7::compute_eps",3);
@@ -117,8 +117,8 @@ $endif
 $ifdef LOG_TIME
     START_LOG_TIME("averkov_lemma_7::compute_mu",4);
 $endif
-    semialgebraic_for_mu := univariate_sign_set([B_poly,op(map(g_i -> g_i+EPS_FACTOR*eps,basis))],
-                                                [seq("nonnegative",i=1..nops(basis)+1)],x);
+    semialgebraic_for_mu := univariate_sign_set([B_poly,op(map(g_i -> g_i+EPS_FACTOR*eps,gens))],
+                                                [seq("nonnegative",i=1..nops(gens)+1)],x);
     DEBUG(__FILE__, __LINE__, lprint(">> semialgebraic_for_mu", semialgebraic_for_mu));
     mu := min(
         map(proc(bound)
@@ -339,11 +339,11 @@ $endif
 $ifdef LOG_TIME
         END_LOG_TIME("averkov_lemma_7",0)
 $endif
-        return map(g_i -> 0, basis);
+        return map(g_i -> 0, gens);
     else
 $ifdef LOG_TIME
         END_LOG_TIME("averkov_lemma_7",0)
 $endif
-        return map(g_i -> AVERKOV_SOS(g_i, N), basis);
+        return map(g_i -> AVERKOV_SOS(g_i, N), gens);
     end if;
 end proc;
