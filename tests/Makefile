@@ -14,8 +14,7 @@ FILE=examples.mpl
 FILE=tests.mpl
 FILE=review_findings.mpl
 
-FILE=tests.mpl
-FILE=review_findings.mpl
+FILE=benchmarking.mpl
 QUIET_MODE=
 HEURISTICS=-D USE_BOUNDS
 FLAGS=-D LOG_TIME
