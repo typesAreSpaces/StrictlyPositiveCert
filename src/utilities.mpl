@@ -24,7 +24,7 @@ local interval;
 local local_poly := realroot(diff(poly, x), 1/10000);
     DEBUG(__FILE__, __LINE__, lprint(">> local_poly", evalf(local_poly)));
 local curr_point;
-local i, j := 1;
+local i, j;
     for i from 1 to nops(S) do
         interval := bound_info(x, S[i], 0);
         DEBUG(__FILE__, __LINE__, lprint(">> Current interval", interval));
@@ -41,17 +41,18 @@ $endif
             return false;
         end if;
 
-        if j > nops(local_poly) then
-            break;
-        end if;
-        curr_point := (local_poly[j,1]+local_poly[j,2])/2;
-        while j <= nops(local_poly) and evalf(interval[1] > curr_point) do
+        # Restart for each interval so S need not be sorted. Always compute
+        # the current point before testing its bounds, and keep checking later
+        # interval endpoints even when there are no critical points left.
+        j := 1;
+        while j <= nops(local_poly) do
             curr_point := (local_poly[j,1]+local_poly[j,2])/2;
-            j := j + 1;
-        end do;
-        DEBUG(__FILE__, __LINE__, lprint(">> curr_point", curr_point));
-        while j <= nops(local_poly) and evalf(curr_point <= interval[2]) do
-            curr_point := (local_poly[j,1]+local_poly[j,2])/2;
+            if evalf(curr_point < interval[1]) then
+                j := j + 1;
+                next;
+            elif evalf(curr_point > interval[2]) then
+                break;
+            end if;
             DEBUG(__FILE__, __LINE__, lprint(">> Show evalf", evalf(subs(x=curr_point, poly)) ));
             if evalf(subs(x=curr_point, poly) <= 0) then
 $ifdef LOG_TIME
