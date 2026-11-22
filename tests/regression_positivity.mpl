@@ -18,6 +18,26 @@ local x, item, answer;
         # Strict positivity rejects zeros, including at an interior minimum.
         [[[-1<=x,x<=1]], x^2, false],
         [[[-2<=x,x<=-1],[1<=x,x<=2]], x^2+1, true],
+        # Both endpoint conventions, repeated roots, and an interior sign dip.
+        [[[0<=x,x<=1]], x, false],
+        [[[0<=x,x<=1]], 1-x, false],
+        [[[1<=x,x<=2]], (x^2-2)^2, false],
+        [[[1<=x,x<=2]], (x^2-2)^2-1/10^20, false],
+        [[[1<=x,x<=2]], (x^2-2)^2+1/10^20, true],
+        # Algebraic endpoints and isolated points use exact signs.
+        [[[sqrt(2)<=x,x<=2]], x^2-2, false],
+        [[[sqrt(2)<=x,x<=2]], x^2-1, true],
+        [[[x=sqrt(2)]], x^2-1, true],
+        [[[x=sqrt(2)]], x^2-2, false],
+        [[[x=0]], 0, false],
+        [[[x=0]], -1, false],
+        [[[x=0]], 1, true],
+        # Rays and the whole line must not substitute infinity into p.
+        [[[x<=-1]], -x, true],
+        [[[x<=1]], x^2-2, false],
+        [[[1<=x]], x, true],
+        [[[x=x]], x^2+1, true],
+        [[[x=x]], (x-1)^2, false],
         [[], -1, true]
     ] do
         answer := StrictlyPositiveCert:-checkPositivityOverSAS(item[1],item[2],x);

@@ -1,3 +1,4 @@
+libname := "../StrictlyPositiveCert.mla", libname:
 interface(echo=0);
 getenv(OMP_NUM_THREADS);
 kernelopts(numcpus);

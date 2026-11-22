@@ -14,59 +14,54 @@ end proc;
 
 # Check if poly is strictly positive
 # over S
-# S is a finite list of intervals
+# S is a finite list of closed intervals/points (possibly unbounded)
 # poly is a polynomial
 local checkPositivityOverSAS := proc(S, poly, x)
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("checkPositivityOverSAS",0)
 $endif
-local interval;
-local local_poly := realroot(diff(poly, x), 1/10000);
-    DEBUG(__FILE__, __LINE__, lprint(">> local_poly", evalf(local_poly)));
-local curr_point;
-local i, j;
-    for i from 1 to nops(S) do
-        interval := bound_info(x, S[i], 0);
-        DEBUG(__FILE__, __LINE__, lprint(">> Current interval", interval));
-        if evalf(subs(x=interval[1], poly) <= 0) then
-$ifdef LOG_TIME
-            END_LOG_TIME("checkPositivityOverSAS",0)
-$endif
-            return false;
-        end if;
-        if evalf(subs(x=interval[2], poly) <= 0) then
-$ifdef LOG_TIME
-            END_LOG_TIME("checkPositivityOverSAS",0)
-$endif
-            return false;
-        end if;
-
-        # Restart for each interval so S need not be sorted. Always compute
-        # the current point before testing its bounds, and keep checking later
-        # interval endpoints even when there are no critical points left.
-        j := 1;
-        while j <= nops(local_poly) do
-            curr_point := (local_poly[j,1]+local_poly[j,2])/2;
-            if evalf(curr_point < interval[1]) then
-                j := j + 1;
-                next;
-            elif evalf(curr_point > interval[2]) then
+local interval, a, b, sample, sequence := FAIL;
+local p := expand(poly), positive := true;
+    # Empty sets are vacuous; constant polynomials need no root counting.
+    if nops(S) = 0 then
+        positive := true;
+    elif not has(p, x) then
+        positive := is(p > 0);
+    else
+        # Build at most one exact Sturm sequence, only if a root count is needed.
+        for interval in S do
+            a, b := op(bound_info(x, interval, 0));
+            if a = b then
+                positive := is(subs(x = a, p) > 0);
+            else
+                # sturm counts (a,b], so test a separately when finite.
+                if a <> -infinity then
+                    sample := a;
+                elif b <> infinity then
+                    sample := b - 1;
+                else
+                    sample := 0;
+                end if;
+                positive := is(subs(x = sample, p) > 0);
+                if positive = true then
+                    if sequence = FAIL then
+                        sequence := sturmseq(p, x);
+                    end if;
+                    positive := evalb(sturm(sequence, x, a, b) = 0);
+                end if;
+            end if;
+            if positive <> true then
                 break;
             end if;
-            DEBUG(__FILE__, __LINE__, lprint(">> Show evalf", evalf(subs(x=curr_point, poly)) ));
-            if evalf(subs(x=curr_point, poly) <= 0) then
-$ifdef LOG_TIME
-                END_LOG_TIME("checkPositivityOverSAS",0)
-$endif
-                return false;
-            end if;
-            j := j + 1;
         end do;
-    end do;
+    end if;
+    if positive = FAIL then
+        error "could not determine an exact polynomial sign";
+    end if;
 $ifdef LOG_TIME
     END_LOG_TIME("checkPositivityOverSAS",0)
 $endif
-    return true;
+    return positive;
 end proc;
 
 # Despite its name, this checks strict positivity, not general SOS membership.
