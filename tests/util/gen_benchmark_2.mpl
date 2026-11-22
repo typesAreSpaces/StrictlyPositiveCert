@@ -20,8 +20,8 @@ local g1 := 1, g2 := -1;
         end if;
     end do;
     if evalb(count_num_roots mod 2 = 0) then
-      g1 := g1*(x - (max_point + 1))^k;
-      g2 := g2*(x - (max_point + 1))^k;
+        g1 := g1*(x - (max_point + 1))^k;
+        g2 := g2*(x - (max_point + 1))^k;
     end if;
     return [g1, g2];
 end proc;

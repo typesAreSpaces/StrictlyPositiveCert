@@ -38,14 +38,14 @@ local i, x, f, g;
     g := simplify(-product((x^2 - i^2)^2, i = 1 .. n)/(x + 1)^2/(x - 1)^2);
 
     #try
-        #checkRealCertify((x+n)^2*f, [(x+n)^2*g], "Comparison benchmark using RealCertify");
+    #checkRealCertify((x+n)^2*f, [(x+n)^2*g], "Comparison benchmark using RealCertify");
     #catch:
-        #printf(">> RealCertify fails\n");
+    #printf(">> RealCertify fails\n");
     #end try;
     #try
-        #checkRealCertify(f, [g], "Comparison benchmark using RealCertify");
+    #checkRealCertify(f, [g], "Comparison benchmark using RealCertify");
     #catch:
-        #printf(">> RealCertify fails\n");
+    #printf(">> RealCertify fails\n");
     #end try;
     try
         checkWeifeng(f, [g], x, "Comparison benchmark using approach");
@@ -66,5 +66,5 @@ printf("\n>> Start benchmark\n");
 
 local n_max := 9;
 for i from 1 to n_max do
-  in_between_comparison_benchmark(i);
+    in_between_comparison_benchmark(i);
 end do;

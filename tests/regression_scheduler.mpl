@@ -14,9 +14,9 @@ local visits := [], caught;
             return original_trial(f, g, x, k, M, base, sg, lambda);
         end proc;
         cert := StrictlyPositiveCert:-spCertificates(f, [g], x,
-            max_k=1, max_query_retries=1, max_search_time=10);
+                                                     max_k=1, max_query_retries=1, max_search_time=10);
         if expand(f-cert[1]-cert[2]*g) <> 0
-           or expand(cert[2]-3/2*(1-g)^2) <> 0 then
+        or expand(cert[2]-3/2*(1-g)^2) <> 0 then
             error "deferred query blocked the later exponent";
         end if;
         if visits <> [[0,1/8], [0,1/8], [1,3/8], [1,3/4], [1,3/2]] then
@@ -26,7 +26,7 @@ local visits := [], caught;
         caught := false;
         try
             StrictlyPositiveCert:-spCertificates(f,[g],x,
-                max_k=0,max_query_retries=0);
+                                                 max_k=0,max_query_retries=0);
         catch: caught := evalb(StringTools:-Search("search exhausted",sprintf("%a",[lastexception])) > 0);
         end try;
         if not caught or visits <> [[0,1/8]] then
@@ -41,9 +41,9 @@ local visits := [], caught;
             return original_trial(f, g, x, k, M, base, sg, lambda);
         end proc;
         cert := StrictlyPositiveCert:-monogenicCertificates(x+3/2,1-x^2,x,
-            max_k=0,max_bisection=0,max_query_retries=1);
+                                                            max_k=0,max_bisection=0,max_query_retries=1);
         if visits <> [[0,1/4],[0,1/4]]
-           or expand(x+3/2-cert[1]-cert[2]*(1-x^2)) <> 0 then
+        or expand(x+3/2-cert[1]-cert[2]*(1-x^2)) <> 0 then
             error "transient timeout lost its candidate or consumed its trial budget";
         end if;
 
@@ -65,7 +65,7 @@ local visits := [], caught;
         caught := false;
         try
             StrictlyPositiveCert:-monogenicCertificates(f,g,x,
-                max_k=0,query_time_limit=1/100,max_query_retries=0);
+                                                        max_k=0,query_time_limit=1/100,max_query_retries=0);
         catch: caught := evalb(StringTools:-Search("search exhausted",sprintf("%a",[lastexception])) > 0);
         end try;
         if not caught then error "query timeout did not retire its exhausted state"; end if;
@@ -74,7 +74,7 @@ local visits := [], caught;
         caught := false;
         try
             StrictlyPositiveCert:-spCertificates(f,[g],x,
-                max_search_time=1/10,query_time_limit=1/100,max_query_retries=20);
+                                                 max_search_time=1/10,query_time_limit=1/100,max_query_retries=20);
         catch: caught := evalb(StringTools:-Search("max_search_time",sprintf("%a",[lastexception])) > 0);
         end try;
         if not caught then error "public search deadline was ignored"; end if;
@@ -83,7 +83,7 @@ local visits := [], caught;
     end try;
     cert := timelimit(10,StrictlyPositiveCert:-spCertificates(f,[g],x));
     if expand(f-cert[1]-cert[2]*g) <> 0 or degree(cert[1],x) <> 18
-       or SemiAlgebraic([cert[1]<=0],[x]) <> [] then
+    or SemiAlgebraic([cert[1]<=0],[x]) <> [] then
         error "default scheduler did not resolve the Stengle regression";
     end if;
     printf("PASS: interleaved search, retry state, query limits, deadline, solver errors, and Stengle regression\n");

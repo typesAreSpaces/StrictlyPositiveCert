@@ -21,7 +21,7 @@ VALUES+=-DEPS_FACTOR=17/20
 VALUES+=-DN_GUESS_AVKL=70
 DEBUG_MODE+=-DENABLE_DEBUGGING
 
-.PHONY: clean test
+.PHONY: clean test lint
 
 all: ${PROJECT_NAME}.mla
 
@@ -30,6 +30,9 @@ ${PROJECT_NAME}.mla: $(wildcard src/*.mpl) scripts/installation_script.mpl
 
 clean:
 	rm -rf ${PROJECT_NAME}.mla
+
+lint:
+	find src/ -type f -name '*.mpl' -print0 | xargs -0 -n 1 format-maple.sh
 
 # Maple can exit successfully after reporting an error; the runner checks output too.
 test:

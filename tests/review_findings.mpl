@@ -85,10 +85,10 @@ local valid_certificate, report, report_error;
                 lprint("basis",basis);
                 lprint("returned certificate",H);
                 lprint("identity residual (zero alone is insufficient)",
-                    normal(f-StrictlyPositiveCert:-dot_product([1,op(basis)],H)));
+                       normal(f-StrictlyPositiveCert:-dot_product([1,op(basis)],H)));
                 lprint("multiplier of x^2 at x=-1",subs(x=-1,H[2]));
                 lprint("is that multiplier a rational polynomial?",
-                    type(H[2],polynom(rational,x)));
+                       type(H[2],polynom(rational,x)));
                 if not timelimit(10,valid_certificate(f,basis,H,x)) then
                     good := false;
                 end if;
@@ -160,7 +160,7 @@ local valid_certificate, report, report_error;
                     # error/timeout is inconclusive, rather than this diagnosis.
                     value := sprintf("%a",item);
                     if StringTools:-Search("division by zero",value)=0 and
-                       StringTools:-Search("coeff",value)=0 then
+                    StringTools:-Search("coeff",value)=0 then
                         error "unexpected error in redundant-generator test: %1",item;
                     end if;
                     good := false;
@@ -212,7 +212,7 @@ local valid_certificate, report, report_error;
         kernelopts(opaquemodules=old_opaque);
     end try;
     printf("\nSUMMARY: %d bug(s) reproduced; %d correct behavior(s); %d inconclusive error(s).\n",
-        bugs,passes,errors);
+           bugs,passes,errors);
     printf("Expected on the reviewed source: 4 bugs, 0 correct behaviors, 0 errors.\n");
 end proc:
 

@@ -7,12 +7,12 @@ local check_polynomials, caught, samples;
     check_polynomials := proc(f, basis, cert, x)
     local term;
         if nops(cert) <> nops(basis)+1 or
-           expand(f-StrictlyPositiveCert:-dot_product([1,op(basis)],cert)) <> 0 then
+        expand(f-StrictlyPositiveCert:-dot_product([1,op(basis)],cert)) <> 0 then
             error "certificate reconstruction failed for %1", [f,basis];
         end if;
         for term in cert do
             if not type(term,polynom(rational,x)) or
-               SemiAlgebraic([term < 0],[x]) <> [] then
+            SemiAlgebraic([term < 0],[x]) <> [] then
                 error "invalid SOS multiplier for %1", [f,basis];
             end if;
         end do;
@@ -33,7 +33,7 @@ local check_polynomials, caught, samples;
         [0,-1],
         [3/2+2^260*x^4-x^2/2,1-x^2],
         [1+(1-x^2)*(x/2)^20+x^24/2^50,1-x^2]
-    ];
+               ];
     for item in samples do
         f,g := op(item);
         cert := StrictlyPositiveCert:-monogenicCertificates(f,g,x);
@@ -58,13 +58,13 @@ local check_polynomials, caught, samples;
     for item in [[x+3/2,1-x^2], [2-x^3,1-x^2],
                  [3/2+2^260*x^4-x^2/2,1-x^2]] do
         cert := StrictlyPositiveCert:-monogenicCertificates(op(item),x,
-            output_sos=true,max_sos_iterations=66);
+                                                            output_sos=true,max_sos_iterations=66);
         reconstructed := [];
         for squares in cert do
             sigma := 0;
             for term in squares do
                 if not type(term[1],rational) or term[1]<0 or
-                   not type(term[2],polynom(rational,x)) then
+                not type(term[2],polynom(rational,x)) then
                     error "invalid weighted square";
                 end if;
                 sigma := sigma+term[1]*term[2]^2;
@@ -94,19 +94,19 @@ local check_polynomials, caught, samples;
     if not caught then error "public max_k budget was not forwarded"; end if;
     caught := false;
     try StrictlyPositiveCert:-monogenicCertificates(10^9*(1-x^2)+1,1-x^2,x,
-            max_k=0,max_bisection=0);
+                                                    max_k=0,max_bisection=0);
     catch: caught := true;
     end try;
     if not caught then error "max_bisection budget was ignored"; end if;
     caught := false;
     try StrictlyPositiveCert:-spCertificates(10^9*(1-x^2)+1,[1-x^2],x,
-            max_k=0,max_bisection=0);
+                                             max_k=0,max_bisection=0);
     catch: caught := true;
     end try;
     if not caught then error "public max_bisection budget was not forwarded"; end if;
     caught := false;
     try StrictlyPositiveCert:-monogenicCertificates(3/2+2^260*x^4-x^2/2,1-x^2,x,
-            output_sos=true,max_sos_iterations=64);
+                                                    output_sos=true,max_sos_iterations=64);
     catch: caught := true;
     end try;
     if not caught then error "SOS refinement budget was ignored"; end if;

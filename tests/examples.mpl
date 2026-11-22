@@ -278,7 +278,7 @@ close_to_semialgebraic := proc(eps)
     # that are close to the semialgebraic set of the basis
 local i;
 
-printf("\n>> Start RealCertify\n");
+    printf("\n>> Start RealCertify\n");
     for i from 0 to 4 do
         try
             checkRealCertify(
@@ -290,7 +290,7 @@ printf("\n>> Start RealCertify\n");
         end try;
     end do;
 
-printf("\n>> Start Weifeng\n");
+    printf("\n>> Start Weifeng\n");
     for i from 0 to 4 do
         try
             checkWeifeng(
@@ -334,7 +334,7 @@ example_11_paper := proc()
         x, "PASS");
 end proc;
 
-problematic_case := proc() 
+problematic_case := proc()
     checkRealCertify(
         -x^2+4848041/10000,
         [(x-241/25)*(x-329/20)*(x-478/25)*(x-1979/100)*(x-2079/100), (-x+241/25)*(x-329/20)*(x-478/25)*(x-1979/100)*(x-2079/100)],

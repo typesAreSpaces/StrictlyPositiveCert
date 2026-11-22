@@ -19,7 +19,7 @@ local g1 := 1, g2 := -1;
         end if;
     end do;
     if evalb(g1 = 1) then
-      return [x^2, g2];
+        return [x^2, g2];
     end if;
     return [g1, g2];
 end proc;

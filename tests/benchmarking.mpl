@@ -121,8 +121,8 @@ runBenchmark1 := proc()
 #Status PASS
 #Heuristics: -D USE_BOUNDS
     for d from 1 to 7 do:
-      natGensBenchmark2(x, d);
-    end do; 
+        natGensBenchmark2(x, d);
+    end do;
 end proc;
 
 certificates_of_strictly_positive_polynomials_benchmark := proc()
@@ -146,132 +146,132 @@ local max_time := 300;
 end proc;
 
 strictly_positive_polynomials_close_to_semialgebraic_sets_benchmark := proc()
-  printf("\n>> Start benchmark\n");
+    printf("\n>> Start benchmark\n");
 local test_name := "Strictly positive polynomials close to semialgebraic sets";
 local max_time := 300;
 
-  for eps in [1/2, 1/3] do
-    for k from 13 to 21 by 2 do
-      local f := (1 + eps) + x;
-      local g := [(1 - x^2)^k];
+    for eps in [1/2, 1/3] do
+        for k from 13 to 21 by 2 do
+            local f := (1 + eps) + x;
+            local g := [(1 - x^2)^k];
 
-      try
-        timelimit(max_time, checkRealCertify(f, g, test_name));
-        printf(">> Succeeds RealCertify %s\n", test_name);
-      catch:
-        printf(">> Timeout RealCertify %s\n", test_name);
-      end try;
+            try
+                timelimit(max_time, checkRealCertify(f, g, test_name));
+                printf(">> Succeeds RealCertify %s\n", test_name);
+            catch:
+                printf(">> Timeout RealCertify %s\n", test_name);
+            end try;
 
-      try
-        timelimit(max_time, checkWeifeng(f, g, x, test_name));
-        printf(">> Succeeds Weifeng %s\n", test_name);
-      catch:
-        printf(">> Timeout Weifeng %s\n", test_name);
-      end try;
+            try
+                timelimit(max_time, checkWeifeng(f, g, x, test_name));
+                printf(">> Succeeds Weifeng %s\n", test_name);
+            catch:
+                printf(">> Timeout Weifeng %s\n", test_name);
+            end try;
+        end do;
     end do;
-  end do;
-  return 0;
+    return 0;
 end proc;
 
 strictly_positive_polynomials_stengle_benchmark := proc()
-  printf("\n>> Start benchmark\n");
+    printf("\n>> Start benchmark\n");
 local test_name := "Strictly positive polynomials Stengles degree estimation";
 local max_time := 300;
 
-  for d in [10, 5, 1, 1/2, 1/3] do
-    for k from 1 to 3 by 2 do
-      local f := (1 - x^2) + d;
-      local g := [(1 - x^2)^k];
+    for d in [10, 5, 1, 1/2, 1/3] do
+        for k from 1 to 3 by 2 do
+            local f := (1 - x^2) + d;
+            local g := [(1 - x^2)^k];
 
-      try
-        timelimit(max_time, checkRealCertify(f, g, test_name));
-        printf(">> Succeeds RealCertify %s\n", test_name);
-      catch:
-        printf(">> Timeout RealCertify %s\n", test_name);
-      end try;
+            try
+                timelimit(max_time, checkRealCertify(f, g, test_name));
+                printf(">> Succeeds RealCertify %s\n", test_name);
+            catch:
+                printf(">> Timeout RealCertify %s\n", test_name);
+            end try;
 
-      try
-        timelimit(max_time, checkWeifeng(f, g, x, test_name));
-        printf(">> Succeeds Weifeng %s\n", test_name);
-      catch:
-        printf(">> Timeout Weifeng %s\n", test_name);
-      end try;
+            try
+                timelimit(max_time, checkWeifeng(f, g, x, test_name));
+                printf(">> Succeeds Weifeng %s\n", test_name);
+            catch:
+                printf(">> Timeout Weifeng %s\n", test_name);
+            end try;
+        end do;
     end do;
-  end do;
-  return 0;
+    return 0;
 end proc;
 
 solving_stengle_example := proc()
-  printf("\n>> Start benchmark\n");
+    printf("\n>> Start benchmark\n");
 local test_name := "Solving Stengle's Example";
 #local max_time := 300;
 local max_time := 5000;
 local eps, f, g;
 #local r;
 
-  #for r from 3 to 8 do
-  #r:=4;
-  #for eps in [5, (5+1)/2, 1, (1+1/2)/2, 1/2, (1/2+1/3)/2, 1/3, 1/4, 62/320] do
-  for eps in [5, 121/27, 107/27, 31/9, 79/27, 65/27, 17/9, 37/27, 23/27, 1/3] do
-  #for eps in [60/320] do
-  #for eps1 from 61 to 60 by -1 do
-    #eps := eps1/320;
-    f := 1 - x^2 + eps;
-    g := [(1 - x^2)^3];
+    #for r from 3 to 8 do
+    #r:=4;
+    #for eps in [5, (5+1)/2, 1, (1+1/2)/2, 1/2, (1/2+1/3)/2, 1/3, 1/4, 62/320] do
+    for eps in [5, 121/27, 107/27, 31/9, 79/27, 65/27, 17/9, 37/27, 23/27, 1/3] do
+        #for eps in [60/320] do
+        #for eps1 from 61 to 60 by -1 do
+        #eps := eps1/320;
+        f := 1 - x^2 + eps;
+        g := [(1 - x^2)^3];
 
-    try
-      timelimit(max_time, checkRealCertify(f, g, test_name));
-      printf(">> Succeeds RealCertify %s\n", test_name);
-    catch:
-      printf(">> Timeout RealCertify %s\n", test_name);
-    end try;
+        try
+            timelimit(max_time, checkRealCertify(f, g, test_name));
+            printf(">> Succeeds RealCertify %s\n", test_name);
+        catch:
+            printf(">> Timeout RealCertify %s\n", test_name);
+        end try;
 
-    try
-      timelimit(max_time, checkWeifeng(f, g, x, test_name));
-      printf(">> Succeeds Weifeng %s\n", test_name);
-    catch:
-      printf(">> Timeout Weifeng %s\n", test_name);
-    end try;
-    #gc();
-    #forget(all);
-  end do;
+        try
+            timelimit(max_time, checkWeifeng(f, g, x, test_name));
+            printf(">> Succeeds Weifeng %s\n", test_name);
+        catch:
+            printf(">> Timeout Weifeng %s\n", test_name);
+        end try;
+        #gc();
+        #forget(all);
+    end do;
 
-  return 0;
+    return 0;
 end proc;
 
 lifted_prods_hypercube := proc()
-  printf("\n>> Start benchmark\n");
+    printf("\n>> Start benchmark\n");
 local test_name := "Lifted products in hypercube";
 local max_time := 300;
 local eps, f, g;
 
-  for eps in [5, 1, 1/2, 1/3, 1/5, 1/10, 1/20]  do
-    f := (1 - x^2)*(1-y^2) + eps;
-    g := [1 - x^2, 1 - y^2];
+    for eps in [5, 1, 1/2, 1/3, 1/5, 1/10, 1/20]  do
+        f := (1 - x^2)*(1-y^2) + eps;
+        g := [1 - x^2, 1 - y^2];
 
-    try
-      timelimit(max_time, checkRealCertify(f, g, test_name));
-      printf(">> Succeeds RealCertify %s\n", test_name);
-    catch:
-      printf(">> Timeout RealCertify %s\n", test_name);
-    end try;
+        try
+            timelimit(max_time, checkRealCertify(f, g, test_name));
+            printf(">> Succeeds RealCertify %s\n", test_name);
+        catch:
+            printf(">> Timeout RealCertify %s\n", test_name);
+        end try;
 
-    #try
-      #timelimit(max_time, checkWeifeng(f, g, x, test_name));
-      #printf(">> Succeeds Weifeng %s\n", test_name);
-    #catch:
-      #printf(">> Timeout Weifeng %s\n", test_name);
-    #end try;
-  end do;
-  return 0;
+        #try
+        #timelimit(max_time, checkWeifeng(f, g, x, test_name));
+        #printf(">> Succeeds Weifeng %s\n", test_name);
+        #catch:
+        #printf(">> Timeout Weifeng %s\n", test_name);
+        #end try;
+    end do;
+    return 0;
 end proc;
 
 # Reads a file 'path' with a benchmark.
 # Assumes the benchmark is stored in a variable called 'external_benchmarks'
 runExternalBenchmark := proc(path)
-  read path;
+    read path;
 local max_time := 300;
-    runBenchmark(external_benchmarks, max_time); 
+    runBenchmark(external_benchmarks, max_time);
 end proc;
 
 # ----------

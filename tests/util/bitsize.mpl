@@ -1,7 +1,7 @@
 #bitsize of integer
 bitsizeI := proc(integer)
     if integer = 0 then
-      return 1;
+        return 1;
     end if;
     return ceil(evalf(log(abs(integer), 2))) + 1;
 end proc;

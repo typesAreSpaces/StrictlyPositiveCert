@@ -7,19 +7,19 @@ local x, f, basis, ok, certificates, multiplier, test_case;
     for test_case in [
         [1-x^2, [2-x^4, 1/4-x^2], [3/4, 0, 1]],
         [3-x^4, [x, 0, 1-x^2], [2, 0, 0, x^2+1]]
-    ] do
+                     ] do
         f, basis := test_case[1], test_case[2];
         ok, certificates := StrictlyPositiveCert:-quickCertificates(f, basis, x);
         if not ok or certificates <> test_case[3] then
             error "unexpected quick certificate for %1", test_case;
         end if;
         if nops(certificates) <> nops(basis)+1
-           or expand(f-StrictlyPositiveCert:-dot_product([1, op(basis)], certificates)) <> 0 then
+        or expand(f-StrictlyPositiveCert:-dot_product([1, op(basis)], certificates)) <> 0 then
             error "quick certificate identity failed";
         end if;
         for multiplier in certificates do
             if not type(multiplier, polynom(rational, x))
-               or SemiAlgebraic([multiplier < 0], [x]) <> [] then
+            or SemiAlgebraic([multiplier < 0], [x]) <> [] then
                 error "invalid SOS multiplier";
             end if;
         end do;

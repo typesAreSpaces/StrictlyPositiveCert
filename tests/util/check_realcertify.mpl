@@ -46,21 +46,21 @@ local out, isvalid, certificates, s, h;
     isvalid, certificates, s := extractCertificates(out);
 
     if isvalid then
-      printf(">> Time taken\n%f\n", st);
-      lprint(">> Sums of squares multipliers", certificates);
-local _degree := foldl((_x, _y) -> max(_x, _y), 0, op(map(h -> quickdegree(h, x), certificates)));
-      printf(">> Degree size\n%s\n", convert(_degree, string));
-      #printf(">> Bitsize complexity of certificates: %s\n", convert(add(bitsizeP(h), h in certificates), string));
+        printf(">> Time taken\n%f\n", st);
+        lprint(">> Sums of squares multipliers", certificates);
+        local _degree := foldl((_x, _y) -> max(_x, _y), 0, op(map(h -> quickdegree(h, x), certificates)));
+        printf(">> Degree size\n%s\n", convert(_degree, string));
+        #printf(">> Bitsize complexity of certificates: %s\n", convert(add(bitsizeP(h), h in certificates), string));
 
 $ifdef SHOW_CHECK_REALCERTIFY
-lprint("Certificates produced", certificates);
-lprint("Test exact certificate", expand (f - s));
-lprint("Test certificates produced are sums of squares");
+        lprint("Certificates produced", certificates);
+        lprint("Test exact certificate", expand (f - s));
+        lprint("Test certificates produced are sums of squares");
 $endif
 
-      return 0;
+        return 0;
     else
-      printf(">> RealCertify couldnt find certificates\n%f\n", st);
-      return 1;
-    end if; 
+        printf(">> RealCertify couldnt find certificates\n%f\n", st);
+        return 1;
+    end if;
 end proc;

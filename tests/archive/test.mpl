@@ -4,29 +4,29 @@ with(StrictlyPositiveCert):
 #eps := 1/2;
 
 #for k in [13, 15, 17, 19, 21] do
-  #basis := [(1-x^2)^k]:
-  #st := time():
-  #lprint(spCertificates(1 + eps + x, basis, x)):
+#basis := [(1-x^2)^k]:
+#st := time():
+#lprint(spCertificates(1 + eps + x, basis, x)):
 #end do;
 
 #eps := 1/2:
 #lprint(">> eps = 1/2");
 
 #for k in [13, 15, 17, 19, 21] do
-  #basis := [(1-x^2)^k]:
-  #st := time():
-  #lprint(spCertificates(1 + eps + x, basis, x));
-  #print("It took ", time() - st, " seconds");
+#basis := [(1-x^2)^k]:
+#st := time():
+#lprint(spCertificates(1 + eps + x, basis, x));
+#print("It took ", time() - st, " seconds");
 #end do;
 
 #eps := 1/3:
 #lprint(">> eps = 1/3");
 
 #for k in [13, 15, 17, 19, 21] do
-  #basis := [(1-x^2)^k]:
-  #st := time():
-  #lprint(spCertificates(1 + eps + x, basis, x));
-  #print("It took ", time() - st, " seconds");
+#basis := [(1-x^2)^k]:
+#st := time():
+#lprint(spCertificates(1 + eps + x, basis, x));
+#print("It took ", time() - st, " seconds");
 #end do;
 
 #spCertificates(-(x - 5), [(x + 1)*(x - 2)*(x - 4), -(x - 1)], x);
