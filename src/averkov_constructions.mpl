@@ -1,8 +1,11 @@
 # Return SOS multipliers H such that f-dot_product(H,gens)>0 on {B_poly>=0}.
 # Every bound and every accepted exponent is checked by exact sign decisions.
 local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess)
-local cells, gamma := 1, eps, pos_coeff := 1, g_i;
-local N, N_top := 1, N_bot := 0, N_cur, admissible;
+local cells, gamma := 1, eps, g_i;
+local N, N_top := 1, admissible;
+$ifdef ENABLE_BINARY_SEARCH_AVKL
+local N_bot := 0, N_cur;
+$endif
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("averkov_lemma_7",0)
     try
@@ -28,7 +31,9 @@ $endif
         return univariate_positive_on_cells(expand(f-AVERKOV_EXPR(n)),cells,x);
     end proc;
     while not admissible(N_top) do
+$ifdef ENABLE_BINARY_SEARCH_AVKL
         N_bot := N_top;
+$endif
         # Retain the configured guess as an extra probe when doubling crosses it.
         if N_top<N_guess and N_guess<2*N_top then
             N_top := N_guess;

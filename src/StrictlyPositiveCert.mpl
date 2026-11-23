@@ -1,4 +1,4 @@
-$define AVERKOV_SOS(g, N)         1/pos_coeff*((g - gamma)/(gamma + eps))^(2*N)
+$define AVERKOV_SOS(g, N)         ((g - gamma)/(gamma + eps))^(2*N)
 $define AVERKOV_1_EXPR(g, N)      AVERKOV_SOS(g, N)*g
 $define AVERKOV_EXPR(N)           add(term, term in map(g_i -> AVERKOV_1_EXPR(g_i, N), gens))
 
@@ -17,7 +17,6 @@ $define INIT_START_LOG_TIME(X, S) local fd;START_LOG_TIME(X, S)
 
 with(SolveTools, SemiAlgebraic);
 with(RootFinding, Isolate);
-with(RegularChains, SemiAlgebraicSetTools, PolynomialRing);
 
 StrictlyPositiveCert := module() option package;
 
