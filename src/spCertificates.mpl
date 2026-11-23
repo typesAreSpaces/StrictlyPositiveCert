@@ -62,7 +62,11 @@ $ifdef ENABLE_QUICK_CERT
 $endif
 
         stage := "bound construction";
-        g := bound_poly(gens, x);
+        try
+            g := bound_poly(gens, x);
+        catch "no compactness witness found":
+            error "bound_poly could not witness compactness of gens: expected an even-degree generator with negative leading coefficient or two odd-degree generators with opposite-sign leading coefficients";
+        end try;
         DEBUG(__FILE__, __LINE__, lprint(">> Done with bound_poly"));
         DEBUG(__FILE__, __LINE__, lprint(">> bound_poly g", g));
 
