@@ -16,7 +16,7 @@ $ifdef ENABLE_QUICK_CERT
 local quickcheck, quickcertificates;
 $endif
 $ifdef LOG_TIME
-    INIT_START_LOG_TIME("spCertificates",0)
+    INIT_START_LOG_TIME("spCertificates")
     try
 $endif
     # Expand before classifying constants or extracting polynomial coefficients.
@@ -94,7 +94,7 @@ $endif
     return certificates;
 $ifdef LOG_TIME
     finally
-        END_LOG_TIME("spCertificates",0);
+        END_LOG_TIME("spCertificates");
     end try;
 $endif
 end proc;

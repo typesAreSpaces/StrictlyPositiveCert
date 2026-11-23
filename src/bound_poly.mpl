@@ -7,7 +7,7 @@ local bound_poly := proc(gens, x)
 local degrees, fst_coeffs, snd_coeffs, h1, h2;
 local i, j;
 $ifdef LOG_TIME
-    INIT_START_LOG_TIME("bound_poly",0)
+    INIT_START_LOG_TIME("bound_poly")
     try
 $endif
     degrees := map(poly -> degree(poly, x), gens);
@@ -69,7 +69,7 @@ $endif
     return NULL;
 $ifdef LOG_TIME
     finally
-        END_LOG_TIME("bound_poly",0);
+        END_LOG_TIME("bound_poly");
     end try;
 $endif
 end proc;

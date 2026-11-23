@@ -1,5 +1,6 @@
 # Compare the specialized exact routines with the general solver as an oracle.
 read "src/StrictlyPositiveCert.mpl":
+with(SolveTools, SemiAlgebraic):
 kernelopts(opaquemodules=false):
 
 check_sign_routines := proc()

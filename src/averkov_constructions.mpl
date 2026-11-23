@@ -7,7 +7,7 @@ $ifdef ENABLE_BINARY_SEARCH_AVKL
 local N_bot := 0, N_cur;
 $endif
 $ifdef LOG_TIME
-    INIT_START_LOG_TIME("averkov_lemma_7",0)
+    INIT_START_LOG_TIME("averkov_lemma_7")
     try
 $endif
     cells := univariate_select_cells(univariate_sign_chart(B_poly,x),"nonnegative");
@@ -59,7 +59,7 @@ $endif
     return map(g_i -> AVERKOV_SOS(g_i,N),gens);
 $ifdef LOG_TIME
     finally
-        END_LOG_TIME("averkov_lemma_7",0);
+        END_LOG_TIME("averkov_lemma_7");
     end try;
 $endif
 end proc;

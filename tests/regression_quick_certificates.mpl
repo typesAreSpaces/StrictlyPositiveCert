@@ -1,6 +1,7 @@
 # Run from the repository root with -DENABLE_QUICK_CERT and the Makefile's -D values.
 # Read source directly so this does not depend on a rebuilt .mla library.
 read "src/StrictlyPositiveCert.mpl":
+with(SolveTools, SemiAlgebraic):
 
 check_quick_certificates := proc()
 local x, f, basis, ok, certificates, multiplier, test_case;

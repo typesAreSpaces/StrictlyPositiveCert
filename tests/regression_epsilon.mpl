@@ -1,5 +1,6 @@
 # Exact epsilon separation and Averkov regressions; read source, not an archive.
 read "src/StrictlyPositiveCert.mpl":
+with(SolveTools, SemiAlgebraic):
 kernelopts(opaquemodules=false):
 
 check_epsilon := proc()

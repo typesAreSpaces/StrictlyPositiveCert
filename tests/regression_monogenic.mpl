@@ -1,5 +1,6 @@
 # Run from the repository root with the Makefile's -D values.
 read "src/StrictlyPositiveCert.mpl":
+with(SolveTools, SemiAlgebraic):
 
 check_monogenic := proc()
 local x, y, i, item, f, g, basis, cert, term, squares, sigma, reconstructed, r, h;

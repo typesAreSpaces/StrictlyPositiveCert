@@ -23,7 +23,7 @@ local g_2 := basis[2];
 local s := H[1];
     lprint("Test exact certificate", f - (s + g_1*H[2] + g_2*H[3]));
     lprint("Test certificates produced are sums of squares");
-    lprint(map(poly -> SemiAlgebraic([poly < 0], [x]), H));
+    lprint(map(poly -> SolveTools:-SemiAlgebraic([poly < 0], [x]), H));
 $endif
 
     return;

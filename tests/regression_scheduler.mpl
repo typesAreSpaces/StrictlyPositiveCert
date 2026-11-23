@@ -1,5 +1,6 @@
 # Check scheduler fairness, retry state, limits, and propagation of solver errors.
 read "src/StrictlyPositiveCert.mpl":
+with(SolveTools, SemiAlgebraic):
 kernelopts(opaquemodules=false):
 
 check_scheduler := proc()
