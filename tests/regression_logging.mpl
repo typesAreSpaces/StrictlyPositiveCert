@@ -104,6 +104,20 @@ end proc;
     end try;
     if not caught then error "timeout was suppressed"; end if;
     balanced("catchable timeout");
-    printf("PASS: timing cleanup on shortcuts, filtering, normal returns, fall-through, nested errors, and catchable timeouts\n");
+    # The pipeline timelimit interrupts logged routines below its boundary;
+    # spCertificates must close their entries and report the stage.
+    caught := false;
+    StrictlyPositiveCert:-univariate_positive_on_cells := proc()
+        while true do end do;
+    end proc;
+    try StrictlyPositiveCert:-spCertificates(x+3/2,[1-x^2],x,
+                                             use_univariate_heuristics=false,max_search_time=1/10);
+    catch "certificate search exhausted max_search_time during": caught := evalb(lastexception[3] = "Averkov");
+    finally
+        StrictlyPositiveCert:-univariate_positive_on_cells := eval(original_positive);
+    end try;
+    if not caught then error "pipeline timeout was not reported: %1",lastexception; end if;
+    balanced("pipeline timeout");
+    printf("PASS: timing cleanup on shortcuts, filtering, normal returns, fall-through, nested errors, catchable timeouts, and pipeline timeout unwinding\n");
 end proc:
 check_logging():

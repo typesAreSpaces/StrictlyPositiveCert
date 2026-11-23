@@ -11,8 +11,8 @@ $endif
 # Timed routines pair INIT_START_LOG_TIME with END_LOG_TIME in a conditional
 # finally block, covering returns and catchable errors. An outer timelimit or
 # user interrupt can bypass finally blocks inside the interrupted computation.
-$define START_LOG_TIME(X, S) stack_level:=stack_level+1;fd := FileTools:-Text:-Open("log_time.txt", append);local _log_time_S := time();FileTools:-Text:-WriteString(fd, cat("Start: ", X, " ", convert(stack_level, string), "\n"));FileTools:-Text:-Close(fd);
-$define END_LOG_TIME(X, S) fd := FileTools:-Text:-Open("log_time.txt", append);FileTools:-Text:-WriteString(fd, cat("End: ", X, " ", convert(stack_level, string), "\nTime: ", convert(time() - _log_time_S, string), "\n"));FileTools:-Text:-Close(fd);stack_level:=stack_level-1;
+$define START_LOG_TIME(X, S) stack_level:=stack_level+1;fd := FileTools:-Text:-Open("log_time.txt", append);local _log_time_S := time();log_entries := [op(log_entries), [X, _log_time_S]];FileTools:-Text:-WriteString(fd, cat("Start: ", X, " ", convert(stack_level, string), "\n"));FileTools:-Text:-Close(fd);
+$define END_LOG_TIME(X, S) fd := FileTools:-Text:-Open("log_time.txt", append);FileTools:-Text:-WriteString(fd, cat("End: ", X, " ", convert(stack_level, string), "\nTime: ", convert(time() - _log_time_S, string), "\n"));FileTools:-Text:-Close(fd);log_entries := log_entries[1..-2];stack_level:=stack_level-1;
 $define INIT_START_LOG_TIME(X, S) local fd;START_LOG_TIME(X, S)
 
 with(RootFinding, Isolate);
@@ -29,7 +29,28 @@ export SplitNonnegativeFactor;
 
 $ifdef LOG_TIME
 local stack_level := -1;
+# Open timing entries [routine, start time], innermost last.
+local log_entries := [];
+
+# Close entries a timelimit abandoned: Maple skips finally blocks below the
+# timelimit boundary, so a caller above it writes their End records.
+local log_unwind := proc(level)
+local fd, entry;
+    while stack_level > level and log_entries <> [] do
+        entry := log_entries[-1];
+        fd := FileTools:-Text:-Open("log_time.txt", append);
+        FileTools:-Text:-WriteString(fd, cat("End: ", entry[1], " ", convert(stack_level, string),
+                                             "\nTime: ", convert(time() - entry[2], string), "\n"));
+        FileTools:-Text:-Close(fd);
+        log_entries := log_entries[1..-2];
+        stack_level := stack_level-1;
+    end do;
+end proc;
 $endif
+
+# CPU-time deadline (as returned by time()) of the enclosing spCertificates
+# timelimit, or FAIL. Inner timeout handlers use it to re-raise the outer one.
+local search_deadline := FAIL;
 
 $include "src/utilities.mpl";
 $include "src/univariate_signs.mpl";

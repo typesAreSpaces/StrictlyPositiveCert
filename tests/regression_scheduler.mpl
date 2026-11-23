@@ -4,7 +4,7 @@ kernelopts(opaquemodules=false):
 
 check_scheduler := proc()
 local x, f := 4/3-x^2, g := (1-x^2)^3, cert, original_trial;
-local visits := [], caught;
+local visits := [], caught, started;
     original_trial := eval(StrictlyPositiveCert:-monogenic_search_trial);
     try
         # Simulate a slow k=0 query while allowing the real k=1 search to finish.
@@ -78,6 +78,22 @@ local visits := [], caught;
         catch: caught := evalb(StringTools:-Search("max_search_time",sprintf("%a",[lastexception])) > 0);
         end try;
         if not caught then error "public search deadline was ignored"; end if;
+
+        # The single outer timelimit must surface from inside a monogenic
+        # trial as the pipeline budget error, not as a deferred query.
+        StrictlyPositiveCert:-monogenic_search_trial := proc()
+        local j := 0;
+            while true do j := j+1; end do;
+        end proc;
+        caught := false;
+        started := time();
+        try
+            StrictlyPositiveCert:-spCertificates(f,[g],x,
+                                                 max_search_time=1/2,query_time_limit=10,max_query_retries=20);
+        catch "certificate search exhausted max_search_time during": caught := evalb(lastexception[3] = "monogenic search");
+        end try;
+        if not caught then error "outer budget was hidden by a monogenic trial: %1",lastexception; end if;
+        if time()-started > 5 then error "outer budget overran inside a monogenic trial"; end if;
     finally
         StrictlyPositiveCert:-monogenic_search_trial := original_trial;
     end try;

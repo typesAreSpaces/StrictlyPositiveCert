@@ -1,12 +1,3 @@
-# Shared cooperative deadline for the public certificate pipeline.
-local univariate_search_remaining := proc(deadline, stage)
-local remaining := deadline-time[real]();
-    if remaining<=0 then
-        error "certificate search exhausted max_search_time during %1",stage;
-    end if;
-    return remaining;
-end proc;
-
 # A direction is sum(weights[i]*gens[i]); weights are fixed rational squares.
 # A nonpositive f cannot be repaired where P>=0, including zeros of P.
 local univariate_scale_regions := proc(f, P, cells, x)
@@ -30,21 +21,18 @@ local h := expand(f-lambda*P), big, small;
 end proc;
 
 # Return [positive rational scale or FAIL, number of trials used].
-local univariate_scale_direction := proc(f, P0, cells, x, max_trials, max_updates, deadline)
+local univariate_scale_direction := proc(f, P0, cells, x, max_trials, max_updates)
 local P, regions, lambda, lo := 0, hi := 0, status, trial;
     if max_trials=0 then return [FAIL,0]; end if;
-    P := timelimit(univariate_search_remaining(deadline,"scalar direction"),expand(P0));
-    regions := timelimit(univariate_search_remaining(deadline,"scalar sign regions"),
-                         univariate_scale_regions(f,P,cells,x));
+    P := expand(P0);
+    regions := univariate_scale_regions(f,P,cells,x);
     if regions=FAIL then return [FAIL,0]; end if;
     if P=0 then return [1,0]; end if;
     # Scale the initial trial by coefficient size; tiny constant directions
     # should not need dozens of doublings merely to reach a useful scale.
-    lambda := timelimit(univariate_search_remaining(deadline,"scalar normalization"),
-                        max(1,op(map(abs,[coeffs(expand(f),x)])))/max(op(map(abs,[coeffs(P,x)]))));
+    lambda := max(1,op(map(abs,[coeffs(expand(f),x)])))/max(op(map(abs,[coeffs(P,x)])));
     for trial from 1 to min(max_trials,max_updates+1) do
-        status := timelimit(univariate_search_remaining(deadline,"scalar trial"),
-                            univariate_scale_status(f,P,lambda,cells,regions,x));
+        status := univariate_scale_status(f,P,lambda,cells,regions,x);
         if status="ok" then return [lambda,trial]; end if;
         if status="infeasible" then return [FAIL,trial]; end if;
         if status="small" then lo:=lambda; else hi:=lambda; end if;
@@ -58,27 +46,23 @@ end proc;
 
 # Returns SOS multipliers with a strictly positive residual on {B>=0},
 # or FAIL. The residual need not be globally nonnegative at this stage.
+# Time is bounded by the caller's timelimit; trial caps bound the work.
 local univariate_reduction := proc(f, gens, x, B,
                                   {max_trials::nonnegint := 64,
-                                   max_updates::nonnegint := 32,
-                                   deadline := time[real]()+300})
+                                   max_updates::nonnegint := 32})
 local cells, i, q, r, weights, result, trials := 0, seen := {}, square;
 local try_direction;
-    cells := timelimit(univariate_search_remaining(deadline,"reduction sign cells"),
-                       univariate_select_cells(univariate_sign_chart(B,x),"nonnegative"));
-    if timelimit(univariate_search_remaining(deadline,"reduction positivity"),
-                 univariate_positive_on_cells(f,cells,x)) then
+    cells := univariate_select_cells(univariate_sign_chart(B,x),"nonnegative");
+    if univariate_positive_on_cells(f,cells,x) then
         return map(g->0,gens);
     end if;
 
     for i from 1 to nops(gens) do
         if gens[i]=0 then next; end if;
-        q := timelimit(univariate_search_remaining(deadline,"polynomial division"),quo(f,gens[i],x));
-        if not timelimit(univariate_search_remaining(deadline,"quotient nonnegativity"),
-                         univariate_nonnegative_on_R(q,x)) then next; end if;
-        r := timelimit(univariate_search_remaining(deadline,"polynomial remainder"),rem(f,gens[i],x));
-        if timelimit(univariate_search_remaining(deadline,"remainder positivity"),
-                     univariate_positive_on_cells(r,cells,x)) then
+        q := quo(f,gens[i],x);
+        if not univariate_nonnegative_on_R(q,x) then next; end if;
+        r := rem(f,gens[i],x);
+        if univariate_positive_on_cells(r,cells,x) then
             weights := map(g->0,gens); weights[i]:=q;
             DEBUG(__FILE__, __LINE__, lprint(">> Univariate division reduction",i));
             return weights;
@@ -88,11 +72,10 @@ local try_direction;
     try_direction := proc(w)
     local j, direction, scaled;
         if trials>=max_trials then return FAIL; end if;
-        direction := timelimit(univariate_search_remaining(deadline,"direction construction"),
-                               expand(add(w[j]*gens[j],j=1..nops(gens))));
+        direction := expand(add(w[j]*gens[j],j=1..nops(gens)));
         if member(direction,seen) then return FAIL; end if;
         seen := seen union {direction};
-        scaled := univariate_scale_direction(f,direction,cells,x,max_trials-trials,max_updates,deadline);
+        scaled := univariate_scale_direction(f,direction,cells,x,max_trials-trials,max_updates);
         trials := trials+scaled[2];
         if scaled[1]=FAIL then return FAIL; end if;
         return map(weight->scaled[1]*weight,w);

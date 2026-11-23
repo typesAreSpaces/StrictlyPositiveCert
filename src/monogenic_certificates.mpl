@@ -142,7 +142,7 @@ monogenicCertificates := proc(f0, g0, x::name,
 local f := expand(f0), g := expand(g0), dg, df, m, M, bounds, regions;
 local k, next_k := 0, round := 0, active := 0, lambda, lo, hi, iteration, retries;
 local states := table(), bases := table(), products := table();
-local trial, status, base, h, started := time[real](), remaining, allowance;
+local trial, status, base, h, started := time(), remaining, allowance;
     if not type(f, polynom(rational, x)) or not type(g, polynom(rational, x)) then
         error "f and g must be univariate polynomials with rational coefficients";
     end if;
@@ -182,7 +182,7 @@ local trial, status, base, h, started := time[real](), remaining, allowance;
         for k from 0 to next_k-1 do
             if states[k] = FAIL then next; end if;
             lambda, lo, hi, iteration, retries := op(states[k]);
-            remaining := max_search_time-(time[real]()-started);
+            remaining := max_search_time-(time()-started);
             if remaining <= 0 then
                 error "monogenic certificate search exhausted max_search_time=%1", max_search_time;
             end if;
@@ -191,6 +191,12 @@ local trial, status, base, h, started := time[real](), remaining, allowance;
                 trial := timelimit(allowance,
                                    monogenic_search_trial(f, g, x, k, M, bases[k], products[k], lambda, regions));
             catch "time expired":
+                # This handler also catches an enclosing timelimit that fired
+                # during the trial; Maple then disarms that outer limit, so
+                # re-raise instead of retrying once the outer budget is spent.
+                if search_deadline <> FAIL and time() >= search_deadline then
+                    error "time expired";
+                end if;
                 DEBUG(__FILE__, __LINE__, lprint(">> Deferred monogenic trial k, iteration, retry", k, iteration, retries));
                 if retries >= max_query_retries then
                     states[k] := FAIL;

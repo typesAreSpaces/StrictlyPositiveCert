@@ -48,25 +48,25 @@ end proc;
 
     # A zero of P with f<=0 blocks every scale, including an included boundary.
     for item in [[x,x^2,cells],[x,x,[[0,1,true,true]]],[-1,0,cells]] do
-        result:=StrictlyPositiveCert:-univariate_scale_direction(op(item),x,16,8,time[real]()+10);
+        result:=StrictlyPositiveCert:-univariate_scale_direction(op(item),x,16,8);
         if result<>[FAIL,0] then error "zero-blocked direction was not rejected"; end if;
     end do;
     # Open endpoints do not introduce a spurious zero obstruction.
-    result:=StrictlyPositiveCert:-univariate_scale_direction(x,x,[[0,1,false,true]],x,16,8,time[real]()+10);
+    result:=StrictlyPositiveCert:-univariate_scale_direction(x,x,[[0,1,false,true]],x,16,8);
     if result[1]=FAIL or not StrictlyPositiveCert:-univariate_positive_on_cells(x-result[1]*x,[[0,1,false,true]],x) then
         error "open endpoint direction failed";
     end if;
     # Opposite-sign violations imply no scale; do not keep bisecting.
-    result:=StrictlyPositiveCert:-univariate_scale_direction(2*x-1,x,[[-2,-1,true,true],[1,2,true,true]],x,16,8,time[real]()+10);
+    result:=StrictlyPositiveCert:-univariate_scale_direction(2*x-1,x,[[-2,-1,true,true],[1,2,true,true]],x,16,8);
     if result<>[FAIL,1] then error "infeasible direction was not recognized"; end if;
 
-    result:=StrictlyPositiveCert:-univariate_scale_direction(1/10,x,cells,x,16,8,time[real]()+10);
+    result:=StrictlyPositiveCert:-univariate_scale_direction(1/10,x,cells,x,16,8);
     if result[1]=FAIL or not type(result[1],rational) or result[1]<=0 or result[1]>=1/10 then
         error "rational halving search failed";
     end if;
-    result:=StrictlyPositiveCert:-univariate_scale_direction(1/10,x,cells,x,1,8,time[real]()+10);
+    result:=StrictlyPositiveCert:-univariate_scale_direction(1/10,x,cells,x,1,8);
     if result<>[FAIL,1] then error "scalar trial limit was ignored"; end if;
-    result:=StrictlyPositiveCert:-univariate_scale_direction(1/10,x,cells,x,16,0,time[real]()+10);
+    result:=StrictlyPositiveCert:-univariate_scale_direction(1/10,x,cells,x,16,0);
     if result<>[FAIL,1] then error "scalar update limit was ignored"; end if;
 
     # Fixed directions may miss a witness; explicit disable/budgets must still
