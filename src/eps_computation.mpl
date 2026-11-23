@@ -23,21 +23,46 @@ local cells := cells0, g;
     return cells;
 end proc;
 
-# Return a positive dyadic eps such that f>0 whenever every g_i+2*eps>=0.
+# Return a positive rational eps such that f>0 whenever every g_i+2*eps>=0.
 # With B supplied, only its compact nonnegative set needs to be considered.
-# This is a safe separation value, not an optimal separation threshold.
-local findEps := proc(x, gens, f, B := FAIL)
-local bad_cells, eps := 1;
+#
+# Validity is monotone: a larger eps only enlarges {g_i>=-2*eps}. The valid
+# values form an open interval (0,eps*), where eps* itself fails, so search for
+# a large valid eps rather than the threshold: double while valid (or halve
+# until valid), then bisect between the last valid and first invalid values.
+# Larger eps makes the Averkov exponent converge faster. lo is always a value
+# that passed the test, so the result is valid whenever the search stops.
+local findEps := proc(x, gens, f, B := FAIL,
+                      {bisection_steps::nonnegint := 3, max_doublings::nonnegint := 64})
+local bad_cells, valid, lo, hi, mid, i;
     bad_cells := univariate_select_cells(univariate_sign_chart(f,x),"nonpositive");
     if B<>FAIL then
         bad_cells := univariate_intersect_cells(bad_cells,
                         univariate_select_cells(univariate_sign_chart(B,x),"nonnegative"));
     end if;
+    # No point to separate: every eps is valid and doubling would not stop.
+    if bad_cells=[] then return 1; end if;
     if epsilon_bad_cells(bad_cells,gens,0,x)<>[] then
         error "f must be strictly positive on the nonnegative set of the generators";
     end if;
-    while epsilon_bad_cells(bad_cells,gens,2*eps,x)<>[] do
-        eps := eps/2;
+    valid := e -> evalb(epsilon_bad_cells(bad_cells,gens,2*e,x)=[]);
+    if valid(1) then
+        # A nonempty bad set bounds eps*, so doubling terminates; the cap is a
+        # safety net only.
+        lo, hi := 1, 2;
+        for i from 1 to max_doublings while valid(hi) do
+            lo, hi := hi, 2*hi;
+        end do;
+        if valid(hi) then return hi; end if;
+    else
+        # Equivalent to bisecting (0,1): halve until the first valid value.
+        hi := 1;
+        while not valid(hi/2) do hi := hi/2; end do;
+        lo := hi/2;
+    end if;
+    for i from 1 to bisection_steps do
+        mid := (lo+hi)/2;
+        if valid(mid) then lo := mid; else hi := mid; end if;
     end do;
-    return eps;
+    return lo;
 end proc;

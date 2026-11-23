@@ -143,15 +143,21 @@ classification, and dyadic bounds against `SemiAlgebraic` as an independent orac
 
 The Averkov stage checks strict positivity on its compact bound using exact
 sign cells and Sturm counts. It chooses a positive dyadic `gamma` such that
-all generators are at most `2*gamma` on that set. Its epsilon search halves a
-positive rational candidate until no point satisfies `f <= 0` and every
+all generators are at most `2*gamma` on that set. Its epsilon search looks for
+a large valid `eps`, meaning no point satisfies `f <= 0` and every
 `g_i + 2*eps >= 0`; the original feasible set is checked first to reject invalid
-positivity inputs. The private `findEps` now returns this safe epsilon directly,
-not the optimal separation threshold used by the earlier implementation.
+positivity inputs. Validity is monotone, so `findEps` doubles from 1 while valid
+(at most 64 doublings) or halves until valid, then runs three bisection steps
+between the last valid and first invalid values and returns the last valid one.
+It returns 1 immediately when there is nothing to separate. A larger `eps`
+makes the Averkov exponent converge much faster.
 
-The prefactor is fixed at one. Exponents increase, up to `max_averkov_N=256`, until the residual is
-verified strictly positive on the bound; the optional binary search retains
-a verified upper exponent, without assuming the predicate is monotone.
+The prefactor is fixed at one. Exponents increase, up to `max_averkov_N=256`.
+Candidates are first rejected cheaply by evaluating the residual on a rational
+grid of points in `{B >= 0}`; doubling and the optional binary search use only
+this test. The final exponent is then verified strictly positive on the bound
+with exact sign decisions, and doubling resumes if that check fails. No
+monotonicity is assumed.
 No floating-point minimization, maximization, logarithms, or symbolic alpha
 optimization is used in this stage. Certificate degrees and coefficient sizes
 may differ, and the exact search does not promise a minimum-degree certificate.
