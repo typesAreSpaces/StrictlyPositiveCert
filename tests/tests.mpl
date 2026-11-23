@@ -10,5 +10,7 @@ kernelopts(numcpus);
 printlevel := -1;
 #printlevel := 8;
 
-spCertificates(x+2,[x^2,-x^5,x+1],x);
-spCertificates(x+3/2,[1, 1-x^2],x);
+#spCertificates(x+2,[x^2,-x^5,x+1],x);
+#spCertificates(x+3/2,[1, 1-x^2],x);
+spCertificates(-1, [-x^2,x^2-1/10^6], x,
+               max_search_time=1/100, max_k=0);

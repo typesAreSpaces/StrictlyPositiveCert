@@ -289,10 +289,10 @@ printf("\n>> Start Benchmarks\n");
 
 ## 7.1.1  Certificates of strictly positive polynomials
 #certificates_of_strictly_positive_polynomials_benchmark();
-#runExternalBenchmark("./benchmarks/left.mpl");
-#runExternalBenchmark("./benchmarks/right.mpl");
-#runExternalBenchmark("./benchmarks/lifted.mpl");
-#runExternalBenchmark("./benchmarks/arch.mpl");
+runExternalBenchmark("./benchmarks/left.mpl");
+runExternalBenchmark("./benchmarks/right.mpl");
+runExternalBenchmark("./benchmarks/lifted.mpl");
+runExternalBenchmark("./benchmarks/arch.mpl");
 
 ## 7.1.2 Comparison of degree of certificates
 strictly_positive_polynomials_close_to_semialgebraic_sets_benchmark();
@@ -304,5 +304,5 @@ solving_stengle_example();
 #lifted_prods_hypercube();
 
 # Thesis examples
-#runExternalBenchmark("./benchmarks/left_saturated_thesis.mpl");
-#runExternalBenchmark("./benchmarks/right_saturated_thesis.mpl");
+runExternalBenchmark("./benchmarks/left_saturated_thesis.mpl");
+runExternalBenchmark("./benchmarks/right_saturated_thesis.mpl");
