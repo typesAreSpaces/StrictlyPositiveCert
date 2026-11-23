@@ -32,8 +32,8 @@ $endif
         end if;
     end do;
 
-# At this point, every element in the gens has odd degree
-# or even degree with positive leading term
+# Search for generators with odd degree
+# and opposite sign
     for i from 1 to nops(gens) - 1 do
         if type(degrees[i], 'even') then
             next;
@@ -66,7 +66,7 @@ $endif
             return [expand(h1*gens[i] + h2*gens[j]), h1, h2, i, j];
         end do;
     end do;
-    return NULL;
+    error "no compactness witness found";
 $ifdef LOG_TIME
     finally
         END_LOG_TIME("bound_poly");

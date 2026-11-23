@@ -34,10 +34,20 @@ end proc;
     balanced("Averkov construction");
     StrictlyPositiveCert:-bound_poly([x+1,1-x],x);
     balanced("odd generator bound");
-    if [StrictlyPositiveCert:-bound_poly([x^2+1],x)]<>[] then
-        error "bound_poly fall-through changed";
-    end if;
-    balanced("bound_poly fall-through");
+    for item in [[x^2+1], [x^3,x], [-x^3,-x], []] do
+        caught := false;
+        try StrictlyPositiveCert:-bound_poly(item,x);
+        catch "no compactness witness found": caught := true;
+        end try;
+        if not caught then error "missing compactness witness was accepted: %1",item; end if;
+        balanced("bound_poly compactness error");
+    end do;
+    caught := false;
+    try StrictlyPositiveCert:-spCertificates(x,[x^2+1],x);
+    catch "bound_poly could not witness compactness of gens": caught := true;
+    end try;
+    if not caught then error "public compactness error was suppressed"; end if;
+    balanced("public compactness error");
     for item in [[x<=1,x<=2],[x<=1,0<=x],[0<=x,x<=1],[0<=x,1<=x],
                  [x=x],[x=0],[0=x],[x<=1],[0<=x],[x<1]] do
         StrictlyPositiveCert:-bound_info(x,item,0);
@@ -98,6 +108,6 @@ end proc;
     end try;
     if not caught then error "timeout was suppressed"; end if;
     balanced("catchable timeout");
-    printf("PASS: timing cleanup on shortcuts, recursion, normal returns, fall-through, nested errors, and catchable timeouts\n");
+    printf("PASS: timing cleanup on shortcuts, recursion, normal returns, compactness errors, nested errors, and catchable timeouts\n");
 end proc:
 check_logging():
