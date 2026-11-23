@@ -62,12 +62,16 @@ local check_polynomials, caught, samples;
     for item in [[x+3/2,[2,1-x^2,0,3/2]],
                  [x+3/2,[x+1,2,1-x,0]],
                  [x^3,[1,0,-2/3,4]],
+                 [x+3/2,[(x+1)^2-x^2-2*x,1-x^2]],
+                 [x+3/2,[1-x^2,(x+1)^2-x^2-2*x-1]],
+                 [x^3,[(x+1)^2-x^2-2*x,(x+1)^2-x^2-2*x-2]],
+                 [x+3/2,[-(x-1)*(x+1)]],
                  [x^2+1,[0,1,3/2]]] do
         f,basis := op(item);
         cert := StrictlyPositiveCert:-spCertificates(f,basis,x);
         check_polynomials(f,basis,cert,x);
         for i from 1 to nops(basis) do
-            if type(basis[i],rational) and basis[i]>=0 and cert[i+1]<>0 then
+            if type(expand(basis[i]),rational) and expand(basis[i])>=0 and cert[i+1]<>0 then
                 error "redundant constant received a nonzero multiplier: %1",item;
             end if;
         end do;

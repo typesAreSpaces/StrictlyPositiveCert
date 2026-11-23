@@ -5,13 +5,15 @@ local i, indices := select(i -> not (type(gens[i], rational) and gens[i] >= 0),
     return map(i -> gens[i], indices), indices;
 end proc;
 
-spCertificates := proc(f, gens, x,
+spCertificates := proc(f, gens0, x,
                        {max_k::nonnegint := 100, max_bisection::nonnegint := 200,
                         query_time_limit::positive := 1/10, max_query_retries::nonnegint := 4,
                         max_search_time::positive := 300})
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("spCertificates",0)
 $endif
+    # Expand before classifying constants or extracting polynomial coefficients.
+local gens := map(expand, gens0);
     if univariate_nonnegative_on_R(f,x) then
         return [f, op(map(0, gens))];
     end if;
