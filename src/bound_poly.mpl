@@ -4,11 +4,12 @@
 # - h1, h2 are the sums of squares which make the linear combination for g
 # - index1, index2 are the indexes in gens which make the linear combination for g
 local bound_poly := proc(gens, x)
-$ifdef LOG_TIME
-    INIT_START_LOG_TIME("bound_poly",0)
-$endif
 local degrees, fst_coeffs, snd_coeffs, h1, h2;
 local i, j;
+$ifdef LOG_TIME
+    INIT_START_LOG_TIME("bound_poly",0)
+    try
+$endif
     degrees := map(poly -> degree(poly, x), gens);
     DEBUG(__FILE__, __LINE__, lprint(">> degrees", degrees));
 
@@ -27,9 +28,6 @@ local i, j;
 
     for i from 1 to nops(gens) do
         if type(degrees[i], even) and fst_coeffs[i] < 0 then
-$ifdef LOG_TIME
-            END_LOG_TIME("bound_poly",0)
-$endif
             return [gens[i], 1, 0, i, i];
         end if;
     end do;
@@ -63,12 +61,15 @@ $endif
                 /abs(fst_coeffs[i]);
                 h2 := 1/abs(fst_coeffs[j]);
             end if;
-$ifdef LOG_TIME
-            END_LOG_TIME("bound_poly",0)
-$endif
             DEBUG(__FILE__, __LINE__, lprint(">> h1", h1));
             DEBUG(__FILE__, __LINE__, lprint(">> h2", h2));
             return [expand(h1*gens[i] + h2*gens[j]), h1, h2, i, j];
         end do;
     end do;
+    return NULL;
+$ifdef LOG_TIME
+    finally
+        END_LOG_TIME("bound_poly",0);
+    end try;
+$endif
 end proc;

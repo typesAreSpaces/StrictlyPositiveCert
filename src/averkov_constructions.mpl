@@ -1,16 +1,14 @@
 # Return SOS multipliers H such that f-dot_product(H,gens)>0 on {B_poly>=0}.
 # Every bound and every accepted exponent is checked by exact sign decisions.
 local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess)
-$ifdef LOG_TIME
-    INIT_START_LOG_TIME("averkov_lemma_7",0)
-$endif
 local cells, gamma := 1, eps, pos_coeff := 1, g_i;
 local N, N_top := 1, N_bot := 0, N_cur, admissible;
+$ifdef LOG_TIME
+    INIT_START_LOG_TIME("averkov_lemma_7",0)
+    try
+$endif
     cells := univariate_select_cells(univariate_sign_chart(B_poly,x),"nonnegative");
     if univariate_positive_on_cells(f,cells,x) then
-$ifdef LOG_TIME
-        END_LOG_TIME("averkov_lemma_7",0);
-$endif
         return map(g_i -> 0, gens);
     end if;
 
@@ -53,8 +51,10 @@ $ifdef ENABLE_BINARY_SEARCH_AVKL
 $endif
     N := N_top;
     DEBUG(__FILE__, __LINE__, lprint(">> Exact Averkov exponent",N));
-$ifdef LOG_TIME
-    END_LOG_TIME("averkov_lemma_7",0);
-$endif
     return map(g_i -> AVERKOV_SOS(g_i,N),gens);
+$ifdef LOG_TIME
+    finally
+        END_LOG_TIME("averkov_lemma_7",0);
+    end try;
+$endif
 end proc;

@@ -9,19 +9,21 @@ spCertificates := proc(f, gens0, x,
                        {max_k::nonnegint := 100, max_bisection::nonnegint := 200,
                         query_time_limit::positive := 1/10, max_query_retries::nonnegint := 4,
                         max_search_time::positive := 300})
-$ifdef LOG_TIME
-    INIT_START_LOG_TIME("spCertificates",0)
-$endif
-    # Expand before classifying constants or extracting polynomial coefficients.
-local gens := map(expand, gens0);
-    if univariate_nonnegative_on_R(f,x) then
-        return [f, op(map(0, gens))];
-    end if;
+local gens;
 local g, f2, monogenic, certificates, reduced_gens, indices, restored;
 local i;
 $ifdef ENABLE_QUICK_CERT
 local quickcheck, quickcertificates;
 $endif
+$ifdef LOG_TIME
+    INIT_START_LOG_TIME("spCertificates",0)
+    try
+$endif
+    # Expand before classifying constants or extracting polynomial coefficients.
+    gens := map(expand, gens0);
+    if univariate_nonnegative_on_R(f,x) then
+        return [f, op(map(0, gens))];
+    end if;
     reduced_gens, indices := remove_redundant_constants(gens);
     if nops(reduced_gens) <> nops(gens) then
         certificates := spCertificates(f, reduced_gens, x,
@@ -32,9 +34,6 @@ $endif
         for i from 1 to nops(indices) do
             restored[indices[i]+1] := certificates[i+1];
         end do;
-$ifdef LOG_TIME
-        END_LOG_TIME("spCertificates",0);
-$endif
         return restored;
     end if;
     if gens = [] then
@@ -92,8 +91,10 @@ $endif
     DEBUG(__FILE__, __LINE__, lprint(">> Input polynomial:", f));
     DEBUG(__FILE__, __LINE__, lprint(">> Generators:", 1, op(gens)));
     DEBUG(__FILE__, __LINE__, lprint(">> Certificates:", op(certificates)));
-$ifdef LOG_TIME
-    END_LOG_TIME("spCertificates",0);
-$endif
     return certificates;
+$ifdef LOG_TIME
+    finally
+        END_LOG_TIME("spCertificates",0);
+    end try;
+$endif
 end proc;
