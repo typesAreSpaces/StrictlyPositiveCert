@@ -11,12 +11,12 @@ local m, M, queries := 0;
                     (100000*x-1)*(100000*x-2)];
     for p in polynomials do
         actual := StrictlyPositiveCert:-univariate_nonnegative_on_R(p,x);
-        expected := evalb(SemiAlgebraic([p<0],[x])=[]);
+        expected := evalb(SolveTools:-SemiAlgebraic([p<0],[x])=[]);
         if actual <> expected then error "global nonnegativity mismatch: %1",p; end if;
         for q in [1,-1,1-x^2,-x^2,x^2-2] do
             S := StrictlyPositiveCert:-univariate_sign_set([p,q],
                                                            ["nonnegative","nonnegative"],x);
-            oracle := SemiAlgebraic([p>=0,q>=0],[x]);
+            oracle := SolveTools:-SemiAlgebraic([p>=0,q>=0],[x]);
             actual := map(piece -> StrictlyPositiveCert:-bound_info(x,piece,0),S);
             expected := map(piece -> StrictlyPositiveCert:-bound_info(x,piece,0),oracle);
             expected := sort(expected,(a,b)->StrictlyPositiveCert:-univariate_compare(a[1],b[1])<0);
@@ -46,7 +46,7 @@ local m, M, queries := 0;
                     pieces := StrictlyPositiveCert:-univariate_cells_to_sas(cells,x);
                 end if;
                 for cell in pieces do
-                    if SemiAlgebraic([op(cell),condition],[x])<>[] then expected:=false; break; end if;
+                    if SolveTools:-SemiAlgebraic([op(cell),condition],[x])<>[] then expected:=false; break; end if;
                 end do;
                 if actual<>expected then
                     error "cell positivity mismatch: %1",[p,cells,strict,actual,expected];
@@ -57,10 +57,10 @@ local m, M, queries := 0;
     end do;
     for g in [1-x^2,-x^2,-1,-(x^2-1)*(x^2-4)] do
         for h in [0,1,-1,x,x^2,(x-1)^2,x^2-2,(x^2-2)^2] do
-            if SemiAlgebraic([h<=0],[x])=[] then status:="ok";
+            if SolveTools:-SemiAlgebraic([h<=0],[x])=[] then status:="ok";
             else
-                big:=evalb(SemiAlgebraic([g>0,h<=0],[x])<>[]);
-                small:=evalb(SemiAlgebraic([g<=0,h<=0],[x])<>[]);
+                big:=evalb(SolveTools:-SemiAlgebraic([g>0,h<=0],[x])<>[]);
+                small:=evalb(SolveTools:-SemiAlgebraic([g<=0,h<=0],[x])<>[]);
                 if big and small then status:="infeasible";
                 elif big then status:="big"; else status:="small"; end if;
             end if;
@@ -73,11 +73,11 @@ local m, M, queries := 0;
     for item in [[x+3/2,1-x^2],[x+1,-x^2],[0,-1],
                  [1/8,1/1000-x^2],[32,8-x^2],[x^2-1/2,-(x^2-1)*(x^2-4)]] do
         p,g := op(item); m:=1; M:=1;
-        if SemiAlgebraic([g>=0],[x])<>[] then
-            while SemiAlgebraic([g>=0,p<2*m],[x])=[] do m:=2*m; end do;
-            while SemiAlgebraic([g>=0,p<m],[x])<>[] do m:=m/2; end do;
-            while SemiAlgebraic([g>=0,g>M],[x])<>[] do M:=2*M; end do;
-            while M>1/2^20 and SemiAlgebraic([g>=0,g>M/2],[x])=[] do M:=M/2; end do;
+        if SolveTools:-SemiAlgebraic([g>=0],[x])<>[] then
+            while SolveTools:-SemiAlgebraic([g>=0,p<2*m],[x])=[] do m:=2*m; end do;
+            while SolveTools:-SemiAlgebraic([g>=0,p<m],[x])<>[] do m:=m/2; end do;
+            while SolveTools:-SemiAlgebraic([g>=0,g>M],[x])<>[] do M:=2*M; end do;
+            while M>1/2^20 and SolveTools:-SemiAlgebraic([g>=0,g>M/2],[x])=[] do M:=M/2; end do;
         end if;
         bounds:=StrictlyPositiveCert:-monogenic_search_bounds(p,g,x);
         if bounds[1..2]<>[m,M] then error "normalization changed: %1",[item,bounds,[m,M]]; end if;

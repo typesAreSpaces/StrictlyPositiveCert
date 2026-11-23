@@ -83,7 +83,7 @@ local visits := [], caught;
     end try;
     cert := timelimit(10,StrictlyPositiveCert:-spCertificates(f,[g],x));
     if expand(f-cert[1]-cert[2]*g) <> 0 or degree(cert[1],x) <> 18
-    or SemiAlgebraic([cert[1]<=0],[x]) <> [] then
+    or SolveTools:-SemiAlgebraic([cert[1]<=0],[x]) <> [] then
         error "default scheduler did not resolve the Stengle regression";
     end if;
     printf("PASS: interleaved search, retry state, query limits, deadline, solver errors, and Stengle regression\n");

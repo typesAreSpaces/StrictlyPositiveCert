@@ -49,10 +49,10 @@ end proc;
         StrictlyPositiveCert:-bound_info(x,item,0);
         balanced("bound_info branch");
     end do;
-    if not StrictlyPositiveCert:-checkPositivityOverSAS([[0<=x,x<=1]],x^2+1,x) then
-        error "positivity result changed";
+    if StrictlyPositiveCert:-averkov_lemma_7(x,x^2+1,[1-x^2],1-x^2,70)<>[0] then
+        error "Averkov positivity shortcut changed";
     end if;
-    balanced("nested positivity check");
+    balanced("Averkov positivity shortcut");
 
     caught := false;
     try StrictlyPositiveCert:-spCertificates(x,[],x);
@@ -83,7 +83,7 @@ end proc;
     StrictlyPositiveCert:-univariate_positive_on_cells := proc()
         error "forced positivity failure";
     end proc;
-    try StrictlyPositiveCert:-checkPositivityOverSAS([[0<=x,x<=1]],x^2+1,x);
+    try StrictlyPositiveCert:-averkov_lemma_7(x,x^2+1,[1-x^2],1-x^2,70);
     catch "forced positivity failure": caught := true;
     finally
         StrictlyPositiveCert:-univariate_positive_on_cells := eval(original_positive);
@@ -97,7 +97,7 @@ end proc;
     end proc;
     # The logged parent is above timelimit, so it receives a catchable error.
     # Maple bypasses finally blocks below an outer timelimit boundary.
-    try StrictlyPositiveCert:-checkPositivityOverSAS([[0<=x,x<=1]],x^2+1,x);
+    try StrictlyPositiveCert:-averkov_lemma_7(x,x^2+1,[1-x^2],1-x^2,70);
     catch "time expired": caught := true;
     finally
         StrictlyPositiveCert:-univariate_positive_on_cells := eval(original_positive);

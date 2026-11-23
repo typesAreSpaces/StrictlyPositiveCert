@@ -99,7 +99,7 @@ local valid_certificate, report, report_error;
         end try;
 
         # ------------------------------------------------------------------
-        # 2. checkPositivityOverSAS can skip a minimum or a later interval.
+        # 2. Interval positivity must not skip a minimum or a later interval.
         #
         # (a) p(1)>0 and p(3)>0, but p(2)=-1/100. The derivative has earlier
         # roots before [1,3]; the cursor logic skips the in-range minimum.
@@ -110,13 +110,13 @@ local valid_certificate, report, report_error;
         printf("\n=== Finding 2: false positivity decisions ===\n");
         try
             p := (x+1)^2*(x-2)^2-1/100;
-            answer := timelimit(10,StrictlyPositiveCert:-checkPositivityOverSAS(
-                [[1<=x,x<=3]],p,x));
+            answer := timelimit(10,StrictlyPositiveCert:-univariate_positive_on_cells(
+                p,[[1,3,true,true]],x));
             lprint("first positivity answer (expected false)",answer);
             lprint("exact negative witness p(2)",subs(x=2,p));
             good := evalb(answer=false);
-            answer := timelimit(10,StrictlyPositiveCert:-checkPositivityOverSAS(
-                [[-2<=x,x<=-1],[1<=x,x<=2]],-x,x));
+            answer := timelimit(10,StrictlyPositiveCert:-univariate_positive_on_cells(
+                -x,[[-2,-1,true,true],[1,2,true,true]],x));
             lprint("second positivity answer (expected false)",answer);
             lprint("exact negative witness at x=1",-1);
             if answer <> false then good := false; end if;

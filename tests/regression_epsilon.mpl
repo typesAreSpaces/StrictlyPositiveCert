@@ -15,7 +15,7 @@ local x, c := 73205080757/10^11, item, f, gens, eps, H, h, i, caught;
         f,gens := op(item);
         eps := StrictlyPositiveCert:-findEps(x,gens,f);
         if not type(eps,rational) or eps<=0 or
-        SemiAlgebraic([f<=0,op(map(g->g+2*eps>=0,gens))],[x])<>[] then
+        SolveTools:-SemiAlgebraic([f<=0,op(map(g->g+2*eps>=0,gens))],[x])<>[] then
             error "unsafe epsilon for %1: %2",item,eps;
         end if;
     end do;
@@ -40,7 +40,7 @@ local x, c := 73205080757/10^11, item, f, gens, eps, H, h, i, caught;
             error "certificate identity failed: %1",item;
         end if;
         for h in H do
-            if not type(h,polynom(rational,x)) or SemiAlgebraic([h<0],[x])<>[] then
+            if not type(h,polynom(rational,x)) or SolveTools:-SemiAlgebraic([h<0],[x])<>[] then
                 error "invalid SOS multiplier: %1",item;
             end if;
         end do;
@@ -48,7 +48,7 @@ local x, c := 73205080757/10^11, item, f, gens, eps, H, h, i, caught;
     # The gamma bound is checked on B, rather than globally: high even-degree
     # positive generators can be unbounded on R while bounded on the compact set.
     H := StrictlyPositiveCert:-averkov_lemma_7(x,x+1/2,[1-x^2,x,x^4],1-x^2,70);
-    if SemiAlgebraic([1-x^2>=0,
+    if SolveTools:-SemiAlgebraic([1-x^2>=0,
         x+1/2-StrictlyPositiveCert:-dot_product([1-x^2,x,x^4],H)<=0],[x])<>[] then
         error "Averkov residual is not strictly positive on B";
     end if;

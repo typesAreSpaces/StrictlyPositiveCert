@@ -19,7 +19,7 @@ local x, f, basis, ok, certificates, multiplier, test_case;
         end if;
         for multiplier in certificates do
             if not type(multiplier, polynom(rational, x))
-            or SemiAlgebraic([multiplier < 0], [x]) <> [] then
+            or SolveTools:-SemiAlgebraic([multiplier < 0], [x]) <> [] then
                 error "invalid SOS multiplier";
             end if;
         end do;

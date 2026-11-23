@@ -1,4 +1,4 @@
-$define AVERKOV_SOS(g, N)         1/pos_coeff*((g - gamma)/(gamma + eps))^(2*N)
+$define AVERKOV_SOS(g, N)         ((g - gamma)/(gamma + eps))^(2*N)
 $define AVERKOV_1_EXPR(g, N)      AVERKOV_SOS(g, N)*g
 $define AVERKOV_EXPR(N)           add(term, term in map(g_i -> AVERKOV_1_EXPR(g_i, N), gens))
 
@@ -15,9 +15,7 @@ $define START_LOG_TIME(X, S) stack_level:=stack_level+1;fd := FileTools:-Text:-O
 $define END_LOG_TIME(X, S) fd := FileTools:-Text:-Open("log_time.txt", append);FileTools:-Text:-WriteString(fd, cat("End: ", X, " ", convert(stack_level, string), "\nTime: ", convert(time() - _log_time_S, string), "\n"));FileTools:-Text:-Close(fd);stack_level:=stack_level-1;
 $define INIT_START_LOG_TIME(X, S) local fd;START_LOG_TIME(X, S)
 
-with(SolveTools, SemiAlgebraic);
 with(RootFinding, Isolate);
-with(RegularChains, SemiAlgebraicSetTools, PolynomialRing);
 
 StrictlyPositiveCert := module() option package;
 

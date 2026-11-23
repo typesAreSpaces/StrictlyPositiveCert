@@ -3,7 +3,7 @@ read "src/StrictlyPositiveCert.mpl":
 kernelopts(opaquemodules=false):
 
 check_positivity_traversal := proc()
-local x, item, answer;
+local x, item, answer, cells, interval, bounds;
     for item in [
         # Earlier derivative roots must not skip the minimum at x=2.
         [[[1<=x,x<=3]], (x+1)^2*(x-2)^2-1/100, false],
@@ -40,7 +40,14 @@ local x, item, answer;
         [[[x=x]], (x-1)^2, false],
         [[], -1, true]
     ] do
-        answer := StrictlyPositiveCert:-checkPositivityOverSAS(item[1],item[2],x);
+        # Convert legacy interval fixtures here; the production pipeline uses cells.
+        cells := [];
+        for interval in item[1] do
+            bounds := StrictlyPositiveCert:-bound_info(x,interval,0);
+            cells := [op(cells),[op(bounds),evalb(bounds[1]<>-infinity),
+                                          evalb(bounds[2]<>infinity)]];
+        end do;
+        answer := StrictlyPositiveCert:-univariate_positive_on_cells(item[2],cells,x);
         if answer <> item[3] then
             error "incorrect interval positivity result for %1: %2", item, answer;
         end if;

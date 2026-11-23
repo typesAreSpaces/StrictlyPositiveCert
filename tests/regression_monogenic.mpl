@@ -12,7 +12,7 @@ local check_polynomials, caught, samples;
         end if;
         for term in cert do
             if not type(term,polynom(rational,x)) or
-            SemiAlgebraic([term < 0],[x]) <> [] then
+            SolveTools:-SemiAlgebraic([term < 0],[x]) <> [] then
                 error "invalid SOS multiplier for %1", [f,basis];
             end if;
         end do;

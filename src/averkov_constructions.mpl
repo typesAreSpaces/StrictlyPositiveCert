@@ -2,8 +2,11 @@
 # Every bound and every accepted exponent is checked by exact sign decisions.
 local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess,
                              {max_N::nonnegint := 256, deadline := time[real]()+300})
-local cells, gamma := 1, eps, pos_coeff := 1, g_i;
-local N, N_top := 1, N_bot := 0, N_cur, next_N, admissible;
+local cells, gamma := 1, eps, g_i;
+local N, N_top := 1, next_N, admissible;
+$ifdef ENABLE_BINARY_SEARCH_AVKL
+local N_bot := 0, N_cur;
+$endif
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("averkov_lemma_7",0)
     try
@@ -35,7 +38,9 @@ $endif
                          univariate_positive_on_cells(expand(f-AVERKOV_EXPR(n)),cells,x));
     end proc;
     while not admissible(N_top) do
+$ifdef ENABLE_BINARY_SEARCH_AVKL
         N_bot := N_top;
+$endif
         if N_top>=max_N then
             error "Averkov search exhausted max_averkov_N=%1",max_N;
         end if;
