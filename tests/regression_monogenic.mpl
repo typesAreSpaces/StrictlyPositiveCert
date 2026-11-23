@@ -2,7 +2,7 @@
 read "src/StrictlyPositiveCert.mpl":
 
 check_monogenic := proc()
-local x, y, i, item, f, g, basis, cert, term, squares, sigma, reconstructed;
+local x, y, i, item, f, g, basis, cert, term, squares, sigma, reconstructed, r, h;
 local check_polynomials, caught, samples;
     check_polynomials := proc(f, basis, cert, x)
     local term;
@@ -88,8 +88,13 @@ local check_polynomials, caught, samples;
     if not caught then error "constant filtering did not forward the search budget"; end if;
 
     # Explicit square decompositions agree with the returned polynomial identity.
+    # The derivative's nonzero roots have isolating intervals sharing zero
+    # as an endpoint. They must not collapse onto the separate root at zero.
+    r := 3/2^40;
+    h := (x^2-r)^2+r^2/10^6;
     for item in [[x+3/2,1-x^2], [2-x^3,1-x^2],
                  [3/2+2^260*x^4-x^2/2,1-x^2],
+                 [h-(x^2+1)/2,-x^2-1],
                  [x,-1], [x^3-2*x+1,-2/3], [1,-1], [-1,-1], [0,-2]] do
         cert := StrictlyPositiveCert:-monogenicCertificates(op(item),x,
                                                             output_sos=true,max_sos_iterations=66);

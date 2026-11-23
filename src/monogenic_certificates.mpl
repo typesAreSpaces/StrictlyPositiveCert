@@ -58,17 +58,27 @@ local m := 1, M := 1, regions := monogenic_sign_regions(g,x);
     return [m,M,regions];
 end proc;
 
-# Bisect a rational isolating interval for a square-free polynomial.
+# A nondegenerate realroot interval isolates a root in its open interior;
+# an endpoint may be a different root. Preserve that interior root when bisecting.
 local monogenic_refine_interval := proc(q, x, interval, width)
-local a := interval[1], b := interval[2], midpoint, qa, qm;
+local a := interval[1], b := interval[2], midpoint, qa, qb, qm, sequence := FAIL;
     while b-a > width do
         midpoint := (a+b)/2;
         qm := subs(x=midpoint, q);
         if qm = 0 then return [midpoint, midpoint]; end if;
         qa := subs(x=a, q);
-        if qa = 0 then return [a, a]; end if;
-        if subs(x=b, q) = 0 then return [b, b]; end if;
-        if qa*qm < 0 then b := midpoint; else a := midpoint; end if;
+        qb := subs(x=b, q);
+        if qa = 0 or qb = 0 then
+            if sequence = FAIL then sequence := sturmseq(q,x); end if;
+            # sturm counts (a,midpoint], excluding any other root at a.
+            if sturm(sequence,x,a,midpoint)>0 then
+                b := midpoint;
+            else
+                a := midpoint;
+            end if;
+        elif qa*qm < 0 then b := midpoint;
+        else a := midpoint;
+        end if;
     end do;
     return [a, b];
 end proc;
