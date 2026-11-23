@@ -76,6 +76,12 @@ $ifdef ENABLE_AVERKOV_CHECK
 $endif
     DEBUG(__FILE__, __LINE__, lprint(">> f2", f2));
 
+    # A univariate polynomial nonnegative on R is already SOS; the monogenic
+    # stage would only add work and degree.
+    if univariate_nonnegative_on_R(f2,x) then
+        return [expand(f2), op(certificates)];
+    end if;
+
     # Global keyword names avoid substitution of the caller's parameter values.
     monogenic := monogenicCertificates(f2, g[1], x,
                                        ':-max_k'=max_k, ':-max_bisection'=max_bisection,
