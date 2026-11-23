@@ -38,6 +38,7 @@ $include "src/univariate_signs.mpl";
 $include "src/signature_constructions.mpl";
 $include "src/bound_poly.mpl";
 $include "src/eps_computation.mpl";
+$include "src/univariate_heuristics.mpl";
 $include "src/averkov_constructions.mpl";
 $include "src/monogenic_certificates.mpl";
 $include "src/spCertificates.mpl";

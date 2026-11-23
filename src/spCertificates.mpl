@@ -8,33 +8,34 @@ end proc;
 spCertificates := proc(f, gens0, x,
                        {max_k::nonnegint := 100, max_bisection::nonnegint := 200,
                         query_time_limit::positive := 1/10, max_query_retries::nonnegint := 4,
-                        max_search_time::positive := 300})
-local gens;
-local g, f2, monogenic, certificates, reduced_gens, indices, restored;
+                        max_search_time::positive := 300,
+                        use_univariate_heuristics::truefalse := true,
+                        max_heuristic_trials::nonnegint := 64,
+                        max_scalar_updates::nonnegint := 32,
+                        max_averkov_N::nonnegint := 256})
+local gens, original_count, indices, remaining, stage := "preprocessing";
+local deadline := time[real]()+max_search_time;
+local g, f2, monogenic, certificates;
 local i;
 $ifdef ENABLE_QUICK_CERT
 local quickcheck, quickcertificates;
 $endif
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("spCertificates",0)
-    try
 $endif
+    try
     # Expand before classifying constants or extracting polynomial coefficients.
-    gens := map(expand, gens0);
-    if univariate_nonnegative_on_R(f,x) then
-        return [f, op(map(0, gens))];
+    if not type(gens0,list) then error "gens must be a list of rational univariate polynomials"; end if;
+    original_count := nops(gens0);
+    gens := timelimit(univariate_search_remaining(deadline,stage),map(expand,gens0));
+    if not type(f,polynom(rational,x)) or
+    not andmap(g_i->type(g_i,polynom(rational,x)),gens) then
+        error "f and gens must be univariate polynomials with rational coefficients";
     end if;
-    reduced_gens, indices := remove_redundant_constants(gens);
-    if nops(reduced_gens) <> nops(gens) then
-        certificates := spCertificates(f, reduced_gens, x,
-                                      ':-max_k'=max_k, ':-max_bisection'=max_bisection,
-                                      ':-query_time_limit'=query_time_limit, ':-max_query_retries'=max_query_retries,
-                                      ':-max_search_time'=max_search_time);
-        restored := [certificates[1], op(map(gen -> 0, gens))];
-        for i from 1 to nops(indices) do
-            restored[indices[i]+1] := certificates[i+1];
-        end do;
-        return restored;
+    gens,indices := remove_redundant_constants(gens);
+    if timelimit(univariate_search_remaining(deadline,stage),univariate_nonnegative_on_R(f,x)) then
+        remaining := univariate_search_remaining(deadline,stage);
+        return restore_generator_multipliers([f,op(map(g_i->0,gens))],indices,original_count);
     end if;
     if gens = [] then
         error "no nonredundant generators remain and f is not nonnegative on the real line";
@@ -43,40 +44,65 @@ $endif
         if type(gens[i], rational) and gens[i] < 0 then
             certificates := map(gen -> 0, gens);
             certificates[i] := ((f - 1)/2)^2/(-gens[i]);
-            return [((f + 1)/2)^2, op(certificates)];
+            return restore_generator_multipliers([((f + 1)/2)^2,op(certificates)],indices,original_count);
         end if;
     end do;
 
 $ifdef ENABLE_QUICK_CERT
-    quickcheck, quickcertificates := quickCertificates(f, gens, x);
+    quickcheck, quickcertificates := timelimit(univariate_search_remaining(deadline,"quick certificates"),
+                                               quickCertificates(f,gens,x));
     if quickcheck then
+        remaining := univariate_search_remaining(deadline,"quick certificates");
         DEBUG(__FILE__, __LINE__, lprint(">> Quick certificates found", op(quickcertificates)));
-        return quickcertificates;
+        return restore_generator_multipliers(quickcertificates,indices,original_count);
     end if;
 $endif
 
+    stage := "bound construction";
+    remaining := univariate_search_remaining(deadline,stage);
     g := bound_poly(gens, x);
+    remaining := univariate_search_remaining(deadline,stage);
     DEBUG(__FILE__, __LINE__, lprint(">> Done with bound_poly"));
     DEBUG(__FILE__, __LINE__, lprint(">> bound_poly g", g));
 
-    DEBUG(__FILE__, __LINE__, lprint(">> Poly f for averkov_lemma_7", f));
-    DEBUG(__FILE__, __LINE__, lprint(">> Poly g[1] for averkov_lemma_7", g[1]));
-    certificates := averkov_lemma_7(x, f, gens, g[1], N_GUESS_AVKL);
-    DEBUG(__FILE__, __LINE__, lprint(">> Done with averkov_lemma_7"));
+    DEBUG(__FILE__, __LINE__, lprint(">> Polynomial for compact-bound reduction", f));
+    DEBUG(__FILE__, __LINE__, lprint(">> Compact bound", g[1]));
+    stage := "univariate reduction";
+    certificates := FAIL;
+    if use_univariate_heuristics then
+        certificates := univariate_reduction(f,gens,x,g[1],
+                        ':-max_trials'=max_heuristic_trials, ':-max_updates'=max_scalar_updates,
+                        ':-deadline'=deadline);
+    end if;
+    if certificates=FAIL then
+        stage := "Averkov";
+        certificates := averkov_lemma_7(x,f,gens,g[1],N_GUESS_AVKL,
+                                       ':-max_N'=max_averkov_N, ':-deadline'=deadline);
+    end if;
+    remaining := univariate_search_remaining(deadline,stage);
+    DEBUG(__FILE__, __LINE__, lprint(">> Done with compact-bound reduction"));
 
-    DEBUG(__FILE__, __LINE__, lprint(">> Averkov multipliers", certificates));
+    DEBUG(__FILE__, __LINE__, lprint(">> Reduction multipliers", certificates));
     f2 := f - dot_product(gens, certificates);
 $ifdef ENABLE_AVERKOV_CHECK
     lprint(">> 2. Checking correctness of averkov_lemma_7",
            univariate_sign_set([g[1],f2],["nonnegative","nonpositive"],x));
 $endif
     DEBUG(__FILE__, __LINE__, lprint(">> f2", f2));
+    stage := "reduction residual";
+    if timelimit(univariate_search_remaining(deadline,stage),univariate_nonnegative_on_R(f2,x)) then
+        remaining := univariate_search_remaining(deadline,stage);
+        return restore_generator_multipliers([f2,op(certificates)],indices,original_count);
+    end if;
 
     # Global keyword names avoid substitution of the caller's parameter values.
+    stage := "monogenic search";
+    remaining := univariate_search_remaining(deadline,stage);
     monogenic := monogenicCertificates(f2, g[1], x,
                                        ':-max_k'=max_k, ':-max_bisection'=max_bisection,
                                        ':-query_time_limit'=query_time_limit, ':-max_query_retries'=max_query_retries,
-                                       ':-max_search_time'=max_search_time);
+                                       ':-max_search_time'=remaining);
+    remaining := univariate_search_remaining(deadline,stage);
     DEBUG(__FILE__, __LINE__, lprint(">> Done with monogenicCertificates"));
 
     certificates[g[4]] := certificates[g[4]] + monogenic[2]*g[2];
@@ -91,10 +117,12 @@ $endif
     DEBUG(__FILE__, __LINE__, lprint(">> Input polynomial:", f));
     DEBUG(__FILE__, __LINE__, lprint(">> Generators:", 1, op(gens)));
     DEBUG(__FILE__, __LINE__, lprint(">> Certificates:", op(certificates)));
-    return certificates;
+    return restore_generator_multipliers(certificates,indices,original_count);
+    catch "time expired":
+        error "certificate search exhausted max_search_time during %1",stage;
 $ifdef LOG_TIME
     finally
         END_LOG_TIME("spCertificates",0);
-    end try;
 $endif
+    end try;
 end proc;

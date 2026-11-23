@@ -15,6 +15,7 @@ scripts = (
     "regression_scheduler.mpl",
     "regression_quick_certificates.mpl",
     "regression_logging.mpl",
+    "regression_univariate_heuristics.mpl",
 )
 for name in scripts:
     flags = list(sys.argv[1:])

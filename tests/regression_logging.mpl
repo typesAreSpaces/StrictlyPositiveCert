@@ -19,9 +19,15 @@ end proc;
         error "negative constant shortcut changed";
     end if;
     balanced("negative constant shortcut");
+    H := StrictlyPositiveCert:-spCertificates(x^3+1/10,[1-x^2,x],x,max_averkov_N=0);
+    if H<>[1/10,0,x^2] then error "division shortcut changed"; end if;
+    balanced("division shortcut");
+    H := StrictlyPositiveCert:-spCertificates(-1,[-x^2,x^2-1/10^6],x,max_averkov_N=0);
+    if H<>[1,2*10^6,2*10^6] then error "scalar shortcut changed"; end if;
+    balanced("scalar shortcut");
     H := StrictlyPositiveCert:-spCertificates(x+3/2,[1,1-x^2,0],x);
     if nops(H)<>4 or H[2]<>0 or H[4]<>0 then error "restoration changed"; end if;
-    balanced("recursive generator filtering");
+    balanced("generator filtering");
     H := StrictlyPositiveCert:-spCertificates(1-x^2,[2-x^4,1/4-x^2],x);
     if H<>[3/4,0,1] then error "quick certificate shortcut changed"; end if;
     balanced("quick certificate shortcut");
@@ -98,6 +104,6 @@ end proc;
     end try;
     if not caught then error "timeout was suppressed"; end if;
     balanced("catchable timeout");
-    printf("PASS: timing cleanup on shortcuts, recursion, normal returns, fall-through, nested errors, and catchable timeouts\n");
+    printf("PASS: timing cleanup on shortcuts, filtering, normal returns, fall-through, nested errors, and catchable timeouts\n");
 end proc:
 check_logging():

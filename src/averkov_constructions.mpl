@@ -1,40 +1,48 @@
 # Return SOS multipliers H such that f-dot_product(H,gens)>0 on {B_poly>=0}.
 # Every bound and every accepted exponent is checked by exact sign decisions.
-local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess)
+local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess,
+                             {max_N::nonnegint := 256, deadline := time[real]()+300})
 local cells, gamma := 1, eps, pos_coeff := 1, g_i;
-local N, N_top := 1, N_bot := 0, N_cur, admissible;
+local N, N_top := 1, N_bot := 0, N_cur, next_N, admissible;
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("averkov_lemma_7",0)
     try
 $endif
-    cells := univariate_select_cells(univariate_sign_chart(B_poly,x),"nonnegative");
-    if univariate_positive_on_cells(f,cells,x) then
+    cells := timelimit(univariate_search_remaining(deadline,"Averkov sign cells"),
+                       univariate_select_cells(univariate_sign_chart(B_poly,x),"nonnegative"));
+    if timelimit(univariate_search_remaining(deadline,"Averkov positivity"),
+                 univariate_positive_on_cells(f,cells,x)) then
         return map(g_i -> 0, gens);
     end if;
 
+    if max_N=0 then error "Averkov search exhausted max_averkov_N=%1",max_N; end if;
+
     # Bound each positive generator value by 2*gamma on the compact set.
     for g_i in gens do
-        while not univariate_positive_on_cells(2*gamma-g_i,cells,x,false) do
+        while not timelimit(univariate_search_remaining(deadline,"Averkov gamma"),
+                            univariate_positive_on_cells(2*gamma-g_i,cells,x,false)) do
             gamma := 2*gamma;
         end do;
     end do;
-    eps := findEps(x,gens,f,B_poly);
+    eps := timelimit(univariate_search_remaining(deadline,"Averkov epsilon"),findEps(x,gens,f,B_poly));
     DEBUG(__FILE__, __LINE__, lprint(">> Exact Averkov gamma, eps",gamma,eps));
 
     # A fixed positive prefactor suffices for convergence. Avoid numerical
     # optimization of alpha and logarithmic estimates of the exponent.
     admissible := proc(n)
     local term;
-        return univariate_positive_on_cells(expand(f-AVERKOV_EXPR(n)),cells,x);
+        return timelimit(univariate_search_remaining(deadline,"Averkov exponent trial"),
+                         univariate_positive_on_cells(expand(f-AVERKOV_EXPR(n)),cells,x));
     end proc;
     while not admissible(N_top) do
         N_bot := N_top;
-        # Retain the configured guess as an extra probe when doubling crosses it.
-        if N_top<N_guess and N_guess<2*N_top then
-            N_top := N_guess;
-        else
-            N_top := 2*N_top;
+        if N_top>=max_N then
+            error "Averkov search exhausted max_averkov_N=%1",max_N;
         end if;
+        next_N := min(2*N_top,max_N);
+        # Retain the configured guess as an extra probe within the cap.
+        if N_top<N_guess and N_guess<next_N then next_N:=N_guess; end if;
+        N_top := next_N;
     end do;
 
 $ifdef ENABLE_BINARY_SEARCH_AVKL
@@ -51,7 +59,8 @@ $ifdef ENABLE_BINARY_SEARCH_AVKL
 $endif
     N := N_top;
     DEBUG(__FILE__, __LINE__, lprint(">> Exact Averkov exponent",N));
-    return map(g_i -> AVERKOV_SOS(g_i,N),gens);
+    return timelimit(univariate_search_remaining(deadline,"Averkov multipliers"),
+                     map(g_i -> AVERKOV_SOS(g_i,N),gens));
 $ifdef LOG_TIME
     finally
         END_LOG_TIME("averkov_lemma_7",0);

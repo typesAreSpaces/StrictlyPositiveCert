@@ -60,8 +60,9 @@ Archimedean Quadratic Modules*. <https://arxiv.org/abs/2503.11119>.
 
 ## Monogenic certificate stage
 
-After constructing a compact bound polynomial `B` and applying
-`averkov_lemma_7`, `spCertificates` now writes the remaining polynomial as
+After constructing a compact bound polynomial `B`, `spCertificates` first tries
+exact univariate reductions and then uses a bounded `averkov_lemma_7` fallback.
+It writes the remaining polynomial as
 `f2 = sigma0 + sigma1*B` using the exact search ported from
 `monogenicCert.wl`. It searches over
 
@@ -94,7 +95,9 @@ is deferred to the next round with twice its previous allowance, up to
 `max_query_retries=4` retries. A timeout never establishes infeasibility or
 moves the multiplier bracket. `max_search_time=300` bounds elapsed search
 time, including normalization; each trial is also capped by the remaining
-budget. These limits are cooperative Maple time limits. Explicit SOS square
+budget. For `spCertificates`, one deadline is shared across preprocessing,
+univariate reduction, Averkov, and the final monogenic search; the latter gets
+only the remaining allowance. These limits are cooperative Maple time limits. Explicit SOS square
 decomposition has its own iteration budget and is outside the search deadline.
 Exhausted budgets raise an error; they do not indicate that no certificate
 exists. Inputs to the monogenic method must be univariate polynomials with
@@ -146,7 +149,7 @@ positive rational candidate until no point satisfies `f <= 0` and every
 positivity inputs. The private `findEps` now returns this safe epsilon directly,
 not the optimal separation threshold used by the earlier implementation.
 
-The prefactor is fixed at one. Exponents increase until the residual is
+The prefactor is fixed at one. Exponents increase, up to `max_averkov_N=256`, until the residual is
 verified strictly positive on the bound; the optional binary search retains
 a verified upper exponent, without assuming the predicate is monotone.
 No floating-point minimization, maximization, logarithms, or symbolic alpha
@@ -154,3 +157,55 @@ optimization is used in this stage. Certificate degrees and coefficient sizes
 may differ, and the exact search does not promise a minimum-degree certificate.
 `EPS_FACTOR` is no longer used. `N_GUESS_AVKL` remains an optional extra probe
 when exponent doubling crosses the configured guess.
+
+## Symbolic univariate reductions
+
+Before the Averkov fallback, `spCertificates` tries polynomial division by each
+nonconstant generator. A quotient nonnegative on the whole real line is an SOS
+multiplier, including quotients such as `x^2` with zeros. The remainder need only
+be strictly positive on `{B >= 0}`. This is an intermediate reduction, not a
+change to the exported `quickCertificates` contract. When the residual is already
+globally nonnegative, the complete certificate is returned immediately; otherwise
+it proceeds to the monogenic stage.
+
+The next heuristic searches for a positive rational `lambda` in
+
+    f - lambda*P > 0 on {B >= 0},  P = add(weights[i]*gens[i]).
+
+Weights are fixed squares chosen from `1`, `x^2`, `(x-1)^2`, and `(x+1)^2`,
+with joint directions and one-generator directions tried in that order. A point
+with `P >= 0` and `f <= 0`, including a zero of `P`, rejects the direction
+immediately. Exact sign decisions on
+`{P > 0}` and `{P < 0}` classify a trial as too large, too small, infeasible, or
+verified. Brackets and all scales are rational; no numerical optimization or SDP
+solver is used. Coefficient-size normalization initializes the scale so tiny
+constant directions can be useful without a long doubling search.
+
+New `spCertificates` options are:
+
+- `use_univariate_heuristics=true`: enable division and scalar reductions.
+- `max_heuristic_trials=64`: total scalar trial budget across directions; zero
+  skips scalar searches while retaining division.
+- `max_scalar_updates=32`: at most this many bracket updates plus the initial
+  trial for each direction, subject to the total trial budget.
+- `max_averkov_N=256`: cap the fallback exponent before polynomial construction.
+  Zero allows reductions and the zero-multiplier shortcut, but disables positive
+  Averkov exponents.
+
+Heuristics may miss a certificate and then fall back to Averkov. Exhausting the
+shared deadline or exponent cap raises a stage-specific error, not a claim of
+infeasibility. `max_k`, `max_bisection`, `query_time_limit`, and `max_query_retries`
+continue to control only the monogenic stage. Constant filtering preserves the
+original generator indices without restarting the deadline. Inputs must be
+rational univariate polynomials and generators must be supplied as a list.
+
+For example:
+
+    spCertificates(x^3+1/10, [1-x^2,x], x, max_averkov_N=0);
+    # [1/10, 0, x^2]
+    spCertificates(-1, [-x^2,x^2-1/10^6], x, max_averkov_N=0);
+    # [1, 2000000, 2000000]
+
+These limits remain cooperative Maple limits; a native operation can overrun its
+allowance. The fixed square directions and the exponent cap do not guarantee
+minimum-degree output. Standalone `monogenicCertificates` behavior is unchanged.
