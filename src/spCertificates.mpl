@@ -19,7 +19,7 @@ spCertificates := proc(f, gens0, x,
 local stage := "preprocessing", outer_deadline := search_deadline, pipeline;
 $ifdef LOG_TIME
 local entry_stack_level;
-    INIT_START_LOG_TIME("spCertificates",0)
+    INIT_START_LOG_TIME("spCertificates")
     entry_stack_level := stack_level;
 $endif
 
@@ -130,7 +130,7 @@ $endif
     finally
         search_deadline := outer_deadline;
 $ifdef LOG_TIME
-        END_LOG_TIME("spCertificates",0);
+        END_LOG_TIME("spCertificates");
 $endif
     end try;
 end proc;

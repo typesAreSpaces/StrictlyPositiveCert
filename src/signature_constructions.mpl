@@ -1,7 +1,7 @@
 bound_info := proc(x, bound, eps)
 local i1, i2, j1, j2;
 $ifdef LOG_TIME
-    INIT_START_LOG_TIME("bound_info",0)
+    INIT_START_LOG_TIME("bound_info")
     try
 $endif
 # This is a bounded bounduality
@@ -48,7 +48,7 @@ $endif
     return NULL;
 $ifdef LOG_TIME
     finally
-        END_LOG_TIME("bound_info",0);
+        END_LOG_TIME("bound_info");
     end try;
 $endif
 end proc;

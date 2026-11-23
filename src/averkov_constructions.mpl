@@ -3,12 +3,12 @@
 # Time is bounded by the caller's timelimit; max_N bounds the exponent search.
 local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess, {max_N::nonnegint := 256})
 local cells, gamma := 1, eps, g_i;
-local N, N_top := 1, next_N, admissible;
+local N_top := 1, next_N, admissible;
 $ifdef ENABLE_BINARY_SEARCH_AVKL
 local N_bot := 0, N_cur;
 $endif
 $ifdef LOG_TIME
-    INIT_START_LOG_TIME("averkov_lemma_7",0)
+    INIT_START_LOG_TIME("averkov_lemma_7")
     try
 $endif
     cells := univariate_select_cells(univariate_sign_chart(B_poly,x),"nonnegative");
@@ -58,12 +58,11 @@ $ifdef ENABLE_BINARY_SEARCH_AVKL
         end if;
     end do;
 $endif
-    N := N_top;
-    DEBUG(__FILE__, __LINE__, lprint(">> Exact Averkov exponent",N));
-    return map(g_i -> AVERKOV_SOS(g_i,N),gens);
+    DEBUG(__FILE__, __LINE__, lprint(">> Exact Averkov exponent",N_top));
+    return map(g_i -> AVERKOV_SOS(g_i,N_top),gens);
 $ifdef LOG_TIME
     finally
-        END_LOG_TIME("averkov_lemma_7",0);
+        END_LOG_TIME("averkov_lemma_7");
     end try;
 $endif
 end proc;

@@ -11,9 +11,8 @@ $endif
 # Timed routines pair INIT_START_LOG_TIME with END_LOG_TIME in a conditional
 # finally block, covering returns and catchable errors. An outer timelimit or
 # user interrupt can bypass finally blocks inside the interrupted computation.
-$define START_LOG_TIME(X, S) stack_level:=stack_level+1;fd := FileTools:-Text:-Open("log_time.txt", append);local _log_time_S := time();log_entries := [op(log_entries), [X, _log_time_S]];FileTools:-Text:-WriteString(fd, cat("Start: ", X, " ", convert(stack_level, string), "\n"));FileTools:-Text:-Close(fd);
-$define END_LOG_TIME(X, S) fd := FileTools:-Text:-Open("log_time.txt", append);FileTools:-Text:-WriteString(fd, cat("End: ", X, " ", convert(stack_level, string), "\nTime: ", convert(time() - _log_time_S, string), "\n"));FileTools:-Text:-Close(fd);log_entries := log_entries[1..-2];stack_level:=stack_level-1;
-$define INIT_START_LOG_TIME(X, S) local fd;START_LOG_TIME(X, S)
+$define INIT_START_LOG_TIME(X) local fd;stack_level:=stack_level+1;fd := FileTools:-Text:-Open("log_time.txt", append);local _log_time_S := time();log_entries := [op(log_entries), [X, _log_time_S]];FileTools:-Text:-WriteString(fd, cat("Start: ", X, " ", convert(stack_level, string), "\n"));FileTools:-Text:-Close(fd);
+$define END_LOG_TIME(X) fd := FileTools:-Text:-Open("log_time.txt", append);FileTools:-Text:-WriteString(fd, cat("End: ", X, " ", convert(stack_level, string), "\nTime: ", convert(time() - _log_time_S, string), "\n"));FileTools:-Text:-Close(fd);log_entries := log_entries[1..-2];stack_level:=stack_level-1;
 
 with(RootFinding, Isolate);
 

@@ -1,7 +1,7 @@
 dot_product := proc(v1, v2)
 local out := 0, i;
 $ifdef LOG_TIME
-    INIT_START_LOG_TIME("dot_product",0)
+    INIT_START_LOG_TIME("dot_product")
     try
 $endif
     for i from 1 to min(nops(v1), nops(v2)) do
@@ -10,7 +10,7 @@ $endif
     return out;
 $ifdef LOG_TIME
     finally
-        END_LOG_TIME("dot_product",0);
+        END_LOG_TIME("dot_product");
     end try;
 $endif
 end proc;
