@@ -1,4 +1,11 @@
+# Multiplier of averkov_lemma_7 for a generator g at exponent N. The default
+# is T_N((g-gamma)/gamma)^2/T_N(1+eps/gamma)^2 (Chebyshev); -DAVERKOV_POWER restores
+# Averkov's ((g-gamma)/(gamma+eps))^(2N). gamma, eps, lambda are locals there.
+$ifdef AVERKOV_POWER
 $define AVERKOV_SOS(g, N)         ((g - gamma)/(gamma + eps))^(2*N)
+$else
+$define AVERKOV_SOS(g, N)         (lambda(N)*averkov_chebyshev(N, (g - gamma)/gamma)^2)
+$endif
 $define AVERKOV_1_EXPR(g, N)      AVERKOV_SOS(g, N)*g
 $define AVERKOV_EXPR(N)           add(term, term in map(g_i -> AVERKOV_1_EXPR(g_i, N), gens))
 

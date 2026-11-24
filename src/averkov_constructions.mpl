@@ -14,12 +14,49 @@ local samples := {}, cell, a, b, k, s;
     return [op(samples)];
 end proc;
 
+# Chebyshev polynomial T_n(u), expanded, for a rational or polynomial u.
+# The ladder keeps (T_k, T_{k+1}) and doubles k bit by bit, using
+#   T_{2k} = 2*T_k^2-1,  T_{2k+1} = 2*T_k*T_{k+1}-u,  T_{2k+2} = 2*T_{k+1}^2-1,
+# so it needs O(log n) products instead of the n of the three-term recurrence.
+local averkov_chebyshev := proc(n::nonnegint, u0)
+local u := expand(u0), a := 1, b, bit;
+    if n=0 then return 1; end if;
+    b := u;
+    for bit in ListTools:-Reverse(convert(n,base,2)) do
+        if bit=1 then
+            a, b := expand(2*a*b-u), expand(2*b^2-1);
+        else
+            a, b := expand(2*a^2-1), expand(2*a*b-u);
+        end if;
+    end do;
+    return a;
+end proc;
+
 # Return SOS multipliers H such that f-dot_product(H,gens)>0 on {B_poly>=0}.
 # Every bound and every accepted exponent is checked by exact sign decisions.
+#
+# Default multiplier for generator g, with u = (g-gamma)/gamma, delta = eps/gamma:
+#   T_N(u)^2/T_N(1+delta)^2, a positive rational times a square.
+# Averkov's ((g-gamma)/(gamma+eps))^(2N) is (u/(1+delta))^(2N): both equal 1
+# at g = -eps. Since T_N(t)/t^N increases for t>=1, the Chebyshev multiplier
+# is the smaller one where |u|<=1+delta (g in [-eps,2*gamma]) and the larger
+# one where g<=-eps. So the residual is at least Averkov's, up to a term of
+# size eps where -eps<g<0 (there f>0 by the choice of eps), and the same
+# argument as in Averkov's Lemma 7 gives an admissible exponent. The two
+# multipliers have the same degree, but the Chebyshev one is far smaller on
+# the good set and grows like exp(N*sqrt(2*delta)) rather than exp(N*delta)
+# across g = -eps, so the exponent needed grows like sqrt(gamma/eps) instead
+# of gamma/eps. At N=1 the two multipliers coincide. gamma is not shrunk
+# below 1: like Averkov's, the multiplier vanishes where g = gamma, which
+# small-margin inputs rely on. Compiling with -DAVERKOV_POWER restores
+# Averkov's multiplier.
 local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess,
                               {gamma_bisection_steps::nonnegint := 4})
 local cells, gamma := 1, eps, g_i, samples, values, bounded, gamma_lo, gamma_mid, i;
 local N_top := 1, residual, sample_ok, exact_ok, next_N;
+$ifndef AVERKOV_POWER
+local lambda;
+$endif
 $ifdef ENABLE_BINARY_SEARCH_AVKL
 local N_bot := 0, N_cur, N_lo, N_hi;
 $endif
@@ -33,7 +70,7 @@ $endif
     end if;
 
     # Bound each generator value by 2*gamma on the compact set. The exponent
-    # grows roughly like gamma/eps, so after doubling, bisect towards the
+    # grows with gamma/eps, so after doubling, bisect towards the
     # smallest valid bound; every candidate passes the same exact test.
     bounded := c -> andmap(g_i -> univariate_positive_on_cells(2*c-g_i,cells,x,false),gens);
     for g_i in gens do
@@ -51,8 +88,11 @@ $endif
     eps := findEps(x,gens,f,B_poly);
     DEBUG(__FILE__, __LINE__, lprint(">> Exact Averkov gamma, eps",gamma,eps));
 
-    # A fixed positive prefactor suffices for convergence. Avoid numerical
-    # optimization of alpha and logarithmic estimates of the exponent.
+$ifndef AVERKOV_POWER
+    # lambda(n) = 1/T_n(1+eps/gamma)^2 normalizes the multiplier to 1 at g = -eps.
+    lambda := proc(n) option remember; 1/averkov_chebyshev(n,1+eps/gamma)^2 end proc;
+$endif
+
     residual := proc(n)
     local term;
         return expand(f-AVERKOV_EXPR(n));

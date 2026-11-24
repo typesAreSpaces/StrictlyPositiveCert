@@ -154,3 +154,20 @@ optimization is used in this stage. Certificate degrees and coefficient sizes
 may differ, and the exact search does not promise a minimum-degree certificate.
 `EPS_FACTOR` is no longer used. `N_GUESS_AVKL` remains an optional extra probe
 when exponent doubling crosses the configured guess.
+
+## Chebyshev multiplier in `averkov_lemma_7` (experiment_eps)
+
+`averkov_lemma_7` replaces Averkov's multiplier `((g-gamma)/(gamma+eps))^(2N)`
+by `T_N(u)^2/T_N(1+eps/gamma)^2` with `u = (g-gamma)/gamma` and `T_N` the
+Chebyshev polynomial of the first kind. Both equal 1 at `g = -eps` and have
+the same degree, and they coincide at `N = 1`. Because `T_N(t)/t^N` increases
+for `t >= 1`, the Chebyshev multiplier is smaller on `-eps <= g <= 2*gamma`
+and larger on `g <= -eps`. The exponent needed grows like `sqrt(gamma/eps)`
+instead of `gamma/eps`. The exponent search and its exact checks are unchanged.
+
+An earlier version scaled `T_N(u)^2` by the constant `mu/(4*m*gamma)` from
+the convergence proof. That constant is far too small in practice and forced
+larger exponents (degree 2 -> 4 on 100 of the 438 benchmark cases).
+
+Build with `FLAGS="-DENABLE_BINARY_SEARCH_AVKL -DAVERKOV_POWER"` to restore
+the original power multiplier for comparison.

@@ -120,7 +120,10 @@ local x, c := 73205080757/10^11, item, f, gens, eps, H, h, i, caught, original_m
     if SolveTools:-SemiAlgebraic([B>=0,f-StrictlyPositiveCert:-dot_product(H,gens)<=0],[x])<>[] then
         error "Averkov residual without samples is not strictly positive on B";
     end if;
-    if exact_checks>=N then
+    # Doubling plus bisection costs about 2*log2(N) exact checks. With the
+    # small Chebyshev exponents that can reach N itself, so a one-check-per-
+    # exponent scan is only detectable above that logarithmic budget.
+    if exact_checks>=max(N,2*ilog2(N)+4) then
         error "exponent search used %1 exact checks for exponent %2",exact_checks,N;
     end if;
     printf("PASS: exact dyadic epsilon, independent feasibility oracle, invalid inputs, and Averkov precision regressions\n");
