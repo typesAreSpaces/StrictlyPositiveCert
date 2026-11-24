@@ -47,10 +47,6 @@ local fd, entry;
 end proc;
 $endif
 
-# CPU-time deadline (as returned by time()) of the enclosing spCertificates
-# timelimit, or FAIL. Inner timeout handlers use it to re-raise the outer one.
-local search_deadline := FAIL;
-
 $include "src/utilities.mpl";
 $include "src/univariate_signs.mpl";
 $include "src/signature_constructions.mpl";

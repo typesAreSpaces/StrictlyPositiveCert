@@ -138,6 +138,7 @@ monogenicCertificates := proc(f0, g0, x::name,
                               {max_k::nonnegint := 100, max_bisection::nonnegint := 200,
                                query_time_limit::positive := 1/10, max_query_retries::nonnegint := 4,
                                max_search_time::positive := 300,
+                               search_deadline::{numeric,identical(FAIL)} := FAIL,
                                max_sos_iterations::nonnegint := 64, output_sos::truefalse := false})
 local f := expand(f0), g := expand(g0), dg, df, m, M, bounds, regions;
 local k, next_k := 0, round := 0, active := 0, lambda, lo, hi, iteration, retries;

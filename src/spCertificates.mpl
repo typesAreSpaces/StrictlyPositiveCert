@@ -16,7 +16,9 @@ spCertificates := proc(f, gens0, x,
                         max_heuristic_trials::nonnegint := 64,
                         max_scalar_updates::nonnegint := 32,
                         max_averkov_N::nonnegint := 256})
-local stage := "preprocessing", outer_deadline := search_deadline, pipeline;
+# The deadline is a local passed down explicitly: module state would go
+# stale when a caller's own timelimit skips this routine's finally block.
+local stage := "preprocessing", search_deadline, pipeline;
 $ifdef LOG_TIME
 local entry_stack_level;
     INIT_START_LOG_TIME("spCertificates")
@@ -103,7 +105,8 @@ $endif
         monogenic := monogenicCertificates(f2, g[1], x,
                                            ':-max_k'=max_k, ':-max_bisection'=max_bisection,
                                            ':-query_time_limit'=query_time_limit, ':-max_query_retries'=max_query_retries,
-                                           ':-max_search_time'=remaining);
+                                           ':-max_search_time'=remaining,
+                                           ':-search_deadline'=search_deadline);
         DEBUG(__FILE__, __LINE__, lprint(">> Done with monogenicCertificates"));
 
         certificates[g[4]] := certificates[g[4]] + monogenic[2]*g[2];
@@ -123,7 +126,6 @@ $endif
 
     try
         search_deadline := time()+max_search_time;
-        if outer_deadline <> FAIL then search_deadline := min(search_deadline,outer_deadline); end if;
         return timelimit(max_search_time, pipeline());
     catch "time expired":
 $ifdef LOG_TIME
@@ -131,9 +133,8 @@ $ifdef LOG_TIME
         log_unwind(entry_stack_level);
 $endif
         error "certificate search exhausted max_search_time during %1",stage;
-    finally
-        search_deadline := outer_deadline;
 $ifdef LOG_TIME
+    finally
         END_LOG_TIME("spCertificates");
 $endif
     end try;

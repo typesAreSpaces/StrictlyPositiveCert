@@ -4,7 +4,7 @@ kernelopts(opaquemodules=false):
 
 check_scheduler := proc()
 local x, f := 4/3-x^2, g := (1-x^2)^3, cert, original_trial;
-local visits := [], caught, started;
+local visits := [], caught, started, original_positive, spin_until;
     original_trial := eval(StrictlyPositiveCert:-monogenic_search_trial);
     try
         # Simulate a slow k=0 query while allowing the real k=1 search to finish.
@@ -101,6 +101,24 @@ local visits := [], caught, started;
     if expand(f-cert[1]-cert[2]*g) <> 0 or degree(cert[1],x) <> 18
     or SolveTools:-SemiAlgebraic([cert[1]<=0],[x]) <> [] then
         error "default scheduler did not resolve the Stengle regression";
+    end if;
+    # A caller's timelimit bypasses spCertificates' finally block. Once the
+    # interrupted call's budget has passed, a later call reaching the
+    # monogenic stage must not inherit that expired deadline.
+    original_positive := eval(StrictlyPositiveCert:-univariate_positive_on_cells);
+    StrictlyPositiveCert:-univariate_positive_on_cells := proc() while true do end do; end proc;
+    try
+        timelimit(1/5,StrictlyPositiveCert:-spCertificates(x+3/2,[1-x^2],x,
+                                                          use_univariate_heuristics=false,max_search_time=1/2));
+    catch "time expired":
+    finally
+        StrictlyPositiveCert:-univariate_positive_on_cells := eval(original_positive);
+    end try;
+    spin_until := time()+1/2;
+    while time() < spin_until do end do;
+    cert := StrictlyPositiveCert:-spCertificates(x+3/2,[1-x^2],x,use_univariate_heuristics=false);
+    if expand(x+3/2-cert[1]-cert[2]*(1-x^2)) <> 0 then
+        error "interrupted search left a stale deadline";
     end if;
     printf("PASS: interleaved search, retry state, query limits, deadline, solver errors, and Stengle regression\n");
 end proc:
