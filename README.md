@@ -161,7 +161,7 @@ monotonicity is assumed.
 No floating-point minimization, maximization, logarithms, or symbolic alpha
 optimization is used in this stage. Certificate degrees and coefficient sizes
 may differ, and the exact search does not promise a minimum-degree certificate.
-`EPS_FACTOR` is no longer used. `N_GUESS_AVKL` remains an optional extra probe
+`N_GUESS_AVKL` remains an optional extra probe
 when exponent doubling crosses the configured guess.
 
 ## Symbolic univariate reductions

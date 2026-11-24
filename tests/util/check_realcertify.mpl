@@ -1,6 +1,5 @@
 with(RealCertify, multivsos_internal);
 
-read "util/bitsize.mpl";
 read "util/quickdegree.mpl";
 
 #$define SHOW_CHECK_REALCERTIFY
@@ -50,7 +49,6 @@ local out, isvalid, certificates, s, h;
         lprint(">> Sums of squares multipliers", certificates);
         local _degree := foldl((_x, _y) -> max(_x, _y), 0, op(map(h -> quickdegree(h, x), certificates)));
         printf(">> Degree size\n%s\n", convert(_degree, string));
-        #printf(">> Bitsize complexity of certificates: %s\n", convert(add(bitsizeP(h), h in certificates), string));
 
 $ifdef SHOW_CHECK_REALCERTIFY
         lprint("Certificates produced", certificates);

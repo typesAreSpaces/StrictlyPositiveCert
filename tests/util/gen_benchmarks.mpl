@@ -3,7 +3,6 @@ currentdir(FileTools[ParentDirectory](__FILE__));
 
 read "nat_gens.mpl";
 
-#read "gen_benchmark.mpl";
 read "gen_benchmark_2.mpl";
 read "random_poly_gen.mpl";
 
