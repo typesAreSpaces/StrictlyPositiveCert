@@ -6,7 +6,7 @@ kernelopts(opaquemodules=false):
 check_sign_routines := proc()
 local x, p, q, polynomials, expected, actual, S, cells, cell, strict, condition;
 local chart, relation, oracle, result, i, item, h, g, big, small, status, bounds, pieces;
-local m, M, queries := 0;
+local m, M, queries := 0, original_locate, b, sequence;
     polynomials := [0,1,-1,x,(x-1)^2,-(x-1)^2,x^2-2,
                     (x^2-2)^2-1/100,x^5-x-1,x*(x^2-2),
                     (100000*x-1)*(100000*x-2)];
@@ -109,6 +109,35 @@ local m, M, queries := 0;
            10^16*x-14142135623730951,cells,x,4) <> FAIL then
         error "near-endpoint root was decided without enough refinement";
     end if;
+    # p and q share the root 3/4, which the sign chart keeps as a RootOf
+    # endpoint. Maple's sturm drops a root at such an endpoint, so the old
+    # fallback discounted it twice and missed the interior root near -0.47.
+    p := 12*x^5+19*x^4-17*x^3-23*x^2+7*x+6;
+    q := -12*x^6-15*x^5-6*x^4-6*x^3-10*x^2+5*x+12;
+    cells := StrictlyPositiveCert:-univariate_select_cells(
+                 StrictlyPositiveCert:-univariate_sign_chart(q,x),"nonnegative");
+    b := cells[1][2];
+    if not type(b,specfunc(RootOf)) or evala(b-3/4)<>0 then
+        error "shared rational root is no longer a RootOf endpoint: %1",b;
+    end if;
+    sequence := StrictlyPositiveCert:-univariate_sturm_sequence(p,x);
+    if StrictlyPositiveCert:-univariate_sturm_count(sequence,x,-1,b)<>2 or
+    StrictlyPositiveCert:-univariate_sturm_count(sequence,x,-infinity,infinity)<>5 then
+        error "exact Sturm count missed a root at an algebraic endpoint";
+    end if;
+    original_locate := eval(StrictlyPositiveCert:-univariate_roots_in_interiors);
+    unprotect(StrictlyPositiveCert:-univariate_roots_in_interiors);
+    try
+        StrictlyPositiveCert:-univariate_roots_in_interiors := proc() FAIL end proc;
+        for strict in [true,false] do
+            if StrictlyPositiveCert:-univariate_positive_on_cells(p,cells,x,strict) then
+                error "Sturm fallback accepted a sign change at a shared algebraic root";
+            end if;
+        end do;
+    finally
+        StrictlyPositiveCert:-univariate_roots_in_interiors := eval(original_locate);
+        protect(StrictlyPositiveCert:-univariate_roots_in_interiors);
+    end try;
     printf("PASS: %d sign/set/classification oracle comparisons and exact dyadic bounds\n",queries);
 end proc:
 check_sign_routines():

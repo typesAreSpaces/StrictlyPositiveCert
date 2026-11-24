@@ -4,7 +4,8 @@ with(SolveTools, SemiAlgebraic):
 kernelopts(opaquemodules=false):
 
 check_epsilon := proc()
-local x, c := 73205080757/10^11, item, f, gens, eps, H, h, i, caught, original_monogenic;
+local x, c := 73205080757/10^11, item, f, gens, eps, H, h, i, caught, original_monogenic, original_positive,
+      original_samples, B, exact_checks, N;
     for item in [
         [x-3/4,[x-1,2*x-1,3*x-1,4-x^2]],
         [-1,[x-c,2-x^2-x-c]],
@@ -90,6 +91,37 @@ local x, c := 73205080757/10^11, item, f, gens, eps, H, h, i, caught, original_m
     if expand(f-StrictlyPositiveCert:-dot_product([1,op(gens)],H))<>0 or
     SemiAlgebraic([H[1]<0],[x])<>[] then
         error "nonnegative residual shortcut produced an invalid certificate";
+    end if;
+    # Uninformative samples must not reduce the exponent search to one
+    # exact check per exponent: the count must stay below the exponent found.
+    f := x+241/50;
+    gens := [(x-112/25)*(x-294/25)*(x-343/25), (-x+112/25)*(x-294/25)*(x-343/25), 154449/625-x^2];
+    B := StrictlyPositiveCert:-bound_poly(gens,x)[1];
+    original_positive := eval(StrictlyPositiveCert:-univariate_positive_on_cells);
+    original_samples := eval(StrictlyPositiveCert:-averkov_sample_points);
+    unprotect(StrictlyPositiveCert:-univariate_positive_on_cells);
+    unprotect(StrictlyPositiveCert:-averkov_sample_points);
+    exact_checks := 0;
+    try
+        StrictlyPositiveCert:-averkov_sample_points := proc() [] end proc;
+        # Residual checks are the three-argument calls on nonlinear polynomials.
+        StrictlyPositiveCert:-univariate_positive_on_cells := proc(p, cells, y)
+            if nargs=3 and degree(expand(p),y)>1 then exact_checks := exact_checks+1; end if;
+            return original_positive(args);
+        end proc;
+        H := StrictlyPositiveCert:-averkov_lemma_7(x,f,gens,B,70);
+    finally
+        StrictlyPositiveCert:-univariate_positive_on_cells := eval(original_positive);
+        StrictlyPositiveCert:-averkov_sample_points := eval(original_samples);
+        protect(StrictlyPositiveCert:-univariate_positive_on_cells);
+        protect(StrictlyPositiveCert:-averkov_sample_points);
+    end try;
+    N := degree(H[3],x)/(2*degree(gens[3],x));
+    if SolveTools:-SemiAlgebraic([B>=0,f-StrictlyPositiveCert:-dot_product(H,gens)<=0],[x])<>[] then
+        error "Averkov residual without samples is not strictly positive on B";
+    end if;
+    if exact_checks>=N then
+        error "exponent search used %1 exact checks for exponent %2",exact_checks,N;
     end if;
     printf("PASS: exact dyadic epsilon, independent feasibility oracle, invalid inputs, and Averkov precision regressions\n");
 end proc:

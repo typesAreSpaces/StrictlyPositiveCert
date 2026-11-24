@@ -19,7 +19,7 @@ end proc;
 local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess,
                               {gamma_bisection_steps::nonnegint := 4})
 local cells, gamma := 1, eps, g_i, samples, values, bounded, gamma_lo, gamma_mid, i;
-local N, N_top := 1, N_bot := 0, N_cur, residual, sample_ok, next_N;
+local N, N_top := 1, N_bot := 0, N_cur, N_lo, N_hi, residual, sample_ok, exact_ok, next_N;
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("averkov_lemma_7")
     try
@@ -71,22 +71,40 @@ $endif
         if n<N_guess and N_guess<2*n then return N_guess; end if;
         return 2*n;
     end proc;
-    # Keep N_bot rejected and N_top sample-admissible. Only the final
-    # candidate pays for the exact check; if it fails, resume doubling.
+    exact_ok := n -> univariate_positive_on_cells(residual(n),cells,x);
+    # Keep N_bot rejected and N_top sample-admissible; resume doubling when
+    # N_top fails the exact check. No monotonicity assumption is needed for
+    # correctness, and the returned exponent need not be the smallest one.
     do
         while not sample_ok(N_top) do
             N_bot := N_top;
             N_top := next_N(N_top);
         end do;
 $ifdef ENABLE_BINARY_SEARCH_AVKL
-        # No monotonicity assumption is needed for correctness; the returned
-        # exponent need not be the smallest one.
-        while N_top-N_bot>1 do
-            N_cur := iquo(N_top+N_bot,2);
-            if sample_ok(N_cur) then N_top := N_cur; else N_bot := N_cur; end if;
+        # Bisect (N_bot,N_top] by samples alone. When samples are informative,
+        # one exact check accepts the smallest sample-admissible exponent.
+        N_lo, N_hi := N_bot, N_top;
+        while N_hi-N_lo>1 do
+            N_cur := iquo(N_hi+N_lo,2);
+            if sample_ok(N_cur) then N_hi := N_cur; else N_lo := N_cur; end if;
         end do;
+        if N_hi<N_top then
+            if exact_ok(N_hi) then N_top := N_hi; break; end if;
+            N_lo := N_hi;
+        end if;
 $endif
-        if univariate_positive_on_cells(residual(N_top),cells,x) then break; end if;
+        if exact_ok(N_top) then
+$ifdef ENABLE_BINARY_SEARCH_AVKL
+            # Samples were not informative below N_top. Bisect between the
+            # rejected N_lo and the verified N_top with exact checks; trusting
+            # samples here would step the exponent up by one per exact check.
+            while N_top-N_lo>1 do
+                N_cur := iquo(N_top+N_lo,2);
+                if sample_ok(N_cur) and exact_ok(N_cur) then N_top := N_cur; else N_lo := N_cur; end if;
+            end do;
+$endif
+            break;
+        end if;
         N_bot := N_top;
         N_top := next_N(N_top);
     end do;
