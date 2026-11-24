@@ -81,7 +81,9 @@ end proc;
     end try;
     if not caught then error "Averkov exponent cap was ignored"; end if;
     caught:=false;
-    try StrictlyPositiveCert:-averkov_lemma_7(x,-1,[-x^2,x^2-1/10^6],-x^2,70,max_N=1);
+    # Per-generator Chebyshev constants certify the former instance
+    # (-1,[-x^2,x^2-1/10^6]) at exponent 1; this one needs about 76.
+    try StrictlyPositiveCert:-averkov_lemma_7(x,x,[1-x^2,x-1/1000],1-x^2,70,max_N=1);
     catch "Averkov search exhausted max_averkov_N": caught:=true;
     end try;
     if not caught then error "Averkov expanded beyond an unsuccessful cap"; end if;

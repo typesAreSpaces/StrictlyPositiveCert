@@ -215,3 +215,22 @@ For example:
 These limits remain cooperative Maple limits; a native operation can overrun its
 allowance. The fixed square directions and the exponent cap do not guarantee
 minimum-degree output. Standalone `monogenicCertificates` behavior is unchanged.
+
+## Univariate Chebyshev construction in `averkov_lemma_7` (experiment_univheuristics)
+
+`averkov_lemma_7` uses a univariate refinement of Averkov's Lemma 7 with
+Chebyshev multipliers `lambda_j*T_{n_j}((g_j-gamma_j)/gamma_j)^2`:
+
+- Only generators that are negative somewhere on `{B>=0, f<=0}` are used.
+  Generators made redundant there by the others are dropped, highest degree
+  first, and get multiplier 0.
+- Each remaining generator has its own range bound `gamma_j`, separation
+  margin `eps_j`, scale `lambda_j = mu/(4*|J|*gamma_j)` and certified exponent
+  `n_j ~ sqrt(gamma_j/eps_j)`. The margins start from `findEps` and are
+  enlarged one at a time.
+- The search runs over a level `k`. Generator `j` uses `max(1, ceil(k*n_j/K))`
+  with `K = max n_j`, and `max_averkov_N` caps `k`, which is the largest
+  exponent used.
+
+All constants come from exact univariate sign decisions, and every accepted
+level is verified exactly.

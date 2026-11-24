@@ -1,6 +1,5 @@
-$define AVERKOV_SOS(g, N)         ((g - gamma)/(gamma + eps))^(2*N)
-$define AVERKOV_1_EXPR(g, N)      AVERKOV_SOS(g, N)*g
-$define AVERKOV_EXPR(N)           add(term, term in map(g_i -> AVERKOV_1_EXPR(g_i, N), gens))
+# averkov_lemma_7 builds per-generator Chebyshev multipliers directly
+# (src/averkov_constructions.mpl); the AVERKOV_* power macros are retired.
 
 $ifdef ENABLE_DEBUGGING
 $define DEBUG(F, L, X) lprint(">> Debugging file ", F, " at line ", L); X
