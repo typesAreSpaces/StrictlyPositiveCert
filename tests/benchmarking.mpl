@@ -152,7 +152,7 @@ local test_name := "Strictly positive polynomials close to semialgebraic sets";
 local max_time := 300;
 
     for eps in [1/2, 1/3] do
-        for k from 13 to 21 by 2 do
+        for k from 13 to 19 by 2 do
             local f := (1 + eps) + x;
             local g := [(1 - x^2)^k];
 

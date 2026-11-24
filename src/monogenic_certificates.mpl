@@ -8,7 +8,7 @@ local p := expand(poly), d;
     if p = 0 then return false; end if;
     d := degree(p, x);
     return type(d, even) and lcoeff(p, x) > 0
-    and (d = 0 or sturm(p, x, -infinity, infinity) = 0);
+    and not univariate_has_real_root(p, x);
 end proc;
 
 local monogenic_status_lambda := proc(f, g, sg, lambda, x, regions := FAIL)
