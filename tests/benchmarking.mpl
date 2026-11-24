@@ -212,8 +212,8 @@ local eps, f, g;
   #for r from 3 to 8 do
   #r:=4;
   #for eps in [5, (5+1)/2, 1, (1+1/2)/2, 1/2, (1/2+1/3)/2, 1/3, 1/4, 62/320] do
-  #for eps in [5, 121/27, 107/27, 31/9, 79/27, 65/27, 17/9, 37/27, 23/27, 1/3] do
-  for eps in [60/320] do
+  for eps in [5, 121/27, 107/27, 31/9, 79/27, 65/27, 17/9, 37/27, 23/27, 1/3] do
+  #for eps in [60/320] do
   #for eps1 from 61 to 60 by -1 do
     #eps := eps1/320;
     f := 1 - x^2 + eps;
@@ -291,13 +291,13 @@ printf("\n>> Start Benchmarks\n");
 #runExternalBenchmark("./benchmarks/left.mpl");
 #runExternalBenchmark("./benchmarks/right.mpl");
 #runExternalBenchmark("./benchmarks/lifted.mpl");
-runExternalBenchmark("./benchmarks/arch.mpl");
+#runExternalBenchmark("./benchmarks/arch.mpl");
 
 ## 7.1.2 Comparison of degree of certificates
-#strictly_positive_polynomials_close_to_semialgebraic_sets_benchmark();
+strictly_positive_polynomials_close_to_semialgebraic_sets_benchmark();
 
 ## 7.1.3 Solving Stengle's Example
-#solving_stengle_example();
+solving_stengle_example();
 
 ## 7.2.2 Lifted products in hypercube
 #lifted_prods_hypercube();
