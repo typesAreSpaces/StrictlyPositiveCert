@@ -146,41 +146,108 @@ local decomposition := sqrfree(p,x), item, result;
     return expand(result);
 end proc;
 
+# Primitive squarefree part with rational coefficients; same real roots as p.
+local univariate_squarefree := proc(p, x)
+    if degree(p,x) <= 0 then return p; end if;
+    return primpart(quo(p,gcd(p,diff(p,x)),x),x);
+end proc;
+
+# realroot isolates by Descartes' rule with exact rationals. On high-degree
+# residuals with large coefficients it is orders of magnitude cheaper than
+# building a Sturm sequence, which suffers from coefficient growth.
+local univariate_has_real_root := proc(p, x)
+    return evalb(degree(p,x) > 0 and realroot(univariate_squarefree(p,x)) <> []);
+end proc;
+
 local univariate_nonnegative_on_R := proc(p0, x)
 local p := expand(p0), oddpart;
     if p=0 then return true; end if;
     if lcoeff(p,x)<0 then return false; end if;
     oddpart := univariate_odd_part(p,x);
-    return evalb(degree(oddpart,x)<=0 or sturm(oddpart,x,-infinity,infinity)=0);
+    return not univariate_has_real_root(oddpart,x);
 end proc;
 
-# A single sequence is reused across every component. Non-strict positivity
-# permits even-multiplicity roots, hence counts only the odd part in interiors.
+# Decide whether some root of the squarefree q lies in an open cell interior.
+# A nondegenerate isolating interval holds one root in its open interior;
+# when it straddles a cell endpoint, either that endpoint is the root (it is
+# then outside the interior) or a finer isolation separates them. Return FAIL
+# if max_refinements finer isolations still leave a straddling interval.
+local univariate_roots_in_interiors := proc(q, cells, x, max_refinements::nonnegint := 40)
+local intervals, interval, cell, l, u, a, b, undecided, k, refinement, inside;
+    intervals := realroot(q);
+    for refinement from 0 to max_refinements do
+        undecided := false;
+        for interval in intervals do
+            l,u := op(interval);
+            for cell in cells do
+                a,b := cell[1],cell[2];
+                if evalb(a=b) then next; end if;
+                if l = u then
+                    inside := evalb(univariate_compare(a,l)<0 and univariate_compare(l,b)<0);
+                elif univariate_compare(u,a) <= 0 or univariate_compare(b,l) <= 0 then
+                    inside := false;
+                elif univariate_compare(a,l) <= 0 and univariate_compare(u,b) <= 0 then
+                    inside := true;
+                else
+                    # The interval straddles a or b. An endpoint inside (l,u)
+                    # that is a root of q is the isolated root itself.
+                    inside := FAIL;
+                    for k in [a,b] do
+                        if k <> -infinity and k <> infinity and
+                        univariate_compare(l,k) < 0 and univariate_compare(k,u) < 0 and
+                        univariate_sign(subs(x=k,q)) = 0 then
+                            inside := false;
+                        end if;
+                    end do;
+                end if;
+                if inside = true then return true; end if;
+                if inside = FAIL then undecided := true; end if;
+            end do;
+        end do;
+        if not undecided then return false; end if;
+        intervals := realroot(q,1/2^refinement);
+    end do;
+    return FAIL;
+end proc;
+
+# Non-strict positivity permits even-multiplicity roots, hence locates only
+# roots of the odd part in interiors. Root isolation uses realroot; Sturm
+# sequences remain only as a fallback for unresolved endpoint proximity.
 local univariate_positive_on_cells := proc(p0, cells, x, strict::truefalse := true)
-local p := expand(p0), q, sequence := FAIL, cell, a, b, sample, count, s;
+local p := expand(p0), q, qs, cell, a, b, sample, count, s, located, sequence;
     if cells=[] then return true; end if;
     if p=0 then return not strict; end if;
     q := `if`(strict,p,univariate_odd_part(p,x));
     for cell in cells do
-        a,b := cell[1],cell[2];
         if cell[3] then
-            s := univariate_sign(subs(x=a,p));
+            s := univariate_sign(subs(x=cell[1],p));
             if s<0 or (strict and s=0) then return false; end if;
         end if;
         if cell[4] then
-            s := univariate_sign(subs(x=b,p));
+            s := univariate_sign(subs(x=cell[2],p));
             if s<0 or (strict and s=0) then return false; end if;
         end if;
-        if evalb(a=b) then next; end if;
-        if degree(q,x)>0 then
-            if sequence=FAIL then sequence := sturmseq(q,x); end if;
-            count := sturm(sequence,x,a,b);
-            # sturm counts (a,b]; excluded endpoints and non-strict tests
-            # permit a root at b. An included strict endpoint was checked above.
-            if b<>infinity and (not strict or not cell[4]) and
-            univariate_sign(subs(x=b,q))=0 then count:=count-1; end if;
-            if count>0 then return false; end if;
+    end do;
+    if degree(q,x)>0 then
+        qs := univariate_squarefree(q,x);
+        located := univariate_roots_in_interiors(qs,cells,x);
+        if located = true then return false; end if;
+        if located = FAIL then
+            sequence := sturmseq(qs,x);
+            for cell in cells do
+                a,b := cell[1],cell[2];
+                if evalb(a=b) then next; end if;
+                # sturm counts (a,b]; discount a root at b, an endpoint.
+                count := sturm(sequence,x,a,b);
+                if b<>infinity and univariate_sign(subs(x=b,qs))=0 then count:=count-1; end if;
+                if count>0 then return false; end if;
+            end do;
         end if;
+    end if;
+    # q has no root in any interior, so one sample fixes its sign there.
+    for cell in cells do
+        a,b := cell[1],cell[2];
+        if evalb(a=b) then next; end if;
         sample := samplePoint(a,b);
         if univariate_sign(subs(x=sample,q))<=0 then return false; end if;
     end do;

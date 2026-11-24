@@ -83,6 +83,32 @@ local m, M, queries := 0;
         bounds:=StrictlyPositiveCert:-monogenic_search_bounds(p,g,x);
         if bounds[1..2]<>[m,M] then error "normalization changed: %1",[item,bounds,[m,M]]; end if;
     end do;
+    # Root isolation against algebraic cell endpoints: roots at, near, and
+    # beyond sqrt(2) and sqrt(3), including a root 10^-17 from sqrt(2) that
+    # no bounded refinement separates and must reach the Sturm fallback.
+    for g in [2-x^2,-(x^2-2)*(x^2-3)] do
+        cells := StrictlyPositiveCert:-univariate_select_cells(
+                     StrictlyPositiveCert:-univariate_sign_chart(g,x),"nonnegative");
+        for p in [x^2-2,(x^2-2)^2,2-x^2,(x^2-2)*(x-1),(x^2-2)^2*(x-3/2),
+                  x-14142/10000,x-14143/10000,(x-14142/10000)*(x-14143/10000),
+                  x-14142135623730951/10^16,x-14142135623730950/10^16,
+                  (x^2-3)*(x+2),(x^2-2)*(x^2-3)+1/10^12,x^2+1] do
+            for strict in [true,false] do
+                actual := StrictlyPositiveCert:-univariate_positive_on_cells(p,cells,x,strict);
+                expected := evalb(SemiAlgebraic([g>=0,`if`(strict,p<=0,p<0)],[x])=[]);
+                if actual<>expected then
+                    error "algebraic endpoint positivity mismatch: %1",[p,g,strict,actual,expected];
+                end if;
+                queries := queries+1;
+            end do;
+        end do;
+    end do;
+    cells := StrictlyPositiveCert:-univariate_select_cells(
+                 StrictlyPositiveCert:-univariate_sign_chart(2-x^2,x),"nonnegative");
+    if StrictlyPositiveCert:-univariate_roots_in_interiors(
+           10^16*x-14142135623730951,cells,x,4) <> FAIL then
+        error "near-endpoint root was decided without enough refinement";
+    end if;
     printf("PASS: %d sign/set/classification oracle comparisons and exact dyadic bounds\n",queries);
 end proc:
 check_sign_routines():

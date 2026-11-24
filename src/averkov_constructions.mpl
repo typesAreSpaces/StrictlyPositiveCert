@@ -16,8 +16,9 @@ end proc;
 
 # Return SOS multipliers H such that f-dot_product(H,gens)>0 on {B_poly>=0}.
 # Every bound and every accepted exponent is checked by exact sign decisions.
-local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess)
-local cells, gamma := 1, eps, g_i, samples;
+local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess,
+                              {gamma_bisection_steps::nonnegint := 4})
+local cells, gamma := 1, eps, g_i, samples, values, bounded, gamma_lo, gamma_mid, i;
 local N, N_top := 1, N_bot := 0, N_cur, residual, sample_ok, next_N;
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("averkov_lemma_7")
@@ -28,12 +29,22 @@ $endif
         return map(g_i -> 0, gens);
     end if;
 
-    # Bound each positive generator value by 2*gamma on the compact set.
+    # Bound each generator value by 2*gamma on the compact set. The exponent
+    # grows roughly like gamma/eps, so after doubling, bisect towards the
+    # smallest valid bound; every candidate passes the same exact test.
+    bounded := c -> andmap(g_i -> univariate_positive_on_cells(2*c-g_i,cells,x,false),gens);
     for g_i in gens do
         while not univariate_positive_on_cells(2*gamma-g_i,cells,x,false) do
             gamma := 2*gamma;
         end do;
     end do;
+    if gamma > 1 then
+        gamma_lo := gamma/2;
+        for i from 1 to gamma_bisection_steps do
+            gamma_mid := (gamma_lo+gamma)/2;
+            if bounded(gamma_mid) then gamma := gamma_mid; else gamma_lo := gamma_mid; end if;
+        end do;
+    end if;
     eps := findEps(x,gens,f,B_poly);
     DEBUG(__FILE__, __LINE__, lprint(">> Exact Averkov gamma, eps",gamma,eps));
 
@@ -43,12 +54,17 @@ $endif
     local term;
         return expand(f-AVERKOV_EXPR(n));
     end proc;
-    # A nonpositive value at a point of {B>=0} rejects n without a Sturm
-    # sequence; passing samples is necessary, not sufficient.
+    # A nonpositive value at a point of {B>=0} rejects n without expanding
+    # the residual: [f(s), [g_1(s), ...]] turn each test into rational
+    # arithmetic. Passing samples is necessary, not sufficient.
     samples := averkov_sample_points(cells,B_poly,x);
+    values := map(s -> [subs(x=s,f), map(g_i -> subs(x=s,g_i),gens)], samples);
     sample_ok := proc(n)
-    local p := residual(n);
-        return andmap(s -> evalb(subs(x=s,p)>0),samples);
+    local v, w;
+        for v in values do
+            if v[1]-add(AVERKOV_1_EXPR(w,n), w in v[2]) <= 0 then return false; end if;
+        end do;
+        return true;
     end proc;
     next_N := proc(n)
         # Retain the configured guess as an extra probe when doubling crosses it.
