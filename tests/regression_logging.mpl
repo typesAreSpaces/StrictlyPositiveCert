@@ -5,7 +5,7 @@ if getenv("SPCERT_LOG_DIR")="" then error "SPCERT_LOG_DIR is required"; end if:
 currentdir(getenv("SPCERT_LOG_DIR")):
 
 check_logging := proc()
-local x, H, item, caught, original_positive;
+local x, H, item, caught;
 local balanced := proc(label)
     if StrictlyPositiveCert:-stack_level<>-1 then
         error "unbalanced timing stack after %1",label;
@@ -53,11 +53,6 @@ end proc;
         StrictlyPositiveCert:-bound_info(x,item,0);
         balanced("bound_info branch");
     end do;
-    if not StrictlyPositiveCert:-checkPositivityOverSAS([[0<=x,x<=1]],x^2+1,x) then
-        error "positivity result changed";
-    end if;
-    balanced("nested positivity check");
-
     caught := false;
     try StrictlyPositiveCert:-spCertificates(x,[],x);
     catch "no nonredundant generators remain": caught := true;
@@ -82,32 +77,6 @@ end proc;
     end try;
     if not caught then error "invalid interval error was suppressed"; end if;
     balanced("invalid interval error");
-    caught := false;
-    original_positive := eval(StrictlyPositiveCert:-univariate_positive_on_cells);
-    StrictlyPositiveCert:-univariate_positive_on_cells := proc()
-        error "forced positivity failure";
-    end proc;
-    try StrictlyPositiveCert:-checkPositivityOverSAS([[0<=x,x<=1]],x^2+1,x);
-    catch "forced positivity failure": caught := true;
-    finally
-        StrictlyPositiveCert:-univariate_positive_on_cells := eval(original_positive);
-    end try;
-    if not caught then error "nested positivity error was suppressed"; end if;
-    balanced("positivity error");
-    caught := false;
-    StrictlyPositiveCert:-univariate_positive_on_cells := proc()
-    local spin := proc() while true do end do; end proc;
-        timelimit(1/100,spin());
-    end proc;
-    # The logged parent is above timelimit, so it receives a catchable error.
-    # Maple bypasses finally blocks below an outer timelimit boundary.
-    try StrictlyPositiveCert:-checkPositivityOverSAS([[0<=x,x<=1]],x^2+1,x);
-    catch "time expired": caught := true;
-    finally
-        StrictlyPositiveCert:-univariate_positive_on_cells := eval(original_positive);
-    end try;
-    if not caught then error "timeout was suppressed"; end if;
-    balanced("catchable timeout");
-    printf("PASS: timing cleanup on shortcuts, recursion, normal returns, compactness errors, nested errors, and catchable timeouts\n");
+    printf("PASS: timing cleanup on shortcuts, recursion, normal returns, compactness errors, and nested errors\n");
 end proc:
 check_logging():

@@ -42,9 +42,9 @@ local q, boxes, roots, samples, i, width := 1, separated;
 end proc;
 
 local univariate_sign_chart := proc(p0, x)
-local p := expand(p0), data, roots, samples, chart := [], i, a, b;
+local p := expand(p0), roots, samples, chart := [], i, a, b;
     if p = 0 then return [[[-infinity,infinity,false,false],0]]; end if;
-    data := univariate_root_data(p,x); roots,samples := op(data);
+    roots,samples := op(univariate_root_data(p,x));
     for i from 1 to nops(samples) do
         a := `if`(i=1,-infinity,roots[i-1]);
         b := `if`(i>nops(roots),infinity,roots[i]);
@@ -160,11 +160,10 @@ local univariate_has_real_root := proc(p, x)
 end proc;
 
 local univariate_nonnegative_on_R := proc(p0, x)
-local p := expand(p0), oddpart;
+local p := expand(p0);
     if p=0 then return true; end if;
     if lcoeff(p,x)<0 then return false; end if;
-    oddpart := univariate_odd_part(p,x);
-    return not univariate_has_real_root(oddpart,x);
+    return not univariate_has_real_root(univariate_odd_part(p,x),x);
 end proc;
 
 # Decide whether some root of the squarefree q lies in an open cell interior.
@@ -227,7 +226,7 @@ end proc;
 # Maple's sturm drops a root at a RootOf endpoint b, counting only (a,b).
 local univariate_sturm_count := proc(sequence, x, a, b)
 local variations := proc(t)
-    local signs, s, count := 0, i;
+    local signs, count := 0, i;
         if t = infinity then
             signs := map(s -> sign(lcoeff(s,x)), sequence);
         elif t = -infinity then

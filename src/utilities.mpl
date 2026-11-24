@@ -15,30 +15,6 @@ $ifdef LOG_TIME
 $endif
 end proc;
 
-# Check if poly is strictly positive
-# over S
-# S is a finite list of closed intervals/points (possibly unbounded)
-# poly is a polynomial
-local checkPositivityOverSAS := proc(S, poly, x)
-local bounds, cells := [], interval, positive;
-$ifdef LOG_TIME
-    INIT_START_LOG_TIME("checkPositivityOverSAS")
-    try
-$endif
-    for interval in S do
-        bounds := bound_info(x,interval,0);
-        cells := [op(cells),[op(bounds),evalb(bounds[1]<>-infinity),
-                             evalb(bounds[2]<>infinity)]];
-    end do;
-    positive := univariate_positive_on_cells(poly,cells,x);
-    return positive;
-$ifdef LOG_TIME
-    finally
-        END_LOG_TIME("checkPositivityOverSAS");
-    end try;
-$endif
-end proc;
-
 # Despite its name, this checks strict positivity, not general SOS membership.
 # A real polynomial without real roots has constant sign, so test x = 0 first.
 isSOS := proc(poly, x)

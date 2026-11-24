@@ -10,7 +10,6 @@ root = Path(__file__).resolve().parent.parent
 scripts = (
     "regression_monogenic.mpl",
     "regression_epsilon.mpl",
-    "regression_positivity.mpl",
     "regression_signs.mpl",
     "regression_scheduler.mpl",
     "regression_quick_certificates.mpl",

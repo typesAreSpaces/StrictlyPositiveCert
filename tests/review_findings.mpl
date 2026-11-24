@@ -11,17 +11,16 @@ printlevel := -1;
 #printlevel := 8;
 
 # This file is intentionally separate from tests/run_regressions.py: the
-# current implementation is expected to reproduce all four reported bugs.
+# current implementation is expected to reproduce the three remaining reported bugs.
 # After fixes, each section should instead report PASS.
 #
 # An ERROR means the test itself could not establish its result (for example,
 # an unexpected timeout). Such a result is not evidence that a bug was fixed.
 # The script does not call restart or quit, and does not edit source/library
-# files. It temporarily exposes private module members for finding 2 and
-# restores the previous opaque-module setting in a finally clause.
+# files. It restores the previous opaque-module setting in a finally clause.
 
 run_review_findings := proc()
-local x, f, basis, H, p, answer, value, good, redundant, item, witness;
+local x, f, basis, H, value, good, redundant, item, witness;
 local old_opaque := kernelopts(opaquemodules);
 local bugs := 0, passes := 0, errors := 0;
 local valid_certificate, report, report_error;
@@ -96,33 +95,6 @@ local valid_certificate, report, report_error;
             report("mixed-parity bound construction",good);
         catch:
             report_error("mixed-parity bound construction",[lastexception]);
-        end try;
-
-        # ------------------------------------------------------------------
-        # 2. checkPositivityOverSAS can skip a minimum or a later interval.
-        #
-        # (a) p(1)>0 and p(3)>0, but p(2)=-1/100. The derivative has earlier
-        # roots before [1,3]; the cursor logic skips the in-range minimum.
-        # (b) p=-x has no derivative roots. It is positive on [-2,-1] but
-        # negative on [1,2]. `break` skips the second interval altogether.
-        # Expected after a fix: BOTH positivity decisions are false.
-        # ------------------------------------------------------------------
-        printf("\n=== Finding 2: false positivity decisions ===\n");
-        try
-            p := (x+1)^2*(x-2)^2-1/100;
-            answer := timelimit(10,StrictlyPositiveCert:-checkPositivityOverSAS(
-                [[1<=x,x<=3]],p,x));
-            lprint("first positivity answer (expected false)",answer);
-            lprint("exact negative witness p(2)",subs(x=2,p));
-            good := evalb(answer=false);
-            answer := timelimit(10,StrictlyPositiveCert:-checkPositivityOverSAS(
-                [[-2<=x,x<=-1],[1<=x,x<=2]],-x,x));
-            lprint("second positivity answer (expected false)",answer);
-            lprint("exact negative witness at x=1",-1);
-            if answer <> false then good := false; end if;
-            report("interval and critical-point traversal",good);
-        catch:
-            report_error("interval and critical-point traversal",[lastexception]);
         end try;
 
         # ------------------------------------------------------------------
@@ -213,7 +185,7 @@ local valid_certificate, report, report_error;
     end try;
     printf("\nSUMMARY: %d bug(s) reproduced; %d correct behavior(s); %d inconclusive error(s).\n",
            bugs,passes,errors);
-    printf("Expected on the reviewed source: 4 bugs, 0 correct behaviors, 0 errors.\n");
+    printf("Expected on the reviewed source: 3 bugs, 0 correct behaviors, 0 errors.\n");
 end proc:
 
 run_review_findings():

@@ -4,10 +4,9 @@
 # each sigma is a list of [weight, polynomial] pairs representing weighted squares.
 # The optional decomposition uses Schweighofer's quadratic reduction (univsos1).
 local monogenic_positive_on_R := proc(poly, x)
-local p := expand(poly), d;
+local p := expand(poly);
     if p = 0 then return false; end if;
-    d := degree(p, x);
-    return type(d, even) and lcoeff(p, x) > 0
+    return type(degree(p, x), even) and lcoeff(p, x) > 0
     and not univariate_has_real_root(p, x);
 end proc;
 
@@ -139,7 +138,7 @@ monogenicCertificates := proc(f0, g0, x::name,
                                query_time_limit::positive := 1/10, max_query_retries::nonnegint := 4,
                                max_search_time::positive := 300,
                                max_sos_iterations::nonnegint := 64, output_sos::truefalse := false})
-local f := expand(f0), g := expand(g0), dg, df, m, M, bounds, regions;
+local f := expand(f0), g := expand(g0), dg, df, m, M, regions;
 local k, next_k := 0, round := 0, active := 0, lambda, lo, hi, iteration, retries;
 local states := table(), bases := table(), products := table();
 local trial, status, base, h, started := time[real](), remaining, allowance;
@@ -159,8 +158,7 @@ local trial, status, base, h, started := time[real](), remaining, allowance;
         end if;
         return [expand(((f+1)/2)^2), expand(-((f-1)/2)^2/g)];
     end if;
-    bounds := timelimit(max_search_time, monogenic_search_bounds(f, g, x));
-    m, M, regions := op(bounds);
+    m, M, regions := op(timelimit(max_search_time, monogenic_search_bounds(f, g, x)));
 
     # Admit higher degrees gradually; advance every active lambda search once.
     # Square-spaced admission avoids building many high-degree states while a

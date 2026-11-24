@@ -1,34 +1,19 @@
-QUIET_MODE=
-QUIET_MODE=-q
+QUIET_MODE ?=
+FLAGS ?=
+SUFFIX ?=
+FILE ?= benchmarking.mpl
+OUTPUT_FILE ?= output$(SUFFIX).txt
+LOG_FILE ?= log_time$(SUFFIX).txt
 
-HEURISTICS=
-HEURISTICS=-D USE_BOUNDS
-HEURISTICS=-D USE_REALCERTIFY
-
-SUFFIX=
-OUTPUT_FILE=output${SUFFIX}.txt
-LOG_FILE=log_time${SUFFIX}.txt
-FILE=benchmarking.mpl
-FILE=comparison_benchmark.mpl
-FILE=examples.mpl
-FILE=tests.mpl
-FILE=review_findings.mpl
-
-FILE=benchmarking.mpl
-QUIET_MODE=
-HEURISTICS=-D USE_BOUNDS
-FLAGS=-D LOG_TIME
-
-.PHONY: all clean impl
+.PHONY: all library impl clean
 
 all: impl
-	
+
 library:
 	$(MAKE) -C ..
 
 impl: library
-	maple ${FILE} ${QUIET_MODE} ${HEURISTICS} ${FLAGS} > ${OUTPUT_FILE}
+	maple $(QUIET_MODE) $(FLAGS) "$(FILE)" > "$(OUTPUT_FILE)"
 
 clean:
-	rm -rf ${OUTPUT_FILE}
-	rm -rf ${LOG_FILE}
+	rm -f -- "$(OUTPUT_FILE)" "$(LOG_FILE)"

@@ -19,7 +19,10 @@ end proc;
 local averkov_lemma_7 := proc(x, f, gens, B_poly, N_guess,
                               {gamma_bisection_steps::nonnegint := 4})
 local cells, gamma := 1, eps, g_i, samples, values, bounded, gamma_lo, gamma_mid, i;
-local N, N_top := 1, N_bot := 0, N_cur, N_lo, N_hi, residual, sample_ok, exact_ok, next_N;
+local N_top := 1, residual, sample_ok, exact_ok, next_N;
+$ifdef ENABLE_BINARY_SEARCH_AVKL
+local N_bot := 0, N_cur, N_lo, N_hi;
+$endif
 $ifdef LOG_TIME
     INIT_START_LOG_TIME("averkov_lemma_7")
     try
@@ -77,7 +80,9 @@ $endif
     # correctness, and the returned exponent need not be the smallest one.
     do
         while not sample_ok(N_top) do
+$ifdef ENABLE_BINARY_SEARCH_AVKL
             N_bot := N_top;
+$endif
             N_top := next_N(N_top);
         end do;
 $ifdef ENABLE_BINARY_SEARCH_AVKL
@@ -105,12 +110,13 @@ $ifdef ENABLE_BINARY_SEARCH_AVKL
 $endif
             break;
         end if;
+$ifdef ENABLE_BINARY_SEARCH_AVKL
         N_bot := N_top;
+$endif
         N_top := next_N(N_top);
     end do;
-    N := N_top;
-    DEBUG(__FILE__, __LINE__, lprint(">> Exact Averkov exponent",N));
-    return map(g_i -> AVERKOV_SOS(g_i,N),gens);
+    DEBUG(__FILE__, __LINE__, lprint(">> Exact Averkov exponent",N_top));
+    return map(g_i -> AVERKOV_SOS(g_i,N_top),gens);
 $ifdef LOG_TIME
     finally
         END_LOG_TIME("averkov_lemma_7");
