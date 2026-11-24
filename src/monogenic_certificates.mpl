@@ -40,6 +40,24 @@ local chart := univariate_sign_chart(g,x);
             univariate_select_cells(chart,"nonpositive")];
 end proc;
 
+# Numerical starting point 2^ceil(log2(max g)) for the exact dyadic search of
+# M in monogenic_search_bounds. It only saves steps: the doubling and halving
+# loops there are monotone and decide every step exactly, so they reach the
+# same M from any start. Starting at M=1 cost one realroot per power of two.
+local monogenic_guess_M := proc(g, x)
+local crit, gmax;
+    try
+        crit := [fsolve(diff(g,x),x)];
+        if crit = [] then return 1; end if;
+        gmax := max(map(c -> evalf(subs(x=c,g)), crit));
+        if not type(gmax, numeric) then return 1; end if;
+        if gmax <= 2^(-20) then return 2^(-20); end if;
+        return 2^ceil(evalf(log[2](gmax)));
+    catch:
+        return 1;
+    end try;
+end proc;
+
 # Normalize once, under the overall search time limit. Keep the original
 # dyadic choices of m and M, including equality and the lower cap for M.
 local monogenic_search_bounds := proc(f, g, x)
@@ -51,6 +69,7 @@ local m := 1, M := 1, regions := monogenic_sign_regions(g,x);
         while univariate_positive_on_cells(f-2*m,regions[2],x,false) do m:=2*m; end do;
         while not univariate_positive_on_cells(f-m,regions[2],x,false) do m:=m/2; end do;
         # Since M>0, {g>=0,g>M} equals {g>M} on the whole real line.
+        M := monogenic_guess_M(g,x);
         while not univariate_nonnegative_on_R(M-g,x) do M:=2*M; end do;
         while M>1/2^20 and univariate_nonnegative_on_R(M/2-g,x) do M:=M/2; end do;
     end if;
