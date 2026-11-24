@@ -210,6 +210,40 @@ local intervals, interval, cell, l, u, a, b, undecided, k, refinement, inside;
     return FAIL;
 end proc;
 
+# Sturm sequence of a squarefree p. Remainders are divided by positive
+# rationals only, which preserves every sign variation.
+local univariate_sturm_sequence := proc(p, x)
+local sequence := [p, diff(p,x)], r;
+    while degree(sequence[-1],x) > 0 do
+        r := -rem(sequence[-2],sequence[-1],x);
+        if r = 0 then break; end if;
+        sequence := [op(sequence), r/abs(content(r,x))];
+    end do;
+    return sequence;
+end proc;
+
+# Number of distinct roots in (a,b] of the squarefree polynomial that
+# generated the sequence. Signs are exact, also at algebraic endpoints;
+# Maple's sturm drops a root at a RootOf endpoint b, counting only (a,b).
+local univariate_sturm_count := proc(sequence, x, a, b)
+local variations := proc(t)
+    local signs, s, count := 0, i;
+        if t = infinity then
+            signs := map(s -> sign(lcoeff(s,x)), sequence);
+        elif t = -infinity then
+            signs := map(s -> sign(lcoeff(s,x))*(-1)^degree(s,x), sequence);
+        else
+            signs := map(s -> univariate_sign(subs(x=t,s)), sequence);
+        end if;
+        signs := remove(s -> s = 0, signs);
+        for i from 1 to nops(signs)-1 do
+            if signs[i] <> signs[i+1] then count := count+1; end if;
+        end do;
+        return count;
+    end proc;
+    return variations(a)-variations(b);
+end proc;
+
 # Non-strict positivity permits even-multiplicity roots, hence locates only
 # roots of the odd part in interiors. Root isolation uses realroot; Sturm
 # sequences remain only as a fallback for unresolved endpoint proximity.
@@ -233,12 +267,12 @@ local p := expand(p0), q, qs, cell, a, b, sample, count, s, located, sequence;
         located := univariate_roots_in_interiors(qs,cells,x);
         if located = true then return false; end if;
         if located = FAIL then
-            sequence := sturmseq(qs,x);
+            sequence := univariate_sturm_sequence(qs,x);
             for cell in cells do
                 a,b := cell[1],cell[2];
                 if evalb(a=b) then next; end if;
-                # sturm counts (a,b]; discount a root at b, an endpoint.
-                count := sturm(sequence,x,a,b);
+                # The count covers (a,b]; discount a root at b, an endpoint.
+                count := univariate_sturm_count(sequence,x,a,b);
                 if b<>infinity and univariate_sign(subs(x=b,qs))=0 then count:=count-1; end if;
                 if count>0 then return false; end if;
             end do;
