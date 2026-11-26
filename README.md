@@ -16,6 +16,11 @@ adding the following two lines at the beginning of your maple file:
     libname := libname, "<PATH-TO-STRICTLYPOSITIVECERT>/StrictlyPositiveCert.mla":
     with(StrictlyPositiveCert):
 
+When built with `-DENABLE_DEBUGGING` (for example,
+`make DEBUG_MODE=-DENABLE_DEBUGGING`), the library prints its source branch
+when loaded with `with(StrictlyPositiveCert)`. The branch name and debug
+setting are saved in the `.mla`; rebuild the library to change them.
+
 ## Usage and examples
 
 The command `spCertificate` has the following inputs:
