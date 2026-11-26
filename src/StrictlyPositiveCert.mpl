@@ -30,6 +30,13 @@ $ifdef LOG_TIME
 local stack_level := -1;
 $endif
 
+# Saved in debug builds so the message identifies the library's source branch.
+$ifdef ENABLE_DEBUGGING
+local ModuleLoad := proc()
+    printf("StrictlyPositiveCert loaded (branch: main)\n");
+end proc;
+$endif
+
 $include "src/utilities.mpl";
 $include "src/signature_constructions.mpl";
 $include "src/bound_poly.mpl";
